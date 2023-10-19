@@ -2,13 +2,15 @@
     margin: 0;
     display: grid;
     row-gap: 60px;
+    padding-bottom: 60px;
     .block{
         display: flex;
         justify-content: space-between;
         width: 100%;
         padding: 20px 0px;
+        
         .infp{
-            width: 49%;
+            width: 48%;
             display: grid;
             row-gap: 30px;
             p{
@@ -21,7 +23,7 @@ line-height: 150%;
             }
         }
         .image{
-            width: 49%;
+            width: 48%;
             position: relative;
         }
     }

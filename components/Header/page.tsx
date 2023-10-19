@@ -16,8 +16,8 @@ const Header: FC = () => (
                 <div className={s.menu0infoBlock1}>
                     <ul>
                         <li> <CiAlarmOn /> 09:00 - 20:00</li>
-                        <li><BsTelephone />+996 770 710-170</li>
-                        <li><MdOutlineMailOutline />info@primex.kg</li>
+                        <li><BsTelephone /> <a href="tel:+996 770 710-170">+996 770 710-170</a>  </li>
+                        <li><MdOutlineMailOutline /> <a href="mailto:info@primex.kg">info@primex.kg</a> </li>
                     </ul>
                 </div>
                 <div className={s.Login}>
@@ -31,7 +31,10 @@ const Header: FC = () => (
         </div>
         <div className={`Contend ${s.menu1}`}>
             <div>
-                <HeaderSvg />
+                <Link href={'/'}>
+                    <HeaderSvg />
+                </Link>
+
             </div>
             <ul >
                 <li>
@@ -52,7 +55,7 @@ const Header: FC = () => (
                         Новости
                     </Link></li>
                 <li>
-                    <Link href={'#'}>
+                    <Link href={'/Page/FAQ'}>
                         F.A.Q.
                     </Link></li>
                 <li>

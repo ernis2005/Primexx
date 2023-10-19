@@ -45,19 +45,21 @@ const Footer = () => {
                         <ul>
                           
                             <li>
-                                <Link href={'#'}>
-                        Услуги
-                                </Link></li>
+                                <Link href={'/'}>
+                        Главная
+                                </Link>
+                            </li>
+                           
                             <li>
                                 <Link href={'#'}>
                         Тарифы
                                 </Link></li>
                             <li>
-                                <Link href={'#'}>
+                                <Link href={'/Page/news'}>
                         Новости
                                 </Link></li>
                             <li>
-                                <Link href={'#'}>
+                                <Link href={'/Page/FAQ'}>
                         F.A.Q.
                                 </Link></li>
                             <li>

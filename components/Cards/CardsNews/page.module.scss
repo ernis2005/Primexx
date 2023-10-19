@@ -23,7 +23,6 @@ img{
    opacity: 1;
    .block{
     display: grid;
-
     row-gap: 15px;
     position: relative;
     p{
@@ -40,10 +39,10 @@ img{
     span{
         background: var(--Green, #009345);
         padding: 5px;
-       max-width: 100%;
-       margin-top: -30px;
- position: absolute;
- color: #fff !important;
+        max-width: 100%;
+        margin-top: -30px;
+        position: absolute;
+        color: #fff !important;
 
     }
    }
