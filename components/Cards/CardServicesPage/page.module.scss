@@ -1,0 +1,82 @@
+.Cards {
+    display: flex;
+    justify-content: space-between;
+    height: 500px;
+
+    .Card {
+        display: grid;
+        height: 500px;
+        width: 380px;
+        padding: 30px;
+        align-content: space-between;
+        background: var(--Green, #009345);
+
+        .block1 {
+            display: grid;
+            row-gap: 15px;
+            color: var(--White, #F5F5F5);
+
+            h2 {
+
+                font-family: Geometria1;
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 120%;
+                /* 57.6px */
+            }
+
+            p {
+
+                font-family: Geometria;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+                /* 24px */
+            }
+        }
+
+    }
+}
+
+.ul {
+    display: grid;
+    row-gap: 20px;
+
+    li {
+        display: flex;
+        list-style: none;
+        gap: 15px;
+        align-items: center;
+
+        p {
+            color: var(--White, #F5F5F5);
+            font-family: Geometria;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            align-items: center;
+        }
+
+        span {
+
+            display: flex;
+            padding: 5px 15px;
+            justify-content: right;
+            align-items: center;
+            gap: 10px;
+            border-radius: 100px;
+            border: 1px solid var(--White, #F5F5F5);
+            color: var(--White, #F5F5F5);
+
+            font-family: Geometria;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+
+        }
+    }
+}
