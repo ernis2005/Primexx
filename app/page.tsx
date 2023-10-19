@@ -8,6 +8,7 @@ import { CardsBlock6 } from '@/components/Cards/CardsBlock6/CardsBlock6';
 export default function Home() {
     return (
         <main className={s.main}>
+          
             <div className={s.block1}>
                 <div className={s.bg}>
                     <Image
@@ -27,6 +28,7 @@ export default function Home() {
                     <button>Хочу заказать</button>
                 </div>
             </div>
+          
             <div className={`Contend ${s.block2}`}>
                 <p>
           Мы являемся сервисом по доставке ваших любимых брендов <br />
@@ -37,6 +39,7 @@ export default function Home() {
                 </p>
                 <CardsBlock1 />
             </div>
+       
             <div className={s.block3}>
                 <h3>Преимущества заказа из зарубежных сайтов</h3>
                 <p>Что делают привлекательными онлайн шоппинг на зарубежных сайтах?</p>
@@ -53,11 +56,11 @@ export default function Home() {
                    
                 </div>
             </div>
-            {/* <div className={`Contend ${s.block3}`} >
+            <div className={`Contend ${s.block3}`} >
                 <h2>
                 Этапы работы
                 </h2>
-            </div> */}
+            </div>
             <div className={`Contend  ${s.block4} `}>
                 <h3>
           Хотите выкупить товар самостоятельно <br />и у вас есть зарубежная

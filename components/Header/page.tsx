@@ -35,12 +35,12 @@ const Header: FC = () => (
             </div>
             <ul >
                 <li>
-                    <Link href={'#'}>
+                    <Link href={'/'}>
                         Главная
                     </Link>
                 </li>
                 <li>
-                    <Link href={'#'}>
+                    <Link href={'/Page/services'}>
                         Услуги
                     </Link></li>
                 <li>

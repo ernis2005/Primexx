@@ -1,0 +1,64 @@
+.Header {
+    display: grid;
+    row-gap: 60px;
+
+    .block {
+        display: grid;
+        row-gap: 60px;
+width: 100%;
+       
+        .Navigation{
+            display: flex;
+            text-align: left;
+            gap: 60px;
+            li{
+                list-style: none;
+                color: var(--Black, #001A0C);
+font-family: Geometria;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+&:hover {
+    border-bottom: 1px solid #001A0C;
+    transition: 0.7s;
+}
+            }
+        }
+        .Info{
+            display: grid;
+            row-gap: 30px;
+ h2 {
+            color: var(--Black, #001A0C);
+            text-align: center;
+            font-family: Geometria1;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%;
+        }
+        p{
+            color: #000;
+text-align: center;
+
+/* Description */
+font-family: Geometria;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 36px */
+        }
+        span {
+            color: #000;
+text-align: center;
+
+/* Regular text */
+font-family: Geometria;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 24px */
+        }
+        }
+    }
+}
