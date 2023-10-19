@@ -53,7 +53,6 @@ export default function Home() {
                 </div>
                 <div className={` Contend ${s.block2Info}`}>
                     <CardsBlock2 />
-                   
                 </div>
             </div>
             <div className={`Contend ${s.block3}`} >

@@ -1,0 +1,84 @@
+.Cards {
+    display: flex;
+gap: 30px;
+flex-wrap: wrap;
+.Card{
+ 
+   
+width: 380px;
+height: 380px;
+padding: 30px;
+background-color: rgb(0, 0, 0);
+position: relative;
+img{
+    position: absolute;
+    opacity: 0.7;
+}
+.info{
+    position: relative;
+    z-index: 2;
+   height: 100%;
+   display: grid;
+   align-content: space-between;
+   opacity: 1;
+   .block{
+    display: grid;
+
+    row-gap: 15px;
+    position: relative;
+    p{
+        max-width: 100%;
+        background: var(--Green, #009345);
+        padding: 5px;
+        color: #fff !important;
+        font-size: 30px;
+        font-family: Geometria1;
+        font-weight: 400;
+        position: absolute;
+        margin-top: -80px;
+    }
+    span{
+        background: var(--Green, #009345);
+        padding: 5px;
+       max-width: 100%;
+       margin-top: -30px;
+ position: absolute;
+ color: #fff !important;
+
+    }
+   }
+
+}
+
+}
+
+}
+.button{
+    display: flex;
+width: 380px;
+margin-top: 40px;
+height: 80px;
+padding: 10px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+color: var(--White, #F5F5F5);
+font-family: Geometria;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin: 0 auto;
+border: none;
+background: var(--Green, #009345);
+cursor: pointer;
+margin-bottom: 40px;
+}
+.Header{
+    display: grid;
+    row-gap: 30px;
+}
+.data4length{
+    display: none;
+}
