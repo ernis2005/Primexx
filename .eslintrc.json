@@ -21,10 +21,7 @@
         "no-console":"warn",
         "no-multiple-empty-lines":"warn",
         "@typescript-eslint/no-unused-vars": "off",
-        "arrow-body-style": [
-            "error",
-            "as-needed"
-        ],
+        
         "@typescript-eslint/no-explicit-any": "error",
         "@typescript-eslint/consistent-type-imports": [
             "error",

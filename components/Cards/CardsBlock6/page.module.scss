@@ -1,0 +1,45 @@
+.Cards{
+    display: flex;
+    gap: 30px;
+    position: relative;
+    .Card{
+        display: flex;
+        width: 585px;
+        min-height: 350px;
+      
+        align-items: flex-end;
+        gap: 10px;
+        position: relative;
+        overflow: hidden;
+     
+        
+        img{
+            position: relative;
+            opacity: 0.9;
+        }
+        div{
+            position: absolute;
+            color: var(--White, #F5F5F5);
+text-align: center;
+font-family: Geometria1;
+font-size: 40px;
+font-style: normal;
+
+font-weight: 700;
+line-height: normal;
+height: 100%;
+padding: 30px;
+bottom: 0px;
+width: 100%;
+text-align: left;
+
+box-shadow: -11px -150px 69px -23px rgba(0, 26, 12, 0.884) inset;
+p{
+    position: absolute;
+    bottom: 30px;
+
+}
+        }
+        // background: linear-gradient(180deg, rgba(0, 51, 24, 0.00) 0%, #003318 100%),  lightgray 50% / cover no-repeat;
+    }
+}

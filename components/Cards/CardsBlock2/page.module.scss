@@ -1,0 +1,59 @@
+.Cards {
+    display: grid;
+    row-gap: 30px;
+   
+    .Card {
+        display: flex;
+        text-align: left;
+        gap: 30px;
+
+        .indexBlock {
+            display: grid;
+            min-width: 100px;
+            height: 100px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            background: var(--Green, #009345);
+
+            p {
+                color: var(--White, #F5F5F5);
+
+                /* H2 */
+                font-family: Geometria1;
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 700;
+                margin: 0;
+                padding: 0;
+                line-height: 120%;
+                /* 57.6px */
+            }
+        }
+
+        .info {
+            display: grid;
+            row-gap: 10px;
+            position: relative;
+width: 666px;
+            h2 {
+                color: var(--Black, #001A0C);
+                font-family: Geometria !important;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+
+            }
+
+            p {
+                color: var(--Black, #001A0C);
+                font-family: Geometria;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+            }
+        }
+    }
+}
