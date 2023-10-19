@@ -4,6 +4,7 @@ import s from './page.module.scss'
 import Image from 'next/image'
 import { HeaderSvg } from '@/components/svg/Header'
 import cm from 'classnames'
+import Link from 'next/link'
 export const CardsNews = () => {
     const [noOFElement, setNoOFElement] = useState(6);
     const data = [1,2,3,4,5,67,8,9,0  ]
@@ -18,20 +19,23 @@ export const CardsNews = () => {
             <div className={s.Cards}>
                 {slice.map((res,i)=> (
                     <div key={i} className={s.Card}>
-                        <Image  src={'/images/Card2.jpg'} layout="fill"
-                            objectFit="cover"
-                            alt="hwllo"/>
-                        <div className={s.info}>
-                            <HeaderSvg/>
-                            <div  className={s.block} >
-                                <p>
+                        <Link href={'/Page/news/1'} >
+                            <Image  src={'/images/Card2.jpg'} layout="fill"
+                                objectFit="cover"
+                                alt="hwllo"/>
+                            <div className={s.info}>
+                                <HeaderSvg/>
+                                <div  className={s.block} >
+                                    <p>
       New Balence 
-                                </p>
-                                <span>
+                                    </p>
+                                    <span>
              Секреты выгодно шоппинг
-                                </span>
+                                    </span>
+                                </div>
                             </div>
-                        </div>
+                        </Link>
+                      
                     </div>
                 ))}
         
