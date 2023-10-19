@@ -47,7 +47,7 @@ const Header: FC = () => (
                         Услуги
                     </Link></li>
                 <li>
-                    <Link href={'#'}>
+                    <Link href={'/Page/tracking'}>
                         Тарифы
                     </Link></li>
                 <li>

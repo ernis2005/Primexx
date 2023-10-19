@@ -1,0 +1,64 @@
+.Header{
+    display: grid;
+    margin: 0 auto;
+    row-gap: 60px;
+    padding-bottom: 60px;
+    .Input{
+        display: flex;
+        gap: 30px;
+        input{
+            display: flex;
+width: 690px;
+height: 80px;
+padding: 20px 30px;
+align-items: center;
+gap: 10px;
+border: 1px solid var(--Dark-Green, #003318);
+background: var(--White, #F5F5F5);
+color: rgba(0, 26, 12, 0.50);
+font-family: Geometria;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+outline: none;
+        }
+        button {
+            display: flex;
+width: 278px;
+height: 80px;
+padding: 10px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+color: var(--White, #F5F5F5);
+font-family: Geometria;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+border:none;
+background: var(--Green, #009345);
+line-height: normal;
+        }
+    }
+    .contends{
+        display: grid;
+        gap: 60px;
+        margin-top: 100px;
+        h2{
+            color: var(--Black, #001A0C);
+
+/* H2 */
+font-family: Geometria1;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+margin: 0 auto;
+line-height: 120%; /* 57.6px */
+        }
+        div{
+            width: 1200px;
+height: 412px;background: var(--Dark-Green, #003318);
+        }
+    }
+}
