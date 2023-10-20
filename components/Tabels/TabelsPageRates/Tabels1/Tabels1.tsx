@@ -4,11 +4,9 @@ interface Person {
     rate:string,price:string,deliveryPeriod:string,dispatch:string,
 }
 const data:Person[] = [
-    {rate:"Турция Cтандарт",price:"$9.5",deliveryPeriod:"3-5 дней",dispatch:"5 раз в неделю"},
-    {rate:"Турция Экспресс",price:"$12",deliveryPeriod:"1-2 дня",dispatch:"2 раза в неделю"},
-    {rate:"Америка",price:"$16",deliveryPeriod:"14-16 дней",dispatch:"1 раз в неделю"},
+    {rate:"Турция Cтандарт",price:"$9.5",deliveryPeriod:"3-5 дней",dispatch:"Вес округляется от 1 кг"},
 ]
-export const TabelsBlock5 = () => {
+export const Tabels1 = () => {
     return (
         <div>
             <table className={s.table} >
@@ -17,7 +15,7 @@ export const TabelsBlock5 = () => {
                         <th>Тариф</th>
                         <th>Стоимость за кг.</th>
                         <th>Срок доставки</th>
-                        <th>Отправка</th>
+                        <th>Дополнительно</th>
                     </tr>
                 </thead>
                 <thead className={s.block2} >

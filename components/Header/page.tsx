@@ -47,7 +47,7 @@ const Header: FC = () => (
                         Услуги
                     </Link></li>
                 <li>
-                    <Link href={'/Page/tracking'}>
+                    <Link href={'/Page/rates'}>
                         Тарифы
                     </Link></li>
                 <li>
@@ -68,8 +68,12 @@ const Header: FC = () => (
                     </Link></li>
             </ul>
             <div className={s.buttonSearch}>
-                <AiOutlineSearch />
-                <p>Отследить товар</p>
+                <Link href={'/Page/tracking'} style={{border:'none'}}>
+                    <AiOutlineSearch />
+                    <p>Отследить товар</p>
+                </Link>
+                
+               
             </div>
         </div>
     </div>

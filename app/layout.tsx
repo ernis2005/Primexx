@@ -10,7 +10,6 @@ export const metadata: Metadata = {
     title: 'Primex',
     description: 'Дарим доступ к растущему миру возможностей! ',
 }
-
 export default function RootLayout({
     children,
 }: {
