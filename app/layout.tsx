@@ -3,6 +3,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Footer from '@/components/Footer/page'
+import Login from '@/components/Login/Login'
+import { ReduxProider } from './redux/provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,16 +15,14 @@ export const metadata: Metadata = {
 export default function RootLayout({
     children,
 }: {
-  children: React.ReactNode
+    children: React.ReactNode
 }) {
     return (
         <html lang="en">
             <body className={inter.className}>
-                <Header/>
-                <main style={{marginTop:'124px'}}>
-                    {children}
-                </main>
-                <Footer/>
+                <ReduxProider>
+                    <Login children={children} />
+                </ReduxProider>  
             </body>
         </html>
     )

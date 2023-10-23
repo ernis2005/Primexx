@@ -1,54 +1,59 @@
-.header{
+.header {
     display: grid;
     padding-bottom: 60px;
     row-gap: 60px;
-    .contend{
+
+    .contend {
         margin: 0 auto;
         display: grid;
         row-gap: 60px;
         width: 100%;
-        div{
-            
+
+        div {
+
             display: grid;
             row-gap: 60px;
             width: 100%;
-         
-            h2{
-                color: var(--Black, #001A0C);
-text-align: center;
 
-/* H2 */
-font-family: Geometria1;
-font-size: 48px;
-font-style: normal;
-font-weight: 800;
-line-height: 120%; /* 57.6px */
+
+            h2 {
+                color: var(--Black, #001A0C);
+                text-align: center;
+
+                /* H2 */
+                font-family: Geometria1;
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: 120%;
+                /* 57.6px */
             }
-            span{
+
+            span {
                 display: grid;
                 row-gap: 30px;
-                p{
-                    color: #000;
-text-align: center;
 
-/* Description */
-font-family: Geometria;
-font-size: 24px;
-font-style: normal;
-font-weight: 600;
-line-height: 150%; /* 36px */
+                p {
+                    color: #000;
+                    text-align: center;
+
+                    /* Description */
+                    font-family: Geometria;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 150%;
+                    /* 36px */
                 }
             }
-            p{
+            p {
                 color: #000;
-text-align: center;
-
-/* Description */
-font-family: Geometria;
-font-size: 24px;
-font-style: normal;
-font-weight: 600;
-line-height: 150%; /* 36px */
+                text-align: center;
+                font-family: Geometria;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 150%;
             }
         }
     }

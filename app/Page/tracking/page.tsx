@@ -27,7 +27,7 @@ const page = () => {
             />
             <div >
                 <form className={`Contend ${s.Input}`} onSubmit={handleSubmit(onSubmit)}>
-                    <input defaultValue="test" {...register("example")} />
+                    <input defaultValue="Введите трек номер" {...register("example")} />
                     {errors.exampleRequired && <span>This field is required</span>}
                     <button type="submit">Отследить</button>
                 </form>
@@ -36,7 +36,8 @@ const page = () => {
                 <h2>
                     Информация о доставке</h2>
                 <div className={s.block2}>
-                </div></div>
+                </div>
+            </div>
 
         </div>
     )

@@ -1,3 +1,5 @@
+"use client"
+
 
 import type { FC } from 'react';
 import React from 'react'
@@ -8,75 +10,83 @@ import { MdOutlineMailOutline } from 'react-icons/md'
 import { HeaderSvg } from '../svg/Header';
 import { AiOutlineSearch } from 'react-icons/ai'
 import Link from 'next/link';
-
-const Header: FC = () => (
-    <div className={s.Header}>
-        <div className={s.menu0}>
-            <div className={`Contend  ${s.menu0Info}`}>
-                <div className={s.menu0infoBlock1}>
-                    <ul>
-                        <li> <CiAlarmOn /> 09:00 - 20:00</li>
-                        <li><BsTelephone /> <a href="tel:+996 770 710-170">+996 770 710-170</a>  </li>
-                        <li><MdOutlineMailOutline /> <a href="mailto:info@primex.kg">info@primex.kg</a> </li>
-                    </ul>
-                </div>
-                <div className={s.Login}>
-                    <ul>
-                        <li>Вход</li>
-                        <span></span>
-                        <li>Регистрация</li>
-                    </ul>
+import {useSelector} from 'react-redux'
+const Header: FC = () => { 
+    const  useName  = useSelector((state)=> state.authReducer.value.eamil)
+    return  (
+        <div className={s.Header}>
+            <div className={s.menu0}>
+                <div className={`Contend  ${s.menu0Info}`}>
+                    <div className={s.menu0infoBlock1}>
+                        <ul>
+                            <li> <CiAlarmOn /> 09:00 - 20:00</li>
+                            <li><BsTelephone /> <a href="tel:+996 770 710-170">+996 770 710-170</a>  </li>
+                            <li><MdOutlineMailOutline /> <a href="mailto:info@primex.kg">info@primex.kg</a> </li>
+                        </ul>
+                    </div>
+                    <div className={s.Login}>
+                        <h1>{useName}</h1>
+                        <ul>
+                            <li>
+                                <a href={'/entrance'}>
+                                     Вход
+                                </a>
+                            </li>
+                            <span></span>
+                            <li>Регистрация</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div className={`Contend ${s.menu1}`}>
-            <div>
-                <Link href={'/'}>
-                    <HeaderSvg />
-                </Link>
-
-            </div>
-            <ul >
-                <li>
+            <div className={`Contend ${s.menu1}`}>
+                <div>
                     <Link href={'/'}>
-                        Главная
+                        <HeaderSvg />
                     </Link>
-                </li>
-                <li>
-                    <Link href={'/Page/services'}>
+
+                </div>
+                <ul >
+                    <li>
+                        <Link href={'/'}>
+                        Главная
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href={'/Page/services'}>
                         Услуги
-                    </Link></li>
-                <li>
-                    <Link href={'/Page/rates'}>
+                        </Link></li>
+                    <li>
+                        <Link href={'/Page/rates'}>
                         Тарифы
-                    </Link></li>
-                <li>
-                    <Link href={'/Page/news'}>
+                        </Link></li>
+                    <li>
+                        <Link href={'/Page/news'}>
                         Новости
-                    </Link></li>
-                <li>
-                    <Link href={'/Page/FAQ'}>
+                        </Link></li>
+                    <li>
+                        <Link href={'/Page/FAQ'}>
                         F.A.Q.
-                    </Link></li>
-                <li>
-                    <Link href={'#'}>
+                        </Link></li>
+                    <li>
+                        <Link href={'#'}>
                         О нас
-                    </Link></li>
-                <li>
-                    <Link href={'#'}>
+                        </Link></li>
+                    <li>
+                        <Link href={'#'}>
                         Контакты
-                    </Link></li>
-            </ul>
-            <div className={s.buttonSearch}>
-                <Link href={'/Page/tracking'} style={{border:'none'}}>
-                    <AiOutlineSearch />
-                    <p>Отследить товар</p>
-                </Link>
+                        </Link></li>
+                </ul>
+                <div className={s.buttonSearch}>
+                    <Link href={'/Page/tracking'} style={{border:'none'}}>
+                        <AiOutlineSearch />
+                        <p>Отследить товар</p>
+                    </Link>
                 
                
+                </div>
             </div>
         </div>
-    </div>
-)
+    )
+}
 
 export default Header

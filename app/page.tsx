@@ -6,6 +6,7 @@ import { TabelsBlock5 } from '@/components/Tabels/TabelsBlock5/page';
 import { CardsBlock6 } from '@/components/Cards/CardsBlock6/CardsBlock6';
 
 export default function Home() {
+ 
     return (
         <main className={s.main}>
           
@@ -55,10 +56,11 @@ export default function Home() {
                     <CardsBlock2 />
                 </div>
             </div>
+            <div></div>
             <div className={`Contend ${s.block3}`} >
-                <h2>
+                <h3>
                 Этапы работы
-                </h2>
+                </h3>
             </div>
             <div className={`Contend  ${s.block4} `}>
                 <h3>
@@ -68,7 +70,7 @@ export default function Home() {
                 <p>
                    Зарегистрируйтесь и получите адреса складов в <span>Турции</span> и
                     <span>Америке</span> <br />
-          для самостоятельных покупок
+                    для самостоятельных покупок
                 </p>
                 <div>
                     <Image
