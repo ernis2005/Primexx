@@ -1,11 +1,14 @@
 "use client"
-import React from 'react'
+import React, { useEffect } from 'react'
 import s from './style.module.scss'
 import type { SubmitHandler } from 'react-hook-form';
 import { useForm } from 'react-hook-form';
 import Image from 'next/image';
 import {useDispatch} from 'react-redux'
 import { Login } from '../redux/features/auth-slice';
+import { redirect } from 'next/navigation';
+import {useSelector} from 'react-redux'
+
 type Inputs = {
     example: string
     exampleRequired: string
@@ -22,7 +25,10 @@ const page = () => {
     const onSubmit: SubmitHandler<Inputs> = (data) =>  {
         dispatch(Login(data.example))
     }
-
+    const   isAuth = useSelector((state)=> state.authReducer.value.isAuth)
+     
+   
+      
     return (
         <div className={s.Header} >
             <div className={s.bg}>
@@ -37,7 +43,7 @@ const page = () => {
                         <input placeholder='email' type="email" {...register("example")} />
                     </span>
                     {errors.exampleRequired && <span>This field is required</span>}
-                    <button type="submit">Войти</button>
+                    <button type="submit"  >Войти</button>
                 </div>
             </form>
         </div>

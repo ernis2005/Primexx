@@ -4,6 +4,8 @@ import s from './page.module.scss'
 import { BannerPages } from '@/components/BannerPages/BannerPages'
 import type { SubmitHandler } from "react-hook-form";
 import { useForm } from "react-hook-form"
+import Header from '@/components/Header/page';
+import Footer from '@/components/Footer/page';
 
 type Inputs = {
   example: string
@@ -20,26 +22,31 @@ const page = () => {
     const onSubmit: SubmitHandler<Inputs> = (data) =>console.log(data);
     
     return (
-        <div className={s.Header}>
-            <BannerPages
-                name={'Отследите товар'}
-                info={'Отследить товар легко и просто!'}
-            />
-            <div >
-                <form className={`Contend ${s.Input}`} onSubmit={handleSubmit(onSubmit)}>
-                    <input defaultValue="Введите трек номер" {...register("example")} />
-                    {errors.exampleRequired && <span>This field is required</span>}
-                    <button type="submit">Отследить</button>
-                </form>
-            </div>
-            <div className={`Contend ${s.contends}`}>
-                <h2>
-                    Информация о доставке</h2>
-                <div className={s.block2}>
+        <>
+            <Header />
+            <div style={{marginTop:'124px'}} className={s.Header}>
+                <BannerPages
+                    name={'Отследите товар'}
+                    info={'Отследить товар легко и просто!'}
+                />
+                <div >
+                    <form className={`Contend ${s.Input}`} onSubmit={handleSubmit(onSubmit)}>
+                        <input defaultValue="Введите трек номер" {...register("example")} />
+                        {errors.exampleRequired && <span>This field is required</span>}
+                        <button type="submit">Отследить</button>
+                    </form>
                 </div>
-            </div>
+                <div className={`Contend ${s.contends}`}>
+                    <h2>
+                    Информация о доставке</h2>
+                    <div className={s.block2}>
+                    </div>
+                </div>
 
-        </div>
+            </div>
+            <Footer />
+        </>
+      
     )
 }
 

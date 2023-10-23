@@ -81,8 +81,6 @@ const Header: FC = () => {
                         <AiOutlineSearch />
                         <p>Отследить товар</p>
                     </Link>
-                
-               
                 </div>
             </div>
         </div>

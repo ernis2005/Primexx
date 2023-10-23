@@ -1,5 +1,8 @@
+
 import type {PayloadAction} from "@reduxjs/toolkit";
 import {createSlice} from "@reduxjs/toolkit"
+import { redirect } from "next/navigation";
+
 interface AuthSate {
     isAuth:boolean,
     eamil:string
@@ -18,10 +21,9 @@ export const auto = createSlice ({
             return  {
                 value: {
                     isAuth:true,
-                    eamil:action.payload  ,
-                       
-                }
-            }
+                    eamil:action.payload,
+                },
+            }    
         }
     }
 })
