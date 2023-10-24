@@ -19,7 +19,7 @@ const page = () => {
         watch,
         formState: { errors },
     } = useForm<Inputs>()
-    const onSubmit: SubmitHandler<Inputs> = (data) =>console.log(data);
+    // const onSubmit: SubmitHandler<Inputs> = (data) => ();
     
     return (
         <>
@@ -30,7 +30,9 @@ const page = () => {
                     info={'Отследить товар легко и просто!'}
                 />
                 <div >
-                    <form className={`Contend ${s.Input}`} onSubmit={handleSubmit(onSubmit)}>
+                    <form className={`Contend ${s.Input}`} 
+                    // onSubmit={handleSubmit(onSubmit)}
+                    >
                         <input defaultValue="Введите трек номер" {...register("example")} />
                         {errors.exampleRequired && <span>This field is required</span>}
                         <button type="submit">Отследить</button>
