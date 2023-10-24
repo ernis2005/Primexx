@@ -5,7 +5,7 @@ import type { SubmitHandler } from 'react-hook-form';
 import { useForm } from 'react-hook-form';
 import Image from 'next/image';
 import {useDispatch} from 'react-redux'
-import { Login } from '../redux/features/auth-slice';
+import { Login, useAppSelector } from '../redux/features/auth-slice';
 import { redirect } from 'next/navigation';
 import {useSelector} from 'react-redux'
 
@@ -25,10 +25,13 @@ const page = () => {
     const onSubmit: SubmitHandler<Inputs> = (data) =>  {
         dispatch(Login(data.example))
     }
-    const   isAuth = useSelector((state)=> state.authReducer.value.isAuth)
-     
+    const   isAuth = useAppSelector((state)=> state.authReducer.value.isAuth)
+    useEffect(() => {
+        if(isAuth === true) {
+            redirect('/')
+        }
+    }, [isAuth])
    
-      
     return (
         <div className={s.Header} >
             <div className={s.bg}>

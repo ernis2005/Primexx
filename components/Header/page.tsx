@@ -11,8 +11,10 @@ import { HeaderSvg } from '../svg/Header';
 import { AiOutlineSearch } from 'react-icons/ai'
 import Link from 'next/link';
 import {useSelector} from 'react-redux'
+import { useAppSelector } from '@/app/redux/features/auth-slice';
 const Header: FC = () => { 
-    const  useName  = useSelector((state)=> state.authReducer.value.eamil)
+    const  useName  = useAppSelector((state)=> state.authReducer.value.eamil)
+    const  isAuth = useAppSelector((state)=>   state.authReducer.value.isAuth)
     return  (
         <div className={s.Header}>
             <div className={s.menu0}>
@@ -25,15 +27,15 @@ const Header: FC = () => {
                         </ul>
                     </div>
                     <div className={s.Login}>
-                        <h1>{useName}</h1>
+                        {/* <h1>{useName}</h1> */}
                         <ul>
-                            <li>
+                           
+                            {isAuth !==true ?( <><li>
                                 <a href={'/entrance'}>
-                                     Вход
+                                    Вход
                                 </a>
-                            </li>
-                            <span></span>
-                            <li>Регистрация</li>
+                            </li><span></span><li>Регистрация</li></>):<li>{useName}</li>}
+                           
                         </ul>
                     </div>
                 </div>

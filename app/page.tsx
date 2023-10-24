@@ -8,12 +8,12 @@ import Header from '@/components/Header/page';
 import Footer from '@/components/Footer/page';
 
 export default function Home() {
- 
+
     return (
         <>
             <Header />
-            <main style={{marginTop:'124px'}} className={s.main}>
-          
+            <main style={{ marginTop: '124px' }} className={s.main}>
+
                 <div className={s.block1}>
                     <div className={s.bg}>
                         <Image
@@ -26,25 +26,25 @@ export default function Home() {
 
                     <div className={` Contend ${s.block1Info}`}>
                         <h1>
-          Доставка от 5 дней <br />
-          из Турции и Америки
+                            Доставка от 5 дней <br />
+                            из Турции и Америки
                         </h1>
                         <p>Наши решения дарят доступ к растущему миру возможностей</p>
                         <button>Хочу заказать</button>
                     </div>
                 </div>
-        
+
                 <div className={`Contend ${s.block2}`}>
                     <p>
-        Мы являемся сервисом по доставке ваших любимых брендов <br />
-        из любого американского или турецкого сайта и маркетплейса во все
-        регионы России. <br />
-        Предоставляем бесплатный склад. Оказываем услугу выкупа из сайтов по
-        низкой комиссией.
+                        Мы являемся сервисом по доставке ваших любимых брендов <br />
+                        из любого американского или турецкого сайта и маркетплейса во все
+                        регионы России. <br />
+                        Предоставляем бесплатный склад. Оказываем услугу выкупа из сайтов по
+                        низкой комиссией.
                     </p>
                     <CardsBlock1 />
                 </div>
-     
+
                 <div className={s.block3}>
                     <h3>Преимущества заказа из зарубежных сайтов</h3>
                     <p>Что делают привлекательными онлайн шоппинг на зарубежных сайтах?</p>
@@ -63,18 +63,18 @@ export default function Home() {
                 <div></div>
                 <div className={`Contend ${s.block3}`} >
                     <h3>
-              Этапы работы
+                        Этапы работы
                     </h3>
                 </div>
                 <div className={`Contend  ${s.block4} `}>
                     <h3>
-                Хотите выкупить товар самостоятельно <br />и у вас есть зарубежная
-                  карта?
+                        Хотите выкупить товар самостоятельно <br />и у вас есть зарубежная
+                        карта?
                     </h3>
                     <p>
-                 Зарегистрируйтесь и получите адреса складов в <span>Турции</span> и
+                        Зарегистрируйтесь и получите адреса складов в <span>Турции</span> и
                         <span>Америке</span> <br />
-                  для самостоятельных покупок
+                        для самостоятельных покупок
                     </p>
                     <div>
                         <Image
@@ -89,17 +89,17 @@ export default function Home() {
                 </div>
                 <div className={` Contend ${s.block5}`}>
                     <h3>Тарифы и сроки</h3>
-                    <TabelsBlock5/>
+                    <TabelsBlock5 />
                     <button>Узнать подробнее</button>
                 </div>
                 <div className={` Contend ${s.block6}`}>
                     <h3>Магазины</h3>
-                    <CardsBlock6/>
+                    <CardsBlock6 />
                 </div>
                 <div></div>
             </main>
             <Footer />
         </>
-      
+
     );
 }

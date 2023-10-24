@@ -2,6 +2,9 @@
 import type {PayloadAction} from "@reduxjs/toolkit";
 import {createSlice} from "@reduxjs/toolkit"
 import { redirect } from "next/navigation";
+import type { TypedUseSelectorHook} from "react-redux";
+import { useSelector } from "react-redux";
+import type { RootSate } from "../store";
 
 interface AuthSate {
     isAuth:boolean,
@@ -29,3 +32,4 @@ export const auto = createSlice ({
 })
 export const { Login} = auto.actions
 export default auto.reducer
+export  const  useAppSelector:TypedUseSelectorHook<RootSate> =  useSelector
