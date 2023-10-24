@@ -1,8 +1,6 @@
 "use client"
-
-
 import type { FC } from 'react';
-import React from 'react'
+import React, { useEffect } from 'react'
 import s from './style.module.scss'
 import { CiAlarmOn } from 'react-icons/ci'
 import { BsTelephone } from 'react-icons/bs'
@@ -10,14 +8,23 @@ import { MdOutlineMailOutline } from 'react-icons/md'
 import { HeaderSvg } from '../svg/Header';
 import { AiOutlineSearch } from 'react-icons/ai'
 import Link from 'next/link';
-import {useSelector} from 'react-redux'
-import { useAppSelector } from '@/app/redux/features/auth-slice';
+import { AutoLogin, useAppSelector } from '@/app/redux/features/auth-slice';
+import { useDispatch } from 'react-redux';
+
 const Header: FC = () => { 
-    const  useName  = useAppSelector((state)=> state.authReducer.value.eamil)
+    const  useName  = useAppSelector((state)=> state.authReducer.value.name)
     const  isAuth = useAppSelector((state)=>   state.authReducer.value.isAuth)
-    const  test = useAppSelector((state)=>   state.authReducer.value)
-    console.log(test);
+    const dispatch = useDispatch()
+    useEffect(() => {
     
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const localStorages: any =  localStorage  
+        const  returnFormData =JSON.parse(localStorages.getItem("uliId"));
+        if (returnFormData  !== null) {
+            dispatch(AutoLogin(returnFormData))
+        }
+      
+    }, [])
     return  (
         <div className={s.Header}>
             <div className={s.menu0}>
@@ -38,7 +45,7 @@ const Header: FC = () => {
                                     Вход
                                 </a>
                             </li><span></span><li>Регистрация</li></>):<li> <Link href={"#"} >{useName}</Link></li>}
-                           
+                         
                         </ul>
                     </div>
                 </div>

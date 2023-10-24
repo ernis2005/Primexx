@@ -6,6 +6,7 @@ import type { TypedUseSelectorHook} from "react-redux";
 import { useSelector } from "react-redux";
 import type { RootSate } from "../store";
 import error from "next/error";
+import { start } from "repl";
 
 interface AuthSate {
     isAuth:boolean,
@@ -41,6 +42,9 @@ interface PayloadActionType {
     email: string,
     password:string,
 }
+interface AutoLoginType {
+    uliId:""
+}
 export const auto = createSlice ({
     name: "autor",
     initialState: initialState,
@@ -53,6 +57,7 @@ export const auto = createSlice ({
                 } 
             })
             if(dataEamil[0]?.password === action.payload.password) {
+                localStorage.setItem("uliId", JSON.stringify(dataEamil[0].uliId));
                 return  {
                     value: {
                         isAuth:true,
@@ -74,9 +79,39 @@ export const auto = createSlice ({
                     },
                 }  
             }
+        },
+        AutoLogin:(start, action:PayloadAction<string>) =>{
+            const dataEamil = testData.filter((res,i )=> {
+                if(res.uliId === action.payload ) {
+                    return res
+                } 
+            })
+            if(dataEamil[0]?.uliId === action.payload) {
+                return  {
+                    value: {
+                        isAuth:true,
+                        eamil:dataEamil[0].eamil,
+                        name:dataEamil[0].name,
+                        password:dataEamil[0].password,
+                        uliId:dataEamil[0].uliId
+                    },
+                }  
+            } else {
+              
+                return  {
+                    value: {
+                        isAuth:false,
+                        eamil:"",
+                        name:"",
+                        password:"",
+                        uliId:""
+                    },
+                }  
+            }
+   
         }
     }
 })
-export const { Login} = auto.actions
+export const { Login,AutoLogin} = auto.actions
 export default auto.reducer
 export  const  useAppSelector:TypedUseSelectorHook<RootSate> =  useSelector
