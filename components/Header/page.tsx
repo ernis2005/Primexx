@@ -15,6 +15,9 @@ import { useAppSelector } from '@/app/redux/features/auth-slice';
 const Header: FC = () => { 
     const  useName  = useAppSelector((state)=> state.authReducer.value.eamil)
     const  isAuth = useAppSelector((state)=>   state.authReducer.value.isAuth)
+    const  test = useAppSelector((state)=>   state.authReducer.value)
+    console.log(test);
+    
     return  (
         <div className={s.Header}>
             <div className={s.menu0}>
@@ -27,14 +30,14 @@ const Header: FC = () => {
                         </ul>
                     </div>
                     <div className={s.Login}>
-                        {/* <h1>{useName}</h1> */}
+                    
                         <ul>
                            
                             {isAuth !==true ?( <><li>
                                 <a href={'/entrance'}>
                                     Вход
                                 </a>
-                            </li><span></span><li>Регистрация</li></>):<li>{useName}</li>}
+                            </li><span></span><li>Регистрация</li></>):<li> <Link href={"#"} >{useName}</Link></li>}
                            
                         </ul>
                     </div>

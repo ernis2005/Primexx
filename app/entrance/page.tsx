@@ -10,7 +10,8 @@ import { redirect } from 'next/navigation';
 import {useSelector} from 'react-redux'
 
 type Inputs = {
-    example: string
+    email: string,
+    password:string,
     exampleRequired: string
 }
 
@@ -23,7 +24,7 @@ const page = () => {
         formState: { errors },
     } = useForm<Inputs>()
     const onSubmit: SubmitHandler<Inputs> = (data) =>  {
-        dispatch(Login(data.example))
+        dispatch(Login(data))
     }
     const   isAuth = useAppSelector((state)=> state.authReducer.value.isAuth)
     useEffect(() => {
@@ -43,7 +44,10 @@ const page = () => {
                 <h2>Добро пожаловать</h2>
                 <div>
                     <span>Электронная почта
-                        <input placeholder='email' type="email" {...register("example")} />
+                        <input placeholder='email' type="email" {...register("email")} />
+                    </span>
+                    <span>Электронная почта
+                        <input placeholder='password' type="password" {...register("password")} />
                     </span>
                     {errors.exampleRequired && <span>This field is required</span>}
                     <button type="submit"  >Войти</button>
