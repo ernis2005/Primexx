@@ -10,27 +10,31 @@ interface Person {
 }
 
  
-const Nav = ({ children }: Person) => {
+// const Nav = ({ children }: Person) => {
 
-    if (window.location.pathname === '/entrance') {
-        return (
-            <main >
-                {children}
-            </main>
-        )
-    } else {
-        return (
+//     if (window.location.pathname === '/entrance') {
+//         return (
+//             <main >
+//                 {children}
+//             </main>
+//         )
+//     } else {
+//         return (
 
-            <main >
-                {children}
-            </main>
+//             <main >
+//                 {children}
+//             </main>
           
-        )
-    }
-}
+//         )
+//     }
+// }
 const Login = ({ children }: Person) => {
     
-    return (<Nav children={children} />
+    return (
+        
+        <main >
+            {children}
+        </main>
     )
 }
 
