@@ -227,7 +227,58 @@ font-weight: 700;
 line-height: 120%; 
     }
 }
+.block7{
+    
+    display: flex;
+width: 1200px;
+padding: 60px;
+justify-content: space-between;
+margin: 0 auto;
+align-items: center;
+
+
+background: #009345;
+.block7Info{
+    width: 495px;
+    display: grid;
+    color: var(--White, #F5F5F5);
+    gap: 30px;
+    h2{
+      
+
+        /* H2 */
+        font-family: Geometria1;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%; /* 57.6px */
+    }
+    p{
+      
+
+        /* Description */
+        font-family: Geometria;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 550;
+        line-height: 150%; /* 36px */
+        span{
+    
+            font-family: Geometria1;
+            font-size: 24px;
+          
+            font-weight: 700;
+            
+        }
+    }
+    
+}
+.fromInput{
+    width: 450px;
+    }
+}
+
 .main{
 display: grid;
-row-gap: 60px;    
+gap: 60px;    
 }

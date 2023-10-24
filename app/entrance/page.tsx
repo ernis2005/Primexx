@@ -46,7 +46,7 @@ const page = () => {
                     <span>Электронная почта
                         <input placeholder='email' type="email" {...register("email")} />
                     </span>
-                    <span>Электронная почта
+                    <span>Пароль
                         <input placeholder='password' type="password" {...register("password")} />
                     </span>
                     {errors.exampleRequired && <span>This field is required</span>}

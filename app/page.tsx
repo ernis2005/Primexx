@@ -6,6 +6,7 @@ import { TabelsBlock5 } from '@/components/Tabels/TabelsBlock5/page';
 import { CardsBlock6 } from '@/components/Cards/CardsBlock6/CardsBlock6';
 import Header from '@/components/Header/page';
 import Footer from '@/components/Footer/page';
+import { FromInput } from '@/components/FromInput/FromInput';
 
 export default function Home() {
 
@@ -95,6 +96,18 @@ export default function Home() {
                 <div className={` Contend ${s.block6}`}>
                     <h3>Магазины</h3>
                     <CardsBlock6 />
+                </div>
+                <div className={s.block7}>
+                    <div className={s.block7Info}>
+                        <h2>Ваш личный байер в мире
+                            международных покупок</h2>
+                        <p>Служба Primex поможет легко приобрести товары в зарубежных интернет-магазинах</p>
+                        <p>Выкупим товары с сайтов за вас в тот же день - <span> быстро, легко и доступно</span></p>
+                        <p>После заполнения заявки, байер сам
+                            с вами свяжется с вами в течении
+                            2-х часов в рабочее время.</p>
+                    </div>
+                    <div className={s.fromInput}><FromInput/></div>
                 </div>
                 <div></div>
             </main>
