@@ -9,12 +9,10 @@ import Footer from '@/components/Footer/page';
 import { FromInput } from '@/components/FromInput/FromInput';
 
 export default function Home() {
-
     return (
         <>
             <Header />
             <main style={{ marginTop: '124px' }} className={s.main}>
-
                 <div className={s.block1}>
                     <div className={s.bg}>
                         <Image
@@ -24,7 +22,6 @@ export default function Home() {
                             alt="hwllo"
                         />
                     </div>
-
                     <div className={` Contend ${s.block1Info}`}>
                         <h1>
                             Доставка от 5 дней <br />
@@ -34,7 +31,6 @@ export default function Home() {
                         <button>Хочу заказать</button>
                     </div>
                 </div>
-
                 <div className={`Contend ${s.block2}`}>
                     <p>
                         Мы являемся сервисом по доставке ваших любимых брендов <br />

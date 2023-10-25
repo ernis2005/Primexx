@@ -8,7 +8,7 @@
     align-items: center;
     justify-items: center;
     background-color: black;
-    height: 100vmin;
+    height: 100vh;
 
     .contend {
         display: grid;
@@ -39,6 +39,12 @@
             row-gap: 30px;
 
             padding: 24px;
+            @media screen and (max-width:476px) {
+                width: 360px;
+                @media screen and (max-width:391px) {
+                    width: 320px;
+                }
+            }
 span {
     width: 100%;
 }
@@ -82,5 +88,6 @@ border: none;
         position: absolute;
         opacity: 0.5;
         z-index: 1;
+      
     }
 }

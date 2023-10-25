@@ -44,7 +44,7 @@ const Header: FC = () => {
                                 <a href={'/entrance'}>
                                     Вход
                                 </a>
-                            </li><span></span><li>Регистрация</li></>):<li> <Link href={"#"} >{useName}</Link></li>}
+                            </li><span></span><li>Регистрация</li></>):<li> <Link href={'/profile'} >{useName}</Link></li>}
                          
                         </ul>
                     </div>

@@ -14,18 +14,21 @@ interface AuthSate {
     password:string,
     name:string,
     uliId:string,
+    tel:string
 
 }
 export const  testData  = [
     {  eamil:'nhtfxnhtfx.9@gmail.com',
         name:"Ernis Ismanilev",
         password:"test",
-        uliId:"123456789"
+        uliId:"123456789",
+        tel:"0999999999",
     },
     {  eamil:'ernis@gamil.com',
         name:"test test",
         password:"test",
-        uliId:"12345"
+        uliId:"12345",
+        tel:"0999999999",
     }
 ]
 
@@ -35,7 +38,8 @@ const initialState ={
         eamil:"",
         name:"",
         password:"",
-        uliId:""
+        uliId:"",
+        tel:""
     } as AuthSate
 } 
 interface PayloadActionType {
@@ -64,7 +68,8 @@ export const auto = createSlice ({
                         eamil:dataEamil[0].eamil,
                         name:dataEamil[0].name,
                         password:dataEamil[0].password,
-                        uliId:dataEamil[0].uliId
+                        uliId:dataEamil[0].uliId,
+                        tel:dataEamil[0].tel
                     },
                 }  
             } else {
@@ -75,7 +80,8 @@ export const auto = createSlice ({
                         eamil:"",
                         name:"",
                         password:"",
-                        uliId:""
+                        uliId:"",
+                        tel:""
                     },
                 }  
             }
@@ -93,7 +99,8 @@ export const auto = createSlice ({
                         eamil:dataEamil[0].eamil,
                         name:dataEamil[0].name,
                         password:dataEamil[0].password,
-                        uliId:dataEamil[0].uliId
+                        uliId:dataEamil[0].uliId,
+                        tel:dataEamil[0].tel
                     },
                 }  
             } else {
@@ -104,7 +111,8 @@ export const auto = createSlice ({
                         eamil:"",
                         name:"",
                         password:"",
-                        uliId:""
+                        uliId:"",
+                        tel:""
                     },
                 }  
             }
