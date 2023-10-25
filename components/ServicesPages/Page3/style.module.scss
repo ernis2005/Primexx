@@ -1,0 +1,121 @@
+.Header{
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    display: grid;
+    row-gap: 60px;
+    width: 100%;
+    span{
+
+    display: grid;
+    row-gap: 30px;
+    h2{
+        color: #000;
+text-align: center;
+
+/* H2 */
+font-family: Geometria1;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 57.6px */
+    }
+    p{
+        color: #000;
+text-align: center;
+
+/* Description */
+font-family: Geometria;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 36px */
+    }
+}
+h2{
+    color: #000;
+text-align: center;
+
+/* H2 */
+font-family: Geometria1;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 57.6px */
+}
+.block1{
+    display: grid;
+    row-gap: 50px;
+    margin-top: 40px;
+.block1Svgs{
+    display:flex;
+    justify-content: space-between;
+    width: 720px;
+    margin: 0 auto;
+  
+    height: 10px;
+    div{
+
+        position: relative;
+        width: 654px;
+        position: absolute;
+        height: 10px;
+        z-index: 1;
+        margin: 0;
+        margin-left: 35px;
+        background: var(--Green, #009345);
+    }
+    svg{
+        width: 120px;
+        height: 120px;
+        margin-top: -56px;
+        position: relative;
+        z-index: 2;
+    }
+}
+.block1info{
+    display: flex;
+    justify-content: space-between;
+    width: 858px;
+    p{
+        color: #000;
+text-align: center;
+
+/* Description */
+font-family: Geometria;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 36px */
+    }
+}
+}
+.Block2{
+    display: flex;
+width: 1200px;
+padding: 60px 10px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 30px;
+background: var(--Dark-Green, #003318);
+div{
+    width: 600px;
+}
+p{
+    color: #FFF;
+text-align: center;
+
+/* Regular text */
+font-family: Geometria;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 24px */
+}
+}
+.block3{
+    width: 1000px;
+    margin: 0 auto;
+}
+}

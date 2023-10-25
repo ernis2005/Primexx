@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 import React, { useState } from 'react'
 import s from './page.module.scss'
@@ -21,7 +22,6 @@ export const FromInput = () => {
         { name:"contacts",title:"Контакты: ", length:10},
         { name:"comments",title:"Комментарии: ", length:13},
     ]
-    // const dispatch = useDispatch()
     const onClicks = (index:number)=> {
         setIndex(index)
     }
@@ -33,7 +33,7 @@ export const FromInput = () => {
     } = useForm<any>()
     const onSubmit: SubmitHandler<any> = (data) =>  {
         
-        console.log('test');
+        console.log(data);
         
     }
     return (
@@ -47,8 +47,8 @@ export const FromInput = () => {
                         [s.block2]: index === 2
                     })} onClick={()=>onClicks(2)} >Америка</div>
             </span><div>
-                {dataInput.map((res) => (
-                    <input placeholder={res.title} {...register(`${res.name}`)} />
+                {dataInput.map((res,i) => (
+                    <input key={i} placeholder={res.title} {...register(`${res.name}`)} />
                 ))}
                 {errors.exampleRequired && <span>This field is required</span>}
                 <button type="submit" style={{ backgroundColor: '#fff' }}>Отправить заявку</button>

@@ -64,19 +64,19 @@ const Header: FC = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link href={'/Page/services'}>
+                        <Link href={'/page/services'}>
                         Услуги
                         </Link></li>
                     <li>
-                        <Link href={'/Page/rates'}>
+                        <Link href={'/page/rates'}>
                         Тарифы
                         </Link></li>
                     <li>
-                        <Link href={'/Page/news'}>
+                        <Link href={'/page/news'}>
                         Новости
                         </Link></li>
                     <li>
-                        <Link href={'/Page/FAQ'}>
+                        <Link href={'/page/FAQ'}>
                         F.A.Q.
                         </Link></li>
                     <li>
@@ -89,7 +89,7 @@ const Header: FC = () => {
                         </Link></li>
                 </ul>
                 <div className={s.buttonSearch}>
-                    <Link href={'/Page/tracking'} style={{border:'none'}}>
+                    <Link href={'/page/tracking'} style={{border:'none'}}>
                         <AiOutlineSearch />
                         <p>Отследить товар</p>
                     </Link>

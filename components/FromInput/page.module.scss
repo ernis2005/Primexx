@@ -46,12 +46,12 @@ border: none;
 }
 .tabs{
     width: 100%;
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
     .block1{
         width: 49%;
         display: flex;
-width: 49%;
+width: 49% !important;
 padding: 15px 20px;
 justify-content: center;
 align-items: center;

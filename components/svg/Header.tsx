@@ -13,3 +13,25 @@ export const HeaderSvg = () => {
         </svg>
     )
 }
+export const  Svg10 = ()=> {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none">
+            <g filter="url(#filter0_d_255_390)">
+                <circle cx="60" cy="60" r="30" fill="#F5F5F5"/>
+                <path fillRule="evenodd" clipRule="evenodd" d="M60 74C67.732 74 74 67.732 74 60C74 52.268 67.732 46 60 46C52.268 46 46 52.268 46 60C46 67.732 52.268 74 60 74ZM60.35 69.1C65.1825 69.1 69.1 65.1825 69.1 60.35C69.1 55.5175 65.1825 51.6 60.35 51.6C55.5175 51.6 51.6 55.5175 51.6 60.35C51.6 65.1825 55.5175 69.1 60.35 69.1Z" fill="#009345"/>
+            </g>
+            <defs>
+                <filter id="filter0_d_255_390" x="0" y="0" width="120" height="120" filterUnits="userSpaceOnUse"colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset/>
+                    <feGaussianBlur stdDeviation="15"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_255_390"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_255_390" result="shape"/>
+                </filter>
+            </defs>
+        </svg>
+    )
+}
