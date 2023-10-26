@@ -10,8 +10,10 @@ import cm from 'classnames'
 //     password:string,
 //     exampleRequired: string
 // }
-
-export const FromInput = () => {
+interface colorType {
+    colors:string
+}
+export const FromInput = ({colors}:colorType) => {
     const [index, setIndex]= useState(1)
     const  dataInput =[
         { name:"link",title:"Ссылка на товар: ", length:17 },
@@ -51,7 +53,7 @@ export const FromInput = () => {
                     <input key={i} placeholder={res.title} {...register(`${res.name}`)} />
                 ))}
                 {errors.exampleRequired && <span>This field is required</span>}
-                <button type="submit" style={{ backgroundColor: '#fff' }}>Отправить заявку</button>
+                <button type="submit" style={{ backgroundColor: `${colors}` }}>Отправить заявку</button>
             </div>
         </form>
         </>

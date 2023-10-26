@@ -33,3 +33,16 @@ background-color: #F5F5F5;
   margin-right: 30px;
 }
 }
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ffffff00;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffffff00;
+  border-radius: 1px;
+  bottom: 3px solid #d4d4d400;
+}

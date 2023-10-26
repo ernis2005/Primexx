@@ -7,8 +7,12 @@ import { CardsBlock6 } from '@/components/Cards/CardsBlock6/CardsBlock6';
 import Header from '@/components/Header/page';
 import Footer from '@/components/Footer/page';
 import { FromInput } from '@/components/FromInput/FromInput';
+import { getNews } from './getData/getData';
 
-export default function Home() {
+const   Home =  async() => {
+    // let data =  await getNews()
+    // console.log(data ,"data");
+    
     return (
         <>
             <Header />
@@ -103,7 +107,7 @@ export default function Home() {
                             с вами свяжется с вами в течении
                             2-х часов в рабочее время.</p>
                     </div>
-                    <div className={s.fromInput}><FromInput/></div>
+                    <div className={s.fromInput}><FromInput colors={"#fff"}/></div>
                 </div>
                 <div></div>
             </main>
@@ -112,3 +116,5 @@ export default function Home() {
 
     );
 }
+
+export default   Home

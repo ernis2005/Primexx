@@ -31,10 +31,14 @@ export const HeaderProfile = () => {
 
                     </div>
                     <ul>
-                        <li> Заказать выкуп</li>
-                        <li>Отследить посылку</li>
+                        <li> <Link href={'/order'}>Заказать выкуп</Link> </li>
+                        <li> <Link href={'/track'}>
+                        Отследить посылку
+                        </Link></li>
                         <li>История посылок</li>
-                        <li>Профиль</li>
+                        <li> <Link href={'/profile'}>
+                        Профиль
+                        </Link> </li>
                     </ul>
                     <button onClick={()=>setModule(true) }>
 

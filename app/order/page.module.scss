@@ -1,0 +1,30 @@
+.block{
+    display: grid;
+    row-gap: 60px;
+    max-width: 600px;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    h2{
+        color: #000;
+        text-align: center;
+        
+        /* H2 */
+        font-family: Geometria1;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%; /* 57.6px */
+    }
+    p{
+        color: var(--Black, #001A0C);
+text-align: center;
+
+/* Regular text */
+font-family: Geometria;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 24px */
+    }
+}
