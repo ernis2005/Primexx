@@ -23,36 +23,36 @@ const Menu = ({ setModule }: Peson) => {
                 <ul>
                     <ul >
                         <li>
-                            <Link href={'/'}>
+                            <Link onClick={() => setModule(false)} href={'/'}>
                                 Главная
                             </Link>
                         </li>
                         <li>
-                            <Link href={'/page/services'}>
+                            <Link onClick={() => setModule(false)} href={'/page/services'}>
                                 Услуги
                             </Link></li>
                         <li>
-                            <Link href={'/page/rates'}>
+                            <Link onClick={() => setModule(false)} href={'/page/rates'}>
                                 Тарифы
                             </Link></li>
                         <li>
-                            <Link href={'/page/news'}>
+                            <Link onClick={() => setModule(false)} href={'/page/news'}>
                                 Новости
                             </Link></li>
                         <li>
-                            <Link href={'/page/FAQ'}>
+                            <Link onClick={() => setModule(false)} href={'/page/FAQ'}>
                                 F.A.Q.
                             </Link></li>
                         <li>
-                            <Link href={'#'}>
+                            <Link onClick={() => setModule(false)} href={'#'}>
                                 О нас
                             </Link></li>
                         <li>
-                            <Link href={'#'}>
+                            <Link onClick={() => setModule(false)} href={'#'}>
                                 Контакты
                             </Link></li>
                     </ul>
-                </ul>
+                </ul>   
                 <div className={s.block2}>
                     <div className={s.block2Contend}>
                         <div className={s.Login}>

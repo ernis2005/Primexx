@@ -33,6 +33,7 @@
             line-height: 120%;
             font-weight: 700;
             font-family: Geometria1;
+            
         }
 
         p {
@@ -56,6 +57,48 @@
             color: var(--Black, #001A0C);
             font-size: 16px;
         }
+        @media screen and (max-width:766px) {
+            h1{
+                font-size: 48px;
+            }
+            p{
+                font-size: 22px;
+            }
+            @media screen and (max-width:585px) {
+                h1{
+                    font-size: 40px;
+                }
+                p{
+                    font-size: 18px;
+                }
+                @media screen and (max-width:485px) {
+                    h1{
+    
+font-size: 24px;
+                    }
+                    p{
+                        font-size: 16px;
+                    }
+                    button {
+                        display: flex;
+width: 220px;
+padding: 10px 20px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+color: var(--Black, #001A0C);
+
+/* Regular text */
+font-family: Geometria;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 24px */
+                    }
+                }
+            }
+            
+        }
     }
 }
 .block2{
@@ -71,6 +114,15 @@
         font-style: normal;
         font-weight: 000;
         line-height: 150%; /* 36px */
+        @media screen and (max-width:1118px) {
+            font-size: 18px;
+            br{
+                display: none;
+            }
+            @media screen and (max-width:568px) {
+                font-size: 15px;
+            }
+        }
     }
 
 }

@@ -40,7 +40,7 @@ export const HeaderProfile = () => {
                         Профиль
                         </Link> </li>
                     </ul>
-                    <button onClick={()=>setModule(true) }>
+                    <button onClick={()=>setModule(true) }> 
                         <AiOutlineMenu />
                     </button>
 

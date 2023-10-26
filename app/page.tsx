@@ -9,14 +9,12 @@ import Footer from '@/components/Footer/page';
 import { FromInput } from '@/components/FromInput/FromInput';
 import { getNews } from './getData/getData';
 
-const   Home =  async() => {
-    // let data =  await getNews()
-    // console.log(data ,"data");
-    
+const Home = async () => {
+
     return (
         <>
             <Header />
-            <main style={{ marginTop: '124px' }} className={s.main}>
+            <main className={`top ${s.main}`}>
                 <div className={s.block1}>
                     <div className={s.bg}>
                         <Image
@@ -45,7 +43,7 @@ const   Home =  async() => {
                     </p>
                     <CardsBlock1 />
                 </div>
-
+                {/*
                 <div className={s.block3}>
                     <h3>Преимущества заказа из зарубежных сайтов</h3>
                     <p>Что делают привлекательными онлайн шоппинг на зарубежных сайтах?</p>
@@ -108,7 +106,7 @@ const   Home =  async() => {
                             2-х часов в рабочее время.</p>
                     </div>
                     <div className={s.fromInput}><FromInput colors={"#fff"}/></div>
-                </div>
+                </div> */}
                 <div></div>
             </main>
             <Footer />
@@ -117,4 +115,4 @@ const   Home =  async() => {
     );
 }
 
-export default   Home
+export default Home
