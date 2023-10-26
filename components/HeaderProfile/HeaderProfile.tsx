@@ -41,7 +41,6 @@ export const HeaderProfile = () => {
                         </Link> </li>
                     </ul>
                     <button onClick={()=>setModule(true) }>
-
                         <AiOutlineMenu />
                     </button>
 

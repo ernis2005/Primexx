@@ -25,7 +25,6 @@ const Header: FC = () => {
         if (returnFormData !== null) {
             dispatch(AutoLogin(returnFormData))
         }
-
     }, [])
     return (
         <div className={s.Header}>
