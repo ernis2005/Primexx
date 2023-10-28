@@ -43,11 +43,11 @@ const Home = async () => {
                     </p>
                     <CardsBlock1 />
                 </div>
-                {/*
+               
                 <div className={s.block3}>
                     <h3>Преимущества заказа из зарубежных сайтов</h3>
                     <p>Что делают привлекательными онлайн шоппинг на зарубежных сайтах?</p>
-                    <div className={s.block2Image}>
+                    {/* <div className={s.block2Image}>
                         <Image
                             layout="fill"
                             alt="/"
@@ -57,9 +57,9 @@ const Home = async () => {
                     </div>
                     <div className={` Contend ${s.block2Info}`}>
                         <CardsBlock2 />
-                    </div>
+                    </div> */}
                 </div>
-                <div></div>
+                {/* <div></div>
                 <div className={`Contend ${s.block3}`} >
                     <h3>
                         Этапы работы
