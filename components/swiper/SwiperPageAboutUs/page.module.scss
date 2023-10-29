@@ -1,0 +1,20 @@
+.Card{
+ 
+height: 450px;
+background: var(--Black, #001A0C);
+color: #fff ;
+align-items: center;
+    text-align: center;
+    display: grid;
+    @media screen and (max-width:430px)  {
+         height: 400px;
+    }
+}
+.Block{
+    max-width:1200px;
+    overflow: hidden;
+     
+        @media screen and (max-width:1264px) {
+     width: 100%;   
+    }
+}

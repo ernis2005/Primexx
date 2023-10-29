@@ -1,10 +1,12 @@
 .block1{
-    width: 100%;
+    width: 1200px;
+   
+    
     justify-content: space-between;
 }
 .table{
     display: block;
-    width: 100%;
+   
     .block1{
         justify-content: space-between;
         display: flex;
@@ -12,7 +14,7 @@
         background: var(--Dark-Green, #003318);
         tr{
             display: flex;
-           width: 100%;
+           width: 1200px;
         
            justify-content: space-between;
            align-items: center;

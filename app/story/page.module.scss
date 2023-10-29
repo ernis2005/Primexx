@@ -1,0 +1,58 @@
+.header {
+    display: grid;
+    row-gap: 60px;
+    padding-top: 60px;
+    overflow: hidden;
+    padding-bottom: 60px;
+
+    div {
+        width: 100%;
+        display: grid;
+        row-gap: 30px;
+    }
+
+    span {
+        display: flex;
+        gap: 30px;
+        @media screen and (max-width:539px) {
+        display: grid           ;
+        gap: 10px;
+        }
+
+        p {
+            color: #000;
+
+            /* Description */
+            font-family: Geometria1;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            /* 36px */
+
+        }
+
+        a {
+            color: var(--Green, #009345);
+            font-family: Geometria;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%;
+            /* 36px */
+            text-decoration-line: underline;
+        }
+
+        @media screen and (max-width:688px) {
+            p {
+                font-size: 24px;
+            }
+
+            a {
+                font-size: 16px;
+                align-items: center;
+                display: grid;
+            }
+        }
+    }
+}

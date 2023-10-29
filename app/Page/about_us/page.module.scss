@@ -1,0 +1,42 @@
+.Header{
+    display: grid;
+
+    row-gap: 60px;
+    .contend{
+        display: grid;
+        row-gap: 30px;
+        h3{
+            color: #000;
+            text-align: center;
+            
+            /* Description */
+            font-family: Geometria;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%; /* 36px */
+            @media screen and (max-width:630px) {
+               br{
+                display: none;
+               }
+            }
+        }
+        p{
+            color: #000;
+
+/* Description */
+font-family: Geometria;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 36px */
+@media screen and (max-width:630px) {
+    
+    font-size: 20px;
+@media screen and (max-width:430px) {
+    font-size: 17px;
+}
+}
+        }
+    }
+}

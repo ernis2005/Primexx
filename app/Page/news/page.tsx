@@ -8,7 +8,7 @@ const page = () => {
     return (
         <>
             <Header />
-            <div style={{marginTop:'124px'}} className={s.Header}>
+            <div  className={`top ${s.Header}`}>
                 <BannerPages
                     name={'Новости'}
                     info={'Узнайте что у нас нового'}

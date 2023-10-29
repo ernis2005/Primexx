@@ -3,7 +3,11 @@
      row-gap: 30px;
      
      .card{
-        width: 100%;
+        
+        width: 1200px;
+        @media screen and (max-width:1238px) {
+        
+        width: 100%;}
        display: block;
 .block1{
     background: var(--Green, #009345);

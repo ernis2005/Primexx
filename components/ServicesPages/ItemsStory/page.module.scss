@@ -1,0 +1,171 @@
+.BlockINfo {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width:923px) {
+        display: grid;
+        justify-content: center;
+        row-gap: 60px;
+        
+    }
+
+    .block2 {
+        height: 291px;
+
+        row-gap: 30px;
+        display: grid !important;
+        justify-items: start !important;
+
+        h2 {
+            color: var(--Black, #001A0C);
+
+            /* Description */
+            font-family: Geometria !important;
+            font-size: 24px !important;
+            font-style: normal !important;
+            font-weight: 600 !important;
+            line-height: 150% !important;
+margin-left: 1px !important;
+            /* 36px */
+            @media screen and (max-width:1145px) {
+                font-size: 16px !important;
+
+            }
+        }
+
+        div {
+            display: grid;
+            gap: 30px;
+
+            span {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                p {
+                    max-width: 240px;
+                    color: var(--Black, #001A0C);
+
+                    /* Regular text */
+                    font-family: Geometria;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 150%;
+                    /* 24px */
+                    list-style: none;
+                }
+                h4 {
+                    max-width: 240px;
+                    color: var(--Black, #001A0C);
+                    font-family: Geometria;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 150%;
+                    list-style: none;
+                }
+
+            }
+
+        }
+
+        button {
+            display: flex;
+            padding: 15px 20px;
+            align-items: flex-start;
+            gap: 10px;
+            align-self: stretch;
+            background: var(--Green, #009345);
+            color: #FFF;
+            text-align: center;
+
+            /* Regular text */
+            font-family: Geometria;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            line-height: 150%;
+            /* 24px */
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    .Items {
+        position: relative;
+        display: grid;
+        row-gap: 40px;
+
+        li {
+            position: relative;
+            display: flex;
+            gap: 30px;
+.s{
+width: 10px;
+position: absolute;
+background: #009345;
+height: 108px;
+margin-left: 40px;
+margin-top: 24px;
+z-index: 1;
+@media screen and (max-width:1145px) {
+    margin-left: 35px;
+
+}
+}
+            svg {
+                position: absolute;
+                width: 90px;
+                height: 90px;
+                margin-top: -17px;
+                z-index: 2;
+
+                @media screen and (max-width:1145px) {
+                    width: 79px;
+                    height: 79px;
+                    margin-top: -15px;
+
+                }
+            }
+
+            div {
+                display: grid;
+                row-gap: 10px;
+                margin-left: 110px;
+
+                P {
+                    color: #000;
+                    font-family: Geometria;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 150%;
+                    /* 24px */
+                }
+
+                span {
+                    color: #4D4D4D;
+                    font-family: Geometria;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 5 00;
+                    line-height: 100%;
+                    /* 16px */
+                }
+
+                @media screen and (max-width:1145px) {
+                    margin-left: 90px;
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+
+    }
+}

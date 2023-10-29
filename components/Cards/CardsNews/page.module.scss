@@ -2,14 +2,41 @@
     display: flex;
 gap: 30px;
 flex-wrap: wrap;
+@media screen and (max-width:1009px) {
+    display: grid;
+grid-template-columns: 2fr 2fr ;
+gap: 30px;
+@media screen and (max-width:563px) {
+    grid-template-columns: 2fr  ;
+}
+}
+
 .Card{
  
-   
+   a{
+    text-decoration: none;
+   }
 width: 380px;
 height: 380px;
 padding: 30px;
 background-color: rgb(0, 0, 0);
 position: relative;
+@media screen and  (max-width:1243px) {
+    width: 31%;
+   @media screen and (max-width:1117px) {
+    height: 300px;
+    @media screen and (max-width:1009px) {
+        width: 100%;
+        height: 400px;
+        @media screen and (max-width:883px) {
+            height: 350px;
+            @media screen and (max-width:759px) {
+                height: 300px;
+            }
+        }
+    }
+   }
+}
 img{
     position: absolute;
     opacity: 0.7;
@@ -18,6 +45,7 @@ img{
     position: relative;
     z-index: 2;
    height: 100%;
+
    display: grid;
    align-content: space-between;
    opacity: 1;
@@ -33,16 +61,20 @@ img{
         font-size: 30px;
         font-family: Geometria1;
         font-weight: 400;
-        position: absolute;
-        margin-top: -80px;
+
+        @media screen and (max-width:675px) {
+            font-size: 25px;
+        }
     }
     span{
         background: var(--Green, #009345);
         padding: 5px;
         max-width: 100%;
-        margin-top: -30px;
-        position: absolute;
+        
         color: #fff !important;
+        @media screen and (max-width:675px) {
+            font-size: 15px;
+        }
 
     }
    }
@@ -73,6 +105,9 @@ border: none;
 background: var(--Green, #009345);
 cursor: pointer;
 margin-bottom: 40px;
+@media screen and (max-width:442px ) {
+    width: 100%;
+}
 }
 .Header{
     display: grid;

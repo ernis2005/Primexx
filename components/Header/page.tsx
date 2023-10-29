@@ -81,7 +81,7 @@ const Header: FC = () => {
                             F.A.Q.
                         </Link></li>
                     <li>
-                        <Link href={'#'}>
+                        <Link href={'/page/about_us'}>
                             О нас
                         </Link></li>
                     <li>

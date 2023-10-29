@@ -35,7 +35,7 @@ export const HeaderProfile = () => {
                         <li> <Link href={'/track'}>
                         Отследить посылку
                         </Link></li>
-                        <li>История посылок</li>
+                        <li> <Link href={'/story'}>История посылок</Link> </li>
                         <li> <Link href={'/profile'}>
                         Профиль
                         </Link> </li>

@@ -22,7 +22,7 @@ export const Tabels1 = () => {
                     {data.map((res,index)=> (
                         <tr  className={s.block2} key={index}>
                             <td>{res.rate}</td>
-                            <td>{res.price}</td>
+                            <td >{res.price}</td>
                             <td>{res.deliveryPeriod}</td>
                             <td>{res.dispatch}</td>
                         </tr>

@@ -1,6 +1,8 @@
 import { CardServicesPage } from '@/components/Cards/CardServicesPage/CardServicesPage'
 import React from 'react'
 import s from './style.module.scss'
+import { FAQAccordionPage } from '@/components/Accordion/FAQAccordionPage/FAQAccordionPage'
+import { data } from '@/app/page/FAQ/page'
 export const Page6 = () => {
     return (
         <div className={`Contend  ${s.Header}   ` }>
@@ -38,6 +40,8 @@ export const Page6 = () => {
                 <li>Подготовка к отправке</li>
                 <li>Таможенное оформление</li>
             </ul>
+            <FAQAccordionPage data={data} />
+            <div></div>
         </div>
     )
 }

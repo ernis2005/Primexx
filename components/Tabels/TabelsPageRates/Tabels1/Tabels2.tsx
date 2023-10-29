@@ -23,7 +23,7 @@ export const Tabels2 = () => {
                     <tr  >
                         <th>Услуга</th>
                       
-                        <th>Срок доставки</th>
+                        <th style={{width:"550px"}}>Срок доставки</th>
                         <th>Дополнительно</th>
                     </tr>
                 </thead>
@@ -31,7 +31,7 @@ export const Tabels2 = () => {
                     {data.map((res,index)=> (
                         <tr  className={s.block2} key={index}>
                             <td>{res.rate}</td>
-                            <td>{res.price}</td>
+                            <td style={{width:"550px"}}>{res.price}</td>
                             <td>{res.deliveryPeriod}</td>
                         
                         </tr>
