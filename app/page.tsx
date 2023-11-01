@@ -43,11 +43,11 @@ const Home = async () => {
                     </p>
                     <CardsBlock1 />
                 </div>
-               
+
                 <div className={s.block3}>
                     <h3>Преимущества заказа из зарубежных сайтов</h3>
                     <p>Что делают привлекательными онлайн шоппинг на зарубежных сайтах?</p>
-                    {/* <div className={s.block2Image}>
+                    <div className={s.block2Image}>
                         <Image
                             layout="fill"
                             alt="/"
@@ -57,14 +57,14 @@ const Home = async () => {
                     </div>
                     <div className={` Contend ${s.block2Info}`}>
                         <CardsBlock2 />
-                    </div> */}
+                    </div>
                 </div>
-                {/* <div></div>
-                <div className={`Contend ${s.block3}`} >
+                <div></div>
+                {/* <div className={`Contend ${s.block3}`} >
                     <h3>
                         Этапы работы
                     </h3>
-                </div>
+                </div> */}
                 <div className={`Contend  ${s.block4} `}>
                     <h3>
                         Хотите выкупить товар самостоятельно <br />и у вас есть зарубежная
@@ -75,12 +75,14 @@ const Home = async () => {
                         <span>Америке</span> <br />
                         для самостоятельных покупок
                     </p>
-                    <div>
+                    <div className={s.block4Images}>
                         <Image
                             src={'/images/Background1.png'}
-                            width={700}
-                            height={500}
+
+                            layout="fill"
+
                             alt="hwllo"
+
                         />
                     </div>
                     <span>Данные адреса вы используете для доставки в интернет-магазинах, а мы получаем ваши посылки и пересылаем их вам.</span>
@@ -88,7 +90,8 @@ const Home = async () => {
                 </div>
                 <div className={` Contend ${s.block5}`}>
                     <h3>Тарифы и сроки</h3>
-                    <TabelsBlock5 />
+                    <div><TabelsBlock5 /></div>
+
                     <button>Узнать подробнее</button>
                 </div>
                 <div className={` Contend ${s.block6}`}>
@@ -105,8 +108,8 @@ const Home = async () => {
                             с вами свяжется с вами в течении
                             2-х часов в рабочее время.</p>
                     </div>
-                    <div className={s.fromInput}><FromInput colors={"#fff"}/></div>
-                </div> */}
+                    <div className={s.fromInput}><FromInput colors={"#fff"} /></div>
+                </div>
                 <div></div>
             </main>
             <Footer />

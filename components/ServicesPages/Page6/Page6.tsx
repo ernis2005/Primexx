@@ -3,6 +3,7 @@ import React from 'react'
 import s from './style.module.scss'
 import { FAQAccordionPage } from '@/components/Accordion/FAQAccordionPage/FAQAccordionPage'
 import { data } from '@/app/page/FAQ/page'
+
 export const Page6 = () => {
     return (
         <div className={`Contend  ${s.Header}   ` }>
@@ -23,7 +24,7 @@ export const Page6 = () => {
                     путём авиа и авто доставки под ключ, по самым выгодным ценам.
                 </span>
             </div>
-            <CardServicesPage />
+            {/* <CardServicesPage /> */}
             <div className={s.Info1}>
                 <p>МЫ НЕ МОЖЕМ БЫТЬ ПРИЧИНОЙ ЗАДЕРЖКИ ДОСТАВКИ ГРУЗА <br />
                     В СЛУЧАЕ ПОЛИТИЧЕСКИХ, ЭКОНОМИЧЕСКИХ, ПРИРОДНЫХ, КЛИМАТИЧЕСКИХ ИЛИ ТАМОЖЕННЫХ ПОТРЯСЕНИЙ.

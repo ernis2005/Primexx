@@ -1,17 +1,17 @@
 .Header {
     display: grid;
     row-gap: 60px;
-width: 100%;
+
     .block {
         display: grid;
         row-gap: 60px;
-width: 100%;
-       
         .Navigation{
             display: flex;
             text-align: left;
             gap: 60px;
             justify-content: center;
+            flex-wrap: wrap;
+            row-gap: 30px ;
             li{
                 list-style: none;
                 color: var(--Black, #001A0C);

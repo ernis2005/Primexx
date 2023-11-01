@@ -22,7 +22,7 @@ export const TabelsBlock5 = () => {
                 </thead>
                 <thead className={s.block2} >
                     {data.map((res,index)=> (
-                        <tr  className={s.block2} key={index}>
+                        <tr  key={index}>
                             <td>{res.rate}</td>
                             <td>{res.price}</td>
                             <td>{res.deliveryPeriod}</td>

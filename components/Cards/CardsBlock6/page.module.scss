@@ -1,16 +1,40 @@
 .Cards{
-    display: flex;
+    display: grid;
     gap: 30px;
-    position: relative;
+
+grid-template-columns: 2fr 2fr ;    position: relative;
+@media screen and (max-width:669px) {
+    grid-template-columns: 2fr  ;  
+}
     .Card{
         display: flex;
-        width: 585px;
+        width: 100%;
         min-height: 350px;
       
         align-items: flex-end;
         gap: 10px;
         position: relative;
         overflow: hidden;
+        @media screen and (max-width:963px) {
+            min-height: 300px;
+            @media screen and (max-width:887px) {
+                min-height: 250px;
+                @media screen and (max-width:791px) {
+                    min-height: 200px;
+                    @media screen and (max-width:669px) {
+                        min-height: 300px;
+                        @media screen and (max-width:510px) {
+                            
+                            min-height: 250px;
+                            @media screen and (max-width:452px) {
+                                min-height: 200px;
+                            }
+                        }
+      
+                    }
+                }
+            }
+        }
      
         
         img{
@@ -34,6 +58,19 @@ width: 100%;
 text-align: left;
 
 box-shadow: -11px -150px 69px -23px rgba(0, 26, 12, 0.884) inset;
+  @media screen and (max-width:963px) {
+            font-size: 30px ;
+            @media screen and (max-width:791px) {
+                font-size: 20px;
+                @media screen and (max-width:669px) {
+                    font-size: 30px ;
+                    @media screen and (max-width:452px) {
+                        font-size: 20px ;
+                    }
+                }
+            }
+        }
+     
 p{
     position: absolute;
     bottom: 30px;

@@ -1,12 +1,18 @@
 .Cards {
     display: grid;
     row-gap: 30px;
-   
+   @media screen and (max-width:851px) {
+    max-width: 1200px !important;
+   }
+   width: 100%;
     .Card {
         display: flex;
         text-align: left;
         gap: 30px;
-
+@media screen and (max-width:502px) {
+    display: grid;
+    row-gap: 30px ;
+}
         .indexBlock {
             display: grid;
             min-width: 100px;
@@ -15,6 +21,9 @@
             align-items: center;
             gap: 10px;
             background: var(--Green, #009345);
+            @media screen and (max-width:502px) {
+                display: none;
+            }
 
             p {
                 color: var(--White, #F5F5F5);
@@ -24,8 +33,9 @@
                 font-size: 48px;
                 font-style: normal;
                 font-weight: 700;
+            
                 margin: 0;
-                padding: 0;
+                padding: 0 !important;
                 line-height: 120%;
                 /* 57.6px */
             }
@@ -35,14 +45,42 @@
             display: grid;
             row-gap: 10px;
             position: relative;
-width: 666px;
-            h2 {
+max-width: 666px;
+      h2 {
                 color: var(--Black, #001A0C);
                 font-family: Geometria !important;
                 font-size: 24px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 150%;
+                display: flex;
+                gap: 10px;
+                @media screen and (max-width:374px) {
+                 font-size: 20px;
+                }
+               
+                span {
+                    display: none;
+                    @media screen and (max-width:502px) {
+                        display: flex;
+min-width: 90px;
+height: 90px;
+padding: 10px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+color: var(--White, #F5F5F5);
+
+/* H2 */
+font-family: Geometria1;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+background: var(--Green, #009345);
+line-height: 120%; /* 57.6px */
+                    }
+                }
 
             }
 
@@ -52,8 +90,34 @@ width: 666px;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
+                padding: 0 !important;
                 line-height: 150%;
+                @media screen and (max-width:844px) {
+                    max-width: 500px !important;
+                    @media screen and (max-width:692px) {
+                        max-width: 400px !important;
+                        @media screen and (max-width:582px) {
+                            max-width: 300px !important;
+                            @media screen and (max-width:502px) {
+                                max-width: 350px !important;
+                            @media screen and (max-width:408px) {
+                                max-width: 320px !important;
+                                @media screen and (max-width:374px) {
+                                    width: 300px;
+                                }
+                            }
+                            }
+                        }
+                    }
+                }
+                      
             }
         }
     }
+}
+.p4{
+    width: 400px;
+}
+.p3{
+    width: 590px;
 }
