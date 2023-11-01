@@ -48,18 +48,18 @@ export const Page3 = () => {
                 </div>
             </div>
 
-           <h2>Оформление выкупа</h2>
+            <h2>Оформление выкупа</h2>
             <div className={s.Block2}>
                 <div>
-                    <FromInput  colors={"#fff"}/>
+                    <FromInput colors={"#fff"} />
                 </div>
                 <p>После заполнения заявки, байер сам с вами свяжется с вами <br />
                     в течении 2-х часов в рабочее время.</p>
-            </div>  
-           <h2>Часто задаваемые вопросы</h2>
+            </div>
+            <h2>Часто задаваемые вопросы</h2>
             <div className={s.block3}>
-                <FAQAccordionPage data={data}/>
-            </div> 
+                <FAQAccordionPage data={data} />
+            </div>
             <div></div>
         </div>
     )
