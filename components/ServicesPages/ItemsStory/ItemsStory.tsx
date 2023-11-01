@@ -1,6 +1,7 @@
 import React from 'react'
 import s from './page.module.scss'
 import { Svg10 } from '@/components/svg/Header'
+import Link from 'next/link'
 const ItemsStory = () => {
     return (
         <div className={s.BlockINfo}>
@@ -65,7 +66,7 @@ const ItemsStory = () => {
                         <h4>354340, г. Сочи, ул. Кирова, дом 20, кв. 56</h4>
                     </span>
                 </div>
-                <button>Оформить доставку по РФ</button>
+                <button><Link href={'/deliveryToRussia'}>Оформить доставку по РФ</Link> </button>
             </div>
         </div>)
 }

@@ -10,7 +10,7 @@ const page = () => {
             <HeaderProfile />
             <div className={`Contend ${s.header}`}>
                 <div>
-                    <span> <p>Актуальные заказы</p> <Link href={'#'}>
+                    <span> <p>Актуальные заказы</p> <Link href={'/deliveryToRussia'}>
                     Оформить доставку по РФ
                     </Link></span>
                     <CardStory/>

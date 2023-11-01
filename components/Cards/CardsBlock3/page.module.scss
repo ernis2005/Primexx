@@ -1,0 +1,159 @@
+.Card{
+    display: grid;
+    grid-template-columns: 2fr 2fr ;
+    justify-content: space-evenly;
+    position: relative;
+align-items: center;
+
+gap: 100px;
+@media screen and (max-width:571px) {
+    grid-template-columns: 2fr ;
+    padding-left: 40px;
+    row-gap: 42px;
+    }
+.p1     {
+    color: var(--Black, #001A0C);
+text-align: right;
+
+/* H2 */
+font-family: Geometria1;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 57.6px */
+@media screen and (max-width:571px) {
+  
+        display: none !important;
+    
+}
+}
+.p2{
+    color: var(--Black, #001A0C);
+    text-align: left;
+    
+    /* H2 */
+    font-family: Geometria1;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 57.6px */
+    @media screen and (max-height:571px) {
+  
+        display: none !important;
+    
+}
+}
+    span {
+display: grid;
+row-gap: 15px;
+        text-align: left;
+        @media screen and (max-height:571px) {
+  
+       text-align: left;
+    }
+        h2 {
+            color: var(--Black, #001A0C);
+
+/* Description */
+font-family: Geometria;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 36px */
+        }
+        p{
+            padding: 0;
+            margin: 0;
+            color: var(--Black, #001A0C);
+
+/* Regular text */
+font-family: Geometria;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 24px */
+        }
+    }
+    .s2{
+        text-align: right;
+        @media screen and (max-width:571px) {
+  
+            text-align: left;
+            margin: 0 auto;
+         }
+        p{
+            padding: 0;
+            margin: 0;
+            
+        }
+    }
+    @media screen and (max-width:571px) {
+  h3{
+    display: none !important;
+  }
+       
+    
+}
+
+}
+.Header{
+    display: grid;
+    row-gap: 60px ;
+ 
+}
+.test{
+    position: absolute;
+    width: 10px;
+    height: 816px;
+
+    left: 50%;
+    
+    border-radius: 10px;
+    margin-top: 40px;
+    @media screen and (max-width:571px) {
+        left:  30px;      }
+
+   
+background: #D9D9D9;
+div{
+      
+       max-height: 100%;
+        width: 100%;
+        z-index: 1;
+        position: absolute;
+        border-radius: 10px;
+background: var(--Green, #009345);
+        
+    }
+    span {
+        width: 300px;
+        row-gap: 81px;
+        position: relative;
+        z-index: 2;
+        display: grid;
+        svg{
+            margin-left: -40px;
+            margin-top: -43px;
+            width: 90px;
+        }
+    }
+    @media screen and (max-width:815px) {
+        height: 942px;
+        span {
+            row-gap: 107px;
+        }
+        @media screen and (max-width:640px) {
+            height: 1024px;
+            span {
+                row-gap: 121px;
+            }
+            @media screen and (max-width:571px) {
+                height: 825px;
+
+                span{
+                    row-gap: 82px;
+                }
+            }
+        }
+    }
+}

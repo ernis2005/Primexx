@@ -8,6 +8,7 @@ import Header from '@/components/Header/page';
 import Footer from '@/components/Footer/page';
 import { FromInput } from '@/components/FromInput/FromInput';
 import { getNews } from './getData/getData';
+import { CardsBlock3 } from '@/components/Cards/CardsBlock3/CardsBlock3';
 
 const Home = async () => {
 
@@ -60,11 +61,15 @@ const Home = async () => {
                     </div>
                 </div>
                 <div></div>
-                {/* <div className={`Contend ${s.block3}`} >
+                <div className={`Contend ${s.block3}`} >
                     <h3>
                         Этапы работы
                     </h3>
-                </div> */}
+                    <div>
+                        <CardsBlock3 />
+                    </div>
+                    <div></div>
+                </div>
                 <div className={`Contend  ${s.block4} `}>
                     <h3>
                         Хотите выкупить товар самостоятельно <br />и у вас есть зарубежная
@@ -78,11 +83,8 @@ const Home = async () => {
                     <div className={s.block4Images}>
                         <Image
                             src={'/images/Background1.png'}
-
                             layout="fill"
-
                             alt="hwllo"
-
                         />
                     </div>
                     <span>Данные адреса вы используете для доставки в интернет-магазинах, а мы получаем ваши посылки и пересылаем их вам.</span>

@@ -6,7 +6,7 @@ import s from './page.module.scss'
 
 const page = () => {
     const [scr, setScr] = useState(0)
-    const [winScrs, setWinScrs] = useState<number>(0)
+   
     const refComponent: React.MutableRefObject<any> = useRef();
     const onScroll = () => {
         const winScr = document.documentElement.scrollTop-500;
@@ -14,7 +14,7 @@ const page = () => {
 
         // const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const height = refComponent.current.getBoundingClientRect().height;
-        setWinScrs(winScr)
+      
         console.log(height, "height");
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         if ((_winScrs: any) => 500) {
