@@ -1,12 +1,13 @@
-import { CardServicesPage } from '@/components/Cards/CardServicesPage/CardServicesPage'
+
 import React from 'react'
 import s from './style.module.scss'
+import { CardServicesPage } from '@/components/Cards/CardServicesPage/CardServicesPage'
 import { FAQAccordionPage } from '@/components/Accordion/FAQAccordionPage/FAQAccordionPage'
 import { data } from '@/app/page/FAQ/page'
 
 export const Page6 = () => {
     return (
-        <div className={`Contend  ${s.Header}   ` }>
+        <div className={`  ${s.Header}   ` }>
             <div className={s.Info}>
                 <h2>
                     Доставка коммерческих грузов <br />
@@ -24,7 +25,7 @@ export const Page6 = () => {
                     путём авиа и авто доставки под ключ, по самым выгодным ценам.
                 </span>
             </div>
-            {/* <CardServicesPage /> */}
+            <CardServicesPage />
             <div className={s.Info1}>
                 <p>МЫ НЕ МОЖЕМ БЫТЬ ПРИЧИНОЙ ЗАДЕРЖКИ ДОСТАВКИ ГРУЗА <br />
                     В СЛУЧАЕ ПОЛИТИЧЕСКИХ, ЭКОНОМИЧЕСКИХ, ПРИРОДНЫХ, КЛИМАТИЧЕСКИХ ИЛИ ТАМОЖЕННЫХ ПОТРЯСЕНИЙ.
@@ -32,7 +33,7 @@ export const Page6 = () => {
                 <p>НЕ НЕСЁМ ОТВЕТСТВЕННОСТЬ ЗА ЗАДЕРЖКУ
                     ГРУЗОВ В ТАКИХ ОБСТОЯТЕЛЬСТВАХ!</p>
             </div>
-            <h4>Этапы работы</h4>
+            {/* <h4>Этапы работы</h4>
             <ul className={s.ul}>
                 <li>Прием груза</li>
                 <li>Распределение по регионам</li>
@@ -40,7 +41,7 @@ export const Page6 = () => {
                 <li>Доставка в склад Москвы</li>
                 <li>Подготовка к отправке</li>
                 <li>Таможенное оформление</li>
-            </ul>
+            </ul> */}
             <FAQAccordionPage data={data} />
             <div></div>
         </div>

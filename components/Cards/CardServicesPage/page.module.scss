@@ -1,23 +1,37 @@
 .Cards {
-    display: flex;
-    justify-content: space-between;
-    height: 500px;
-
+    display: grid;
+grid-template-columns: 2fr 2fr 2fr ;
+gap: 30px;
+    
+max-width: 100%;
+@media screen and (max-width:1092px) {
+    grid-template-columns: 2fr 2fr  ;
+    @media screen and (max-width:672px) {
+        grid-template-columns: 2fr;
+    }
+}
     .Card {
         display: grid;
         height: 500px;
-        width: 380px;
+        width: 100%;
         padding: 30px;
         align-content: space-between;
+        row-gap: 30px;
         background: var(--Green, #009345);
-
+        @media screen and (max-width:814px) {
+            h2{
+                font-size: 36px;
+            }
+            min-height: 20px;
+            @media screen and (max-width:672px) {
+height: auto;
+            }
+        }
         .block1 {
             display: grid;
             row-gap: 15px;
             color: var(--White, #F5F5F5);
-
             h2 {
-
                 font-family: Geometria1;
                 font-size: 48px;
                 font-style: normal;
@@ -27,13 +41,17 @@
             }
 
             p {
-
                 font-family: Geometria;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 150%;
                 /* 24px */
+            }
+            @media screen and (max-width:814px) {
+                h2{
+                    font-size: 36px;
+                }
             }
         }
 
