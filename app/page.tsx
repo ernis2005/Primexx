@@ -52,7 +52,7 @@ const Home = async () => {
                         <Image
                             layout="fill"
                             alt="/"
-                            objectFit="convers"
+                            objectFit="cover"
                             src={'/images/Background.png'}
                         />
                     </div>
