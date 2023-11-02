@@ -28,19 +28,19 @@ const Menu = ({ setModule }: Peson) => {
                             </Link>
                         </li>
                         <li>
-                            <Link onClick={() => setModule(false)} href={'/page/services'}>
+                            <Link onClick={() => setModule(false)} href={'/Page/services'}>
                                 Услуги
                             </Link></li>
                         <li>
-                            <Link onClick={() => setModule(false)} href={'/page/rates'}>
+                            <Link onClick={() => setModule(false)} href={'/Page/rates'}>
                                 Тарифы
                             </Link></li>
                         <li>
-                            <Link onClick={() => setModule(false)} href={'/page/news'}>
+                            <Link onClick={() => setModule(false)} href={'/Page/news'}>
                                 Новости
                             </Link></li>
                         <li>
-                            <Link onClick={() => setModule(false)} href={'/page/FAQ'}>
+                            <Link onClick={() => setModule(false)} href={'/Page/FAQ'}>
                                 F.A.Q.
                             </Link></li>
                         <li>
@@ -68,7 +68,7 @@ const Menu = ({ setModule }: Peson) => {
                             </ul>
                         </div>
                         <div className={s.buttonSearch}>
-                            <Link href={'/page/tracking'} style={{ border: 'none' }}>
+                            <Link href={'/Page/tracking'} style={{ border: 'none' }}>
                                 <AiOutlineSearch />
                                 <p>Отследить товар</p>
                             </Link>

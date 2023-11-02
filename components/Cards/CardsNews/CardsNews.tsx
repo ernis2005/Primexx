@@ -19,7 +19,7 @@ export const CardsNews = () => {
             <div className={s.Cards}>
                 {slice.map((res,i)=> (
                     <div key={i} className={s.Card}>
-                        <Link href={'/page/news/1'} >
+                        <Link href={'/Page/news/1'} >
                             <Image  src={'/images/Card2.jpg'} layout="fill"
                                 objectFit="cover"
                                 alt="hwllo"/>
