@@ -9,19 +9,18 @@ export const CardsBlock3 = () => {
 
     const refComponent: React.MutableRefObject<any> = useRef();
     const onScroll = () => {
-        const winScr = document.documentElement.scrollTop - 1611;
-
-        const height = refComponent.current.getBoundingClientRect().height;
-
-
-        if ((_winScrs: number) => 1611) {
-
-            const scrlled = (winScr / height) * 70
-
-
-            setScr(scrlled)
+        let test = 1611
+        const heiScr = window.innerWidth
+        if (heiScr <= 594) {
+            test = 1900
         }
-
+        if (heiScr <= 562) {
+            test = 2500
+        }
+        const winScr: number = document.documentElement.scrollTop - test;
+        const height = refComponent.current.getBoundingClientRect().height;
+        const scrlled = (winScr / height) * 70
+        setScr(scrlled)
     }
 
     useEffect(() => {
@@ -43,7 +42,7 @@ export const CardsBlock3 = () => {
                 <span className={s.s2}>
                     <h2>Выбор товара</h2>
                     <p>Необходимо выбрать товар из любого турецкого или американского
-сайта/маркетплейса.</p>
+                        сайта/маркетплейса.</p>
                 </span>
 
 
@@ -72,14 +71,14 @@ export const CardsBlock3 = () => {
                 <span >
                     <h2>Оформление заказа</h2>
                     <p>Выкупим вами выбранный товар
-в тот же день</p>
+                        в тот же день</p>
                 </span>
             </div>
             <div className={s.Card}>
                 <span className={s.s2}>
                     <h2>Выкуп товара</h2>
                     <p>Принимаем ваши посылки,
-консолидируем и переупаковываем.</p>
+                        консолидируем и переупаковываем.</p>
                 </span>
 
 

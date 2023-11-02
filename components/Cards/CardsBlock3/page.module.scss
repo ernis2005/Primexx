@@ -138,12 +138,12 @@ background: var(--Green, #009345);
         }
     }
     @media screen and (max-width:815px) {
-        height: 942px;
+        height: 922px;
         span {
             row-gap: 107px;
         }
         @media screen and (max-width:640px) {
-            height: 1024px;
+            height: 1004px;
             span {
                 row-gap: 121px;
             }
@@ -153,6 +153,21 @@ background: var(--Green, #009345);
                 span{
                     row-gap: 82px;
                 }
+@media screen and (max-width:463px) {
+    height: 882px;
+    span {
+        row-gap: 95px;
+    }
+@media screen and (max-width:427px) {
+    height: 924px;
+    span {
+        row-gap: 102px;
+    }
+}
+}
+
+
+
             }
         }
     }
