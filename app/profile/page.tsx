@@ -52,7 +52,7 @@ const profile = () => {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default profile

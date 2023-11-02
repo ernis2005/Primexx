@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import s from './style.module.scss'
 import type { SubmitHandler } from 'react-hook-form';
 import { useForm } from 'react-hook-form';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import {useDispatch} from 'react-redux'
 import { Login, useAppSelector } from '../redux/features/auth-slice';
 import { redirect } from 'next/navigation';

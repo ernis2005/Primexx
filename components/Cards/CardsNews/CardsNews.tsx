@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 import s from './page.module.scss'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import { HeaderSvg } from '@/components/svg/Header'
 import cm from 'classnames'
 import Link from 'next/link'

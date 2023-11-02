@@ -1,7 +1,7 @@
 import React from 'react'
 import s from './page.module.scss'
 import { BannerPages } from '@/components/BannerPages/BannerPages'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import Header from '@/components/Header/page'
 import Footer from '@/components/Footer/page'
 const page = () => {

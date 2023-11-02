@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import s from './page.module.scss';
 import { CardsBlock1 } from '@/components/Cards/CardsBlock1/CardsBlock1';
 import { CardsBlock2 } from '@/components/Cards/CardsBlock2/CardsBlock2';
