@@ -15,7 +15,6 @@ interface AuthSate {
     name:string,
     uliId:string,
     tel:string
-
 }
 export const  testData  = [
     {  eamil:'nhtfxnhtfx.9@gmail.com',
@@ -31,7 +30,6 @@ export const  testData  = [
         tel:"0999999999",
     }
 ]
-
 const initialState ={
     value : {
         isAuth:false,
@@ -54,7 +52,6 @@ export const auto = createSlice ({
     initialState: initialState,
     reducers: {
         Login:(state,action:PayloadAction<PayloadActionType>)=> {
-    
             const dataEamil = testData.filter((res,i )=> {
                 if(res.eamil === action.payload.email ) {
                     return res

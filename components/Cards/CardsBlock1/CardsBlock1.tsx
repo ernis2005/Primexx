@@ -1,33 +1,33 @@
 import React from 'react'
 import s from './page.module.scss'
 import Image from "next/legacy/image"
-interface Peson {
-    index: string;
-    info: string;  
-}
-const data:Peson[] = [
-    {index:'01',info:"Наша компания использует современные технологии для оптимизации маршрутов доставки,  чтобы наши клиенты получали свои заказы  в срок."},
-    {index:'02',info:"Мы постоянно следим за развитием индустрии и внедряет инновационные технологии и методы управления логистическими процессами."},
-    {index:'03',info:"Наша команда предоставляет клиентам персонализированные решения и услуги, учитывая их уникальные потребности и особенности бизнеса."},
-    {index:'04',info:"Компания активно работает над уменьшением экологического воздействия своей деятельности."}
-]
-export const CardsBlock1 = () => {
+import { getCardPag1 } from '@/app/getData/getData';
+type Card = {
+    id: number;
+    title: string;
+    description: string;
+    image: string;
+  };
+
+export const CardsBlock1 =  async () => {
+    const data:Card[] = await getCardPag1()
+    
     return (
         <div className={s.Cards}>
             {  data.map((res,i)=> {
                 return (
-                    <div key={i} className={s.Card}>
+                    <div key={res.id} className={s.Card}>
                         <div className={s.bg}>
                             <Image
-                                src={'/images/bg1.jfif'}
+                                src={`${res.image}`}
                                 layout="fill"
                                 objectFit="cover"
                                 alt="hwllo"
                             />
                         </div>
                         <div className={s.info}>
-                            <h3>{res.index}</h3>
-                            <p>{res.info}</p>
+                            <h3>{res.title}</h3>
+                            <p>{res.description}</p>
                         </div>
                     </div>
                 )

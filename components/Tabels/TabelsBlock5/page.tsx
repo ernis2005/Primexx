@@ -1,14 +1,23 @@
-import React from 'react'
+import React, { FC } from 'react'
 import s from './page.module.scss'
-interface Person {
-    rate:string,price:string,deliveryPeriod:string,dispatch:string,
-}
-const data:Person[] = [
-    {rate:"Турция Cтандарт",price:"$9.5",deliveryPeriod:"3-5 дней",dispatch:"5 раз в неделю"},
-    {rate:"Турция Экспресс",price:"$12",deliveryPeriod:"1-2 дня",dispatch:"2 раза в неделю"},
-    {rate:"Америка",price:"$16",deliveryPeriod:"14-16 дней",dispatch:"1 раз в неделю"},
-]
-export const TabelsBlock5 = () => {
+
+type Product = {
+    id: number;
+    title: string;
+    amount: string;
+    delivery_time: string;
+    delivery: string;
+};
+
+type ProductList = Product[];
+type ProductComponentProps = {
+    data: ProductList;
+};
+
+
+export const TabelsBlock5= ({ data }: ProductComponentProps) => {
+    console.log(data, 'Taibel');
+
     return (
         <div>
             <table className={s.table} >
@@ -21,18 +30,18 @@ export const TabelsBlock5 = () => {
                     </tr>
                 </thead>
                 <thead className={s.block2} >
-                    {data.map((res,index)=> (
-                        <tr  key={index}>
-                            <td>{res.rate}</td>
-                            <td>{res.price}</td>
-                            <td>{res.deliveryPeriod}</td>
-                            <td>{res.dispatch}</td>
+                    {data.map((res, index: React.Key) => (
+                        <tr key={index}>
+                            <td>{res.title}</td>
+                            <td>{res.amount}</td>
+                            <td>{res.delivery_time}</td>
+                            <td>{res.delivery}</td>
                         </tr>
                     ))}
                 </thead>
-      
+
             </table>
         </div>
-  
+
     )
 }

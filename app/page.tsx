@@ -7,11 +7,19 @@ import { CardsBlock6 } from '@/components/Cards/CardsBlock6/CardsBlock6';
 import Header from '@/components/Header/page';
 import Footer from '@/components/Footer/page';
 import { FromInput } from '@/components/FromInput/FromInput';
-import { getNews } from './getData/getData';
+import { getNews, getRateTime } from './getData/getData';
 import { CardsBlock3 } from '@/components/Cards/CardsBlock3/CardsBlock3';
 
+type Product = {
+    id: number;
+    title: string;
+    amount: string;
+    delivery_time: string;
+    delivery: string;
+  };
+  
 const Home = async () => {
-
+    const dataRate:Product[] = await getRateTime()
     return (
         <>
             <Header />
@@ -92,7 +100,7 @@ const Home = async () => {
                 </div>
                 <div className={` Contend ${s.block5}`}>
                     <h3>Тарифы и сроки</h3>
-                    <div><TabelsBlock5 /></div>
+                    <div><TabelsBlock5 data={dataRate} /></div>
 
                     <button>Узнать подробнее</button>
                 </div>
