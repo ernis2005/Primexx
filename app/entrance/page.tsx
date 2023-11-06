@@ -27,7 +27,7 @@ const page = () => {
         dispatch(Login(data))
     }
     const   isAuth = useAppSelector((state)=> state.authReducer.value.isAuth)
-    console.log(isAuth);
+   
     
     useEffect(() => {
         if(isAuth === true) {
