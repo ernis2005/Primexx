@@ -5,38 +5,44 @@
     .block {
         display: grid;
         row-gap: 60px;
-        .Navigation{
+
+        .Navigation {
             display: flex;
             text-align: left;
             gap: 60px;
             justify-content: center;
             flex-wrap: wrap;
-            row-gap: 30px ;
-            li{
+            row-gap: 30px;
+
+            li {
                 list-style: none;
                 color: var(--Black, #001A0C);
-font-family: Geometria;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-&:hover {
-    border-bottom: 1px solid #001A0C;
-    transition: 0.7s;
-}
+                font-family: Geometria;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+
+                &:hover {
+                    border-bottom: 1px solid #001A0C;
+                    transition: 0.7s;
+                }
             }
         }
-   
+
     }
 }
-.accNone{
+
+.accNone {
     display: none;
 
 }
-.acc{
+
+.acc {
     display: block;
     width: 100%;
 }
-.accliAcc{
+
+.accliAcc {
     border-bottom: 1px solid black;
 }

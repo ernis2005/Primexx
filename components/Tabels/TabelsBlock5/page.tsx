@@ -15,7 +15,7 @@ type ProductComponentProps = {
 };
 
 
-export const TabelsBlock5= ({ data }: ProductComponentProps) => {
+export const TabelsBlock5 = ({ data }: ProductComponentProps) => {
     console.log(data, 'Taibel');
 
     return (
@@ -30,14 +30,25 @@ export const TabelsBlock5= ({ data }: ProductComponentProps) => {
                     </tr>
                 </thead>
                 <thead className={s.block2} >
-                    {data.map((res, index: React.Key) => (
-                        <tr key={index}>
-                            <td>{res.title}</td>
-                            <td>{res.amount}</td>
-                            <td>{res.delivery_time}</td>
-                            <td>{res.delivery}</td>
+                    {data.length >= 0 ? (
+                        data.map((res, index: React.Key) => (
+                            <tr key={index}>
+                                <td>{res.title}</td>
+                                <td>{res.amount}</td>
+                                <td>{res.delivery_time}</td>
+                                <td>{res.delivery}</td>
+                            </tr>
+                        ))
+                        
+                    ) : (
+                        <tr>
+                            <td>   <h1>helloo</h1></td>
                         </tr>
-                    ))}
+                    )}
+                    {/**/}
+                  
+
+
                 </thead>
 
             </table>

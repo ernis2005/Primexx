@@ -9,7 +9,7 @@ import { useForm } from 'react-hook-form'
 type Inputs = {
     name: string
     tel: string
-    eamil: string
+    email: string
     exampleRequired: string
 }
 
@@ -43,7 +43,7 @@ const profile = () => {
                         </span>
                         <span>
                             <p>Адрес электронной почты</p>
-                            <input defaultValue={`${user.eamil}`} {...register("eamil")} />
+                            <input defaultValue={`${user.email}`} {...register("email")} />
                         </span>
                         {errors.exampleRequired && <span>This field is required</span>}
                         <button type="submit">Сохранить изменения</button>

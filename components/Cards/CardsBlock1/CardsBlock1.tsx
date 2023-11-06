@@ -7,33 +7,33 @@ type Card = {
     title: string;
     description: string;
     image: string;
-  };
+};
 
-export const CardsBlock1 =  async () => {
-    const data:Card[] = await getCardPag1()
-    
+export const CardsBlock1 = async () => {
+    const data: Card[] = await getCardPag1()
     return (
         <div className={s.Cards}>
-            {  data.map((res,i)=> {
-                return (
-                    <div key={res.id} className={s.Card}>
-                        <div className={s.bg}>
-                            <Image
-                                src={`${res.image}`}
-                                layout="fill"
-                                objectFit="cover"
-                                alt="hwllo"
-                            />
+            {data.length >= 0 ? (
+                data.map((res, i) => {
+                    return (
+                        <div key={res.id} className={s.Card}>
+                            <div className={s.bg}>
+                                <Image
+                                    src={`${res.image}`}
+                                    layout="fill"
+                                    objectFit="cover"
+                                    alt="hwllo"
+                                />
+                            </div>
+                            <div className={s.info}>
+                                <h3>{res.title}</h3>
+                                <p>{res.description}</p>
+                            </div>
                         </div>
-                        <div className={s.info}>
-                            <h3>{res.title}</h3>
-                            <p>{res.description}</p>
-                        </div>
-                    </div>
+                    )
+                }
                 )
-            })
-            }
-           
+            ) : null}
         </div>
     )
 }

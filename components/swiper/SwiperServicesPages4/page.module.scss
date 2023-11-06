@@ -1,0 +1,51 @@
+.Card {
+
+    height: 450px;
+ 
+    position: relative;
+    background: var(--Dark-Green, #003318);
+    @media screen and (max-width:430px) {
+        height: 400px;
+    }
+    span {
+        
+ 
+        position: absolute;
+        bottom: 30px;
+        padding: 30px;
+        padding-bottom: 0px;
+        text-align: left !important;
+        h2{
+            color: var(--White, #F5F5F5) !important;
+
+/* Description */
+font-family: Geometria !important;
+font-size: 24px !important;
+font-style: normal;
+
+text-align: left !important;
+font-weight: 300 !important;
+line-height: 150%; /* 36px */
+
+        }
+        p{
+            color: var(--White, #F5F5F5) !important;
+
+/* Regular text */
+font-family: Geometria !important;
+font-size: 16px !important;
+font-style: normal !important;
+font-weight: 400 !important;
+line-height: 150% !important; /* 24px */
+        }
+    }
+}
+
+.Block {
+    max-width: 1200px;
+    overflow: hidden;
+
+    @media screen and (max-width:1264px) {
+        width: 100%;
+    }
+}

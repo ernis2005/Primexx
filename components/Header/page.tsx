@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 import type { FC } from 'react';
 import React, { useEffect } from 'react'
@@ -8,22 +9,26 @@ import { MdOutlineMailOutline } from 'react-icons/md'
 import { HeaderSvg } from '../svg/Header';
 import { AiOutlineMenu, AiOutlineSearch } from 'react-icons/ai'
 import Link from 'next/link';
-import { AutoLogin, useAppSelector } from '@/app/redux/features/auth-slice';
+import { AutoLogin, ugetUsers, useAppSelector } from '@/app/redux/features/auth-slice';
 import { useDispatch } from 'react-redux';
 import cm from 'classnames'
 import Menu from './menu/Menu';
+
+import type { AsyncThunkAction } from '@reduxjs/toolkit';
 const Header: FC = () => {
     const useName = useAppSelector((state) => state.authReducer.value.name)
     const isAuth = useAppSelector((state) => state.authReducer.value.isAuth)
+    console.log(useName);
+    
     const [module1, setModule1] = React.useState(false)
     const dispatch = useDispatch()
     useEffect(() => {
 
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const localStorages: any = localStorage
-        const returnFormData = JSON.parse(localStorages.getItem("uliId"));
+        const localStorages:any = localStorage
+        const returnFormData:any= JSON.parse(localStorages.getItem("uliId"));
         if (returnFormData !== null) {
-            dispatch(AutoLogin(returnFormData))
+            dispatch(ugetUsers(returnFormData))
         }
     }, [])
     return (

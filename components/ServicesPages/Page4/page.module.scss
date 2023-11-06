@@ -1,0 +1,40 @@
+.header {
+    padding: 60px 0px;
+    display: grid;
+    row-gap: 60px;
+
+    span {
+        display: grid;
+        row-gap: 30px;
+        text-align: center;
+
+        h2 {
+            color: #000;
+            text-align: center;
+
+            /* H2 */
+            font-family: Geometria1;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%;
+
+            /* 57.6px */
+            @media screen and (max-width:510px) {
+                font-size: 36px;
+            }
+            p {
+                color: #000;
+                text-align: center;
+
+                /* Description */
+                font-family: Geometria;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 150%;
+                /* 36px */
+            }
+        }
+    }
+}

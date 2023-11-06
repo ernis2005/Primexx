@@ -6,7 +6,7 @@ import { AiOutlineMenu } from 'react-icons/ai'
 import Link from 'next/link'
 import Menu from './menu/Menu'
 import cm from 'classnames'
-import { AutoLogin, useAppSelector } from '@/app/redux/features/auth-slice'
+import { AutoLogin, ugetUsers, useAppSelector } from '@/app/redux/features/auth-slice'
 import { useDispatch } from 'react-redux'
 export const HeaderProfile = () => {
     const  [module,setModule]= React.useState(false)
@@ -16,7 +16,7 @@ export const HeaderProfile = () => {
         const localStorages: any =  localStorage  
         const  returnFormData =JSON.parse(localStorages.getItem("uliId"));
         if (returnFormData  !== null) {
-            dispatch(AutoLogin(returnFormData))
+            dispatch(ugetUsers(returnFormData))
         }
     }, [])
 

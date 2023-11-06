@@ -8,6 +8,7 @@ import Footer from '@/components/Footer/page';
 import { Page6 } from '@/components/ServicesPages/Page6/Page6';
 import cm from 'classnames'
 import { Page3 } from '@/components/ServicesPages/Page3/Page3';
+import { Page4 } from '@/components/ServicesPages/Page4/Page4';
 const page = () => {
     const [navigationIndex, setNavigationIndex] = React.useState(4)
     const NavigationData = ["Доставка", "Бесплатный склад", "Выкуп товара", "Консолидация", "Доставка коммерческих грузов"]
@@ -28,6 +29,11 @@ const page = () => {
                         [s.acc]: navigationIndex === 2
                     })}>
                         <Page3 />
+                    </div>
+                    <div className={cm(s.accNone, {
+                        [s.acc]: navigationIndex === 3
+                    })}>
+                        <Page4 />
                     </div>
                     <div className={cm(s.accNone, {
                         [s.acc]: navigationIndex === 4
