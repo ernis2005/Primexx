@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
-import type { FC } from 'react';
 import React, { useEffect } from 'react'
 import s from './style.module.scss'
 import { CiAlarmOn } from 'react-icons/ci'
@@ -14,8 +13,7 @@ import { useDispatch } from 'react-redux';
 import cm from 'classnames'
 import Menu from './menu/Menu';
 
-import type { AsyncThunkAction } from '@reduxjs/toolkit';
-const Header: FC = () => {
+const Header= () => {
     const useName = useAppSelector((state) => state.authReducer.value.name)
     const isAuth = useAppSelector((state) => state.authReducer.value.isAuth)
     console.log(useName);
@@ -25,8 +23,8 @@ const Header: FC = () => {
     useEffect(() => {
 
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const localStorages:any = localStorage
-        const returnFormData:any= JSON.parse(localStorages.getItem("uliId"));
+        const localStorages= localStorage
+        const returnFormData= JSON.parse(localStorages.getItem("uliId"));
         if (returnFormData !== null) {
             dispatch(ugetUsers(returnFormData))
         }

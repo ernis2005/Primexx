@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
-import type { PayloadAction } from "@reduxjs/toolkit";
+
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 import { redirect } from "next/navigation";
-import type { TypedUseSelectorHook } from "react-redux";
+
 import { useDispatch, useSelector } from "react-redux";
-import type { RootSate } from "../store";
+
 import error from "next/error";
 import { start } from "repl";
 import axios, { AxiosError } from "axios";
@@ -30,16 +31,7 @@ export  const ugetUsers = createAsyncThunk(
         }
     }
 )
-interface AuthSate {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    [x: string]: any;
-    isAuth: true;
-        email: string;
-        name: string;
-        tel: string;
-        code_logistic: string;
-        send_code: string;
-}
+
 export const testData = [
     {
         eamil: 'nhtfxnhtfx.9@gmail.com',
@@ -66,20 +58,14 @@ const initialState = {
         code_logistic: "",
         info:""
     
-    } as unknown as AuthSate
+    } 
 }
-interface PayloadActionType {
-    email: string,
-    password: string,
-}
-interface AutoLoginType {
-    uliId: ""
-}
+
 export const auto = createSlice({
     name: "autor",
     initialState: initialState,
     reducers: {
-        Login:  (state, action: PayloadAction<PayloadActionType>) =>  {
+        Login:  (state, action) =>  {
             const datas = axios.post(`${api}/account/token/`, {
                 email: action.payload.email,
                 password: action.payload.password
@@ -104,7 +90,7 @@ export const auto = createSlice({
             });
 
         },
-        AutoLogin: (start, action: PayloadAction<AuthSate>) => { 
+        AutoLogin: (start, action) => { 
             console.log(action);
         
             return {
@@ -128,4 +114,4 @@ export const auto = createSlice({
 )
 export const { Login, AutoLogin } = auto.actions
 export default auto.reducer
-export const useAppSelector: TypedUseSelectorHook<RootSate> = useSelector
+export const useAppSelector= useSelector

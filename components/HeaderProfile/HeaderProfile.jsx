@@ -12,8 +12,7 @@ export const HeaderProfile = () => {
     const  [module,setModule]= React.useState(false)
     const dispatch = useDispatch()
     useEffect(() => {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const localStorages: any =  localStorage  
+        const localStorages =  localStorage  
         const  returnFormData =JSON.parse(localStorages.getItem("uliId"));
         if (returnFormData  !== null) {
             dispatch(ugetUsers(returnFormData))
