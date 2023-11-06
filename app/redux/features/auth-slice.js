@@ -7,7 +7,7 @@ import { redirect } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 
 import error from "next/error";
-import { start } from "repl";
+
 import axios, { AxiosError } from "axios";
 import { api, getUser,  } from "@/app/getData/getData";
 import { useState } from "react";
