@@ -34,8 +34,7 @@ export const FromInput = ({colors}:colorType) => {
         formState: { errors },
     } = useForm<any>()
     const onSubmit: SubmitHandler<any> = (data) =>  {
-        
-        console.log(data);
+
         
     }
     return (

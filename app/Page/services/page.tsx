@@ -10,8 +10,9 @@ import cm from 'classnames'
 import { Page3 } from '@/components/ServicesPages/Page3/Page3';
 import { Page4 } from '@/components/ServicesPages/Page4/Page4';
 const page = () => {
-    const [navigationIndex, setNavigationIndex] = React.useState(4)
+    const [navigationIndex, setNavigationIndex] = React.useState(2)
     const NavigationData = ["Доставка", "Бесплатный склад", "Выкуп товара", "Консолидация", "Доставка коммерческих грузов"]
+     
     return (
         <>
             <Header />

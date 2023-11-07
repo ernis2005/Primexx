@@ -1,12 +1,23 @@
 import React from 'react'
 import s from './page.module.scss'
-interface Person {
-    rate:string,price:string,deliveryPeriod:string,dispatch:string,
-}
-const data:Person[] = [
-    {rate:"Турция Cтандарт",price:"$9.5",deliveryPeriod:"3-5 дней",dispatch:"Вес округляется от 1 кг"},
-]
-export const Tabels1 = () => {
+type Product = {
+    data:{
+        id: number;
+        title: string;
+        amount: string;
+        delivery_time: string;
+        delivery: string;
+        additionally: string
+    }
+
+};
+
+type ProductList = Product[];
+type ProductComponentProps = {
+    data: ProductList;
+};
+export const Tabels1 = (data: Product) => {
+
     return (
         <div>
             <table className={s.table} >
@@ -19,18 +30,18 @@ export const Tabels1 = () => {
                     </tr>
                 </thead>
                 <thead className={s.block2} >
-                    {data.map((res,index)=> (
-                        <tr  className={s.block2} key={index}>
-                            <td>{res.rate}</td>
-                            <td >{res.price}</td>
-                            <td>{res.deliveryPeriod}</td>
-                            <td>{res.dispatch}</td>
-                        </tr>
-                    ))}
+
+                    <tr className={s.block2}>
+                        <td>{data.data.title}</td>
+                        <td >{data.data.amount}</td>
+                        <td>{data.data.delivery_time}</td>
+                        <td>{data.data.additionally}</td>
+                    </tr>
+
                 </thead>
-      
+
             </table>
         </div>
-  
+
     )
 }

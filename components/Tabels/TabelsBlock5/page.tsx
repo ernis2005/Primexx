@@ -16,7 +16,7 @@ type ProductComponentProps = {
 
 
 export const TabelsBlock5 = ({ data }: ProductComponentProps) => {
-    console.log(data, 'Taibel');
+
 
     return (
         <div>
@@ -45,12 +45,7 @@ export const TabelsBlock5 = ({ data }: ProductComponentProps) => {
                             <td>   <h1>helloo</h1></td>
                         </tr>
                     )}
-                    {/**/}
-                  
-
-
                 </thead>
-
             </table>
         </div>
 

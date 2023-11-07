@@ -1,43 +1,43 @@
 import React from 'react'
 import s from './page.module.scss'
-interface Person {
-    rate:string,price:string,deliveryPeriod:string,
-}
-export const Tabels2 = () => {
-    
-    const data:Person[] = [
-        {rate:"Турция Cтандарт",price:"$9.5",deliveryPeriod:"Проверка содержимого вашей покупки",},
-        {rate:"Турция Cтандарт",price:"$9.5",deliveryPeriod:"Проверка содержимого вашей покупки",},
-        {rate:"Турция Cтандарт",price:"$9.5",deliveryPeriod:"Проверка содержимого вашей покупки",},
-        {rate:"Турция Cтандарт",price:"$9.5",deliveryPeriod:" ------",},
-        {rate:"Турция Cтандарт",price:"$9.5",deliveryPeriod:" ------",},
+type Product = {
+    id: number;
+    title: string;
+    amount: string;
+    delivery_time: string;
+    delivery: string;
+    additionally:string
+};
 
-        {rate:"Турция Cтандарт",price:"$9.5",deliveryPeriod:" ------",},
+type ProductList = Product[];
+type ProductComponentProps = {
+    data: ProductList;
+};
+export const Tabels2 = (data: ProductComponentProps) => {
 
 
-    ]
     return (
         <div>
             <table className={s.table} >
                 <thead className={s.block1}>
                     <tr  >
                         <th>Услуга</th>
-                      
-                        <th style={{width:"550px"}}>Срок доставки</th>
+
+                        <th style={{ width: "550px" }}>Стоимость</th>
                         <th>Дополнительно</th>
                     </tr>
                 </thead>
                 <thead className={s.block2} >
-                    {data.map((res,index)=> (
-                        <tr  className={s.block2} key={index}>
-                            <td>{res.rate}</td>
-                            <td style={{width:"550px"}}>{res.price}</td>
-                            <td>{res.deliveryPeriod}</td>
-                        
+                    {data.data.map((res, index) => (
+                        <tr className={s.block2} key={index}>
+                            <td>{res.title}</td>
+                            <td style={{ width: "550px" }}>{res.amount}</td>
+                            <td>{res.additionally}</td>
+
                         </tr>
                     ))}
                 </thead>
-  
+
             </table>
         </div>
     )

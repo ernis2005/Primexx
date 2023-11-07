@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 import React, { useEffect } from 'react'
 import s from './page.module.scss'
@@ -5,7 +6,7 @@ import type { SubmitHandler } from 'react-hook-form';
 import { useForm } from 'react-hook-form';
 import Image from "next/legacy/image";
 import {useDispatch} from 'react-redux'
-import { Login, useAppSelector } from '../redux/features/auth-slice';
+import { Login, registrationPost, useAppSelector } from '../redux/features/auth-slice';
 import { redirect } from 'next/navigation';
 import {useSelector} from 'react-redux'
 
@@ -29,9 +30,11 @@ const page = () => {
         formState: { errors },
     } = useForm<Inputs>()
     const onSubmit: SubmitHandler<Inputs> = (data) =>  {
-        dispatch(Login(data))
+        dispatch(registrationPost(data))
     }
     const   isAuth = useAppSelector((state)=> state.authReducer.value.isAuth)
+
+    const { status, error }:any = useAppSelector((state) => state.authReducer)
     // useEffect(() => {
     //     if(isAuth === true) {
     //         redirect('/')
@@ -47,7 +50,9 @@ const page = () => {
             </div>
             <form className={s.contend} onSubmit={handleSubmit(onSubmit)}>
                 <h2>Добро пожаловать</h2>
+              
                 <div>
+                    {error && <p>{error}</p>}
                     <span>Ваше имя
                         <input placeholder='Ваше имя' type="text" {...register("name")} />
                     </span>

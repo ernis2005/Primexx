@@ -10,16 +10,15 @@ const page = () => {
     const refComponent: React.MutableRefObject<any> = useRef();
     const onScroll = () => {
         const winScr = document.documentElement.scrollTop-500;
-        console.log(winScr, "winScr");
+       
 
         // const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const height = refComponent.current.getBoundingClientRect().height;
-      
-        console.log(height, "height");
+
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         if ((_winScrs: any) => 500) {
             const scrlled = (winScr / height) * 110
-            console.log(scrlled, 'scrlled');
+           
 
             setScr(scrlled)
         }

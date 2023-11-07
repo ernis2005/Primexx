@@ -5,8 +5,20 @@ import { Tabels1 } from '@/components/Tabels/TabelsPageRates/Tabels1/Tabels1'
 import { Tabels2 } from '@/components/Tabels/TabelsPageRates/Tabels1/Tabels2'
 import Header from '@/components/Header/page'
 import Footer from '@/components/Footer/page'
+import { getRate } from '@/app/getData/getData'
 
-const page = () => {
+type Product = {
+    country: string;
+    id: number;
+    title: string;
+    amount: string;
+    delivery_time: string;
+    delivery: string;
+    additionally: string
+};
+const page = async () => {
+    const data: Product[] = await getRate()
+   
     return (
         <>
             <Header />
@@ -17,7 +29,7 @@ const page = () => {
                 />
                 <div className={`Contend ${s.contend}`}>
                     {/* <div><h2>Турция (Стамбул) - Россия (Москва)</h2></div> */}
-                    <div><h2>США (Делавэр) - Россия (Москва)</h2><Tabels1 />
+                    <div><h2>{data[4].country}</h2><Tabels1 data={data[4]} />
                         <span>
                             <p>Отправка товаров происходит по пятницам. <br />
                                 Коробки от обуви отдельно 1$. Груз от 100 килограмм по 14$ </p>
@@ -27,7 +39,7 @@ const page = () => {
                     </div>
                     <div>
                         <h2>Дополнительные услуги</h2>
-                        <Tabels2 />
+                        <Tabels2 data={data} />
                         <p>Лира к рублю - 5 рублей.</p>
                     </div>
                 </div>

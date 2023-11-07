@@ -20,12 +20,30 @@ export const getRateTime = async () => {
     }
     
 }
+export const getRate = async () => {
+    try {
+        const data = await axios(`http://192.168.89.177:8000/about/rate/`)
+        return data.data
+    } catch (error) {
+        return  error
+    }
+    
+}
 export const getCardPag1 = async () => {
     try {
         const data = await axios('http://192.168.89.177:8000/about/card/')
         return data.data
     } catch (error) {
 
+        return  error
+    }
+
+}
+export const getFAQ = async () => {
+    try {
+        const data = await axios('http://192.168.89.177:8000/about/faq/')
+        return data.data
+    } catch (error) {
         return  error
     }
 

@@ -12,11 +12,11 @@ import { AutoLogin, ugetUsers, useAppSelector } from '@/app/redux/features/auth-
 import { useDispatch } from 'react-redux';
 import cm from 'classnames'
 import Menu from './menu/Menu';
-
+import {LuUserSquare2} from 'react-icons/lu'
 const Header= () => {
     const useName = useAppSelector((state) => state.authReducer.value.name)
     const isAuth = useAppSelector((state) => state.authReducer.value.isAuth)
-    console.log(useName);
+
     
     const [module1, setModule1] = React.useState(false)
     const dispatch = useDispatch()
@@ -46,9 +46,9 @@ const Header= () => {
 
                             {isAuth !== true ? (<><li>
                                 <a href={'/entrance'}>
-                                    Вход
+                                  Вход
                                 </a>
-                            </li><span></span><li>Регистрация</li></>) : <li> <Link href={'/profile'} >{useName}</Link></li>}
+                            </li><span></span><li><Link href={'/registration'}>Регистрация</Link> </li></>) : <li> <Link href={'/profile'} >   <LuUserSquare2/> {useName}</Link></li>}
 
                         </ul>
                     </div>
@@ -87,10 +87,7 @@ const Header= () => {
                         <Link href={'/Page/about_us'}>
                             О нас
                         </Link></li>
-                    <li>
-                        <Link href={'#'}>
-                            Контакты
-                        </Link></li>
+                
                 </ul>
                 <div className={s.buttonSearch}>
                     <Link href={'/Page/tracking'} style={{ border: 'none' }}>

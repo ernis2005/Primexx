@@ -21,7 +21,6 @@ const profile = () => {
         formState: { errors },
     } = useForm<Inputs>()
     const user = useAppSelector((state) => state.authReducer.value)
-    console.log(user);
     return (
         <div>
             <HeaderProfile />

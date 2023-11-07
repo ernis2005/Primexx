@@ -21,8 +21,7 @@ const page = () => {
     } = useForm<fromType>()
     const onSubmit: SubmitHandler<fromType> = (data) => {
 
-        console.log(data);
-
+    
     }
     return (
         <div>

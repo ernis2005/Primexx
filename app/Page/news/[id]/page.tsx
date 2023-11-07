@@ -8,7 +8,7 @@ import { getNewsId } from '@/app/getData/getData'
 const page =  async({ params: { id } }:{params:{id:number}}) => {
    
     const data = await getNewsId(id)
-    console.log(data.data);
+
     
     return (
         <>
