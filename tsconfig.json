@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/Accordion/FAQAccordionPage/FAQAccordionPage.jsx", "app/redux/features/auth-slice.ts", "components/Header/page.jsx", "components/HeaderProfile/HeaderProfile.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/Accordion/FAQAccordionPage/FAQAccordionPage.jsx", "app/redux/features/auth-slice.ts", "components/Header/page.jsx", "components/HeaderProfile/HeaderProfile.jsx", "app/story/page.jsx", "app/redux/features/trac-get.js"],
   "exclude": ["node_modules"]
 }

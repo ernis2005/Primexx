@@ -66,6 +66,12 @@
                     a {
                         color: #fff;
                         text-decoration: none;
+                    svg{
+                        align-items: center;
+                        /* margin-top: 9px; */
+                        position: absolute;
+                        margin-left: -23px;
+                    }
                     }
 
                     li {
@@ -76,6 +82,7 @@
                         font-style: normal;
                         font-weight: 400;
                         line-height: normal;
+                        
 
                     }
 

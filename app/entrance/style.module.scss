@@ -94,3 +94,27 @@ border: none;
       
     }
 }
+.link{
+    margin: 0 auto;
+    
+    color: var(--Black, #001A0C) !important;
+text-align: center;
+
+/* Regular text */
+font-family: Geometria;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 24px */
+a{
+    color: var(--Green, #009345) !important;
+    text-decoration: none;
+
+/* Regular text */
+font-family: Geometria;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%;
+}
+}

@@ -1,5 +1,12 @@
+
+
+import { kye } from "@/components/ServicesPages/Page6/Page6";
 import axios from "axios"
+
 export const api = 'http://192.168.89.177:8000'
+
+console.log(kye);
+
 export const getNews = async () => {
     const data = await axios('http://192.168.89.177:8000/about/blog/')
 
@@ -48,6 +55,26 @@ export const getFAQ = async () => {
     }
 
 }
+export const getAboutUs = async () => {
+    try {
+        const data = await axios('http://192.168.89.177:8000/about/about_us/')
+        return data.data
+    } catch (error) {
+        return  error
+    }
+
+}
+export const getShop = async (props:{country__id:number,category__id:number}) => {
+    try {
+        const data = await axios(`http://192.168.89.177:8000/about/shop/?country__id=${props.country__id}&category__id=${props.category__id}`)
+    
+        return data.data
+    } catch (error) {
+        return  error
+    }
+
+}
+
 
 export const getUser = async (kye:string) => {
     try {

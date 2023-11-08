@@ -4,7 +4,9 @@ import Header from '@/components/Header/page'
 import Footer from '@/components/Footer/page'
 import { BannerPages } from '@/components/BannerPages/BannerPages'
 import { SwiperPageAboutUs } from '@/components/swiper/SwiperPageAboutUs/SwiperPageAboutUs'
-const page = () => {
+import { getAboutUs } from '@/app/getData/getData'
+const page = async () => {
+    const data = await getAboutUs()
     return (
         <div>
             <Header />
@@ -19,7 +21,7 @@ const page = () => {
                     <p>Мы — логистическая компания Primex, и нашей гордостью является обеспечение оперативной и надежной доставки товаров из Турции и Америки в Россию. </p>
                     <p>Мы понимаем, как важно для вас получить свои товары в кратчайшие сроки, и именно поэтому мы сделали эту задачу своей основной миссией создавая условия для наших клиентов возможность совершать самостоятельные покупки, также с помощью байера</p>
                     <p></p>
-                    <SwiperPageAboutUs/>
+                    <SwiperPageAboutUs data={data}/>
                     <p>Сотрудничая с Primex, вы получаете надежного партнера, который постарается превысить ваши ожидания. Мы гордимся тем, что наши клиенты могут полностью доверять нам в вопросах доставки и обработки товаров.</p>
                     <p>Сделайте первый шаг к быстрой и надежной доставке из Турции и Америки в Россию с нами!</p>
                     <p> </p>

@@ -2,25 +2,22 @@
 "use client"
 import React, { useEffect } from 'react'
 import s from './page.module.scss'
+import { InputMask } from '@react-input/mask';
 import type { SubmitHandler } from 'react-hook-form';
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 import Image from "next/legacy/image";
-import {useDispatch} from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { Login, registrationPost, useAppSelector } from '../redux/features/auth-slice';
-import { redirect } from 'next/navigation';
-import {useSelector} from 'react-redux'
-
 type Inputs = {
     email: string,
-    password:string,
-    name:string,
-    lastName:string,
-    tel:string |number,
+    password: string,
+    name: string,
+    lastName: string,
+    tel: string | number,
     exampleRequired: string,
-    repeatPassword:string
-
+    repeatPassword: string
+    role: string
 }
-
 const page = () => {
     const dispatch = useDispatch()
     const {
@@ -29,18 +26,18 @@ const page = () => {
         watch,
         formState: { errors },
     } = useForm<Inputs>()
-    const onSubmit: SubmitHandler<Inputs> = (data) =>  {
+    const onSubmit: SubmitHandler<Inputs> = (data) => {
         dispatch(registrationPost(data))
     }
-    const   isAuth = useAppSelector((state)=> state.authReducer.value.isAuth)
-
-    const { status, error }:any = useAppSelector((state) => state.authReducer)
+    // const isAuth = useAppSelector((state) => state.authReducer.value.isAuth)
+    const { status, error }: any = useAppSelector((state) => state.authReducer)
     // useEffect(() => {
     //     if(isAuth === true) {
     //         redirect('/')
     //     }
     // }, [isAuth])
-   
+
+
     return (
         <div className={s.Header} >
             <div className={s.bg}>
@@ -50,7 +47,7 @@ const page = () => {
             </div>
             <form className={s.contend} onSubmit={handleSubmit(onSubmit)}>
                 <h2>Добро пожаловать</h2>
-              
+
                 <div>
                     {error && <p>{error}</p>}
                     <span>Ваше имя
@@ -60,7 +57,21 @@ const page = () => {
                         <input placeholder='Ваша фамилия' type="text" {...register("lastName")} />
                     </span>
                     <span>Номер телефона
-                        <input placeholder='+996 (###) 999 999' type="tel" {...register("tel")} />
+                        <InputMask
+                            placeholder='+7 (___) ___-__-__'
+                            mask="+7 (___) ___-__-__"
+                            {...register("tel")}
+                            replacement={{ _: /\d/ }}
+                        />
+                        {/* <input placeholder='+996 (###) 999 999' type="tel" {...register("tel")} /> */}
+                    </span>
+                    <span>
+                        Роль
+                        <select className={s.input} {...register("role")}>
+                            <option value="1">user</option>
+                            <option value="0">байер </option>
+
+                        </select>
                     </span>
                     <span>Электронная почта
                         <input placeholder='email' type="email" {...register("email")} />

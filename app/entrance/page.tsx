@@ -9,6 +9,7 @@ import { useDispatch } from 'react-redux'
 import { Login, postLogin, useAppSelector } from '../redux/features/auth-slice';
 import { redirect } from 'next/navigation';
 import { useSelector } from 'react-redux'
+import Link from 'next/link';
 
 type Inputs = {
     email: string,
@@ -29,7 +30,7 @@ const page = () => {
     }
     const isAuth = useAppSelector((state) => state.authReducer.value.isAuth)
 
-    const { status, error }:any = useAppSelector((state) => state.authReducer)
+    const { status, error }: any = useAppSelector((state) => state.authReducer)
     useEffect(() => {
         if (isAuth === true) {
             redirect('/')
@@ -57,6 +58,11 @@ const page = () => {
                     </span>
                     {errors.exampleRequired && <span>This field is required</span>}
                     <button type="submit">Войти</button>
+                 
+                    <p className={s.link}>Нет аккаунта? <Link href={'/registration'}>
+                            Создать аккаунт
+                    </Link></p>
+                    
                 </div>
             </form>
         </div>

@@ -37,7 +37,7 @@
             display: grid;
             width: 400px;
             row-gap: 30px;
-
+ row-gap: 15px;
             padding: 24px;
             @media screen and (max-width:476px) {
                 width: 360px;
@@ -50,8 +50,21 @@
             }
 span {
     width: 100%;
+    display: grid;
+    row-gap: 5px;
 }
             input {
+                color: rgba(0, 26, 12, 0.50);
+                font-family: Geometria;
+                font-size: 16px;
+                font-style: normal;
+                padding: 5px;
+                font-weight: 600;
+                line-height: 150%;
+                outline: none;
+                width: 100%;
+            }
+            .input{
                 color: rgba(0, 26, 12, 0.50);
                 font-family: Geometria;
                 font-size: 16px;
