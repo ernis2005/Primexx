@@ -1,3 +1,4 @@
+import { kye } from "@/components/ServicesPages/Page6/Page6";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
@@ -15,7 +16,7 @@ const initialState = {
     } 
 }
 export const getTrac = createAsyncThunk(
-    'trac/getTrac' , async function(){
+    'trac/getTrac' , async function(kye,{rejectWithValue}){
         try {
             
             const data = await axios('http://192.168.89.177:8000/flight/baseparcels/',{
@@ -25,9 +26,10 @@ export const getTrac = createAsyncThunk(
                     Authorization: `Bearer ${kye} `,
                 },
             })
-            return data.data
+            return data.data    
         } catch (error) {
-            return error
+
+            return  rejectWithValue(error.response.data.message)
         }
     }
 )
@@ -42,6 +44,18 @@ export const trac = createSlice({
         test:()=>{}
     },
     extraReducers: {
+        [getTrac.pending]: (state, action) => {
+            state.status = "loading"
+        },
+        [getTrac.fulfilled]: (state, { payload }) => {
+            state.status = "success"
+            state.trac = payload
+        },
+        [getTrac.rejected]: (state, action) => { 
+            
+            state.status = "failed"
+            state.error = action.payload.message
+        }
       
     }
 })

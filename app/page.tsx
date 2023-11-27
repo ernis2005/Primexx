@@ -7,17 +7,15 @@ import { CardsBlock6 } from '@/components/Cards/CardsBlock6/CardsBlock6';
 import Header from '@/components/Header/page';
 import Footer from '@/components/Footer/page';
 import { FromInput } from '@/components/FromInput/FromInput';
-import { getNews, getRateTime } from './getData/getData';
+import {  getRateTime } from './getData/getData';
 import { CardsBlock3 } from '@/components/Cards/CardsBlock3/CardsBlock3';
-
 type Product = {
     id: number;
     title: string;
     amount: string;
     delivery_time: string;
     delivery: string;
-  };
-  
+};
 const Home = async () => {
     const dataRate:Product[] = await getRateTime()
     return (

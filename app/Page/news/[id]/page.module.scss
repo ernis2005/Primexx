@@ -1,44 +1,49 @@
-.header{
+.header {
     margin: 0;
     display: grid;
     row-gap: 60px;
     padding-bottom: 60px;
-    .block{
+
+    .block {
         display: flex;
         justify-content: space-between;
-        
+
         padding: 20px 0px;
+
         @media screen and (max-width:1035px) {
             display: grid;
             row-gap: 15px;
         }
-        
-        .infp{
+
+        .infp {
             width: 48%;
             display: grid;
             row-gap: 30px;
+
             @media screen and (max-width:1035px) {
-                 width: 100%;
-          
-                }
-            p{
+                width: 100%;
+            }
+            p {
                 color: #000;
-font-family: Geometria;
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 150%;
+                font-family: Geometria;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 150%;
             }
         }
-        .image{
+
+        .image {
             width: 48%;
             position: relative;
+
             @media screen and (max-width:1035px) {
-            padding-bottom: 50%;
+                padding-bottom: 50%;
                 width: 100%;
-      @media screen and (max-width:518px) {
-        padding-bottom: 100%;
-      }
+
+                @media screen and (max-width:518px) {
+                    padding-bottom: 100%;
+                }
             }
         }
     }

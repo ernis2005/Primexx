@@ -1,47 +1,45 @@
 "use client"
 import { HeaderProfile } from '@/components/HeaderProfile/HeaderProfile'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import s from './page.module.scss'
 import Link from 'next/link'
 import { CardStory } from '@/components/Cards/CardStory/CardStory'
 
-import { useDispatch } from 'react-redux'
-import { getTrac } from '../redux/features/auth-slice'
+import { useDispatch, useSelector } from 'react-redux'
+import { getTrac } from '../redux/features/trac-get'
 
-const page =  () => {
-    // const data = await getTrack()
-    
+const page = () => {
+    // const [data, setData] = useState([])
     const dispatch = useDispatch()
-    // let data = dispatch(getTrac())
+    const getItem = async () => {
+
+    }
     // console.log(data);
     useEffect(() => {
-
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const localStorages = localStorage
         const returnFormData = JSON.parse(localStorages.getItem("uliId"));
-        if (returnFormData !== null) {
-            let data = dispatch(getTrac(returnFormData))
-            console.log(data.then(),'test');
-        }
-    }, [])
-    // const returnFormData= await JSON.parse(localStorage.getItem("uliId"));
-    // console.log(returnFormData,'const returnFormData= JSON.parse(localStorages.getItem("uliId"));');
+        dispatch(getTrac(returnFormData))
 
+    }, [])
+    const data = useSelector(state => state.tracReducer)
+    console.log(data);
     return (
         <div>
             <HeaderProfile />
-            <div className={`Contend ${s.header}`}>
+            {data.status === "loading" && <div>loading...</div>}
+            {data.status === "failed" && <div className={`Contend ${s.error}`}> <p> {data.error}</p></div>}
+            {data.status === "success" && <div className={`Contend ${s.header}`}>
                 <div>
                     <span> <p>Актуальные заказы</p> <Link href={'/deliveryToRussia'}>
                         Оформить доставку по РФ
                     </Link></span>
-                    <CardStory />
+                    <CardStory />   
                 </div>
                 <div>
                     <span><p>Предыдушие заказы</p></span>
                     <CardStory />
                 </div>
-            </div>
+            </div>}
         </div>
     )
 }

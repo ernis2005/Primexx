@@ -1,32 +1,36 @@
 import React from 'react'
 import s from './page.module.scss'
-interface Peson  {
-    id:number,
-    title:string,
-    description:string,
-    image:string,
-    country:string,
-    country_name:string,
-    category:string,
+import Image from 'next/legacy/image';
+interface Person {
+    id: number,
+    title: string,
+    description: string,
+    image: string,
+    country: number,
+    country_name: string,
+    category: number,
+    category_name: string
+}
 
-category_name:string
-}
-interface Type {
-    data:Peson[]
-}
-export const CardShop = (data:Type[]) => {
-   
+type DataArray = Person[];
+
+export const CardShop = ({ data }: { data: DataArray; }) => {
+
     return (
         <div className={s.Cards}>
-            {/* {data.map((res, i) => (
+            {data.map((res: Person, i: number) => (
                 <div key={i} className={s.Card}>
-                    <div className={s.image}></div>
-                    <div className={s.info}><h2>Walmart</h2>
-                        <p>Онлайн маркетплейс
-                            от знаменитой сети магазинов Walmart.</p></div>
+                    <div className={s.image}>
+                        <Image src={res.image} layout='fill' objectFit='cover' />
+                    </div>
+                    <div className={s.info}>
+                        <h2>{res.title}</h2>
+                        <p  dangerouslySetInnerHTML={{__html: res.description}}/>
+            
+                    </div>
                 </div>
-            ))} */}
-
+            ))}
         </div>
     )
 }
+

@@ -42,7 +42,7 @@ export const TabelsBlock5 = ({ data }: ProductComponentProps) => {
                         
                     ) : (
                         <tr>
-                            <td>   <h1>helloo</h1></td>
+                            <td>   <h1>пусто </h1></td>
                         </tr>
                     )}
                 </thead>

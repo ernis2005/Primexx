@@ -21,10 +21,7 @@ const page = async () => {
                     info={'Узнайте что у нас нового'}
                 />
                 <div className={`Contend ${s.block}`}>
-                   
                     <CardsNews data={data}/>
-                 
-
                 </div>
             </div>
             <Footer />

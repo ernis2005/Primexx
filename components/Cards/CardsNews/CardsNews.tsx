@@ -54,6 +54,5 @@ export const CardsNews = ({ data }: Person) => {
                 Смотреть еще
             </button>
         </div>
-
     )
 }

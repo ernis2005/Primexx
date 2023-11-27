@@ -23,9 +23,7 @@ export const getRateTime = async () => {
         return data.data
     } catch (error) {
         return  error
-        
     }
-    
 }
 export const getRate = async () => {
     try {
@@ -41,10 +39,8 @@ export const getCardPag1 = async () => {
         const data = await axios('http://192.168.89.177:8000/about/card/')
         return data.data
     } catch (error) {
-
         return  error
     }
-
 }
 export const getFAQ = async () => {
     try {
@@ -67,7 +63,8 @@ export const getAboutUs = async () => {
 export const getShop = async (props:{country__id:number,category__id:number}) => {
     try {
         const data = await axios(`http://192.168.89.177:8000/about/shop/?country__id=${props.country__id}&category__id=${props.category__id}`)
-    
+       
+        
         return data.data
     } catch (error) {
         return  error

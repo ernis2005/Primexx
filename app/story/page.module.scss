@@ -56,3 +56,13 @@
         }
     }
 }
+.error{
+    display: grid;
+    justify-content: center;
+    p{
+        color: red;
+    font-family: Geometria1;
+    font-size: 30px;
+    font-weight: 500;    
+    }
+}
