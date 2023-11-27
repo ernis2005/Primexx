@@ -8,16 +8,16 @@ import s from './page.module.scss'
 import { CardShop } from '@/components/Cards/CardShop/CardShop'
 import { useDispatch, useSelector } from 'react-redux'
 import { getShop } from '../redux/features/shop-get'
-import  Loading  from '@/components/Loading/Loading'
-const page =  () => {
-    const [category,setCategory]= useState(1)
+import Loading from '@/components/Loading/Loading'
+const page = () => {
+    const [category, setCategory] = useState(1)
 
     const dispatch = useDispatch()
-    useEffect(()=> {
-        dispatch(getShop({category__id: category, country__id: 2}))
-    },[  dispatch,category])
-    const data = useSelector((state) => state.shopReducer)   
-    console.log(data,'data');
+    useEffect(() => {
+        dispatch(getShop({ category__id: category, country__id: 2 }))
+    }, [dispatch, category])
+    const data = useSelector((state) => state.shopReducer)
+    console.log(data, 'data');
     return (
         <div>
             <Header />
@@ -26,7 +26,6 @@ const page =  () => {
                     name={'Магазины Америки'}
                     info={'Подзаголовок'}
                 />
-              
                 <div className={`Contend ${s.Header}`}>
                     <ul>
                         <li
@@ -35,18 +34,18 @@ const page =  () => {
                         <li
                             onClick={() => setCategory(2)}
                         >Универмаги</li>
-                        <li onClick={()=> setCategory(3)}>Одежда</li>
-                        <li  onClick={()=> setCategory(4)}>Обувь</li>
-                        <li  onClick={()=> setCategory(5)}>БАДы и витамины</li>
+                        <li onClick={() => setCategory(3)}>Одежда</li>
+                        <li onClick={() => setCategory(4)}>Обувь</li>
+                        <li onClick={() => setCategory(5)}>БАДы и витамины</li>
                     </ul>
                     {data.status === 'success' && <div>
-                        {data.shop.length === 0 && <div style={{margin:'0 auto', height:'250px'}}>Нет данных</div>}
+                        {data.shop.length === 0 && <div style={{ margin: '0 auto', height: '250px' }}>Нет данных</div>}
                         <CardShop data={data.shop} />
                     </div>}
-                    {data.status === 'loading' && <Loading/>}
-            
+                    {data.status === 'loading' && <Loading />}
+
                     {data.status === 'failed' && <div>{data.error}</div>}
-                  
+
                 </div>
             </div>
             <Footer />

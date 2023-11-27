@@ -7,7 +7,6 @@ const page = () => {
     return (
         <div>
             <HeaderProfile />
-
             <div className={`Contend ${s.block}`}>
                 <h2>Информация о доставке</h2>
                 <ItemsStory/>

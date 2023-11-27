@@ -63,13 +63,18 @@ export const getAboutUs = async () => {
 export const getShop = async (props:{country__id:number,category__id:number}) => {
     try {
         const data = await axios(`http://192.168.89.177:8000/about/shop/?country__id=${props.country__id}&category__id=${props.category__id}`)
-       
-        
         return data.data
     } catch (error) {
         return  error
     }
 
+}
+export const getBaseparcelsId = async (id:number) => {
+  
+    // eslint-disable-next-line no-empty
+    try {
+        
+    } catch (error) { /* empty */ }
 }
 
 

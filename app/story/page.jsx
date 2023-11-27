@@ -7,7 +7,7 @@ import { CardStory } from '@/components/Cards/CardStory/CardStory'
 
 import { useDispatch, useSelector } from 'react-redux'
 import { getTrac } from '../redux/features/trac-get'
-
+import Loading from '@/components/Loading/Loading'
 const page = () => {
     // const [data, setData] = useState([])
     const dispatch = useDispatch()
@@ -22,22 +22,23 @@ const page = () => {
 
     }, [])
     const data = useSelector(state => state.tracReducer)
-    console.log(data);
+    console.log(data.trac, 'data');
     return (
         <div>
             <HeaderProfile />
-            {data.status === "loading" && <div>loading...</div>}
             {data.status === "failed" && <div className={`Contend ${s.error}`}> <p> {data.error}</p></div>}
+            {data.status === "loading" && <Loading /> }
             {data.status === "success" && <div className={`Contend ${s.header}`}>
                 <div>
+                
                     <span> <p>Актуальные заказы</p> <Link href={'/deliveryToRussia'}>
                         Оформить доставку по РФ
                     </Link></span>
-                    <CardStory />   
+                    <CardStory data={data.trac} />   
                 </div>
                 <div>
                     <span><p>Предыдушие заказы</p></span>
-                    <CardStory />
+                    <CardStory data={data.trac} />   
                 </div>
             </div>}
         </div>
