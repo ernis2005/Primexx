@@ -70,11 +70,13 @@ export const getShop = async (props:{country__id:number,category__id:number}) =>
 
 }
 export const getBaseparcelsId = async (id:number) => {
-  
-    // eslint-disable-next-line no-empty
+
     try {
-        
-    } catch (error) { /* empty */ }
+        const data  = await axios.get(`http://192.168.89.177:8000/flight/baseparcels/?search=${id}`)
+        return data.data
+    } catch (error) { 
+        console.log(error);
+    }
 }
 
 
