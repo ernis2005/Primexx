@@ -18,6 +18,7 @@ const page = () => {
     }, [dispatch, category])
     const data = useSelector((state) => state.shopReducer)
     console.log(data, 'data');
+    
     return (
         <div>
             <Header />
