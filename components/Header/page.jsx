@@ -62,7 +62,7 @@ const Header= () => {
                     </Link>
 
                 </div>
-                <ul >
+                <ul>
                     <li>
                         <Link href={'/'}>
                             Главная

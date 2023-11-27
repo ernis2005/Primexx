@@ -1,68 +1,76 @@
 .footer{
-    background: var(--Black, #001A0C);
-    margin: 0 auto;
-   
     width: 100%;
-    .block{
-        color: #fff;
-        padding: 60px 0px;
-        display: flex;
-        gap: 280px;
-        .info{
-            display: grid;
-        row-gap: 80px;
-            span{
-                display: grid;
-                row-gap: 30px;
-                p{
-                    font-family: Geometria;
-font-size: 24px;
-font-style: normal;
-font-weight: 500;
-line-height: 150%;
-                }
-            }
-            .socialMedia{
-                display: flex;
-                gap: 10px;
-                li{
-                    list-style: none;
-                    svg{
-                        width: 36px;
-height: 27px;
-                    }
-                }
-            }
-        }
-        .Navigation{
-            display: flex;
-            gap: 100px;
-            p{
-                color: rgba(245, 245, 245, 0.50);
-font-family: Geometria;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-margin-bottom: 20px;
-            }
-            ul{
-                display: grid;
-                row-gap: 20px;
-                li{
-list-style: none;
-a{
-    text-decoration: none;
-    color: var(--White, #F5F5F5);
-font-family: Geometria;
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-}
-                }
-            }
+    min-height: 100px;
+    padding: 12px;
+    background: var(--Black, #001A0C);
+    color: #fff;
 
+    .between{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .img{
+        max-width: 30px;
+        width: 100%;
+        margin: 5px;
+    }
+    
+    .primex p{
+        color: #FFF;
+        font-family: Geometria;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 120%; 
+        padding: 20px 0 38px;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        grid-gap: 32px;
+        grid-auto-flow: dense;
+        margin: 40px 0;
+    }
+    .flex{
+        display: flex;
+        // align-items: center;
+        gap: 40px;
+    }
+    li{
+        list-style: none;
+        padding: 5px 0;
+        color: var(--White, #F5F5F5);
+        font-family: Geometria;
+        font-size: 17px;
+        font-weight: 600;
+
+
+        cursor: pointer;
+        a{
+            color: var(--White, #F5F5F5);
+            font-family: Geometria;
+            font-size: 17px;
+            font-weight: 600;
+            text-decoration: none;
         }
     }
+    .btn{
+        max-width: 160px;
+        width: 100%;
+        height: 40px;
+        color: #fff;
+        background: var(--Green, #009345);
+        margin-bottom: 30px;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+
+
+.container{
+    max-width: 1200px; 
+    width: 90%;
+    margin: 0 auto;
 }

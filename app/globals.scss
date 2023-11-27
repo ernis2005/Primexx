@@ -28,10 +28,9 @@ justify-content: center;
 .Contend{
   max-width: 1200px;
   
-margin:  auto;
+  margin:  auto;
 @media screen and (max-width:1238px) {
-  margin-left: 30px;
-  margin-right: 30px;
+  margin: 0 30px;
 }
 }
 ::-webkit-scrollbar {
@@ -52,4 +51,8 @@ margin:  auto;
   @media screen and (max-width:970px) {
     padding-top: 82px;
   }
+}
+
+button{
+  cursor: pointer;
 }
