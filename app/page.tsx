@@ -9,6 +9,7 @@ import Footer from '@/components/Footer/page';
 import { FromInput } from '@/components/FromInput/FromInput';
 import {  getRateTime } from './getData/getData';
 import { CardsBlock3 } from '@/components/Cards/CardsBlock3/CardsBlock3';
+import Link from "next/link";
 type Product = {
     id: number;
     title: string;
@@ -94,13 +95,21 @@ const Home = async () => {
                         />
                     </div>
                     <span>Данные адреса вы используете для доставки в интернет-магазинах, а мы получаем ваши посылки и пересылаем их вам.</span>
-                    <button>Зарегистрироваться</button>
+                    <button>
+                        <Link href={'/registration'}>
+                            Зарегистрироваться
+                        </Link>
+                    </button>
                 </div>
                 <div className={` Contend ${s.block5}`}>
                     <h3>Тарифы и сроки</h3>
                     <div><TabelsBlock5 data={dataRate} /></div>
 
-                    <button>Узнать подробнее</button>
+                    <button>
+                        <Link href={'/Page/rates'}>
+                            Узнать подробнее
+                        </Link>
+                    </button>
                 </div>
                 <div className={` Contend ${s.block6}`}>
                     <h3>Магазины</h3>
