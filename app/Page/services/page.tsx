@@ -18,6 +18,7 @@ const page = () => {
             <Header />
             <div className={` top ${s.Header}`}>
                 <BannerPages
+                idPage={2}
                     name={'Наши услуги'}
                     info={'Что мы можем и что Вы можете ожидать от нас'}
                 />

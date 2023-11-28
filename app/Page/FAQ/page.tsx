@@ -16,6 +16,7 @@ const page = async () => {
             <Header />
             <div style={{ marginTop: '124px' }} className={s.header}>
                 <BannerPages
+                idPage={4}
                     name={'Часто задаваемые вопросы'}
                     info={'Найдите ответ на ваш вопрос'}
                 />
