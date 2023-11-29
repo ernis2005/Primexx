@@ -9,12 +9,12 @@ import cm from 'classnames'
 import { useDispatch } from 'react-redux'
 import { ugetUsers } from '@/app/redux/features/auth-slice'
 export const HeaderProfile = () => {
-    const  [module,setModule]= React.useState(false)
+    const [module, setModule] = React.useState(false)
     const dispatch = useDispatch()
     useEffect(() => {
-        const localStorages =  localStorage  
-        const  returnFormData =JSON.parse(localStorages.getItem("uliId"));
-        if (returnFormData  !== null) {
+        const localStorages = localStorage
+        const returnFormData = JSON.parse(localStorages.getItem("uliId"));
+        if (returnFormData !== null) {
             dispatch(ugetUsers(returnFormData))
         }
     }, [])
@@ -30,28 +30,28 @@ export const HeaderProfile = () => {
 
                     </div>
                     <ul>
-                        <li> 
+                        <li>
                             <Link href={'/order'}>
                                 Заказать выкуп
-                            </Link> 
-                            </li>
-                        <li> 
-                            <Link href={'/track'}>
-                        Отследить посылку
                             </Link>
                         </li>
-                        <li> 
+                        <li>
+                            <Link href={'/track'}>
+                                Отследить посылку
+                            </Link>
+                        </li>
+                        <li>
                             <Link href={'/story'}>
                                 История посылок
-                            </Link> 
+                            </Link>
                         </li>
-                        <li> 
+                        <li>
                             <Link href={'/profile'}>
-                                    Профиль
-                            </Link> 
+                                Профиль
+                            </Link>
                         </li>
                     </ul>
-                    <button onClick={()=>setModule(true) }> 
+                    <button onClick={() => setModule(true)}>
                         <AiOutlineMenu />
                     </button>
 
@@ -59,9 +59,9 @@ export const HeaderProfile = () => {
 
             </div>
             <div className={cm(s.accNone, {
-                [s.acc]:module===true
+                [s.acc]: module === true
             })}>
-                <Menu  setModule={setModule}/>
+                <Menu setModule={setModule} />
             </div>
 
         </>

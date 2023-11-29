@@ -27,45 +27,45 @@ const page = () => {
         <div>
             <HeaderProfile />
             {
-            data.status === "failed"
-             && 
-             <div className={`Contend ${s.error}`}> 
-             <p> 
-                {data.error}
-             </p>
-             </div>
-             }
-            {
-            data.status === "loading"
-             &&
-              <Loading /> 
+                data.status === "failed"
+                &&
+                <div className={`Contend ${s.error}`}>
+                    <p>
+                        {data.error}
+                    </p>
+                </div>
             }
             {
-            data.status === "success"
-             &&
-            <div className={`Contend ${s.header}`}>
+                data.status === "loading"
+                &&
+                <Loading />
+            }
+            {
+                data.status === "success"
+                &&
+                <div className={`Contend ${s.header}`}>
 
-                <div>
-                
-                    <span> <p>Актуальные заказы</p> <Link href={'/deliveryToRussia'}>
-                        Оформить доставку по РФ
-                    </Link></span>
-                    <CardStory data={data.trac} />   
+                    <div>
+
+                        <span> <p>Актуальные заказы</p> <Link href={'/deliveryToRussia'}>
+                            Оформить доставку по РФ
+                        </Link></span>
+                        <CardStory data={data.trac} />
+                    </div>
+                    <div>
+                        <span><p>Предыдушие заказы</p></span>
+                        <CardStory data={data.trac} />
+                    </div>
                 </div>
-                <div>
-                    <span><p>Предыдушие заказы</p></span>
-                    <CardStory data={data.trac} />   
-                </div>
-            </div>
             }
-           
-          {
-          data.trac.length <= 0 && (
-            <p className={s.Contend}>
-                Нету данных
-            </p>
-          )
-          }
+
+            {
+                data.trac.length <= 0 && (
+                    <p className={s.Contend}>
+                        Нету данных
+                    </p>
+                )
+            }
         </div>
     )
 }

@@ -15,7 +15,7 @@ const page = async ({ params: { id } }: { params: { id: number } }) => {
             <Header />
             <div style={{ marginTop: '124px' }} className={s.header}>
                 <BannerPages
-                idPage={'1'}
+                    idPage={'1'}
                     name={`${data.title}`}
                     info={' '}
                 />
