@@ -10,6 +10,8 @@
         display: grid;
         row-gap: 30px;
     }
+    
+
 
     span {
         display: flex;
@@ -66,3 +68,15 @@
     font-weight: 500;    
     }
 }
+.Contend{
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    @media (max-width: 700px){
+        .Contend{
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 90%;
+    }
+    }

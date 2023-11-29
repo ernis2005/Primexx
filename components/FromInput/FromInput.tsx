@@ -40,10 +40,10 @@ export const FromInput = ({colors}:colorType) => {
     return (
         <><form className={s.contend} onSubmit={handleSubmit(onSubmit)}>
             <span className={s.tabs}>
-                <div className={cm(s.block1, {
+                <div style={{cursor:'pointer'}} className={cm(s.block1, {
                     [s.block2]: index === 1
                 })} onClick={()=>onClicks(1)} >Турция</div>
-                <div
+                <div style={{cursor:'pointer'}}
                     className={cm(s.block1, {
                         [s.block2]: index === 2
                     })} onClick={()=>onClicks(2)} >Америка</div>
@@ -53,7 +53,7 @@ export const FromInput = ({colors}:colorType) => {
                     <input key={i} placeholder={res.title} {...register(`${res.name}`)} />
                 ))}
                 {errors.exampleRequired && <span>This field is required</span>}
-                <button type="submit" style={{ backgroundColor: `${colors}` }}>Отправить заявку</button>
+                <button type="submit" style={{ backgroundColor: `${colors}`, color:'#fff'  }}>Отправить заявку</button>
             </div>
         </form>
         </>

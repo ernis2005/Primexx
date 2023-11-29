@@ -6,8 +6,8 @@ import { AiOutlineMenu } from 'react-icons/ai'
 import Link from 'next/link'
 import Menu from './menu/Menu'
 import cm from 'classnames'
-import { AutoLogin, ugetUsers, useAppSelector } from '@/app/redux/features/auth-slice'
 import { useDispatch } from 'react-redux'
+import { ugetUsers } from '@/app/redux/features/auth-slice'
 export const HeaderProfile = () => {
     const  [module,setModule]= React.useState(false)
     const dispatch = useDispatch()
@@ -30,14 +30,26 @@ export const HeaderProfile = () => {
 
                     </div>
                     <ul>
-                        <li> <Link href={'/order'}>Заказать выкуп</Link> </li>
-                        <li> <Link href={'/track'}>
+                        <li> 
+                            <Link href={'/order'}>
+                                Заказать выкуп
+                            </Link> 
+                            </li>
+                        <li> 
+                            <Link href={'/track'}>
                         Отследить посылку
-                        </Link></li>
-                        <li> <Link href={'/story'}>История посылок</Link> </li>
-                        <li> <Link href={'/profile'}>
-                        Профиль
-                        </Link> </li>
+                            </Link>
+                        </li>
+                        <li> 
+                            <Link href={'/story'}>
+                                История посылок
+                            </Link> 
+                        </li>
+                        <li> 
+                            <Link href={'/profile'}>
+                                    Профиль
+                            </Link> 
+                        </li>
                     </ul>
                     <button onClick={()=>setModule(true) }> 
                         <AiOutlineMenu />

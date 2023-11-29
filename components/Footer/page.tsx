@@ -65,17 +65,33 @@ const Footer = () => {
             </div>
             <div>
                 <ul className={s.ul_bar}>
-                    <li >Горячая линия по вопросам<br /> доставки</li>
-                    <li><button className={s.btn}>Написать</button></li>
+                    <li style={{width:'400px'}}>Горячая линия по вопросам  доставки</li>
+                    <li>
+                        <button className={s.btn}>
+                            Написать
+                        </button>
+                    </li>
                     <li>Дополнительно</li>
-                    <li>Отзывы клиентов</li>
-                    <li><Link href={'/turkey'}>Магазины Турции</Link></li>
-                    <li><Link href={'/america'}>Магазины Америки</Link></li>
+                    <li>
+                        <Link href={'/Page/about_us'}>
+                        Отзывы клиентов
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href={'/turkey'}>
+                            Магазины Турции
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href={'/america'}>
+                            Магазины Америки
+                        </Link>
+                    </li>
                 </ul>
             </div>
-            </div>
-           </div>
-            </div>
+        </div>
+    </div>
+</div>
 
         </footer>
     )

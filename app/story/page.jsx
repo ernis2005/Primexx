@@ -26,9 +26,25 @@ const page = () => {
     return (
         <div>
             <HeaderProfile />
-            {data.status === "failed" && <div className={`Contend ${s.error}`}> <p> {data.error}</p></div>}
-            {data.status === "loading" && <Loading /> }
-            {data.status === "success" && <div className={`Contend ${s.header}`}>
+            {
+            data.status === "failed"
+             && 
+             <div className={`Contend ${s.error}`}> 
+             <p> 
+                {data.error}
+             </p>
+             </div>
+             }
+            {
+            data.status === "loading"
+             &&
+              <Loading /> 
+            }
+            {
+            data.status === "success"
+             &&
+            <div className={`Contend ${s.header}`}>
+
                 <div>
                 
                     <span> <p>Актуальные заказы</p> <Link href={'/deliveryToRussia'}>
@@ -40,7 +56,16 @@ const page = () => {
                     <span><p>Предыдушие заказы</p></span>
                     <CardStory data={data.trac} />   
                 </div>
-            </div>}
+            </div>
+            }
+           
+          {
+          data.trac.length <= 0 && (
+            <p className={s.Contend}>
+                Нету данных
+            </p>
+          )
+          }
         </div>
     )
 }

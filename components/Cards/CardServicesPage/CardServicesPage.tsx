@@ -26,13 +26,16 @@ export const CardServicesPage = () => {
                        
                         <ul className={s.ul}>
                             <li>
-                                <p>Стоимость:</p> <span>{res.price}</span>
+                                <p>Стоимость:</p> 
+                                <span>{res.price}</span>
                             </li>
                             <li>
-                                <p>За место:</p><span>{res.forAPlace}</span>
+                                <p>За место:</p>
+                                <span>{res.forAPlace}</span>
                             </li>
                             <li>
-                                <p>Сроки:</p> <span>{res.deadlines}</span>
+                                <p>Сроки:</p> 
+                                <span>{res.deadlines}</span>
                             </li>
                         </ul>
                      

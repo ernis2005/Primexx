@@ -8,14 +8,15 @@ import { MdOutlineMailOutline } from 'react-icons/md'
 import { HeaderSvg } from '../svg/Header';
 import { AiOutlineMenu, AiOutlineSearch } from 'react-icons/ai'
 import Link from 'next/link';
-import { AutoLogin, ugetUsers, useAppSelector } from '@/app/redux/features/auth-slice';
-import { useDispatch } from 'react-redux';
+
+import { useDispatch, useSelector } from 'react-redux';
 import cm from 'classnames'
 import Menu from './menu/Menu';
 import {LuUserSquare2} from 'react-icons/lu'
+import { ugetUsers } from '@/app/redux/features/auth-slice'
 const Header= () => {
-    const useName = useAppSelector((state) => state.authReducer.value.name)
-    const isAuth = useAppSelector((state) => state.authReducer.value.isAuth)
+    const useName = useSelector((state) => state.authReducer.value.name)
+    const isAuth = useSelector((state) => state.authReducer.value.isAuth)
 
     
     const [module1, setModule1] = React.useState(false)
@@ -44,11 +45,15 @@ const Header= () => {
 
                         <ul>
 
-                            {isAuth !== true ? (<><li>
+                            {isAuth !== true ? (<>
+                            <li>
                                 <a href={'/entrance'}>
                             Вход
                                 </a>
-                            </li><span></span><li><Link href={'/registration'}>Регистрация</Link> </li></>) : <li> <Link href={'/profile'} >   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            </li>
+                            <span></span>
+                            <li>
+                                <Link href={'/registration'}>Регистрация</Link> </li></>) : <li> <Link href={'/profile'} >   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                 <path d="M13.637 15.5176C12.4977 14.2452 10.8424 13.4444 9 13.4444C7.15764 13.4444 5.50215 14.2452 4.36285 15.5176M9 17C4.58172 17 1 13.4183 1 9C1 4.58172 4.58172 1 9 1C13.4183 1 17 4.58172 17 9C17 13.4183 13.4183 17 9 17ZM9 10.7778C7.52724 10.7778 6.33333 9.58387 6.33333 8.11111C6.33333 6.63835 7.52724 5.44444 9 5.44444C10.4728 5.44444 11.6667 6.63835 11.6667 8.11111C11.6667 9.58387 10.4728 10.7778 9 10.7778Z" stroke="#F5F5F5" strokeLinejoin="round" />
                             </svg> {useName}</Link></li>}
                         </ul>

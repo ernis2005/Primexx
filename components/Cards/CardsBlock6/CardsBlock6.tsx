@@ -17,7 +17,7 @@ const data:Peson[] = [
     name:"Магазины Америки",
     image:'images/card.jfif',
     linck:"/america"
-}
+   }
 ] 
 export const CardsBlock6 = () => {
     return (

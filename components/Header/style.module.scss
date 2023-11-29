@@ -4,14 +4,14 @@
     position: fixed;
     top: 0;
     background-color: #F5F5F5;
-    z-index: 11;
+    z-index: 999;
     width: 100%;
 
     .menu0 {
 
         width: 100%;
         margin: 0 auto;
-        background-color: #001a0c;
+        background: var(--Green, #01170b);
         justify-content: center;
         color: #fff;
         @media screen and (max-width:970px) {

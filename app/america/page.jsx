@@ -23,6 +23,7 @@ const page = () => {
             <Header />
             <div className={`top`}>
                 <BannerPages
+                    idPage={8}
                     name={'Магазины Америки'}
                     info={'Подзаголовок'}
                 />
@@ -38,17 +39,21 @@ const page = () => {
                         <li onClick={() => setCategory(4)}>Обувь</li>
                         <li onClick={() => setCategory(5)}>БАДы и витамины</li>
                     </ul>
-                    {data.status === 'success' && <div>
+                    {
+                    data.status === 'success' && <div>
                         {data.shop.length === 0 && <div style={{ margin: '0 auto', height: '250px' }}>Нет данных</div>}
                         <CardShop data={data.shop} />
                     </div>}
-                    {data.status === 'loading' && <Loading />}
+                    {
+                    data.status === 'loading' && <Loading />
+                    }
 
-                    {data.status === 'failed' && <div>{data.error}</div>}
-
+                    {
+                    data.status === 'failed' && <div>{data.error}</div>
+                    }
                 </div>
             </div>
-            <Footer />
+          <Footer />
         </div>
     )
 }
