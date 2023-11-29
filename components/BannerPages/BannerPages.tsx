@@ -3,6 +3,7 @@ import s from './page.module.scss'
 import Image from 'next/legacy/image'
 
 import img2 from '../../public/images/faq.png'
+import Link from 'next/link'
 
 
 interface Person {
@@ -22,11 +23,14 @@ export const BannerPages = ({name,info,idPage}:Person) => {
     ]
     return (
         <div className={s.Header}>
-             {images.filter((res, index) => res.id === idPage).map((res, index) => (<Image src={res.img} alt="" layout='fill' objectFit='cover' /> ))}
-            <div className={`Contend ${s.block}`}>
+           
+                {images.filter((res, index) => res.id === idPage).map((res, index) => (<Image src={res.img} alt="" layout='fill' objectFit='cover' /> ))}
+                <div className={`Contend ${s.block}`}>
                 <h2>{name}</h2>
                 <p>{info}</p>
             </div>
+            
+             
         </div>
     )
 }

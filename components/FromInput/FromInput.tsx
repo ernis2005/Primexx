@@ -47,7 +47,8 @@ export const FromInput = ({colors}:colorType) => {
                     className={cm(s.block1, {
                         [s.block2]: index === 2
                     })} onClick={()=>onClicks(2)} >Америка</div>
-            </span><div>
+            </span>
+            <div>
                 {dataInput.map((res,i) => (
                     <input key={i} placeholder={res.title} {...register(`${res.name}`)} />
                 ))}

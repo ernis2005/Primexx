@@ -69,8 +69,8 @@ const Footer = () => {
                     <li><button className={s.btn}>Написать</button></li>
                     <li>Дополнительно</li>
                     <li>Отзывы клиентов</li>
-                    <li>Магазины Турции</li>
-                    <li>Магазины Америки</li>
+                    <li><Link href={'/turkey'}>Магазины Турции</Link></li>
+                    <li><Link href={'/america'}>Магазины Америки</Link></li>
                 </ul>
             </div>
             </div>

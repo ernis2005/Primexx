@@ -8,14 +8,22 @@ interface Peson {
     linck:string,
 }
 const data:Peson[] = [
-    {name:"Магазины Турции",image:'images/card2.jfif',linck:"/turkey"},
-    {name:"Магазины Америки",image:'images/card.jfif',linck:"/america"}
+    {
+    name:"Магазины Турции",
+    image:'images/card2.jfif',
+    linck:"/turkey"
+    },
+    {
+    name:"Магазины Америки",
+    image:'images/card.jfif',
+    linck:"/america"
+}
 ] 
 export const CardsBlock6 = () => {
     return (
         <div  className={s.Cards}>
             {
-                data.map((res)=> (
+                data.map((res) => (
                     <Link href={res.linck} className={s.Card}>
                         <Image alt='/'  layout='fill' objectFit='cover' src={`/${res.image}`}/>
                         <div>
