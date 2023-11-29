@@ -1,10 +1,13 @@
 import React from 'react'
 import s from './page.module.scss'
+import Image from 'next/image'
 interface Person {
-    name:string,
-    info:string
+    name: string,
+    info: string,
+  
 }
-export const BannerPages = ({name,info}:Person) => {
+
+export const BannerPages = ({ name, info,  }: Person) => {
     return (
         <div className={s.Header}>
             <div className={`Contend ${s.block}`}>

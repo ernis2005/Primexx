@@ -22,8 +22,8 @@ import cm from 'classnames'
 //     flight_code: 'C/MOS/27/11/23'
 //   }
 const ItemsStory = (data) => {
-    console.log(data, 'data');
-    const res = data.data[0]
+
+    const res = data.data
     return (
         <div className={s.BlockINfo}>
             <ul className={s.Items}>

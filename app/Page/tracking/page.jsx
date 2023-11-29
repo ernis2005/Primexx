@@ -17,16 +17,16 @@ const page = () => {
         watch,
         formState: { errors },
     } = useForm()
-     const  [data ,setData] = useState()
+    const  [data ,setData] = useState()
     const [loading,setLoading] = useState(false)
-const onSubmit =  (data) => {
+    const onSubmit =  (data) => {
 
-   const dataBase =  getBaseparcelsId(data.example)
- dataBase.then((res)=> setData(res))
- setLoading(true)
+        const dataBase =  getBaseparcelsId(data.example)
+        dataBase.then((res)=> setData(res))
+        setLoading(true)
   
-};
-console.log(data);
+    };
+    console.log(data , 'datadas');
 
     return (
         <>
@@ -38,25 +38,22 @@ console.log(data);
                 />
 
                 <form className={`Contend ${s.Input}`}
-                onSubmit={handleSubmit(onSubmit)}
+                    onSubmit={handleSubmit(onSubmit)}
                 >
                     <input placeholder="Введите трек номер" {...register("example")} />
                     {errors.exampleRequired && <span>This field is required</span>}
                     <button type="submit">Отследить</button>
                 </form>
                 {loading === true  ? (
-                     <p>
-                        data ok
-                     </p>
+                //             <div className={`Contend ${s.contends}`}>
+                //                 <h2>
+                // Информация о доставке</h2>
+
+                //             </div> 
+                // <p>ASDASD</p>
+                    <ItemsStory data={data} />
                 ): (<p> loading...</p>)
                 }
-
-                {/* <div className={`Contend ${s.contends}`}>
-                    <h2>
-                        Информация о доставке</h2>
-                    <ItemsStory/>
-
-                </div> */}
 
             </div>
             <Footer />

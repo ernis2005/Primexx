@@ -8,14 +8,14 @@ import ItemsStory from '@/components/ServicesPages/ItemsStory/ItemsStory'
 
 const page = async ({ params: { id } }) => {
     const getDatas = await getBaseparcelsId(id)
-   
+    console.log(getDatas[0], 'getDatas'    );
     
     return (
         <div>
             <HeaderProfile />
             <div className={`Contend ${s.block}`}>
                 <h2>Информация о доставке</h2>
-                <ItemsStory data={getDatas}/>
+                <ItemsStory data={getDatas[0]}/>
             </div>
         </div>
     )
