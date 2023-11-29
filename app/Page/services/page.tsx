@@ -12,13 +12,13 @@ import { Page4 } from '@/components/ServicesPages/Page4/Page4';
 const page = () => {
     const [navigationIndex, setNavigationIndex] = React.useState(2)
     const NavigationData = ["Доставка", "Бесплатный склад", "Выкуп товара", "Консолидация", "Доставка коммерческих грузов"]
-     
+
     return (
         <>
             <Header />
             <div className={` top ${s.Header}`}>
                 <BannerPages
-                idPage={2}
+                    idPage={2}
                     name={'Наши услуги'}
                     info={'Что мы можем и что Вы можете ожидать от нас'}
                 />

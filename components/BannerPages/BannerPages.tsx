@@ -7,12 +7,12 @@ import Link from 'next/link'
 
 
 interface Person {
-    name:string,
-    info:string,
-    idPage:string | number,
+    name: string,
+    info: string,
+    idPage: string | number,
 }
 
-export const BannerPages = ({name,info,idPage}:Person) => {
+export const BannerPages = ({ name, info, idPage }: Person) => {
     const images = [
         { img: "/images/bg.png", id: 1 },
         { img: "/images/carson.png", id: 2 },
@@ -20,15 +20,15 @@ export const BannerPages = ({name,info,idPage}:Person) => {
         { img: "/images/faq.png", id: 4 },
         { img: "/images/о нас.png", id: 5 },
         { img: "/images/news.png", id: 6 },
-        { img:'/images/Amerika1.png', id:7 },
-        { img:'/images/AMERIKA.png', id:8}
+        { img: '/images/Amerika1.png', id: 7 },
+        { img: '/images/AMERIKA.png', id: 8 }
     ]
     return (
         <div className={s.Header}>
-                {
-                images.filter((res, index) => res.id === idPage).map((res, index) => (<Image src={res.img} alt="" layout='fill' objectFit='cover' /> ))
-                }
-                <div className={`Contend ${s.block}`}>
+            {
+                images.filter((res, index) => res.id === idPage).map((res, index) => (<Image src={res.img} alt="" layout='fill' objectFit='cover' />))
+            }
+            <div className={`Contend ${s.block}`}>
                 <h2>{name}</h2>
                 <p>{info}</p>
             </div>

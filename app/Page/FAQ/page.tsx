@@ -10,13 +10,13 @@ import { getFAQ } from '@/app/getData/getData'
 const page = async () => {
     const data = await getFAQ()
 
- 
+
     return (
         <>
             <Header />
             <div style={{ marginTop: '124px' }} className={s.header}>
                 <BannerPages
-                idPage={4}
+                    idPage={4}
                     name={'Часто задаваемые вопросы'}
                     info={'Найдите ответ на ваш вопрос'}
                 />

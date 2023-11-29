@@ -18,14 +18,14 @@ type Product = {
 };
 const page = async () => {
     const data: Product[] = await getRate()
-   
+
     return (
         <>
             <Header />
             <div style={{ marginTop: '124px' }} className={s.header}>
-                
+
                 <BannerPages
-                idPage={3}
+                    idPage={3}
                     name={'Тарифы и сроки'}
                     info={'Тарифы и сроки'}
                 />

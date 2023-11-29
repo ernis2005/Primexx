@@ -16,12 +16,12 @@ const page = async () => {
             <Header />
             <div className={`top ${s.Header}`}>
                 <BannerPages
-                idPage={6}
+                    idPage={6}
                     name={'Новости'}
                     info={'Узнайте что у нас нового'}
                 />
                 <div className={`Contend ${s.block}`}>
-                    <CardsNews data={data}/>
+                    <CardsNews data={data} />
                 </div>
             </div>
             <Footer />

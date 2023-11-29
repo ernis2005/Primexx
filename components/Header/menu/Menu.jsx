@@ -7,11 +7,9 @@ import { useAppSelector } from '@/app/redux/features/auth-slice'
 import { CiAlarmOn } from 'react-icons/ci'
 import { BsTelephone } from 'react-icons/bs'
 import { MdOutlineMailOutline } from 'react-icons/md'
-interface Peson {
-    setModule: React.Dispatch<React.SetStateAction<boolean>>
-}
 
-const Menu = ({ setModule }: Peson) => {
+
+const Menu = ({ setModule }) => {
     const isAuth = useAppSelector((state) => state.authReducer.value.isAuth)
     const useName = useAppSelector((state) => state.authReducer.value.name)
     return (

@@ -8,7 +8,6 @@ const nextConfig = {
             },
         ],
         minimumCacheTTL: 1500000,
-     
     },
 }
 
