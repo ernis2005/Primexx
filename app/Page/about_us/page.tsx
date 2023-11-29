@@ -12,6 +12,7 @@ const page = async () => {
             <Header />
             <div className={`top ${s.Header}`}>
                 <BannerPages
+                idPage={5}
                     name={'О Нас'}
                     info={'Узнайте о нас'}
                 />

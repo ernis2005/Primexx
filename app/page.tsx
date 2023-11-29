@@ -9,6 +9,7 @@ import Footer from '@/components/Footer/page';
 import { FromInput } from '@/components/FromInput/FromInput';
 import {  getRateTime } from './getData/getData';
 import { CardsBlock3 } from '@/components/Cards/CardsBlock3/CardsBlock3';
+import imag from '../public/images/bg.png'
 import Link from "next/link";
 type Product = {
     id: number;
@@ -19,6 +20,7 @@ type Product = {
 };
 const Home = async () => {
     const dataRate:Product[] = await getRateTime()
+    
     return (
         <>
             <Header />
@@ -26,7 +28,7 @@ const Home = async () => {
                 <div className={s.block1}>
                     <div className={s.bg}>
                         <Image
-                            src={'/images/bg.jfif'}
+                            src={imag}
                             layout="fill"
                             objectFit="cover"
                             alt="hwllo"

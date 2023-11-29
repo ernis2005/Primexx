@@ -13,10 +13,10 @@ const Footer = () => {
     return (
         <footer className={s.footer}>
             <div className={s.container}>
-            <div className={`${s.container} ${s.cards}`} style={{gap:'140px'}}>
+            <div className={`${s.container} ${s.cards}`} >
             <div className={s.primex}>
                 <h3><HeaderSvg/></h3>
-                <p>Дарим доступ к растущему
+                <p>Дарим доступ к растущему <br />
                 миру возможностей! </p>
                 <div className="flex">
                 <Image className={s.img} src={insta} alt='' />
@@ -27,9 +27,9 @@ const Footer = () => {
                 <Image className={s.img} src={telegram} alt='' />
                 </div>
             </div>
-            <div className={s.cards} style={{gap:'30px'}}>
+            <div className={s.cards}>
             <div>
-                <ul className={s.ul}>
+                <ul className={s.ul_bar}>
                     <li>
                         <Link href={'/'}>
                         Главная
@@ -65,12 +65,12 @@ const Footer = () => {
             </div>
             <div>
                 <ul className={s.ul_bar}>
-                    <li style={{width:'320px'}}>Горячая линия по вопросам доставки</li>
+                    <li >Горячая линия по вопросам<br /> доставки</li>
                     <li><button className={s.btn}>Написать</button></li>
                     <li>Дополнительно</li>
                     <li>Отзывы клиентов</li>
-                    <li>Магазины Турции</li>
-                    <li>Магазины Америки</li>
+                    <li><Link href={'/turkey'}>Магазины Турции</Link></li>
+                    <li><Link href={'/america'}>Магазины Америки</Link></li>
                 </ul>
             </div>
             </div>

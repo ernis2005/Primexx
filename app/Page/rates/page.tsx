@@ -6,7 +6,7 @@ import { Tabels2 } from '@/components/Tabels/TabelsPageRates/Tabels1/Tabels2'
 import Header from '@/components/Header/page'
 import Footer from '@/components/Footer/page'
 import { getRate } from '@/app/getData/getData'
-
+import img from '../../../public/images/тарифы.png'
 type Product = {
     country: string;
     id: number;
@@ -14,7 +14,7 @@ type Product = {
     amount: string;
     delivery_time: string;
     delivery: string;
-    additionally: string
+    additionally: string;
 };
 const page = async () => {
     const data: Product[] = await getRate()
@@ -23,7 +23,9 @@ const page = async () => {
         <>
             <Header />
             <div style={{ marginTop: '124px' }} className={s.header}>
+                
                 <BannerPages
+                idPage={3}
                     name={'Тарифы и сроки'}
                     info={'Тарифы и сроки'}
                 />
