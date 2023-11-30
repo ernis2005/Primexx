@@ -8,8 +8,7 @@ import Header from '@/components/Header/page';
 import Footer from '@/components/Footer/page';
 import ItemsStory from '@/components/ServicesPages/ItemsStory/ItemsStory';
 import { getBaseparcelsId } from '@/app/getData/getData';
-
-
+import { useDispatch, useSelector } from 'react-redux'
 const page = () => {
     const {
         register,
@@ -17,17 +16,14 @@ const page = () => {
         watch,
         formState: { errors },
     } = useForm()
-    const  [data ,setData] = useState()
-    const [loading,setLoading] = useState(false)
-    const onSubmit =  (data) => {
-
-        const dataBase =  getBaseparcelsId(data.example)
-        dataBase.then((res)=> setData(res))
-        setLoading(true)
-  
+    // const  [data ,setData] = useState()
+    const dispatch = useDispatch()
+    const onSubmit = (data) => {
+        dispatch(getBaseparcelsId(data.example))
     };
-    console.log(data , 'datadas');
 
+    const data = useSelector(state => state.baseparceIReducer)
+    console.log(data, 'data');
     return (
         <>
             <Header />
@@ -38,23 +34,21 @@ const page = () => {
                 />
 
                 <form className={`Contend ${s.Input}`}
-                    onSubmit={handleSubmit(onSubmit)}
-                >
+                    onSubmit={handleSubmit(onSubmit)}>
                     <input placeholder="Введите трек номер" {...register("example")} />
                     {errors.exampleRequired && <span>This field is required</span>}
                     <button type="submit">Отследить</button>
                 </form>
-                {loading === true  ? (
-                //             <div className={`Contend ${s.contends}`}>
-                //                 <h2>
-                // Информация о доставке</h2>
-
-                //             </div> 
-                // <p>ASDASD</p>
-                    <ItemsStory data={data} />
-                ): (<p> loading...</p>)
-                }
-
+                {data.status === 'loading' && <div>Загрузка</div>}
+                {data.status === 'failed' && <div>{data.error}</div>}
+                {
+                    data.status === 'success' && 
+                    <div className={`Contend ${s.contends}`}>
+                        <ItemsStory data={data.baseparceId} />
+                    </div>
+                }  
+           
+             
             </div>
             <Footer />
         </>
@@ -63,3 +57,4 @@ const page = () => {
 }
 
 export default page
+

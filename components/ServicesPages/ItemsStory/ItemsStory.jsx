@@ -24,6 +24,7 @@ import cm from 'classnames'
 const ItemsStory = (data) => {
 
     const res = data.data
+    console.log(data.data , 'data');
     return (
         <div className={s.BlockINfo}>
             <ul className={s.Items}>
