@@ -5,7 +5,6 @@ import axios from "axios"
 
 export const api = 'http://192.168.89.177:8000'
 
-console.log(kye);
 
 export const getNews = async () => {
     const data = await axios('http://192.168.89.177:8000/about/blog/')
@@ -95,4 +94,31 @@ export const getUser = async (kye:string) => {
         
     }
    
+}
+
+export const postPurchase_ordercreat =(data: {
+    contact: string;
+    comment: string;
+    fullname: string; url: string; size: string; color: string; quantity: string; price: string; total_price: string; 
+},counterName: string) =>{
+
+    try {
+        axios.post('http://192.168.89.177:8000/flight/purchase_order/create/',{
+            country:counterName,
+            url:data.url,
+            size:data.size,
+            color:data.color,
+            quantity:data.quantity,
+            price:data.price,
+            fullname:data.fullname,
+            contact:data.contact,
+            comment:data.comment,
+        } )
+        
+
+    } catch (error) {
+        console.log(error);
+        
+        return error
+    }   
 }

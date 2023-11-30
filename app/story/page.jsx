@@ -22,7 +22,7 @@ const page = () => {
 
     }, [])
     const data = useSelector(state => state.tracReducer)
-    console.log(data.trac, 'data');
+    
     return (
         <div>
             <HeaderProfile />

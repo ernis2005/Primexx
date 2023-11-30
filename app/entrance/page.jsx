@@ -11,7 +11,11 @@ import { redirect } from 'next/navigation';
 import { useSelector } from 'react-redux'
 import Link from 'next/link';
 import { postLogin } from '../redux/features/auth-slice';
+import { Box, Modal } from '@mui/material'
 const page = () => {
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
     const dispatch = useDispatch()
     const {
         register,
@@ -30,7 +34,15 @@ const page = () => {
             redirect('/')
         }
     }, [isAuth])
-
+    const style = {
+        position: 'absolute' ,
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: 400,
+        bgcolor: 'background.paper',
+        p: 4,
+    }
     return (
         <div className={s.Header} >
             <div className={s.bg}>
@@ -47,6 +59,9 @@ const page = () => {
                         <input placeholder='email' type="email" {...register("email")} />
                     </span>
                     <span>Пароль
+                        <p onClick={()=>handleOpen()}>
+                     забыли пароль? 
+                        </p>
                         <input placeholder='password' type="password" {...register("password")} />
 
                     </span>
@@ -59,6 +74,22 @@ const page = () => {
                     
                 </div>
             </form>
+            <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+            >
+                <Box sx={style}>
+                    <div className={s.module}>
+                        <span>Электронная почта
+                            <input placeholder='email' type="email" />
+                        </span>
+                        <button >Отправить</button>
+                    </div>
+             
+                </Box>
+            </Modal>
         </div>
     )
 }

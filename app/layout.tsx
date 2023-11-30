@@ -5,7 +5,7 @@ import { Inter } from 'next/font/google'
 import Footer from '@/components/Footer/page'
 import Login from '@/components/Login/Login'
 import { ReduxProider } from './redux/provider'
-
+import { StyledEngineProvider } from '@mui/material/styles';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -20,11 +20,14 @@ export default function RootLayout({
 
     return (
         <html lang="en">
-            <body className={inter.className}>
-                <ReduxProider>
-                    <Login children={children} />
-                </ReduxProider>  
-            </body>
+            <StyledEngineProvider>
+                <body className={inter.className}>
+                    <ReduxProider>
+                        <Login children={children} />
+                    </ReduxProider>
+                </body>
+            </StyledEngineProvider>
+
         </html>
     )
 }

@@ -8,7 +8,7 @@ import ItemsStory from '@/components/ServicesPages/ItemsStory/ItemsStory'
 
 const page = async ({ params: { id } }) => {
     const getDatas = await getBaseparcelsId(id)
-    console.log(getDatas[0], 'getDatas'    );
+
     
     return (
         <div>

@@ -5,26 +5,30 @@ import axios from 'axios';
 export const getBaseparceId = createAsyncThunk(
     'baseparce/getBaseparceId', async function (id, { dispatch, rejectWithValue }) {
         try {
-            const data = await axios(  `http://192.168.89.177:8000/flight/baseparcels/?search=${id}`)
+            const data = await axios(`http://192.168.89.177:8000/flight/baseparcels/?search=${id}`)
 
-            return data.data
+            dispatch(addData(data.data))
         } catch (error) {
-            return rejectWithValue(`${error}`)
+            return rejectWithValue(error)
         }
     }
 )
-        
 
 export const baseparceId = createSlice({
     initialState: {
         baseparceId: [],
-        status: null,
-        error: null,
+  
     },
+    status: null,
+    error: null,
     name: 'baseparceId',
     reducers: {
         getData: (state, action) => {
-            return state.baseparceId = action.payload
+            // eslint-disable-next-line no-undef
+            getBaseparceId(action.payload)
+        } ,
+        addData: (state, action) => {
+            state.baseparceId = action.payload[0]
         }
     },
     extraReducers: {
@@ -42,6 +46,6 @@ export const baseparceId = createSlice({
     }
 })
 
-export const { getData } = baseparceId.actions
+export const { getData,addData } = baseparceId.actions
 
 export default baseparceId.reducer

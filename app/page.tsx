@@ -6,12 +6,13 @@ import { TabelsBlock5 } from '@/components/Tabels/TabelsBlock5/page';
 import { CardsBlock6 } from '@/components/Cards/CardsBlock6/CardsBlock6';
 import Header from '@/components/Header/page';
 import Footer from '@/components/Footer/page';
-import { FromInput } from '@/components/FromInput/FromInput';
+
 import {  getRateTime } from './getData/getData';
 import { CardsBlock3 } from '@/components/Cards/CardsBlock3/CardsBlock3';
 import imag from '../public/images/bg.png'
 import Link from "next/link";
 import d from '../public/images/visa.svg'
+import { FromInput } from "@/components/FromInput/FromInput";
 type Product = {
     id: number;
     title: string;
@@ -128,7 +129,7 @@ const Home = async () => {
                             с вами свяжется с вами в течении
                             2-х часов в рабочее время.</p>
                     </div>
-                    <div className={s.fromInput}><FromInput colors={"#fff"} /></div>
+                    <div className={s.fromInput}><FromInput colors={"#333"} /></div>
                 </div>
                 <div></div>
             </main>

@@ -9,6 +9,8 @@ import Footer from '@/components/Footer/page';
 import ItemsStory from '@/components/ServicesPages/ItemsStory/ItemsStory';
 import { getBaseparcelsId } from '@/app/getData/getData';
 import { useDispatch, useSelector } from 'react-redux'
+import { Box, Modal } from '@mui/material'
+import { getBaseparceId, getData } from '@/app/redux/features/baseparceId-get'
 const page = () => {
     const {
         register,
@@ -16,14 +18,15 @@ const page = () => {
         watch,
         formState: { errors },
     } = useForm()
-    // const  [data ,setData] = useState()
+
     const dispatch = useDispatch()
+    
     const onSubmit = (data) => {
-        dispatch(getBaseparcelsId(data.example))
+        dispatch(getBaseparceId(data.example))
     };
 
     const data = useSelector(state => state.baseparceIReducer)
-    console.log(data, 'data');
+    console.log(data.baseparceId, 'data');
     return (
         <>
             <Header />
@@ -41,14 +44,7 @@ const page = () => {
                 </form>
                 {data.status === 'loading' && <div>Загрузка</div>}
                 {data.status === 'failed' && <div>{data.error}</div>}
-                {
-                    data.status === 'success' && 
-                    <div className={`Contend ${s.contends}`}>
-                        <ItemsStory data={data.baseparceId} />
-                    </div>
-                }  
-           
-             
+                
             </div>
             <Footer />
         </>
@@ -58,3 +54,9 @@ const page = () => {
 
 export default page
 
+///{
+    //     data.status === 'success' && 
+    //     <div className={`Contend ${s.contends}`}>
+    //         <ItemsStory data={data.baseparceId} />
+    //     </div>
+    // }  

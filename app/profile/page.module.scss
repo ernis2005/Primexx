@@ -1,4 +1,4 @@
-.block1{
+.block1 {
     margin: 0 auto;
     width: 100%;
     text-align: center;
@@ -6,77 +6,171 @@
     padding: 60px 0px;
     display: grid;
     row-gap: 60px;
-    
-    h2{
+
+    h2 {
         color: #000;
 
-/* Description */
-font-family: Geometria;
-font-size: 24px;
-font-style: normal;
-font-weight: 600;
-line-height: 150%; /* 36px */
+        /* Description */
+        font-family: Geometria;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%;
+        /* 36px */
     }
-    .Input{
+
+    .Input {
         display: grid;
         margin: 0 auto;
         width: 350px;
         row-gap: 30px;
+
         @media screen and (max-width:436px) {
             width: 330px;
         }
+
         span {
             display: grid;
             text-align: left;
             row-gap: 8px;
-            p{
+
+            p {
                 color: var(--Black, #001A0C);
 
-/* Regular text */
-font-family: Geometria;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: 150%; /* 24px */
+                /* Regular text */
+                font-family: Geometria;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 150%;
+                /* 24px */
             }
-            input{
+
+            input {
                 outline: none;
                 display: flex;
-padding: 10px 15px;
-justify-content: center;
-align-items: center;
-align-self: stretch;
-border: 1px solid #CCC;
-background: rgba(249, 249, 249, 0.80);
-color: #001A0C;
+                padding: 10px 15px;
+                justify-content: center;
+                align-items: center;
+                align-self: stretch;
+                border: 1px solid #CCC;
+                background: rgba(249, 249, 249, 0.80);
+                color: #001A0C;
 
-/* Regular text */
-font-family: Geometria;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: 150%; /* 24px */
+                /* Regular text */
+                font-family: Geometria;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 150%;
+                /* 24px */
             }
-          
+
         }
+
         button {
             display: flex;
 
-height: 44px;
-padding: 10px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-background: var(--Green, #009345);
-color: var(--White, #F5F5F5);
+            height: 44px;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            background: var(--Green, #009345);
+            color: var(--White, #F5F5F5);
 
-/* Regular text */
-font-family: Geometria;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: 150%; /* 24px */
-border: none;
+            /* Regular text */
+            font-family: Geometria;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%;
+            /* 24px */
+            border: none;
         }
+    }
+}
+
+.buttonPo {
+    display: flex;
+    height: 44px;
+    padding: 20px 110px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: var(--Green, #009345);
+    color: var(--White, #F5F5F5);
+    margin: 0 auto;
+    font-family: Geometria;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    border: none;
+}
+
+.module {
+    display: grid;
+    margin: 0 auto;
+    width: 350px;
+    row-gap: 30px;
+
+    @media screen and (max-width:436px) {
+        width: 330px;
+    }
+
+    
+
+        p {
+            color: var(--Black, #001A0C);
+
+            /* Regular text */
+            font-family: Geometria;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+
+            line-height: 150%;
+            /* 24px */
+        }
+
+        input {
+            outline: none;
+            display: flex;
+            padding: 10px 15px;
+            justify-content: center;
+            align-items: center;
+            align-self: stretch;
+            border: 1px solid #CCC;
+            background: rgba(249, 249, 249, 0.80);
+            color: #001A0C;
+
+            /* Regular text */
+            font-family: Geometria;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%;
+        
+    }
+    button {
+        display: flex;
+
+        height: 44px;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        background: var(--Green, #009345);
+        color: var(--White, #F5F5F5);
+
+        /* Regular text */
+        font-family: Geometria;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%;
+        /* 24px */
+        border: none;
     }
 }

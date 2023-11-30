@@ -31,7 +31,7 @@ export const registrationPost= createAsyncThunk(
                     await location.replace('/registration/confirm')
                 }
             } else {
-                return rejectWithValue('пароль не совпадают')
+                return rejectWithValue('Пароль не совпадают')
             }
         } catch (error) {
             return rejectWithValue(` Это электронная почта занята ${error}`,)
