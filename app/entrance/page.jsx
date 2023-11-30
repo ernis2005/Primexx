@@ -12,10 +12,12 @@ import { useSelector } from 'react-redux'
 import Link from 'next/link';
 import { postLogin } from '../redux/features/auth-slice';
 import { Box, Modal } from '@mui/material'
+import { codeSend } from '../getData/getData';
 const page = () => {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+    const [email , setEmail] = React.useState() 
     const dispatch = useDispatch()
     const {
         register,
@@ -42,6 +44,10 @@ const page = () => {
         width: 400,
         bgcolor: 'background.paper',
         p: 4,
+    }
+    const postEmail = () => {
+        console.log(email);
+        codeSend(email)
     }
     return (
         <div className={s.Header} >
@@ -83,9 +89,9 @@ const page = () => {
                 <Box sx={style}>
                     <div className={s.module}>
                         <span>Электронная почта
-                            <input placeholder='email' type="email" />
+                            <input onChange={(e)=>setEmail(e.target.value)} placeholder='email' type="email" />
                         </span>
-                        <button >Отправить</button>
+                        <button onClick={()=> postEmail()} >Отправить</button>
                     </div>
              
                 </Box>
