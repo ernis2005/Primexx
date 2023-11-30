@@ -19,12 +19,24 @@ const Footer = () => {
                         <p>Дарим доступ к растущему <br />
                             миру возможностей! </p>
                         <div className="flex">
-                            <Image className={s.img} src={insta} alt='' />
-                            <Image className={s.img} src={img} alt='' />
-                            <Image className={s.img} src={tikTok} alt='' />
-                            <Image className={s.img} src={youtube} alt='' />
-                            <Image className={s.img} src={what} alt='' />
-                            <Image className={s.img} src={telegram} alt='' />
+                            <Link href={'https://www.instagram.com/'}>
+                                <Image className={s.img} src={insta} alt='' />
+                            </Link>
+                            <Link href={'https://vk.com/'}>
+                                <Image className={s.img} src={img} alt='' />
+                            </Link>
+                            <Link href={'https://www.tiktok.com/'}>
+                                <Image className={s.img} src={tikTok} alt='' />
+                            </Link>
+                            <Link href={'https://www.youtube.com/watch?v=oLPgYSNerik&list=RDMM&index=21'}>
+                                <Image className={s.img} src={youtube} alt='' />
+                            </Link>
+                            <Link href={'https://www.whatsapp.com/?lang=ru_RU'}>
+                                <Image className={s.img} src={what} alt='' />
+                            </Link>
+                            <Link href={'https://web.telegram.org/k/'}>
+                                <Image className={s.img} src={telegram} alt='' />
+                            </Link>
                         </div>
                     </div>
                     <div className={s.cards}>
