@@ -11,7 +11,7 @@ import {  getRateTime } from './getData/getData';
 import { CardsBlock3 } from '@/components/Cards/CardsBlock3/CardsBlock3';
 import imag from '../public/images/bg.png'
 import Link from "next/link";
-import d from '../public/images/vasaCard.svg'
+import d from '../public/images/visa.svg'
 type Product = {
     id: number;
     title: string;
@@ -92,7 +92,7 @@ const Home = async () => {
                     </p>
                     <div className={s.block4Images}>
                         <Image
-                            src={'/images/vasaCard.svg'}
+                            src={'/images/visa.svg'}
                             layout="fill"
                             alt="hwllo"
                         />
