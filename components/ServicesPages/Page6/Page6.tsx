@@ -4,7 +4,8 @@ import s from './style.module.scss'
 import { CardServicesPage } from '@/components/Cards/CardServicesPage/CardServicesPage'
 import { FAQAccordionPage } from '@/components/Accordion/FAQAccordionPage/FAQAccordionPage'
 import { getFAQ } from '@/app/getData/getData'
-export const kye =window.localStorage.getItem('uliId')
+import Cookies from 'js-cookie'
+export const kye = Cookies.get('ulild')
 export const Page6 =  () => {
     const [isloding, useIsLoding] = useState(false)
     const [data, useData] = useState()

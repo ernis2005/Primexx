@@ -25,8 +25,8 @@ export const CardsBlock3 = () => {
 
     useEffect(() => {
         // eslint-disable-next-line no-constant-condition
-        window.addEventListener("scroll", onScroll)
-        return () => window.removeEventListener("scroll", onScroll)
+        addEventListener("scroll", onScroll)
+        return () => removeEventListener("scroll", onScroll)
     },)
     return (
         <div className={s.Header} ref={refComponent}>

@@ -8,6 +8,7 @@ import { CardStory } from '@/components/Cards/CardStory/CardStory'
 import { useDispatch, useSelector } from 'react-redux'
 import { getTrac } from '../redux/features/trac-get'
 import Loading from '@/components/Loading/Loading'
+import Cookies from 'js-cookie';
 const page = () => {
     // const [data, setData] = useState([])
     const dispatch = useDispatch()
@@ -16,9 +17,8 @@ const page = () => {
     }
     // console.log(data);
     useEffect(() => {
-        const localStorages = localStorage
-        const returnFormData = JSON.parse(localStorages.getItem("uliId"));
-        dispatch(getTrac(returnFormData))
+        const myData = Cookies.get('uliId');
+        dispatch(getTrac(myData))
 
     }, [])
     const data = useSelector(state => state.tracReducer)

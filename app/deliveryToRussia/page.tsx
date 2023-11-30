@@ -20,8 +20,6 @@ const page = () => {
         formState: { errors },
     } = useForm<fromType>()
     const onSubmit: SubmitHandler<fromType> = (data) => {
-
-    
     }
     return (
         <div>

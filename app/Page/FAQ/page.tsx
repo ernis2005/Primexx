@@ -9,8 +9,6 @@ import { getFAQ } from '@/app/getData/getData'
 
 const page = async () => {
     const data = await getFAQ()
-
-
     return (
         <>
             <Header />

@@ -18,7 +18,7 @@
     "rules": {
         "indent":"error",
         "eqeqeq":"warn",
-        "no-console":"warn",
+        // "no-console":"warn",
         "no-multiple-empty-lines":"warn",
         "@typescript-eslint/no-unused-vars": "off",
         

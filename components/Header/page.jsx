@@ -14,6 +14,7 @@ import cm from 'classnames'
 import Menu from './menu/Menu';
 import { LuUserSquare2 } from 'react-icons/lu'
 import { ugetUsers } from '@/app/redux/features/auth-slice'
+import Cookies from 'js-cookie';
 const Header = () => {
     const useName = useSelector((state) => state.authReducer.value.name)
     const isAuth = useSelector((state) => state.authReducer.value.isAuth)
@@ -21,15 +22,22 @@ const Header = () => {
 
     const [module1, setModule1] = React.useState(false)
     const dispatch = useDispatch()
+    // useEffect(() => {
+    //     if (localStorage === 'is not defined') {
+    //         const returnFormData = JSON.parse(localStorage?.getItem("uliId"));
+    //         if (returnFormData !== null) {
+    //             dispatch(ugetUsers(returnFormData))
+    //         }
+    //     }
+    // }, [])
     useEffect(() => {
-
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const localStorages = localStorage
-        const returnFormData = JSON.parse(localStorages.getItem("uliId"));
-        if (returnFormData !== null) {
-            dispatch(ugetUsers(returnFormData))
+        const myData = Cookies.get('uliId');
+        console.log(myData);
+        if (myData !== undefined) {
+            dispatch(ugetUsers(myData))
+            
         }
-    }, [])
+    }, []);
     return (
         <div className={s.Header}>
             <div className={s.menu0}>

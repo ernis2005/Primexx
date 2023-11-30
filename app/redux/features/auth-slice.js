@@ -9,7 +9,7 @@ import axios, { AxiosError } from "axios";
 import { api, getUser, } from "@/app/getData/getData";
 import { useState } from "react";
 import { redirect } from "next/navigation";
-
+import Cookies from 'js-cookie';
 import { useRouter } from 'next/navigation'
 
 export const registrationPost= createAsyncThunk(
@@ -28,7 +28,7 @@ export const registrationPost= createAsyncThunk(
                 console.log(params);
                 const data = await axios.get(`${api}/account/code/send/?type=1&email=${params.email}`)
                 if (data) {
-                    await window.location.replace('/registration/confirm')
+                    await location.replace('/registration/confirm')
                 }
             } else {
                 return rejectWithValue('пароль не совпадают')
@@ -45,7 +45,7 @@ export const codeVerifyPost = createAsyncThunk(
                 code:params.code
             })
             if (data) {
-                await window.location.replace('/entrance')
+                await location.replace('/entrance')
             }
          
 
@@ -93,7 +93,8 @@ export const postLogin = createAsyncThunk(
                 email: action.email,
                 password: action.password
             }).then((res) => {
-                localStorage.setItem("uliId", JSON.stringify(res.data.access));
+                Cookies.set('uliId', res.data.access, );
+                // localStorage?.setItem("uliId", JSON.stringify(res.data.access));
                 dispatch(ugetUsers(res.data.access))
             })
         } catch (error) {

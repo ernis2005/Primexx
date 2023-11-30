@@ -8,14 +8,16 @@ import Menu from './menu/Menu'
 import cm from 'classnames'
 import { useDispatch } from 'react-redux'
 import { ugetUsers } from '@/app/redux/features/auth-slice'
+import Cookies from 'js-cookie'
 export const HeaderProfile = () => {
     const [module, setModule] = React.useState(false)
     const dispatch = useDispatch()
     useEffect(() => {
-        const localStorages = localStorage
-        const returnFormData = JSON.parse(localStorages.getItem("uliId"));
-        if (returnFormData !== null) {
-            dispatch(ugetUsers(returnFormData))
+        const myData = Cookies.get('uliId');
+        
+        if (myData !== undefined) {
+            dispatch(ugetUsers(myData))
+            
         }
     }, [])
 
