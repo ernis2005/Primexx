@@ -7,5 +7,3 @@ function Loading() {
 }
 
 export default Loading
-
-//      я лох
