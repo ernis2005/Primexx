@@ -54,9 +54,3 @@ const page = () => {
 
 export default page
 
-///{
-    //     data.status === 'success' && 
-    //     <div className={`Contend ${s.contends}`}>
-    //         <ItemsStory data={data.baseparceId} />
-    //     </div>
-    // }  

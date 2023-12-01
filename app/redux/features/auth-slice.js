@@ -34,7 +34,7 @@ export const registrationPost= createAsyncThunk(
                 return rejectWithValue('Пароль не совпадают')
             }
         } catch (error) {
-            return rejectWithValue(` Это электронная почта занята ${error}`,)
+            return rejectWithValue(` Это электронная почта занята `,)
         }
     }
 )
@@ -47,8 +47,6 @@ export const codeVerifyPost = createAsyncThunk(
             if (data) {
                 await location.replace('/entrance')
             }
-         
-
         } catch (error) {
             return rejectWithValue(`${error}`)
         }
