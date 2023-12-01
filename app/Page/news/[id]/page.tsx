@@ -14,11 +14,15 @@ const page = async ({ params: { id } }: { params: { id: number } }) => {
         <>
             <Header />
             <div style={{ marginTop: '124px' }} className={s.header}>
-                <BannerPages
-                    idPage={'1'}
-                    name={`${data.title}`}
-                    info={' '}
-                />
+                <div className={s.Header}>
+                    <Image src={data.image} layout="fill"
+                        objectFit="cover"
+                        alt="hwllo" />
+                    <div className={`Contend ${s.block}`}>
+                        <h2>{data.title}</h2>
+                    
+                    </div>
+                </div>
                 <div className={`Contend ${s.block}`}>
                     <div className={s.image}><Image src={data.image} layout="fill"
                         objectFit="cover"
