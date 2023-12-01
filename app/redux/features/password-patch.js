@@ -13,7 +13,7 @@ export const fetchPasswordPatch = createAsyncThunk(
                 { password: data.oldPassword, new_password: data.newPassword }, {
                     headers: {
                         'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${myto}`
+                        Authorization: `Bearer ${myto}`
                     }
                 })
             console.log(response,'hello');
@@ -51,6 +51,7 @@ export const passwordPatchSlice = createSlice({
             state.status = 'failed';
             state.error = action.payload;
         },
+        
     },
 });
 export const { increment, decrement } = passwordPatchSlice.actions;

@@ -7,17 +7,18 @@ import { useForm } from 'react-hook-form';
 import Image from "next/legacy/image";
 import { useDispatch } from 'react-redux'
 
-import { redirect } from 'next/navigation';
+import { redirect, useRouter } from 'next/navigation';
 import { useSelector } from 'react-redux'
 import Link from 'next/link';
 import { postLogin } from '../redux/features/auth-slice';
 import { Box, Modal } from '@mui/material'
 import { codeSend } from '../getData/getData';
+
 const page = () => {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-    const [email , setEmail] = React.useState() 
+    const [email, setEmail] = React.useState()
     const dispatch = useDispatch()
     const {
         register,
@@ -32,12 +33,19 @@ const page = () => {
 
     const { status, error } = useSelector((state) => state.authReducer)
     useEffect(() => {
+        if (status === 'failed') {
+            setInterval(() => { 
+                document.getElementById('error').style.display = 'none'
+            },1500);
+        }
+    }, [status])
+    useEffect(() => {
         if (isAuth === true) {
             redirect('/')
         }
     }, [isAuth])
     const style = {
-        position: 'absolute' ,
+        position: 'absolute',
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
@@ -45,9 +53,13 @@ const page = () => {
         bgcolor: 'background.paper',
         p: 4,
     }
+    const router = useRouter()
     const postEmail = () => {
         console.log(email);
         codeSend(email)
+        router.push('/restorePassword');
+        // redirect('/restorePassword')
+        
     }
     return (
         <div className={s.Header} >
@@ -60,24 +72,24 @@ const page = () => {
                 <h2>Добро пожаловать</h2>
 
                 <div>
-                    {error && <p>Не правильно ввели пароль или логин</p>}
+                    {error && <p id='error'>Не правильно ввели пароль или логин</p>}
                     <span>Электронная почта
                         <input placeholder='email' type="email" {...register("email")} />
                     </span>
                     <span>Пароль
-                        <p onClick={()=>handleOpen()}>
-                     забыли пароль? 
+                        <p onClick={() => handleOpen()}>
+                            забыли пароль?
                         </p>
                         <input placeholder='password' type="password" {...register("password")} />
 
                     </span>
                     {errors.exampleRequired && <span>This field is required</span>}
                     <button type="submit">Войти</button>
-                 
+
                     <p className={s.link}>Нет аккаунта? <Link href={'/registration'}>
-                            Создать аккаунт
+                        Создать аккаунт
                     </Link></p>
-                    
+
                 </div>
             </form>
             <Modal
@@ -89,11 +101,10 @@ const page = () => {
                 <Box sx={style}>
                     <div className={s.module}>
                         <span>Электронная почта
-                            <input onChange={(e)=>setEmail(e.target.value)} placeholder='email' type="email" />
+                            <input onChange={(e) => setEmail(e.target.value)} placeholder='email' type="email" />
                         </span>
-                        <button onClick={()=> postEmail()} >Отправить</button>
+                        <button onClick={() => postEmail()} >Отправить</button>
                     </div>
-             
                 </Box>
             </Modal>
         </div>

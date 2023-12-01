@@ -33,10 +33,27 @@ export const getTrac = createAsyncThunk(
         }
     }
 )
+export const getTracHistory = createAsyncThunk(
+    'trac/getTracHistory' , async function(kye,{rejectWithValue}){
+        try {
+            const data = await axios('http://192.168.89.177:8000/flight/history/',{
+                method: "GET",
+                headers: {
+                    accept: "application/json",
+                    Authorization: `Bearer ${kye} `,
+                },
+            })
+            return data.data    
+        } catch (error) {
+            return  rejectWithValue(error.response.data.message)
+        }
+    }
+)
 export const trac = createSlice({
     name: "trac",
     initialState: {
-        trac:[]
+        trac:[],
+        tracHistory:[]
     },
     error: null,
     status: null,
@@ -55,8 +72,19 @@ export const trac = createSlice({
             
             state.status = "failed"
             state.error = action.payload.message
+        },
+        [getTracHistory.pending]: (state, action) => {
+            state.status = "loading"
+        },
+        [getTracHistory.fulfilled]: (state, { payload }) => {
+            state.status = "success"
+            state.tracHistory = payload
+        },
+        [getTracHistory.rejected]: (state, action) => { 
+            
+            state.status = "failed"
+            state.error = action.payload.message
         }
-      
     }
 })
 export const {test} = trac.actions

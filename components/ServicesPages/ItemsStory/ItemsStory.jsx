@@ -102,8 +102,13 @@ const ItemsStory = (data) => {
                     </span>
                 </div>
                 <button className={cm(s.button, {
-                    [s.button2]: res.status < 3,
-                })}><Link href={'/deliveryToRussia'}>Оформить доставку по РФ</Link> </button>
+                    [s.button2]: res.status < 1,
+                    [s.button2]: res.status >= 5,
+                })}><Link 
+                        href={{
+                            pathname: '/deliveryToRussia',
+                            query: { id: JSON.stringify(res.track_code) },
+                        }}>Оформить доставку по РФ</Link> </button>
             </div>
         </div>)
 }

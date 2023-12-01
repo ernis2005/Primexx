@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/Accordion/FAQAccordionPage/FAQAccordionPage.jsx", "app/redux/features/auth-slice.js", "components/Header/page.jsx", "components/HeaderProfile/HeaderProfile.jsx", "app/story/page.jsx", "app/redux/features/trac-get.js", "app/america/page.jsx", "app/turkey/page.jsx", "components/Cards/CardStory/CardStory.jsx", "app/entrance/page.jsx", "app/profile/page.jsx", "app/registration/confirm/page.jsx", "app/registration/page.jsx", "components/Header/menu/Menu.jsx", "components/FromInput/FromInput.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/Accordion/FAQAccordionPage/FAQAccordionPage.jsx", "app/redux/features/auth-slice.js", "components/Header/page.jsx", "components/HeaderProfile/HeaderProfile.jsx", "app/story/page.jsx", "app/redux/features/trac-get.js", "app/america/page.jsx", "app/turkey/page.jsx", "components/Cards/CardStory/CardStory.jsx", "app/entrance/page.jsx", "app/profile/page.jsx", "app/registration/confirm/page.jsx", "app/registration/page.jsx", "components/Header/menu/Menu.jsx", "components/FromInput/FromInput.jsx", "app/deliveryToRussia/page.jsx"],
   "exclude": ["node_modules"]
 }

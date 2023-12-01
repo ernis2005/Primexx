@@ -7,11 +7,11 @@ export const CardStory = ({data}) => {
         <div className={s.Cards}>
             {data.map((item, index) => {    
                 return (
-                    <Link href={`/story/${item.track_code}`} key={index}>
-                   
+                    <Link 
+                        href={item.status_label !== 'Выдан' ? `/story/${item.track_code}` : '#'}
+                        key={index}>
                         <p># {item.track_code}</p>
                         <span>{item.status_label}</span>
-                   
                     </Link>
                 )
             }) }

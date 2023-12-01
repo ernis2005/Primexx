@@ -1,10 +1,9 @@
 
 
-import { kye } from "@/components/ServicesPages/Page6/Page6";
 import axios from "axios"
-
+import Cookies from "js-cookie"
 export const api = 'http://192.168.89.177:8000'
-
+const  kye = Cookies.get('uliId')
 
 export const getNews = async () => {
     const data = await axios('http://192.168.89.177:8000/about/blog/')
@@ -69,12 +68,37 @@ export const getShop = async (props:{country__id:number,category__id:number}) =>
 
 }
 export const getBaseparcelsId = async (id:number) => {
-
     try {
+        
         const data  = await axios.get(`http://192.168.89.177:8000/flight/baseparcels/?search=${id}`)
         return data.data
     } catch (error) { 
-        console.log(error);
+        return error
+    }
+}
+export const getBaseparcelsHistoryId = async (id:number) => {
+    try { 
+        const data  = await axios.get(`http://192.168.89.177:8000/flight/history/?search=${id}`)
+        return data.data
+    } catch (error) {
+        
+        return error
+    }
+}
+export const getBaseparcelsHistory = async () => {
+
+    try {
+        const data  = await axios.get(`http://192.168.89.177:8000/flight/history/`,{
+            headers: {
+                accept: "application/json",
+                Authorization: `Bearer ${kye} `,
+            },
+        }
+        )
+
+        return data.data
+    } catch (error) {   
+        return error
     }
 }
 
@@ -124,8 +148,30 @@ export const postPurchase_ordercreat =(data: {
 }
 export const codeSend = (email:string)=> {
     try {
-        axios.get(` http://192.168.89.177:8000/account/code/send/?type=2&email=${email}`)
+        axios.get(`http://192.168.89.177:8000/account/code/send/?type=2&email=${email}`)
 
+    } catch (error) {
+        return error
+    }
+}
+export const postDeliveryOrder = (data: { Fullname: string; PhoneNumber: string; ClientCode: string; FullAddress: string; Comment: string; }, id: string) => {
+    try { 
+        const myto = Cookies.get('uliId');
+        axios.post('http://192.168.89.177:8000/flight/delivery_order/create/', {
+            track_code: id,
+            fullname: data.Fullname,
+            phone: data.PhoneNumber,
+            client_code: data.ClientCode,
+            address: data.FullAddress,
+            comment: data.Comment,
+        }, {
+            headers: {
+                accept: "application/json",
+                Authorization: `Bearer ${myto} `,
+            },
+        })
+        
+        return true
     } catch (error) {
         return error
     }

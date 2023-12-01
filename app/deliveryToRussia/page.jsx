@@ -3,24 +3,26 @@
 import { HeaderProfile } from '@/components/HeaderProfile/HeaderProfile'
 import React from 'react'
 import s from './page.module.scss'
-import type { SubmitHandler} from 'react-hook-form';
-import { Form, useForm } from 'react-hook-form'
-interface fromType {
-    Fullname:string;
-    PhoneNumber:string;
-    ClientCode:string;
-    FullAddress:string;
-    Comment:string;
-}
-const page = () => {
+import { Form, useForm,reset } from 'react-hook-form'
+import { postDeliveryOrder } from '../getData/getData';
+
+const page = (params ) => {
+    const  id = params.searchParams.id
+    console.log(id,'id');
     const {
         register,
         handleSubmit,
         watch,
+        
+        reset,
         formState: { errors },
-    } = useForm<fromType>()
-    const onSubmit: SubmitHandler<fromType> = (data) => {
+    } = useForm()
+    const onSubmit= (data) => {
+        postDeliveryOrder(data,id)
+        reset();
     }
+    const watchAllFields = watch();
+
     return (
         <div>
             <HeaderProfile />
@@ -36,7 +38,7 @@ const page = () => {
                     <input placeholder={'Клиентский код'} {...register(`ClientCode`)} />
                     <input placeholder={'Полный адрес'} {...register(`FullAddress`)} />
                     <input placeholder={'Комментарий'} {...register(`Comment`)} />
-                    <button type="submit" >Оставить заявку</button>
+                    <button type="submit"   disabled={!watchAllFields.Comment}>Оставить заявку</button>
                 </form>
             </div >
         </div >

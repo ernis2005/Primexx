@@ -51,7 +51,7 @@ export const Page3 = () => {
             <h2>Оформление выкупа</h2>
             <div className={s.Block2}>
                 <div>
-                    <FromInput colors={"#fff"} />
+                    <FromInput colors={"#333"} />
                 </div>
                 <p>После заполнения заявки, байер сам с вами свяжется с вами <br />
                     в течении 2-х часов в рабочее время.</p>

@@ -6,23 +6,18 @@ import Link from 'next/link'
 import { CardStory } from '@/components/Cards/CardStory/CardStory'
 
 import { useDispatch, useSelector } from 'react-redux'
-import { getTrac } from '../redux/features/trac-get'
+import { getTrac, getTracHistory } from '../redux/features/trac-get'
 import Loading from '@/components/Loading/Loading'
 import Cookies from 'js-cookie';
 const page = () => {
-    // const [data, setData] = useState([])
     const dispatch = useDispatch()
-    const getItem = async () => {
-
-    }
-    // console.log(data);
     useEffect(() => {
         const myData = Cookies.get('uliId');
         dispatch(getTrac(myData))
-
+        dispatch(getTracHistory(myData))
     }, [])
+
     const data = useSelector(state => state.tracReducer)
-    
     return (
         <div>
             <HeaderProfile />
@@ -54,7 +49,7 @@ const page = () => {
                     </div>
                     <div>
                         <span><p>Предыдушие заказы</p></span>
-                        <CardStory data={data.trac} />
+                        <CardStory data={data.tracHistory} />
                     </div>
                 </div>
             }

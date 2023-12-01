@@ -4,6 +4,7 @@ import tracReducer from './features/trac-get'
 import shopReducer from './features/shop-get'
 import baseparceIReducer from './features/baseparceId-get'
 import passwordReducer from './features/password-patch'
+import passwordRestoreReducer from './features/password-restore'
 export  const store  = configureStore ( {
     reducer: {
         authReducer,
@@ -11,6 +12,7 @@ export  const store  = configureStore ( {
         shopReducer,
         baseparceIReducer,
         passwordReducer,
+        passwordRestoreReducer,
     }
 }) 
 
