@@ -1,12 +1,12 @@
+
 import { createSlice } from '@reduxjs/toolkit';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-export const getBaseparceId = createAsyncThunk(
-    'baseparce/getBaseparceId', async function (id, { dispatch, rejectWithValue }) {
+export const getConsolidation = createAsyncThunk(
+    'consolidation/getConsolidation', async function (_, { dispatch, rejectWithValue }) {
         try {
-            const data = await axios(`http://192.168.89.177:8000/flight/baseparcels/?search=${id}`)
-
+            const data = await axios(`http://192.168.89.177:8000//about/consolidation/`)
             return data
         } catch (error) {
             return rejectWithValue(error.response.data)
@@ -16,12 +16,11 @@ export const getBaseparceId = createAsyncThunk(
 
 export const baseparceId = createSlice({
     initialState: {
-        baseparceId: [],
-  
+        consolidation: [],
     },
     status: null,
     error: null,
-    name: 'baseparceId',
+    name: 'consolidation',
     reducers: {
         getData: (state, action) => {
             // eslint-disable-next-line no-undef
@@ -32,14 +31,14 @@ export const baseparceId = createSlice({
         }
     },
     extraReducers: {
-        [getBaseparceId.pending]: (state, action) => {
+        [getConsolidation.pending]: (state, action) => {
             state.status = 'loading'
         },
-        [getBaseparceId.fulfilled]: (state,  action ) => {
+        [getConsolidation.fulfilled]: (state,  action ) => {
             state.status = 'success'
             state.baseparceId = action.payload
         },
-        [getBaseparceId.rejected]: (state, action) => {
+        [getConsolidation.rejected]: (state, action) => {
             state.status = 'failed'
             state.error = action.payload
         }

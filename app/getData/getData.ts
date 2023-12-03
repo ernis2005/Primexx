@@ -146,6 +146,17 @@ export const postPurchase_ordercreat =(data: {
         return error
     }   
 }
+export const  getConsolidation = () => {
+    try {
+        const data = axios.get('http://192.168.89.177:8000/about/consolidation/') 
+        console.log(data);
+        
+        return data
+    } catch (error) {
+        return error
+    }
+}
+
 export const codeSend = (email:string)=> {
     try {
         axios.get(`http://192.168.89.177:8000/account/code/send/?type=2&email=${email}`)

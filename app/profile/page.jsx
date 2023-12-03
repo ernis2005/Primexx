@@ -5,7 +5,7 @@ import { HeaderSvg } from '@/components/svg/Header'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { HeaderProfile } from '@/components/HeaderProfile/HeaderProfile'
 
-import { useForm } from 'react-hook-form'
+import { set, useForm } from 'react-hook-form'
 import { useDispatch, useSelector } from 'react-redux'
 import { Box, Modal } from '@mui/material'
 import { fetchPasswordPatch } from '../redux/features/password-patch'
@@ -28,6 +28,7 @@ const profile = () => {
         formState: { errors },
     } = useForm()
     const user = useSelector((state) => state.authReducer.value)
+    console.log(user, 'user');
     const style = {
         position: 'absolute' ,
         top: '50%',
@@ -47,6 +48,25 @@ const profile = () => {
             dispatch(fetchPasswordPatch({oldPassword , newPassword}))
         }
     }
+    const { status,error }  = useSelector((state) => state.passwordReducer)
+    console.log(error ,status, 'passwordPatch');
+    useEffect(()=> {
+        if(status === 'success'){
+            setOpen(false)
+            document.body.style.overflow = 'auto'
+        }   
+    },[status])
+    useEffect(()=> {
+        if(status === 'failed'){
+            const div = document.getElementById('error')
+            setTimeout(() => {
+                div.style.display = 'none'
+            }, 3000);
+        }
+        if(status === 'success'){
+            handleClose()    
+        }
+    },[status])
     return (
         <div>
             <HeaderProfile />
@@ -67,8 +87,8 @@ const profile = () => {
                                 {...register("tel")} />
                         </span>
                         <span>
-                            <p>Адрес электронной почты</p>
-                            <input defaultValue={`${user.email}`} {...register("email")} />
+                            <p>Адрес  </p>
+                            <input defaultValue={`${user.address}`} {...register("address   ")} />
                         </span>
                         {errors.exampleRequired && <span>This field is required</span>}
                         <button type="submit">Сохранить изменения</button>
@@ -83,6 +103,8 @@ const profile = () => {
                     >
                         <Box sx={style}>
                             <div className={s.module}>
+                                {status === 'failed' && <p className={s.errors} id='error'>{error?.message}</p>
+                                }
                                 <input value={oldPassword} onChange={(e)=>setoldPassword(e.target.value)}  onInput={(e) => {
                                     const re = /[а-яА-ЯёЁ]/g;
                                     if (re.test(e.target.value)) {
@@ -111,3 +133,5 @@ const profile = () => {
 }
 
 export default profile
+// {status === 'failed' && <div>{error.messeg}</div>
+// }

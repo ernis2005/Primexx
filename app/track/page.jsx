@@ -1,18 +1,15 @@
+
 "use client"
-import React, { use, useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import s from './page.module.scss'
-import { BannerPages } from '@/components/BannerPages/BannerPages'
-
-import { useForm } from "react-hook-form"
-import Header from '@/components/Header/page';
-import Footer from '@/components/Footer/page';
-import ItemsStory from '@/components/ServicesPages/ItemsStory/ItemsStory';
+import { HeaderProfile } from '@/components/HeaderProfile/HeaderProfile'
+import { useForm } from 'react-hook-form'
 import { useDispatch, useSelector } from 'react-redux'
-import { Box, Modal } from '@mui/material'
-import { getBaseparceId, getData } from '@/app/redux/features/baseparceId-get'
-import { ItemsStorytR } from '@/components/ItemsStorytR/page'
+import { getBaseparceId } from '../redux/features/baseparceId-get'
 
+import { ItemsStorytR } from '@/components/ItemsStorytR/page'
 const page = () => {
+    
     const {
         register,
         handleSubmit,
@@ -31,15 +28,9 @@ const page = () => {
     
     console.log(data, 'dataGet');
     return (
-        <>
-            <Header />
-            <div className={`top ${s.Header}`}>
-                <BannerPages
-                    idPage={2}
-                    name={'Отследить товар'}
-                    info={'Отследить товар легко и просто!'}
-                />
-
+        <div>
+            <HeaderProfile />
+            <div className={s.Header}>
                 <form className={`Contend ${s.Input}`}
                     onSubmit={handleSubmit(onSubmit)}>
                     <input placeholder="Введите трек номер" {...register("example")} />
@@ -49,16 +40,13 @@ const page = () => {
                 
                 {data.status === 'loading' && <div className='Contend'>Загрузка</div>}
                 {data.status === 'failed' && <div className='Contend'>{data.error.message} </div>}
-                {data.status === 'success' && <div className={s.blockasdsdas}  ><ItemsStorytR data={data.baseparceId.data}/></div>}
+                {data.status === 'success' && <div className={  ` ${s.blockasdsdas}`}><ItemsStorytR data={data.baseparceId.data}/></div>}
                 <div style={{height:250}}>
                 </div>
             </div>
-            <Footer />
-        </>
-
+            
+        </div>
     )
 }
 
 export default page
-
-

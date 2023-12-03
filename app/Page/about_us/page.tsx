@@ -5,6 +5,18 @@ import Footer from '@/components/Footer/page'
 import { BannerPages } from '@/components/BannerPages/BannerPages'
 import { SwiperPageAboutUs } from '@/components/swiper/SwiperPageAboutUs/SwiperPageAboutUs'
 import { getAboutUs } from '@/app/getData/getData'
+export const metadata = {
+    title: "О Нас",
+    description: '',
+    icons: [
+        {
+            rel: "icon",
+            sizes: "any",
+            url: "/logo1.jpg",
+        },
+    ],
+}
+
 const page = async () => {
     const data = await getAboutUs()
     return (

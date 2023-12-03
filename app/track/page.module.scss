@@ -1,104 +1,130 @@
-.block{
-    margin: 0 auto;
-    justify-content: center;
-    text-align: center;
+.Header {
     display: grid;
+    margin: 0 auto;
     row-gap: 60px;
-    padding-top: 60px;
     padding-bottom: 60px;
-    width: 100%;
-    h2{
-        color: #000;
-text-align: center;
-font-family: Geometria1;
-font-size: 48px;
-font-style: normal;
-font-weight: 700;
-line-height: 120%; 
-@media screen and (max-width:1044px) {
-   
-    font-size: 40px;
-}
-@media screen and (max-width:514px) {
-    color: #000;
-text-align: center;
 
-/* Description */
-font-family: Geometria;
-font-size: 24px;
-font-style: normal;
-font-weight: 600;
-line-height: 150%; /* 36px */
-}
-    }
-    .Input{
+    .Input {
         display: flex;
         gap: 30px;
         row-gap: 30px;
-        width: 100%;
+
         @media screen and (max-width:754px) {
             display: grid;
 
         }
-        @media screen and (max-width:514px) {
-            input{
+
+        @media screen and (max-width:754px) {
+            input {
                 width: 100% !important;
             }
-            button{
+
+            button {
                 width: 100% !important;
             }
         }
-        input{
+
+        input {
             outline: none;
             display: flex;
-width: 690px;
-height: 80px;
-padding: 20px 30px;
-align-items: center;
-gap: 10px;
-color: rgba(0, 26, 12, 0.50);
-font-family: Geometria;
-font-size: 24px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-border: 1px solid var(--Dark-Green, #003318);
-background: var(--White, #F5F5F5);
-@media screen and (max-width:1044px) {
-    width: 500px;
-}
-@media screen and (max-width:824px) {
-    width: 450px;
-    font-size: 20px;
-    height: 60px;
-}
+            width: 690px;
+            height: 80px;
+            padding: 20px 30px;
+            align-items: center;
+            gap: 10px;
+            color: rgba(0, 26, 12, 0.50);
+            font-family: Geometria;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            border: 1px solid var(--Dark-Green, #003318);
+            background: var(--White, #F5F5F5);
+
+            @media screen and (max-width:1044px) {
+                width: 500px;
+            }
+
+            @media screen and (max-width:824px) {
+                width: 450px;
+                font-size: 20px;
+                height: 60px;
+            }
         }
+
         button {
             display: flex;
-width: 278px;
-height: 80px;
-margin: 0 auto;
-padding: 10px;
-justify-content: center;
-border: none;
-align-items: center;
-gap: 10px;
-background: var(--Green, #009345);
-color: var(--White, #F5F5F5);
-font-family: Geometria;
-font-size: 24px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-@media screen and (max-width:824px) {
-    width: 200px;
-    height: 60px;
-    font-size: 20px;
-}
-@media screen and (max-width:754px) {
-    display: grid;
-    width: 450px;
-}
+            width: 278px;
+            height: 80px;
+            margin: 0 auto;
+            padding: 10px;
+            justify-content: center;
+            border: none;
+            align-items: center;
+            gap: 10px;
+            background: var(--Green, #009345);
+            color: var(--White, #F5F5F5);
+            font-family: Geometria;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+
+            @media screen and (max-width:824px) {
+                width: 200px;
+                height: 60px;
+                font-size: 20px;
+            }
+
+            @media screen and (max-width:754px) {
+                display: grid;
+                width: 450px;
+            }
         }
     }
+
+    .contends {
+        display: grid;
+        gap: 60px;
+        width: 100%;
+
+        @media screen and (max-width:1243px) {
+            width: auto;
+        }
+
+        h2 {
+            color: #000;
+            text-align: center;
+            font-family: Geometria1;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%;
+
+            @media screen and (max-width:1044px) {
+
+                font-size: 40px;
+            }
+
+            @media screen and (max-width:514px) {
+                color: #000;
+                text-align: center;
+
+                /* Description */
+                font-family: Geometria;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 150%;
+                /* 36px */
+            }
+        }
+
+    }
+}
+
+.blockasdsdas {
+    max-width: 1200px;
+    width: 94% !important;
+    margin: 0 auto;
 }

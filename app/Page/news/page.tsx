@@ -7,6 +7,19 @@ import Footer from '@/components/Footer/page'
 import { getNews } from '@/app/getData/getData'
 import type { NewsCard, NewsCardList } from './type'
 import image from '../../../public/images/carson.png'
+
+export const metadata = {
+    title: "Новости",
+    description: '',
+    icons: [
+        {
+            rel: "icon",
+            sizes: "any",
+            url: "/logo1.jpg",
+        },
+    ],
+}
+
 const page = async () => {
     const data: NewsCard[] = await getNews()
 

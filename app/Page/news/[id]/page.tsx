@@ -5,6 +5,18 @@ import Image from "next/legacy/image"
 import Header from '@/components/Header/page'
 import Footer from '@/components/Footer/page'
 import { getNewsId } from '@/app/getData/getData'
+export const metadata = {
+    title: "Новости",
+    description: '',
+    icons: [
+        {
+            rel: "icon",
+            sizes: "any",
+            url: "/logo1.jpg",
+        },
+    ],
+}
+
 const page = async ({ params: { id } }: { params: { id: number } }) => {
 
     const data = await getNewsId(id)

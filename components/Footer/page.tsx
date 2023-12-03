@@ -77,7 +77,7 @@ const Footer = () => {
                         </div>
                         <div>
                             <ul className={s.ul_bar}>
-                                <li style={{ width: '400px' }}>Горячая линия по вопросам  доставки</li>
+                                <li >Горячая линия по вопросам  доставки</li>
                                 <li>
                                     <button className={s.btn}>
                                         Написать

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -8,8 +8,18 @@ import 'swiper/css/pagination';
 
 import { Pagination } from 'swiper/modules';
 import s from './page.module.scss'
-export const SwiperServicesPages4 = () => {
+import { useDispatch, useSelector } from 'react-redux';
+import { getConsolidation } from '@/app/redux/features/getData';
+
+export const SwiperServicesPages4 =  () => {
     const data = [1, 2, 3, 4, 5, 6, 78, 9, 0,]
+    const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(getConsolidation())
+    },[])
+    const {staus,error}  = useSelector(state => state.consolidationReducer) 
+    
+    console.log(staus,error, 'consolidationReducer');
     return (<div className={s.Block}>
         <Swiper
             slidesPerView={3.5}

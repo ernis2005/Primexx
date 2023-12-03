@@ -13,6 +13,7 @@ import imag from '../public/images/bg.png'
 import Link from "next/link";
 import d from '../public/images/visa.svg'
 import { FromInput } from "@/components/FromInput/FromInput";
+import type { Metadata } from "next";
 type Product = {
     id: number;
     title: string;
@@ -20,9 +21,19 @@ type Product = {
     delivery_time: string;
     delivery: string;
 };
+export const metadata: Metadata = {
+    title: 'Primex',
+    description: 'Дарим доступ к растущему миру возможностей! ',
+    icons: [
+        {
+            rel: "icon",
+            sizes: "any",
+            url: "/logo1.jpg",
+        },
+    ],
+}
 const Home = async () => {
     const dataRate:Product[] = await getRateTime()
-    
     return (
         <>
             <Header />

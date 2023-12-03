@@ -24,6 +24,7 @@ export const registrationPost= createAsyncThunk(
                     password: params.password,
                     info: `${params.name}  ${params.lastName}`,
                     role: params.role,
+                    address: params.address,
                 })
                 console.log(params);
                 const data = await axios.get(`${api}/account/code/send/?type=1&email=${params.email}`)
@@ -113,8 +114,8 @@ const initialState = {
         send_code: "",
         tel: "",
         code_logistic: "",
-        info: ""
-
+        info: "",
+        address: ""
     } 
 }
 
@@ -130,28 +131,24 @@ export const auto = createSlice({
                     isAuth: true,
                     email: action.payload.email,
                     name: action.payload?.info,
-
                     code_logistic: action.payload.code_logistic,
                     send_code: action.payload.send_cod,
                     tel: action.payload.phone,
+                    address: action.payload.address
                 },
-
             }
         },
         AutoLogin: (start, action) => {
-
-
             return {
                 value: {
                     isAuth: true,
                     email: action.payload.email,
                     name: action.payload?.info,
-
                     code_logistic: action.payload.code_logistic,
                     send_code: action.payload.send_cod,
                     tel: action.payload.phone,
+                    address: action.payload.address
                 },
-
             }
         },
     },

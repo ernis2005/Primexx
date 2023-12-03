@@ -6,6 +6,17 @@ import Header from '@/components/Header/page'
 import Footer from '@/components/Footer/page'
 import { FAQAccordionPage } from '@/components/Accordion/FAQAccordionPage/FAQAccordionPage'
 import { getFAQ } from '@/app/getData/getData'
+export const metadata = {
+    title: "Часто задаваемые вопросы",
+    description: '',
+    icons: [
+        {
+            rel: "icon",
+            sizes: "any",
+            url: "/logo1.jpg",
+        },
+    ],
+}
 
 const page = async () => {
     const data = await getFAQ()

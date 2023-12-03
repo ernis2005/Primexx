@@ -7,6 +7,7 @@ import { Controller, useForm } from 'react-hook-form';
 import Image from "next/legacy/image";
 import { useDispatch, useSelector } from 'react-redux'
 import { registrationPost, useAppSelector } from '../redux/features/auth-slice';
+import Head from 'next/head';
 
 const page = () => {
     const dispatch = useDispatch()
@@ -19,17 +20,15 @@ const page = () => {
     const onSubmit = (data) => {
         dispatch(registrationPost(data))
     }
-    // const isAuth = useAppSelector((state) => state.authReducer.value.isAuth)
     const { status, error } = useAppSelector((state) => state.authReducer)
-    // useEffect(() => {
-    //     if(isAuth === true) {
-    //         redirect('/')
-    //     }
-    // }, [isAuth])
-
 
     return (
         <div className={s.Header} >
+            <Head>
+                <meta name="description" content="Описание вашей страницы" />
+                <meta property="og:image" content="/logo1.jpg" />
+        // Добавьте здесь другие мета-теги
+            </Head>
             <div className={s.bg}>
                 <Image src={'/images/bgLogin.jfif'} layout="fill"
                     objectFit="cover"
@@ -66,7 +65,9 @@ const page = () => {
                     <span>Электронная почта
                         <input placeholder='email' type="email" {...register("email")} />
                     </span>
-
+                    <span>Адрес
+                        <input placeholder='address' type="address" {...register("address")} />
+                    </span>
                     <span>Введите пароль
                         <input placeholder='' type="password" {...register("password")} />
                     </span>
@@ -75,8 +76,13 @@ const page = () => {
                     </span>
                     {errors.exampleRequired && <span>This field is required</span>}
                     <button type="submit"  >Создать аккаунт</button>
+                    <p  className={s.pLogin}>
+                    Уже есть аккаунт? <a href="/entrance">Войти</a>
+                    </p>
+    
                 </div>
             </form>
+
         </div>
     )
 }

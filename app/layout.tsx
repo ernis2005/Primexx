@@ -6,11 +6,19 @@ import Footer from '@/components/Footer/page'
 import Login from '@/components/Login/Login'
 import { ReduxProider } from './redux/provider'
 import { StyledEngineProvider } from '@mui/material/styles';
+import Head from 'next/head'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
     title: 'Primex',
     description: 'Дарим доступ к растущему миру возможностей! ',
+    icons: [
+        {
+            rel: "icon",
+            sizes: "any",
+            url: "/logo1.jpg",
+        },
+    ],
 }
 export default function RootLayout({
     children,
@@ -19,7 +27,11 @@ export default function RootLayout({
 }) {
 
     return (
+        
         <html lang="en">
+            <Head>
+                <link rel="icon" href="/logo1.jpg" />
+            </Head>
             <StyledEngineProvider>
                 <body className={inter.className}>
                     <ReduxProider>

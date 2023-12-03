@@ -14,8 +14,23 @@ type Product = {
     amount: string;
     delivery_time: string;
     delivery: string;
+  
     additionally: string;
 };
+
+export const metadata = {
+    title: "Тарифы и сроки",
+    description: '',
+    icons: [
+        {
+            rel: "icon",
+            sizes: "any",
+            url: "/logo1.jpg",
+        },
+    ],
+}
+
+
 const page = async () => {
     const data: Product[] = await getRate()
 
