@@ -8,7 +8,7 @@ import { postDeliveryOrder } from '../getData/getData';
 
 const page = (params ) => {
     const  id = params.searchParams.id
-    console.log(id,'id');
+    
     const {
         register,
         handleSubmit,

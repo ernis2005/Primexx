@@ -6,7 +6,7 @@ import axios from 'axios';
 export const getConsolidation = createAsyncThunk(
     'consolidation/getConsolidation', async function (_, { dispatch, rejectWithValue }) {
         try {
-            const data = await axios(`http://192.168.89.177:8000//about/consolidation/`)
+            const data = await axios(`http://192.168.89.177:8000/about/consolidation/`)
             return data
         } catch (error) {
             return rejectWithValue(error.response.data)
@@ -14,7 +14,7 @@ export const getConsolidation = createAsyncThunk(
     }
 )
 
-export const baseparceId = createSlice({
+export const getConsolidationData = createSlice({
     initialState: {
         consolidation: [],
     },
@@ -22,12 +22,9 @@ export const baseparceId = createSlice({
     error: null,
     name: 'consolidation',
     reducers: {
-        getData: (state, action) => {
-            // eslint-disable-next-line no-undef
-            getBaseparceId(action.payload)
-        } ,
+       
         addData: (state, action) => {
-            state.baseparceId = action.payload[0]
+            state.consolidation = action.payload[0]
         }
     },
     extraReducers: {
@@ -35,8 +32,9 @@ export const baseparceId = createSlice({
             state.status = 'loading'
         },
         [getConsolidation.fulfilled]: (state,  action ) => {
+            
             state.status = 'success'
-            state.baseparceId = action.payload
+            state.consolidation = action.payload.data
         },
         [getConsolidation.rejected]: (state, action) => {
             state.status = 'failed'
@@ -45,6 +43,6 @@ export const baseparceId = createSlice({
     }
 })
 
-export const { getData,addData } = baseparceId.actions
+export const { getData, } = getConsolidationData.actions
 
-export default baseparceId.reducer
+export default getConsolidationData.reducer

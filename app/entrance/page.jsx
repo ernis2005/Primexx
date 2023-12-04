@@ -55,7 +55,7 @@ const page = () => {
     }
     const router = useRouter()
     const postEmail = () => {
-        console.log(email);
+        
         codeSend(email)
         router.push('/restorePassword');
         // redirect('/restorePassword')

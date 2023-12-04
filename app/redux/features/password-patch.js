@@ -7,7 +7,6 @@ export const fetchPasswordPatch = createAsyncThunk(
     'passwordPatch/fetchPasswordPatch',
     async (data, { rejectWithValue }) => {
         const myto = Cookies.get('uliId');
-        console.log({ password: data.oldPassword, new_password: data.newPassword }, 'data');
         try {
             const response = await axios.put('http://192.168.89.177:8000/account/password/change/', {
                 password: data.oldPassword,
@@ -18,7 +17,7 @@ export const fetchPasswordPatch = createAsyncThunk(
                     Authorization: `Bearer ${myto}`
                 }
             });
-            console.log(response.data);
+            
         } catch (error) {
             return rejectWithValue(error.response.data);
         }

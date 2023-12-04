@@ -9,6 +9,7 @@ import { set, useForm } from 'react-hook-form'
 import { useDispatch, useSelector } from 'react-redux'
 import { Box, Modal } from '@mui/material'
 import { fetchPasswordPatch } from '../redux/features/password-patch'
+import {saveChanges} from '../redux/features/save-changes'
 
 const profile = () => {
     const [open, setOpen] = React.useState(false);
@@ -28,7 +29,24 @@ const profile = () => {
         formState: { errors },
     } = useForm()
     const user = useSelector((state) => state.authReducer.value)
-    console.log(user, 'user');
+    
+    
+    const onSubmit = (data) => {   
+        let  useUnfo = data
+        if(useUnfo.name.length <= 1){
+            useUnfo.name = user.name
+            
+        }
+        if(useUnfo.tel.length <= 1){
+            useUnfo.tel = user.tel
+        }
+        if(useUnfo.address.length <= 1){
+            useUnfo.address = user.address
+        }
+        
+        dispatch(saveChanges(useUnfo))
+    
+    }
     const style = {
         position: 'absolute' ,
         top: '50%',
@@ -49,7 +67,7 @@ const profile = () => {
         }
     }
     const { status,error }  = useSelector((state) => state.passwordReducer)
-    console.log(error ,status, 'passwordPatch');
+    
     useEffect(()=> {
         if(status === 'success'){
             setOpen(false)
@@ -74,7 +92,7 @@ const profile = () => {
                 <div className={s.block1}>
                     <h2>Добро пожаловать,{user.name}</h2>
                     <form className={` ${s.Input}`}
-                    // onSubmit={handleSubmit(onSubmit)}
+                        onSubmit={handleSubmit(onSubmit)}
                     >
                         <span>
                             <p>Фамилия и имя</p>
@@ -83,16 +101,17 @@ const profile = () => {
                         <span>
                             <p>Номер телефона</p>
                             <input  defaultValue={user.tel.replace(/^(\d{3})(\d{3})(\d{3})$/, '+996 ($1) $2-$3')}
-                                // defaultValue={`${user.tel}`} 
-                                {...register("tel")} />
+                                
+                                {...register("tel")}   maxLength={11}/>
                         </span>
                         <span>
                             <p>Адрес  </p>
-                            <input defaultValue={`${user.address}`} {...register("address   ")} />
+                            
+                            <input defaultValue={`${user.address}`} {...register("address")} />
                         </span>
                         {errors.exampleRequired && <span>This field is required</span>}
                         <button type="submit">Сохранить изменения</button>
-                      
+                    
                     </form>
                     <button onClick={handleOpen} className={s.buttonPo} >Cменить пароль</button>
                     <Modal

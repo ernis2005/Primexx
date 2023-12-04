@@ -141,7 +141,7 @@ export const postPurchase_ordercreat =(data: {
         
 
     } catch (error) {
-        console.log(error);
+      
         
         return error
     }   
@@ -149,7 +149,7 @@ export const postPurchase_ordercreat =(data: {
 export const  getConsolidation = () => {
     try {
         const data = axios.get('http://192.168.89.177:8000/about/consolidation/') 
-        console.log(data);
+        
         
         return data
     } catch (error) {

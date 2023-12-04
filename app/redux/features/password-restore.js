@@ -4,7 +4,7 @@ import axios from "axios";
 export const restorePasswordPost = createAsyncThunk(
     'restorePasswordPost/restorePasswordPost',
     async (data, { rejectWithValue }) => {
-        console.log(data);
+       
         try {
             const response = await axios.post(  `http://192.168.89.177:8000/account/password/verify/reset/`,
                 { email: data.email,

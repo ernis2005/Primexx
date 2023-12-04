@@ -13,11 +13,9 @@ export const Page4 = () => {
         getFAQ().then((res) => {
             useData(res)
         })
-
         setInterval(() => {
             useIsLoding(true)
         }, 100)
-
     }
   
 

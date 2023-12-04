@@ -25,7 +25,6 @@ export const FromInput = ({colors}) => {
         { name:"comment",title:"Комментарии: ", length:13},
     ]
     const onClicks = (index)=> {
-        console.log(index);
         setIndex(index.id)
         setCounterName(index.name)
     }

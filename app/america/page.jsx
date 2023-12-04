@@ -17,7 +17,6 @@ const page = () => {
         dispatch(getShop({ category__id: category, country__id: 2 }))
     }, [dispatch, category])
     const data = useSelector((state) => state.shopReducer)
-    console.log(data, 'data');
     return (
         <div>
             <Header />

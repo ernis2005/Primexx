@@ -26,7 +26,6 @@ const page = () => {
     };
     const data = useSelector(state => state.baseparceIReducer)
     
-    console.log(data, 'dataGet');
     return (
         <div>
             <HeaderProfile />

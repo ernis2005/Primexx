@@ -28,10 +28,9 @@ const page = () => {
     const router = useRouter()
     const onSubmit = (data) => {
         const  datasda =   dispatch(restorePasswordPost(data))
-        console.log(datasda,'data');
+    
         
     }
-    console.log(status,'tersdf');
     useEffect(() => {
         if (status === 'failed') {
             setInterval(() => { 
@@ -40,7 +39,7 @@ const page = () => {
           
         }
         if (status === 'success') {
-            console.log(status);
+            
             router.push('/entrance');
         }
     }, [status])

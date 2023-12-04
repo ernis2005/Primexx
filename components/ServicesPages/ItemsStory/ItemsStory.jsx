@@ -24,7 +24,6 @@ import cm from 'classnames'
 const ItemsStory = (data) => {
 
     const res = data.data
-    console.log(data , 'data');
     return (
         <div className={s.BlockINfo}>
             <ul className={s.Items}>
@@ -35,7 +34,7 @@ const ItemsStory = (data) => {
                     })}></p>
                     <div>
                         <p>Формируется</p>
-                        <span>{res.created_at}</span>
+                        <span>{res.created_at?.slice(0, 10)}</span>
                     </div>
                 </li>
                 <li>
@@ -45,7 +44,7 @@ const ItemsStory = (data) => {
                     <Svg10 />
                     <div>
                         <p>В пути</p>
-                        <span>{res.sent_to_moscow_at}</span>
+                        <span>{res.sent_to_moscow_at?.slice(0, 10)}</span>
                     </div>
                 </li>    <li>
                     <Svg10 />
@@ -54,7 +53,7 @@ const ItemsStory = (data) => {
                     })}></p>
                     <div>
                         <p>Прибыл рейс</p>
-                        <span>{res.arrived_at}</span>
+                        <span>{res.arrived_at?.slice(0, 10)}</span>
                     </div>
                 </li>    <li>
                     <Svg10 />
@@ -63,7 +62,7 @@ const ItemsStory = (data) => {
                     })}></p>
                     <div>
                         <p>Сортируется на складе</p>
-                        <span>{res.sorted_at}</span>
+                        <span>{res.sorted_at?.slice(0, 10)}</span>
                     </div>
                 </li>    <li>
                     <Svg10 />
@@ -72,7 +71,7 @@ const ItemsStory = (data) => {
                     })}></p>
                     <div>
                         <p>Отправлен по адресу</p>
-                        <span>{res.sent_to_client_at}</span>
+                        <span>{res.sent_to_client_at?.slice(0, 10)}</span>
                     </div>
                 </li>    <li>
                     <Svg10 />
@@ -81,7 +80,7 @@ const ItemsStory = (data) => {
                     })}></p>
                     <div>
                         <p>Выдан</p>
-                        <span>{res.delivered_at}</span>
+                        <span>{res.delivered_at?.slice(0, 10)}</span>
                     </div>
                 </li>
             </ul>

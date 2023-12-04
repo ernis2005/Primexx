@@ -32,7 +32,6 @@ const Header = () => {
     // }, [])
     useEffect(() => {
         const myData = Cookies.get('uliId');
-        console.log(myData);
         if (myData !== undefined) {
             dispatch(ugetUsers(myData))
             

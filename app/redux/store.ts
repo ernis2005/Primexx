@@ -6,6 +6,8 @@ import baseparceIReducer from './features/baseparceId-get'
 import passwordReducer from './features/password-patch'
 import passwordRestoreReducer from './features/password-restore'
 import consolidationReducer from './features/getData'
+import saveChangesReducer from './features/save-changes'
+import getDataReducer from './features/getData'
 export  const store  = configureStore ( {
     reducer: {
         authReducer,
@@ -15,6 +17,8 @@ export  const store  = configureStore ( {
         passwordReducer,
         passwordRestoreReducer,
         consolidationReducer,
+        saveChangesReducer,
+        
     }
 }) 
 

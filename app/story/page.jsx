@@ -41,8 +41,7 @@ const page = () => {
                 <div className={`Contend ${s.header}`}>
 
                     <div>
-
-                       
+                        <span> <p>Актуальные заказы</p> </span>
                         <CardStory data={data.trac} />
                     </div>
                     <div>
@@ -65,6 +64,3 @@ const page = () => {
 
 export default page
 
-// <span> <p>Актуальные заказы</p> <Link href={'/deliveryToRussia'}>
-//     Оформить доставку по РФ
-// </Link></span>

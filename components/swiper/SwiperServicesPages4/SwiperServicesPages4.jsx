@@ -10,6 +10,7 @@ import { Pagination } from 'swiper/modules';
 import s from './page.module.scss'
 import { useDispatch, useSelector } from 'react-redux';
 import { getConsolidation } from '@/app/redux/features/getData';
+import Image from 'next/legacy/image';
 
 export const SwiperServicesPages4 =  () => {
     const data = [1, 2, 3, 4, 5, 6, 78, 9, 0,]
@@ -17,9 +18,8 @@ export const SwiperServicesPages4 =  () => {
     useEffect(() => {
         dispatch(getConsolidation())
     },[])
-    const {staus,error}  = useSelector(state => state.consolidationReducer) 
+    const {staus,error,consolidation}  = useSelector(state => state.consolidationReducer) 
     
-    console.log(staus,error, 'consolidationReducer');
     return (<div className={s.Block}>
         <Swiper
             slidesPerView={3.5}
@@ -53,13 +53,13 @@ export const SwiperServicesPages4 =  () => {
             modules={[Pagination]}
             className="mySwiper"
         >
-            {data.map((_,i) => (
+            {consolidation.map((res,i) => (
                 <SwiperSlide key={i}>
                     <div className={s.Card}>
-
+                        <Image  src={res.image} objectFit='cover' layout='fill' alt="Picture of the author" />
                         <span>
-                            <h2>Собственный склад в Турции и Америке</h2>
-                            <p>Собственный склад в Турции, в городе Стамбул. В Америке, штат Делавэр. Где наши сотрудники консолидируют ваши посылки.</p>
+                            <h2>{res.title}</h2>
+                            <p>{res.description }</p>
                         </span>
                     </div>
                 </SwiperSlide>
