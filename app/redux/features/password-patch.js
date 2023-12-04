@@ -2,13 +2,14 @@ import { createSlice } from '@reduxjs/toolkit';
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from 'axios';
 import Cookies from 'js-cookie';
+import { Api } from '@/app/api';
 
 export const fetchPasswordPatch = createAsyncThunk(
     'passwordPatch/fetchPasswordPatch',
     async (data, { rejectWithValue }) => {
         const myto = Cookies.get('uliId');
         try {
-            const response = await axios.put('http://192.168.89.177:8000/account/password/change/', {
+            const response = await axios.put(`${Api}account/password/change/`, {
                 password: data.oldPassword,
                 new_password: data.newPassword
             }, {

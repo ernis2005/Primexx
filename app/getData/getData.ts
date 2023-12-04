@@ -2,22 +2,22 @@
 
 import axios from "axios"
 import Cookies from "js-cookie"
-export const api = 'http://192.168.89.177:8000'
+import { Api } from '../api'
 const  kye = Cookies.get('uliId')
 
 export const getNews = async () => {
-    const data = await axios('http://192.168.89.177:8000/about/blog/')
+    const data = await axios(`${Api}about/blog/`)
 
     return data.data
 }
 export const getNewsId = async (id: number) => {
-    const data = await axios(`http://192.168.89.177:8000/about/blog/${id}`)
+    const data = await axios(`${Api}about/blog/${id}`)
 
     return data.data
 }
 export const getRateTime = async () => {
     try {
-        const data = await axios(`http://192.168.89.177:8000/about/rate_time/`)
+        const data = await axios(`${Api}about/rate_time/`)
         return data.data
     } catch (error) {
         return  error
@@ -25,7 +25,7 @@ export const getRateTime = async () => {
 }
 export const getRate = async () => {
     try {
-        const data = await axios(`http://192.168.89.177:8000/about/rate/`)
+        const data = await axios(`${Api}about/rate/`)
         return data.data
     } catch (error) {
         return  error
@@ -34,7 +34,7 @@ export const getRate = async () => {
 }
 export const getCardPag1 = async () => {
     try {
-        const data = await axios('http://192.168.89.177:8000/about/card/')
+        const data = await axios(`${Api}about/card/`)
         return data.data
     } catch (error) {
         return  error
@@ -42,7 +42,7 @@ export const getCardPag1 = async () => {
 }
 export const getFAQ = async () => {
     try {
-        const data = await axios('http://192.168.89.177:8000/about/faq/')
+        const data = await axios(`${Api}about/faq/`)
         return data.data
     } catch (error) {
         return  error
@@ -51,7 +51,7 @@ export const getFAQ = async () => {
 }
 export const getAboutUs = async () => {
     try {
-        const data = await axios('http://192.168.89.177:8000/about/about_us/')
+        const data = await axios(`${Api}about/about_us/`)
         return data.data
     } catch (error) {
         return  error
@@ -60,7 +60,7 @@ export const getAboutUs = async () => {
 }
 export const getShop = async (props:{country__id:number,category__id:number}) => {
     try {
-        const data = await axios(`http://192.168.89.177:8000/about/shop/?country__id=${props.country__id}&category__id=${props.category__id}`)
+        const data = await axios(`${Api}about/shop/?country__id=${props.country__id}&category__id=${props.category__id}`)
         return data.data
     } catch (error) {
         return  error
@@ -70,7 +70,7 @@ export const getShop = async (props:{country__id:number,category__id:number}) =>
 export const getBaseparcelsId = async (id:number) => {
     try {
         
-        const data  = await axios.get(`http://192.168.89.177:8000/flight/baseparcels/?search=${id}`)
+        const data  = await axios.get(`${Api}flight/baseparcels/?search=${id}`)
         return data.data
     } catch (error) { 
         return error
@@ -78,7 +78,7 @@ export const getBaseparcelsId = async (id:number) => {
 }
 export const getBaseparcelsHistoryId = async (id:number) => {
     try { 
-        const data  = await axios.get(`http://192.168.89.177:8000/flight/history/?search=${id}`)
+        const data  = await axios.get(`${Api}flight/history/?search=${id}`)
         return data.data
     } catch (error) {
         
@@ -88,7 +88,7 @@ export const getBaseparcelsHistoryId = async (id:number) => {
 export const getBaseparcelsHistory = async () => {
 
     try {
-        const data  = await axios.get(`http://192.168.89.177:8000/flight/history/`,{
+        const data  = await axios.get(`${Api}flight/history/`,{
             headers: {
                 accept: "application/json",
                 Authorization: `Bearer ${kye} `,
@@ -105,7 +105,7 @@ export const getBaseparcelsHistory = async () => {
 
 export const getUser = async (kye:string) => {
     try {
-        const data = await axios('http://192.168.89.177:8000/account/get/',{
+        const data = await axios(`${Api}account/get/`,{
             method: "GET",
             headers: {
                 accept: "application/json",
@@ -127,7 +127,7 @@ export const postPurchase_ordercreat =(data: {
 },counterName: string) =>{
 
     try {
-        axios.post('http://192.168.89.177:8000/flight/purchase_order/create/',{
+        axios.post(`${Api}flight/purchase_order/create/`,{
             country:counterName,
             url:data.url,
             size:data.size,
@@ -148,7 +148,7 @@ export const postPurchase_ordercreat =(data: {
 }
 export const  getConsolidation = () => {
     try {
-        const data = axios.get('http://192.168.89.177:8000/about/consolidation/') 
+        const data = axios.get(`${Api}about/consolidation/`) 
         
         
         return data
@@ -159,7 +159,7 @@ export const  getConsolidation = () => {
 
 export const codeSend = (email:string)=> {
     try {
-        axios.get(`http://192.168.89.177:8000/account/code/send/?type=2&email=${email}`)
+        axios.get(`${Api}account/code/send/?type=2&email=${email}`)
 
     } catch (error) {
         return error
@@ -168,7 +168,7 @@ export const codeSend = (email:string)=> {
 export const postDeliveryOrder = (data: { Fullname: string; PhoneNumber: string; ClientCode: string; FullAddress: string; Comment: string; }, id: string) => {
     try { 
         const myto = Cookies.get('uliId');
-        axios.post('http://192.168.89.177:8000/flight/delivery_order/create/', {
+        axios.post(`${Api}flight/delivery_order/create/`, {
             track_code: id,
             fullname: data.Fullname,
             phone: data.PhoneNumber,

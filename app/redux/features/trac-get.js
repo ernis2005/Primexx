@@ -1,6 +1,7 @@
 import { kye } from "@/components/ServicesPages/Page6/Page6";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import { Api } from "@/app/api";
 
 const initialState = {
     value: {
@@ -19,7 +20,7 @@ export const getTrac = createAsyncThunk(
     'trac/getTrac' , async function(kye,{rejectWithValue}){
         try {
             
-            const data = await axios('http://192.168.89.177:8000/flight/baseparcels/',{
+            const data = await axios(`${Api}flight/baseparcels/`,{
                 method: "GET",
                 headers: {
                     accept: "application/json",
@@ -36,7 +37,7 @@ export const getTrac = createAsyncThunk(
 export const getTracHistory = createAsyncThunk(
     'trac/getTracHistory' , async function(kye,{rejectWithValue}){
         try {
-            const data = await axios('http://192.168.89.177:8000/flight/history/',{
+            const data = await axios(`${Api}flight/history/`,{
                 method: "GET",
                 headers: {
                     accept: "application/json",

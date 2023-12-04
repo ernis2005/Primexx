@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
-
+import { Api } from "@/app/api";
 import { useDispatch, useSelector } from "react-redux";
 
 import error from "next/error";
 import axios, { AxiosError } from "axios";
-import { api, getUser, } from "@/app/getData/getData";
+import {  getUser, } from "@/app/getData/getData";
 import { useState } from "react";
 import { redirect } from "next/navigation";
 import Cookies from 'js-cookie';
@@ -18,7 +18,7 @@ export const registrationPost= createAsyncThunk(
         try {
             if (params.password === params.repeatPassword) {
                 const phoneNumberWithoutMask = params.tel.replace(/\D/g, '');
-                await axios.post(`${api}/account/register/`, {
+                await axios.post(`${Api}account/register/`, {
                     email: params.email,
                     phone: phoneNumberWithoutMask,
                     password: params.password,
@@ -27,7 +27,7 @@ export const registrationPost= createAsyncThunk(
                     address: params.address,
                 })
                
-                const data = await axios.get(`${api}/account/code/send/?type=1&email=${params.email}`)
+                const data = await axios.get(`${Api}account/code/send/?type=1&email=${params.email}`)
                 if (data) {
                     await location.replace('/registration/confirm')
                 }
@@ -42,7 +42,7 @@ export const registrationPost= createAsyncThunk(
 export const codeVerifyPost = createAsyncThunk(
     'autor/codeVerifyPost', async function (params, { rejectWithValue, }) {
         try {
-            const  data= await axios.post(`${api}/account/code/verify/`,{
+            const  data= await axios.post(`${Api}account/code/verify/`,{
                 code:params.code
             })
             if (data) {
@@ -56,7 +56,7 @@ export const codeVerifyPost = createAsyncThunk(
 export const ugetUsers = createAsyncThunk(
     'autor/ugetUsers', async function (id, { dispatch }) {
         try {
-            const data = await axios('http://192.168.89.177:8000/account/get/', {
+            const data = await axios(`${Api}account/get/`, {
                 method: "GET",
                 headers: {
                     accept: "application/json",
@@ -73,7 +73,7 @@ export const ugetUsers = createAsyncThunk(
 // export const  getTrack = async () => {
 
 //     try {
-//         const data = await axios('http://192.168.89.177:8000/flight/baseparcels/',{
+//         const data = await axios(`${Api}/flight/baseparcels/`,{
 //             method: "GET",
 //             headers: {
 //                 accept: "application/json",
@@ -88,7 +88,7 @@ export const ugetUsers = createAsyncThunk(
 export const postLogin = createAsyncThunk(
     'autor/postLogin', async function (action, { rejectWithValue, dispatch }) {
         try {
-            await axios.post(`${api}/account/token/`, {
+            await axios.post(`${Api}account/token/`, {
                 email: action.email,
                 password: action.password
             }).then((res) => {

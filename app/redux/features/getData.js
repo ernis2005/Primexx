@@ -2,11 +2,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { Api } from '@/app/api';
 
 export const getConsolidation = createAsyncThunk(
     'consolidation/getConsolidation', async function (_, { dispatch, rejectWithValue }) {
         try {
-            const data = await axios(`http://192.168.89.177:8000/about/consolidation/`)
+            const data = await axios(`${Api}about/consolidation/`)
             return data
         } catch (error) {
             return rejectWithValue(error.response.data)

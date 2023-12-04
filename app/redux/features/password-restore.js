@@ -1,12 +1,13 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import { Api } from "@/app/api";
 
 export const restorePasswordPost = createAsyncThunk(
     'restorePasswordPost/restorePasswordPost',
     async (data, { rejectWithValue }) => {
        
         try {
-            const response = await axios.post(  `http://192.168.89.177:8000/account/password/verify/reset/`,
+            const response = await axios.post(`${Api}account/password/verify/reset/`,
                 { email: data.email,
                     code:data.kod,
                     password: data.Password,

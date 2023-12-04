@@ -1,12 +1,13 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import Cookies from "js-cookie";
+import { Api } from "@/app/api";
 export const saveChanges = createAsyncThunk(
     'saveChanges/saveChanges', async function (data, { dispatch, rejectWithValue }) {
         const myto = Cookies.get('uliId');
         
         try {
-            await axios.put('http://192.168.89.177:8000/account/update/info/', {
+            await axios.put(`${Api}account/update/info/`, {
                 info: data.name,
                 phone: data.tel,
                 address: data.address,

@@ -1,11 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { Api } from '@/app/api';
 import axios from 'axios';
 
 export const getBaseparceId = createAsyncThunk(
     'baseparce/getBaseparceId', async function (id, { dispatch, rejectWithValue }) {
         try {
-            const data = await axios(`http://192.168.89.177:8000/flight/baseparcels/?search=${id}`)
+            const data = await axios(`${Api}flight/baseparcels/?search=${id}`)
 
             return data
         } catch (error) {
