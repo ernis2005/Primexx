@@ -4,7 +4,7 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: "http",
-                hostname: "192.168.89.177",
+                hostname: "141.8.198.192",
             },
         ],
         minimumCacheTTL: 1500000,
