@@ -28,6 +28,7 @@ export const registrationPost= createAsyncThunk(
                 })
                
                 const data = await axios.get(`${Api}account/code/send/?type=1&email=${params.email}`)
+                console.log(data,'addad');
                 if (data) {
                     await location.replace('/registration/confirm')
                 }

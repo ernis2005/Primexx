@@ -15,7 +15,6 @@ interface Person {
 type DataArray = Person[];
 
 export const CardShop = ({ data }: { data: DataArray; }) => {
-
     return (
         <div className={s.Cards}>
             {data.map((res: Person, i: number) => (

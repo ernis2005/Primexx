@@ -30,7 +30,12 @@ export const CardsBlock6 = () => {
         <div className={s.Cards}>
             {
                 data.map((res) => (
-                    <Link href={res.linck} className={s.Card}>
+                    <Link
+                        href={{
+                            pathname: '/shop',
+                            query: { id: JSON.stringify(res.id) , name: res.name,img:res.image},
+                        }}
+                        className={s.Card}>
                         <Image className={s.img} alt='/' layout='fill' objectFit='cover' src={`${res.image}`} />
                         <p>{res.name}</p>
                     </Link>

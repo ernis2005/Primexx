@@ -48,7 +48,7 @@ const page = async () => {
                 <div className={`Contend ${s.contend}`}>
                     {/* <div><h2>Турция (Стамбул) - Россия (Москва)</h2></div> */}
                     
-                    {data?.map((res, i) => (
+                    {data.map((res, i) => (
                         <div>
                             <h2>{res.country}</h2><Tabels1 data={res} />
                             <span>
