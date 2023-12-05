@@ -1,22 +1,28 @@
-import React from 'react'
+"use client"
+
+
 import s from './page.module.scss'
 import Image from "next/legacy/image"
 import Link from 'next/link'
-interface Peson {
-    name: string,
-    image: string,
-    linck: string,
-}
-const data: Peson[] = [
+
+const data = [
     {
-        name: "Магазины Турции",
-        image: 'images/card2.jfif',
+        id: 1,
+        name: "Турция",
+        image: '/images/магазин1.jpg',
         linck: "/turkey"
     },
     {
-        name: "Магазины Америки",
-        image: 'images/card.jfif',
+        id: 2,
+        name: "Америка",
+        image: '/images/магазин2.jpg',
         linck: "/america"
+    },
+    {
+        id: 3,
+        name: 'Китай',
+        image: '/images/магазин3.jpg',
+        linck: "/china"
     }
 ]
 export const CardsBlock6 = () => {
@@ -25,10 +31,8 @@ export const CardsBlock6 = () => {
             {
                 data.map((res) => (
                     <Link href={res.linck} className={s.Card}>
-                        <Image alt='/' layout='fill' objectFit='cover' src={`/${res.image}`} />
-                        <div>
-                            <p>{res.name}</p>
-                        </div>
+                        <Image className={s.img} alt='/' layout='fill' objectFit='cover' src={`${res.image}`} />
+                        <p>{res.name}</p>
                     </Link>
                 ))
             }

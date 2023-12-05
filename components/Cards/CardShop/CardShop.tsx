@@ -1,4 +1,4 @@
-import React from 'react'
+import  React from 'react'
 import s from './page.module.scss'
 import Image from 'next/legacy/image';
 interface Person {

@@ -2,38 +2,61 @@ import React from 'react'
 import s from './page.module.scss'
 import Image from "next/legacy/image"
 import { getCardPag1 } from '@/app/getData/getData';
-type Card = {
-    id: number;
-    title: string;
-    description: string;
-    image: string;
-};
+
+
+const datadata = [
+    {
+        id: 1,
+        img: '/images/а1.jpg',
+        title:'01',
+        text: 'Оперативно обеспечиваем наших клиентов эффективными решениями на каждом этапе работы.'
+    },
+    {
+        id: 2,
+        img: '/images/a2.jpg',
+        title: '02',
+        text: 'Возможность самостоятельно выкупить, используя наш бесплатный склад'
+    },
+    {
+        id: 3,
+        img: '/images/а3.jpg',
+        title:'03',
+        text: 'Отслеживание посылки с момента заказа до получения.'
+    },
+    {
+        id: 4,
+        img: '/images/а4.jpg',
+        title: '04',
+        text: 'В форс-мажорных ситуациях компенсируем потери.'
+    }
+]
+
 
 export const CardsBlock1 = async () => {
-    const data: Card[] = await getCardPag1()
+    // const datadata: Card[] = await getCardPag1()
     return (
-        <div className={s.Cards}>
-            {data.length >= 0 ? (
-                data.map((res, i) => {
-                    return (
-                        <div key={res.id} className={s.Card}>
-                            <div className={s.bg}>
+        <div className={s.wrap}>
+            <div className={s.cards}>
+                {datadata.length >= 0 ? (
+                    datadata.map((res, i) => {
+                        return (
+                            <div key={res.id} className={s.card}>
                                 <Image
-                                    src={`${res.image}`}
+                                    src={`${res.img}`}
                                     layout="fill"
                                     objectFit="cover"
                                     alt="hwllo"
                                 />
+                                <h1>{res.title}</h1>
+                                <div className={s.info}>
+                                    <h3>{res.text}</h3>
+                                </div>
                             </div>
-                            <div className={s.info}>
-                                <h3>{res.title}</h3>
-                                <p>{res.description}</p>
-                            </div>
-                        </div>
+                        )
+                    }
                     )
-                }
-                )
-            ) : null}
+                ) : null}
+            </div>
         </div>
     )
 }

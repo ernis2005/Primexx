@@ -11,15 +11,15 @@ import { Pagination } from 'swiper/modules';
 import s from './page.module.scss'
 import Image from 'next/legacy/image';
 interface Person {
-    
-        id:number,
-        image:string
-    
+
+    id: number,
+    image: string
+
 }
 interface Types {
-   data: Person[]
+    data: Person[]
 }
-export const SwiperPageAboutUs = (data:Types) => {
+export const SwiperPageAboutUs = (data: Types) => {
     return (<div className={s.Block}>
         <Swiper
             slidesPerView={3.5}
@@ -54,9 +54,11 @@ export const SwiperPageAboutUs = (data:Types) => {
             className="mySwiper"
         >
             {data.data.map((res) => (
-                <SwiperSlide key={res.id}><div className={s.Card}>
-                    <Image src={res.image} layout='fill' />
-                </div></SwiperSlide>
+                <SwiperSlide key={res.id}>
+                    <div className={s.Card}>
+                        <Image src={res.image} layout='fill' />
+                    </div>
+                </SwiperSlide>
             ))}
         </Swiper>
     </div>)

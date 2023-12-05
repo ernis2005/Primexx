@@ -64,19 +64,13 @@ const Home = async () => {
                         Предоставляем бесплатный склад. Оказываем услугу выкупа из сайтов по
                         низкой комиссией.
                     </p>
-                    <CardsBlock1 />
                 </div>
-
+                <CardsBlock1 />
                 <div className={s.block3}>
                     <h3>Преимущества заказа из зарубежных сайтов</h3>
                     <p>Что делают привлекательными онлайн шоппинг на зарубежных сайтах?</p>
                     <div className={s.block2Image}>
-                        <Image
-                            layout="fill"
-                            alt="/"
-                            objectFit="cover"
-                            src={'/images/Background.png'}
-                        />
+                       
                     </div>
                     <div className={` Contend ${s.block2Info}`}>
                         <CardsBlock2 />

@@ -28,27 +28,28 @@ const Menu = ({ setModule }) => {
                         <li>
                             <Link onClick={() => setModule(false)} href={'/Page/services'}>
                                 Услуги
-                            </Link></li>
+                            </Link>
+                        </li>
                         <li>
                             <Link onClick={() => setModule(false)} href={'/Page/rates'}>
                                 Тарифы
-                            </Link></li>
+                            </Link>
+                        </li>
                         <li>
                             <Link onClick={() => setModule(false)} href={'/Page/news'}>
                                 Новости
-                            </Link></li>
+                            </Link>
+                        </li>
                         <li>
                             <Link onClick={() => setModule(false)} href={'/Page/FAQ'}>
                                 F.A.Q.
-                            </Link></li>
+                            </Link>
+                        </li>
                         <li>
                             <Link onClick={() => setModule(false)} href={'#'}>
                                 О нас
-                            </Link></li>
-                        <li>
-                            <Link onClick={() => setModule(false)} href={'#'}>
-                                Контакты
-                            </Link></li>
+                            </Link>
+                        </li>
                     </ul>
                 </ul>   
                 <div className={s.block2}>
