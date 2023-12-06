@@ -21,7 +21,7 @@ export const FAQAccordionPage = (data) => {
     return (
         <div className={s.header}>
             { data.data !== undefined  ? (
-                data?.data.map((res, i) => (
+                data.data.map((res, i) => (
                     <div className={s.card} key={i} onClick={() => onClick(i)}>
                         <div className={s.block1}>
                             <p>
