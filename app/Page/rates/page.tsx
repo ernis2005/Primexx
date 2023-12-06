@@ -34,12 +34,11 @@ export const metadata = {
 const page = async () => {
     const data: Product[] = await getRate()
     console.log(data,'http://141.8.198.192/');
- 
+
     return (
         <>
             <Header />
             <div style={{ marginTop: '124px' }} className={s.header}>
-
                 <BannerPages
                     idPage={3}
                     name={'Тарифы и сроки'}
@@ -48,7 +47,7 @@ const page = async () => {
                 <div className={`Contend ${s.contend}`}>
                     {/* <div><h2>Турция (Стамбул) - Россия (Москва)</h2></div> */}
                     
-                    {data.map((res, i) => (
+                    {data?.map((res, i) => (
                         <div>
                             <h2>{res.country}</h2><Tabels1 data={res} />
                             <span>
@@ -57,10 +56,7 @@ const page = async () => {
                                 <p>Стоимость указана до склада Москвы. Далее передаем посылку до местной курьерской службы,  <br /> таких как Сдэк, Boxberry, Яндекс и т.д.</p>
                             </span>
                         </div>
-  
                     ))}
-                      
-
                     <div>
                         <h2>Дополнительные услуги</h2>
                         <Tabels2 data={data} />
