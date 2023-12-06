@@ -5,7 +5,11 @@
     gap: 30px;
     @media screen and (max-width:900px){
     grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-    }
+ @media screen and (max-width:369px) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    
+ }
+}
 
     .save{
         width: 100%;

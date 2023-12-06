@@ -4,6 +4,14 @@
 import s from './page.module.scss'
 import Image from "next/legacy/image"
 import Link from 'next/link'
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+
+import { FreeMode, Pagination } from 'swiper/modules';
 
 const data = [
     {
@@ -25,22 +33,55 @@ const data = [
         linck: "/china"
     }
 ]
+
 export const CardsBlock6 = () => {
     return (
         <div className={s.Cards}>
-            {
-                data.map((res) => (
-                    <Link
-                        href={{
-                            pathname: '/shop',
-                            query: { id: JSON.stringify(res.id) , name: res.name,img:res.image},
-                        }}
-                        className={s.Card}>
-                        <Image className={s.img} alt='/' layout='fill' objectFit='cover' src={`${res.image}`} />
-                        <p>{res.name}</p>
-                    </Link>
-                ))
-            }
+            <Swiper
+                slidesPerView={3}
+                spaceBetween={30}
+                freeMode={true}
+                breakpoints={{
+                    104: {
+                        slidesPerView: 1.5,
+                    },
+                    492:{
+                        slidesPerView: 2,
+                    },
+                    536: {
+                        slidesPerView: 2.4,
+                    },
+                    723: {
+                        slidesPerView: 3,
+                    },
+                 
+                }}
+                pagination={{
+                    clickable: true,
+                }}
+                modules={[FreeMode, Pagination]}
+                className="mySwiper"
+            >
+
+                {
+                    data.map((res) => (
+                        <SwiperSlide className={s.Card}>
+                            <Link
+                                href={{
+                                    pathname: '/shop',
+                                    query: { id: JSON.stringify(res.id) , name: res.name,img:res.image},
+                                }}
+                                style={{backgroundImage:`url(${res.image})`} }
+                                className={s.Card}>
+                                <Image className={s.img} alt='/' layout='fill' objectFit='cover' src={`${res.image}`} />
+                                <p>{res.name}</p>
+                            </Link>
+
+                        </SwiperSlide>
+                
+                    ))
+                }
+            </Swiper>
         </div>
     )
 }
