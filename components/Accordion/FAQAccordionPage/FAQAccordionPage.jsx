@@ -21,30 +21,32 @@ export const FAQAccordionPage = (data) => {
     if(data === undefined) return null
     return (
         <div className={s.header}>
-            { data.data !== undefined  ? (
-                data.data.map((res, i) => (
-                    <div className={s.card} key={i} onClick={() => onClick(i)}>
-                        <div className={s.block1}>
-                            <p>
-                                {res.question}
-                            </p>
-                            <span className={cm(s.svg, {
-                                [s.svgAcc]: state === i
-                            })}><FiChevronDown />
-                            </span>
-                        </div>
-                        <div className={cm(s.block2, {
-                            [s.block2Acc]: state === i
-                        })}>
-                            <ul>
-                                <li dangerouslySetInnerHTML={{__html:res.answer}}/>
-                            </ul>
-                        </div>
-                    </div>
-                ))
-            ):null
-            }
+            
 
         </div>
     )
 }
+
+//{ data.data !== undefined  ? (
+//     data.data.map((res, i) => (
+//         <div className={s.card} key={i} onClick={() => onClick(i)}>
+//             <div className={s.block1}>
+//                 <p>
+//                     {res.question}
+//                 </p>
+//                 <span className={cm(s.svg, {
+//                     [s.svgAcc]: state === i
+//                 })}><FiChevronDown />
+//                 </span>
+//             </div>
+//             <div className={cm(s.block2, {
+//                 [s.block2Acc]: state === i
+//             })}>
+//                 <ul>
+//                     <li dangerouslySetInnerHTML={{__html:res.answer}}/>
+//                 </ul>
+//             </div>
+//         </div>
+//     ))
+// ):null
+// }
