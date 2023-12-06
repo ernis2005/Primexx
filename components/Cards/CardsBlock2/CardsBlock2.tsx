@@ -1,8 +1,6 @@
-
-"use server"
 import React from 'react'
 import s from './page.module.scss'
-import Image from 'next/legacy/image';
+import Image from 'next/image'
 
 const data = [
     {
@@ -38,7 +36,7 @@ export const CardsBlock2 = () => {
     return (
         <div className={s.saves}>
             {
-                data.map((el) => (
+                data?.map((el) => (
                     <div className={s.save}>
                         <div className={s.block}>
                             <Image className={s.img} src={el.img} alt="/" layout='fill' objectFit='cover' />
