@@ -2,8 +2,6 @@ import React from 'react'
 import s from './page.module.scss'
 import Image from 'next/legacy/image';
 
-
-
 const data = [
     {
         id: 1,

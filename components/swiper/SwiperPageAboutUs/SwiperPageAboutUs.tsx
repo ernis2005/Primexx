@@ -1,4 +1,4 @@
-
+"use client"
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
@@ -8,6 +8,7 @@ import { Pagination } from 'swiper/modules';
 import s from './page.module.scss'
 import Image from 'next/legacy/image';
 interface Person {
+
     id: number,
     image: string
 
