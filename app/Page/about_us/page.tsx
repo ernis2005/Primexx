@@ -40,7 +40,6 @@ const page = async () => {
                     <p> </p>
                 </div>
                 <div></div>
-                <div></div>
             </div>
 
             <Footer />
