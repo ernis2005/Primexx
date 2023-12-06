@@ -16,10 +16,12 @@ export const FAQAccordionPage = (data) => {
             setstate(id)
         )
     }
+    console.log(data);
+    if(data.data === undefined) return null
     return (
         <div className={s.header}>
             { data.data !== undefined  ? (
-                data.data.map((res, i) => (
+                data?.data.map((res, i) => (
                     <div className={s.card} key={i} onClick={() => onClick(i)}>
                         <div className={s.block1}>
                             <p>

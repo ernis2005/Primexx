@@ -26,7 +26,7 @@ export const BannerPages = ({ name, info, idPage }: Person) => {
     return (
         <div className={s.Header}>
             {
-                images.filter((res, index) => res.id === idPage).map((res, index) => (<Image src={res.img} alt="" layout='fill' objectFit='cover' />))
+                images.filter((res, index) => res.id === idPage).map((res, index) => (<Image src={res.img} alt="" layout='fill' objectFit='cover'  key={index}/>))
             }
             <div className={`Contend ${s.block}`}>
                 <h2>{name}</h2>
