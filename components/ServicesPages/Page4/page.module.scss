@@ -7,7 +7,11 @@
         display: grid;
         row-gap: 30px;
         text-align: center;
-
+        max-width: 1200px;
+        margin: 0 auto;
+        @media screen and (max-width:1238px) {
+            margin: 0 30px;
+          }
         h2 {
             color: #000;
             text-align: center;
@@ -38,3 +42,99 @@
         }
     }
 }
+.block1{
+    background-color: #001A0C;
+    color: #fff;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+width: 1200px;
+margin: 0 auto;
+@media screen and (max-width:1244px) {
+    width: 100%;
+}    
+p{
+        padding: 30px 0px;
+        color: #FFF;
+text-align: center;
+
+/* Regular text */
+font-family: Geometria;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 130%; /* 20.8px */
+z-index: 2;
+position: relative;
+    }
+    img{
+        opacity: .3;
+    }
+    h2{
+        z-index: 2;
+        padding: 30px 0px;
+        color: var(--White, #F5F5F5);
+text-align: center;
+position: relative;
+/* H3 */
+font-family: Geometria1;
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 43.2px */
+@media screen and (max-width:386px) {
+    font-size: 30px;
+}
+    }
+    form{
+        max-width: 600px;
+        margin: 0 auto;
+        display: grid;
+        row-gap: 30px;
+position: relative;
+z-index: 2;
+        
+        input{
+   
+            width: 100%;
+            padding: 15px 20px;
+            align-items: flex-start;
+            gap: 10px;
+            color: #B3B3B3;
+            text-align: left;
+            
+            /* Regular text */
+            font-family: Geometria;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%; /* 24px */
+            border: 1px solid #CCC;
+            background: #FFF;
+            outline: none;
+            }
+            button{
+                display: flex;
+            width: 100%;
+            padding: 15px 20px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            color: var(--Black, #001A0C);
+            text-align: center;
+            
+            /* Regular text */
+            font-family: Geometria;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%; /* 24px */
+            border: none;
+            }
+    }
+}
+// .FAQAccordionPage{
+//     max-width: 1200px;
+//     margin: 0 auto;
+//     }

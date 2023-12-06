@@ -34,7 +34,11 @@ const page = async () => {
                     info={'Узнайте что у нас нового'}
                 />
                 <div className={`Contend ${s.block}`}>
-                    <CardsNews data={data} />
+                    {data.length === 0 ? <div className={s.noData}>
+                      
+                        <h1 style={{height:250}}>Новостей нет</h1>   
+                    </div> : <CardsNews data={data} />
+                    }
                 </div>
             </div>
             <Footer />

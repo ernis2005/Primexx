@@ -19,7 +19,7 @@ export const CardsNews = ({ data }: Person) => {
     const [noOFElement, setNoOFElement] = useState(6);
     const datas = [1, 2, 3, 4, 5, 67, 8, 9, 0]
     const slice = data?.slice(0, noOFElement);
-    const data4length = datas.length;
+    const data4length = data.length;
     const LoadMore = () => {
         setNoOFElement(noOFElement + 6);
     };
@@ -50,9 +50,9 @@ export const CardsNews = ({ data }: Person) => {
                 ))}
 
             </div>
-            <button onClick={() => LoadMore()} className={cm(s.button)}>
+            {data4length <= 6 ? null : <button onClick={() => LoadMore()} className={cm(s.button, { [s.buttonNone]: data4length <= noOFElement })}>
                 Смотреть еще
-            </button>
+            </button>}
         </div>
     )
 }

@@ -15,7 +15,7 @@ type ProductComponentProps = {
 };
 
 
-export const TabelsBlock5 = ({ data }: ProductComponentProps) => {
+export const  TabelsBlock5 = ({ data }: ProductComponentProps) => {
 
 
     return (

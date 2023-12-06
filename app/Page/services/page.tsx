@@ -22,18 +22,18 @@ const page = () => {
                     name={'Наши услуги'}
                     info={'Что мы можем и что Вы можете ожидать от нас'}
                 />
-                <div className={`Contend ${s.block}`}>
+                <div className={` ${s.block}`}>
 
-                    <ul className={s.Navigation}>
+                    <ul className={`Contend ${s.Navigation}`}>
                         {NavigationData.map((res, i) => (<li key={i} onClick={() => setNavigationIndex(i)} className={cm(s.accli, { [s.accliAcc]: navigationIndex === i })} >{res}</li>))}
                     </ul>
                     <div className={cm(s.accNone, {
-                        [s.acc]: navigationIndex === 2
+                        [s.accs]: navigationIndex === 2
                     })}>
                         <Page3 />
                     </div>
                     <div className={cm(s.accNone, {
-                        [s.acc]: navigationIndex === 3
+                        [s.accs]: navigationIndex === 3
                     })}>
                         <Page4 />
                     </div>

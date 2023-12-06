@@ -40,9 +40,16 @@
 
 .acc {
     display: block;
-    width: 100%;
-}
+    max-width: 1200px;
+    margin:  auto;
+    
+  @media screen and (max-width:1238px) {
+    margin: 0 30px;
+  }}
 
 .accliAcc {
     border-bottom: 1px solid black;
+}
+.accs{
+    display: block;
 }

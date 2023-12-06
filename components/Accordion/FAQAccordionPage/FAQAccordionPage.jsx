@@ -17,7 +17,8 @@ export const FAQAccordionPage = (data) => {
         )
     }
     console.log(data);
-    if(data.data === undefined) return null
+    
+    if(data === undefined) return null
     return (
         <div className={s.header}>
             { data.data !== undefined  ? (
@@ -42,9 +43,7 @@ export const FAQAccordionPage = (data) => {
                     </div>
                 ))
             ):null
-             
             }
-         
 
         </div>
     )
