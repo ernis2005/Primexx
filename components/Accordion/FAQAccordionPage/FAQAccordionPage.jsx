@@ -21,7 +21,7 @@ export const FAQAccordionPage = (data) => {
     if(data === undefined) return null
     return (
         <div className={s.header}>
-            <h1 style={{height:250}}>asdasd</h1>
+            <h1 style={{height:"250px"}}>asdas1d</h1>
 
         </div>
     )
