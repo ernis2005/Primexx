@@ -15,8 +15,13 @@
      
         .card{
             width: 100%;
+<<<<<<< HEAD
             padding: 1px  25px;
         
+=======
+            padding: 25px;
+            min-height: 170px;
+>>>>>>> 64872fa (dlvksnv)
             position: relative;
             z-index: 100;
             background-color: black;
@@ -25,13 +30,14 @@
                 position: relative;
                 z-index: 99;
                 color: var(--White, #F5F5F5);
-                font-family: Geometria;
+                font-family: Geometria1;
                 font-size: 44px;
                 font-weight: bold;
             }
     
             img{
                 width: 100%;
+                padding: 40px;
                 opacity: 0.4;
                 position: relative;
                 z-index: 99;

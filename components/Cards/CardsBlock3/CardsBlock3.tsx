@@ -97,6 +97,7 @@ export const CardsBlock3 = () => {
                     <Svg10 />
                 </span>
             </div>
+            <button className={s.btn_bar}>Благодаря нашей трекинг системе отслеживайте ваши посылки на каждом этапе</button>
         </div>
     )
 }

@@ -3,7 +3,7 @@
     grid-template-columns: 2fr 2fr ;
     justify-content: space-evenly;
     position: relative;
-align-items: center;
+    align-items: center;
 
 gap: 100px;
 @media screen and (max-width:571px) {
@@ -11,6 +11,7 @@ gap: 100px;
     padding-left: 40px;
     row-gap: 42px;
     }
+    
 .p1     {
     color: var(--Black, #001A0C);
 text-align: right;
@@ -44,8 +45,8 @@ line-height: 120%; /* 57.6px */
 }
 }
     span {
-display: grid;
-row-gap: 15px;
+        display: grid;
+        row-gap: 15px;
         text-align: left;
         @media screen and (max-height:571px) {
   
@@ -54,24 +55,24 @@ row-gap: 15px;
         h2 {
             color: var(--Black, #001A0C);
 
-/* Description */
-font-family: Geometria;
-font-size: 24px;
-font-style: normal;
-font-weight: 600;
-line-height: 150%; /* 36px */
+            /* Description */
+            font-family: Geometria;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%; /* 36px */
         }
         p{
             padding: 0;
             margin: 0;
             color: var(--Black, #001A0C);
 
-/* Regular text */
-font-family: Geometria;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: 150%; /* 24px */
+            /* Regular text */
+            font-family: Geometria;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%; /* 24px */
         }
     }
     .s2{
@@ -99,6 +100,19 @@ line-height: 150%; /* 24px */
 .Header{
     display: grid;
     row-gap: 60px ;
+
+    .btn_bar{
+        margin: 0 auto;
+        max-width: 700px;
+        width: 100%;
+        padding: 26px;
+        color: var(--White, #F5F5F5);
+        font-family: Geometria;
+        font-size: 16px;
+        font-weight: 400;
+        background: var(--Green, #009345);
+        border: none;
+    }
  
 }
 .test{
