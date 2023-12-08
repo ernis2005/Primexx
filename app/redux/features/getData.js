@@ -14,6 +14,20 @@ export const getConsolidation = createAsyncThunk(
         }
     }
 )
+export const postConsolidation = createAsyncThunk(  
+
+    'consolidation/postConsolidation', async function (data, { dispatch, rejectWithValue }) {
+        
+        const phoneNumberWithoutMask = data.phone.replace(/\D/g, '');
+        try {
+            await axios.post(`${Api}flight/consultation_order/create/`,  {  fullname: data.name,   phone: phoneNumberWithoutMask, })
+            
+        } catch (error) {
+            return rejectWithValue(error.response.data)
+        }
+    }
+)
+
 
 export const getConsolidationData = createSlice({
     initialState: {
@@ -33,14 +47,25 @@ export const getConsolidationData = createSlice({
             state.status = 'loading'
         },
         [getConsolidation.fulfilled]: (state,  action ) => {
-            
             state.status = 'success'
             state.consolidation = action.payload.data
         },
         [getConsolidation.rejected]: (state, action) => {
             state.status = 'failed'
             state.error = action.payload
+        },
+        [postConsolidation.pending]: (state, action) => {
+            state.status = 'loading'
+        },
+        [postConsolidation.fulfilled]: (state, action) => {
+            state.status = 'success'
+            state.consolidation = action.payload.data
+        },
+        [postConsolidation.rejected]: (state, action) => {
+            state.status = 'failed'
+            state.error = action.payload
         }
+
     }
 })
 

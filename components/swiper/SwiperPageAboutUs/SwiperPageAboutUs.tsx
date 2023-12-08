@@ -53,7 +53,7 @@ export const SwiperPageAboutUs = (data: Types) => {
             {data.data.map((res) => (
                 <SwiperSlide key={res.id}>
                     <div className={s.Card}>
-                        <Image src={res.image} layout='fill' />
+                        <Image src={res.image} objectFit='cover' layout='fill' />
                     </div>
                 </SwiperSlide>
             ))}

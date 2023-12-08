@@ -49,7 +49,6 @@ const page = (params) => {
                         >Универмаги</li>
                         <li onClick={() => setCategory(3)}>Одежда</li>
                         <li onClick={() => setCategory(4)}>Обувь</li>
-                        <li onClick={() => setCategory(5)}>БАДы и витамины</li>
                     </ul>
                     {data.status !== 'loading' && (data.shop.length === 0 && <div style={{ margin: '0 auto', height: '250px' }}>Нет данных</div>)}
                     {

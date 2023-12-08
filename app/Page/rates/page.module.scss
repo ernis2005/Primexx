@@ -7,8 +7,11 @@
     .contend {
         margin: 0 auto;
         display: grid;
+        grid-row-gap: 60px;
         row-gap: 60px;
         width: 100%;
+        overflow: hidden;
+        padding: 30px;
         div {
 
             display: grid;

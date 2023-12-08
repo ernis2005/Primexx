@@ -46,9 +46,11 @@ const Menu = ({ setModule }) => {
                             </Link>
                         </li>
                         <li>
-                            <Link onClick={() => setModule(false)} href={'#'}>
+                            <Link onClick={() => setModule(false)} href={'/Page/about_us'}>
                                 О нас
                             </Link>
+                        </li>
+                        <li>
                         </li>
                     </ul>
                 </ul>   

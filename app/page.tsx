@@ -85,7 +85,7 @@ const Home = async () => {
                     <div>
                         <CardsBlock3 />
                     </div>
-                    <div></div>
+                    
                 </div>
                 <div className={`Contend  ${s.block4} `}>
                     <h3>
