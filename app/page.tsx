@@ -14,6 +14,7 @@ import Link from "next/link";
 import d from '../public/images/visa.svg'
 import { FromInput } from "@/components/FromInput/FromInput";
 import type { Metadata } from "next";
+import RegisterButton from "@/components/RegisterButton/RegisterButton";
 type Product = {
     id: number;
     title: string;
@@ -104,11 +105,7 @@ const Home = async () => {
                         />
                     </div>
                     <span>Данныe адреса вы используете для доставки в интернет-магазинах, а мы получаем ваши посылки и пересылаем их вам.</span>
-                    <button>
-                        <Link href={'/registration'}>
-                            Зарегистрироваться
-                        </Link>
-                    </button>
+                    <RegisterButton/>
                 </div>
                 <div className={` Contend ${s.block5}`}>
                     <h3>Тарифы и сроки</h3>

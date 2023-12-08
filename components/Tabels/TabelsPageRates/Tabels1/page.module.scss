@@ -79,3 +79,71 @@
         }
     }
 }
+.block12{
+    justify-content: space-between;
+    display: flex;
+   
+    background: var(--Dark-Green, #003318);
+    tr{
+        display: flex;
+       width: 1200px;
+    
+       justify-content: space-between;
+       align-items: center;
+       flex-shrink: 0;
+      
+           text-align: center;
+        th{ 
+            height: 80px;
+            width: 100%;
+            padding-left: 30px ;
+            padding-right: 30px;
+            display: grid;
+            align-items: center;color: var(--White, #F5F5F5);
+            text-align: center;
+            
+            /* Description */
+            font-family: Geometria;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 36px */
+            border: 1px solid var(--Black, #001A0C);
+        }
+       
+    }
+
+}
+.block22{
+    justify-content: space-between;
+    display: block;
+    background: var(--Dark-Green, #009345);
+    tr{
+        display: flex;
+       width: 100%;
+       justify-content: space-between;
+       align-items: center;
+       flex-shrink: 0;
+        text-align: center;
+           td{ 
+        
+            width: 100%;
+         padding-left: 30px ;
+         padding-right: 30px;
+            display: grid;
+            align-items: center;color: var(--White, #F5F5F5);
+            text-align: center;
+            
+            /* Description */
+            font-family: Geometria;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 36px */
+
+           
+            border: 1px solid var(--Black, #001A0C);
+        }
+       
+    }
+}

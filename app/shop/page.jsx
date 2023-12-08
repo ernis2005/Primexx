@@ -11,7 +11,7 @@ import { getShop } from '../redux/features/shop-get'
 import Loading from '@/components/Loading/Loading'
 import Image from 'next/legacy/image'
 const page = (params) => {
-    console.log(params, 'params');
+
     const [category, setCategory] = useState(1)
     const dispatch = useDispatch()
     useEffect(() => {
@@ -23,10 +23,12 @@ const page = (params) => {
         subTitle: 'Подзаголовок'
 
     }
+    console.log(data.shop);
     return (
         <div>
             <Header />
             <div className={`top`}>
+
                 
                 <div className={s.Header1}>
                 
@@ -49,9 +51,9 @@ const page = (params) => {
                         <li onClick={() => setCategory(4)}>Обувь</li>
                         <li onClick={() => setCategory(5)}>БАДы и витамины</li>
                     </ul>
+                    {data.status !== 'loading' && (data.shop.length === 0 && <div style={{ margin: '0 auto', height: '250px' }}>Нет данных</div>)}
                     {
                         data.status === 'success' && <div>
-                            {data.shop.length === 0 && <div style={{ margin: '0 auto', height: '250px' }}>Нет данных</div>}
                             <CardShop data={data.shop} />
                         </div>}
                     {

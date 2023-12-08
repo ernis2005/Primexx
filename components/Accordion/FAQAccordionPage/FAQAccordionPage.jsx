@@ -16,7 +16,7 @@ export const FAQAccordionPage = (data) => {
             setstate(id)
         )
     }
-    console.log(data);
+
     
     if(data === undefined) return null
     return (

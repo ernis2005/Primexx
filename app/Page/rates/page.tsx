@@ -14,7 +14,6 @@ type Product = {
     amount: string;
     delivery_time: string;
     delivery: string;
-  
     additionally: string;
 };
 
@@ -33,8 +32,7 @@ export const metadata = {
 
 const page = async () => {
     const data: Product[] = await getRate()
-    console.log(data,'http://141.8.198.192/');
-
+    
     return (
         <>
             <Header />
@@ -45,23 +43,24 @@ const page = async () => {
                     info={'Тарифы и сроки'}
                 />
                 <div className={`Contend ${s.contend}`}>
+                    <div>
+                        <h2>Дополнительные услуги</h2>
+                        <Tabels2 data={data} />
+                        <p>Лира к рублю - 5 рублей.</p>
+                    </div>
                     {/* <div><h2>Турция (Стамбул) - Россия (Москва)</h2></div> */}
                     
                     {data?.map((res, i) => (
                         <div>
                             <h2>{res.country}</h2><Tabels1 data={res} />
                             <span>
-                                <p>Отправка товаров происходит по пятницам. <br />
-          Коробки от обуви отдельно 1$. Груз от 100 килограмм по 14$ </p>
-                                <p>Стоимость указана до склада Москвы. Далее передаем посылку до местной курьерской службы,  <br /> таких как Сдэк, Boxberry, Яндекс и т.д.</p>
+                                <p>Отправка товаров происходит два раза в неделю.
+Коробки от обуви отдельно 1$. Груз от 100 килограмм по 14$  </p>
+                                <p>Стоимость указана до склада Москвы. Далее передаем посылку до местной курьерской службы, таких как Сдэк, Boxberry, Яндекс и т.д.</p>
                             </span>
                         </div>
                     ))}
-                    <div>
-                        <h2>Дополнительные услуги</h2>
-                        <Tabels2 data={data} />
-                        <p>Лира к рублю - 5 рублей.</p>
-                    </div>
+            
                 </div>
             </div>
             <Footer />
