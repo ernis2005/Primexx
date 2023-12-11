@@ -4,8 +4,8 @@
     justify-content: space-evenly;
     position: relative;
     align-items: center;
+    gap: 100px;
 
-gap: 100px;
 @media screen and (max-width:571px) {
     grid-template-columns: 2fr ;
     padding-left: 114px;
@@ -18,14 +18,14 @@ gap: 100px;
     
 .p1     {
     color: var(--Black, #001A0C);
-text-align: right;
+    text-align: right;
 
 /* H2 */
 font-family: Geometria1;
 font-size: 48px;
 font-style: normal;
 font-weight: 700;
-line-height: 120%; /* 57.6px */
+line-height: 120%; 
 @media screen and (max-width:571px) {
   
         display: none !important;
@@ -36,12 +36,11 @@ line-height: 120%; /* 57.6px */
     color: var(--Black, #001A0C);
     text-align: left;
     
-    /* H2 */
     font-family: Geometria1;
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
-    line-height: 120%; /* 57.6px */
+    line-height: 120%; 
     @media screen and (max-height:571px) {
   
         display: none !important;
@@ -54,30 +53,26 @@ line-height: 120%; /* 57.6px */
         row-gap: 15px;
         text-align: left;
         @media screen and (max-height:571px) {
-  
-       text-align: left;
+        text-align: left;
     }
         h2 {
             color: var(--Black, #001A0C);
 
-            /* Description */
             font-family: Geometria1;
             font-size: 24px;
             font-style: normal;
             font-weight: 600;
-            line-height: 150%; /* 36px */
+            line-height: 150%;
         }
         p{
             padding: 0;
             margin: 0;
             color: var(--Black, #001A0C);
-
-            /* Regular text */
             font-family: Geometria;
             font-size: 16px;
             font-style: normal;
             font-weight: 600;
-            line-height: 150%; /* 24px */
+            line-height: 150%; 
         }
     }
     .s2{
@@ -140,27 +135,25 @@ row-gap: 15px;
     position: absolute;
     width: 10px;
     height: 816px;
-
     left: 50%;
-    
     border-radius: 10px;
     margin-top: 40px;
     @media screen and (max-width:571px) {
         left: 30px;  
         margin-top: 20px;
-    margin-left: 46px;
+        margin-left: 46px;
     }
 
    
 background: #D9D9D9;
 div{
       
-       max-height: 100%;
+        max-height: 100%;
         width: 100%;
         z-index: 1;
         position: absolute;
         border-radius: 10px;
-background: var(--Green, #009345);
+        background: var(--Green, #009345);
         
     }
     span {

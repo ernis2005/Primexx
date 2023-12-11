@@ -65,7 +65,7 @@ const Home = async () => {
                 </div>
                 <div className={`Contend ${s.block2}`}>
                     <p>Мы являемся сервисом по доставке ваших любимых брендов <br />
-из любого американского или турецкого сайта и маркетплейса во все регионы России. 
+                    из любого американского или турецкого сайта и маркетплейса во все регионы России. 
                     </p>
                 </div>
                 <CardsBlock1 />
@@ -80,9 +80,8 @@ const Home = async () => {
                         <CardsBlock2 />
                     </div>
                 </div>
-                <div></div>
                 <div className={`Contend ${s.block3}`} >
-                    <h3>
+                    <h3 style={{marginTop:'30px'}}>
                         Этапы работы
                     </h3>
                     <div>
@@ -93,10 +92,11 @@ const Home = async () => {
                 <div></div>
                 <div className={`Contend  ${s.block4} `}>
                     <h3>
-                    Хотите выкупить товар самостоятельно ? <br /></h3>
+                    Хотите выкупить товар самостоятельно <br />
+                    и у вас есть зарубежная карта? ? <br /></h3>
                     <p>
-                        Зарегистрируйтесь и получите адреса складов в <span>Турции</span> и 
-                        <span>Америке</span> <br />
+                        Зарегистрируйтесь и получите адреса складов в <span>Турции</span> 
+                         и   <span>Америке</span> <br />
                         для самостоятельных покупок
                     </p>
                     <div className={s.block4Images}>
@@ -110,10 +110,10 @@ const Home = async () => {
                     <RegisterButton/>
                 </div>
                 <div className={` Contend ${s.block5}`}>
-                    <h3>Тарифы и сроки</h3>
-                    <div><TabelsBlock5 data={dataRate} /></div>
+                    <h3 style={{padding:'60px 0 62px'}}>Тарифы и сроки</h3>
+                    <div style={{}}><TabelsBlock5 data={dataRate} /></div>
 
-                    <button>
+                    <button style={{margin:'30px auto 40px'}}>
                         <Link href={'/Page/rates'}>
                             Узнать подробнее
                         </Link>
@@ -123,7 +123,7 @@ const Home = async () => {
                     <h3>Магазины</h3>
                     <CardsBlock6 data={dataCountry} /> 
                 </div> */}
-                <div className={s.block7}>
+                <div className={s.block7} style={{marginBottom:'60px'}}>
                     <div className={s.block7Info}>
                         <h2>Ваш личный байер в мире
                             международных покупок</h2>
@@ -135,7 +135,6 @@ const Home = async () => {
                     </div>
                     <div className={s.fromInput}><FromInput colors={"#333"} /></div>
                 </div>
-                <div></div>
             </main>
             <Footer />
         </>
