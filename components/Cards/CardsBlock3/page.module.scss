@@ -96,10 +96,8 @@ line-height: 120%; /* 57.6px */
   h3{
     display: none !important;
   }
-       
-    
 }
-@media screen and (max-width:450px) {
+@media screen and (max-width:498px) {
     span{
         h2{
             font-size: 16px !important ;
@@ -115,7 +113,7 @@ line-height: 120%; /* 57.6px */
 .Header{
     display: grid;
     row-gap: 60px ;
- @media screen and (max-width:450px) {
+ @media screen and (max-width:498px) {
 row-gap: 15px;
  }
     .btn_bar{
@@ -129,7 +127,7 @@ row-gap: 15px;
         font-weight: 400;
         background: var(--Green, #009345);
         border: none;
-        @media screen and (max-width:450px) {
+        @media screen and (max-width:498px) {
             padding: 15px;
             font-size: 15px;
         }
@@ -211,13 +209,13 @@ background: var(--Green, #009345);
                      }
                 }
                 }
-@media screen and (max-width:463px) {
+@media screen and (max-width:501px) {
     height: 882px;
     
     span {
         row-gap: 95px;
     }
-@media screen and (max-width:450px) {
+@media screen and (max-width:501px) {
     height: 924px;
     height: 525px;
     margin-left: 23px;
@@ -236,7 +234,7 @@ background: var(--Green, #009345);
         span {
             row-gap: 32px;
         }
-        @media screen and (max-width:450px ) {
+        @media screen and (max-width:501px ) {
             height: 611px !important;
             span {
                 row-gap: 39px !important;
@@ -255,10 +253,42 @@ background: var(--Green, #009345);
     @media screen and (max-width:569px) {
         height: 843px;
         span {
-            row-gap: 84px;
+            row-gap: 88px;
         }
         @media screen and (max-width:542px) {
             left: 10px;
+            height: 805px;
+            span{
+                row-gap: 77px;  
+            }
+            @media screen and (max-width:525px) {
+                height: 833px;
+                span {
+                    row-gap: 87px;
+                }
+            }
+
+            @media screen and (max-width:498px) {
+                height: 482px;
+                span {
+                    row-gap: 13px;
+                }
+           
+                @media screen and (max-width:476px) {
+                    height:  510px;
+                    span {
+                        row-gap: 19px;
+                    }
+                    @media screen and (max-width:439px) {
+                 height: 556px ;
+                 span{
+                        row-gap: 27px;
+                 }
+                    }
+                }
+                left: 26px;
+            }
+            
         }
     }
 }

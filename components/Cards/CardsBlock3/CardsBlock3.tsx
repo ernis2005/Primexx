@@ -15,12 +15,18 @@ export const CardsBlock3 = () => {
             test = 1900
         }
         if (heiScr <= 562) {
-            test = 1500
+            test = 2500
         }
+        if (heiScr <= 450) {
+            test = 1900
+        }
+        
         const winScr: number = document.documentElement.scrollTop - test;
         const height = refComponent.current.getBoundingClientRect().height;
         const scrlled = (winScr / height) * 70
         setScr(scrlled)
+        console.log(height);
+        
     }
 
     useEffect(() => {
