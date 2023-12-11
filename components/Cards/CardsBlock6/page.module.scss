@@ -24,12 +24,18 @@
         line-height: 150%;
 
   
-@media screen  and (max-width:472px) {
-    min-width: 200px;
-}
-    @media screen and (max-width:372px) {
-        height: 250px !important; 
-    }
+
+    @media screen and (max-width:450px) {
+        display: flex;
+        min-width: 120px !important;
+        min-height: 180px !important;
+        max-width: 120px !important;
+        max-height: 180px !important;
+        padding: 15px !important;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;}
         .image {
             z-index: 3 ;
             position: absolute;
@@ -41,9 +47,7 @@
             z-index: 4;
             text-align: center;
             top: 260px;
-            @media screen and (max-width:372px) {
-                top: 190px !important; 
-             }
+            
         }
     }
 }

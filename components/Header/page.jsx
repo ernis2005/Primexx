@@ -48,6 +48,7 @@ const Header = () => {
                             <li><MdOutlineMailOutline /> <a href="mailto:info@primex.kg">info@primex.kg</a> </li>
                         </ul>
                     </div>
+  
                     <div className={s.Login}>
 
                         <ul>
@@ -74,44 +75,47 @@ const Header = () => {
                     </Link>
 
                 </div>
-                <ul>
-                    <li>
-                        <Link href={'/'}>
-                            Главная
+                <div className={s.className1}>
+                    <ul>
+                        <li>
+                            <Link href={'/'}>
+                        Главная
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href={'/Page/services'}>
+                        Услуги
+                            </Link></li>
+                        <li>
+                            <Link href={'/Page/rates'}>
+                        Тарифы
+                            </Link></li>
+                        <li>
+                            <Link href={'/Page/news'}>
+                        Новости
+                            </Link></li>
+                        <li>
+                            <Link href={'/Page/FAQ'}>
+                        F.A.Q.
+                            </Link></li>
+                        <li>
+                            <Link href={'/Page/about_us'}>
+                        О нас
+                            </Link></li>
+
+                    </ul>
+                    <div className={s.buttonSearch}>
+                        <Link href={'/Page/tracking'} style={{ border: 'none' }}>
+                            <AiOutlineSearch />
+                            <p>Отследить товар</p>
                         </Link>
-                    </li>
-                    <li>
-                        <Link href={'/Page/services'}>
-                            Услуги
-                        </Link></li>
-                    <li>
-                        <Link href={'/Page/rates'}>
-                            Тарифы
-                        </Link></li>
-                    <li>
-                        <Link href={'/Page/news'}>
-                            Новости
-                        </Link></li>
-                    <li>
-                        <Link href={'/Page/FAQ'}>
-                            F.A.Q.
-                        </Link></li>
-                    <li>
-                        <Link href={'/Page/about_us'}>
-                            О нас
-                        </Link></li>
+                    </div>
+                    <button onClick={() => setModule1(true)}>
+                        <AiOutlineMenu />
+                    </button>
 
-                </ul>
-                <div className={s.buttonSearch}>
-                    <Link href={'/Page/tracking'} style={{ border: 'none' }}>
-                        <AiOutlineSearch />
-                        <p>Отследить товар</p>
-                    </Link>
                 </div>
-                <button onClick={() => setModule1(true)}>
-                    <AiOutlineMenu />
-                </button>
-
+               
             </div>
             <div className={cm(s.accNone, {
                 [s.acc]: module1 === true

@@ -9,13 +9,13 @@ export const CardsBlock3 = () => {
 
     const refComponent: React.MutableRefObject<any> = useRef();
     const onScroll = () => {
-        let test = 1611
+        let test = 1411
         const heiScr = window.innerWidth
         if (heiScr <= 594) {
             test = 1900
         }
         if (heiScr <= 562) {
-            test = 2500
+            test = 1500
         }
         const winScr: number = document.documentElement.scrollTop - test;
         const height = refComponent.current.getBoundingClientRect().height;
@@ -35,14 +35,14 @@ export const CardsBlock3 = () => {
 
                 <span >
                     <h2>Регистрация</h2>
-                    <p>Чтобы начать работу с нами, необходимо пройти быструю регистрацию.</p>
+                    <p>Чтобы начать работу с нами, необходимо пройти быструю регистрацию</p>
                 </span>
             </div>
             <div className={s.Card}>
                 <span className={s.s2}>
                     <h2>Выбор товара</h2>
-                    <p>Необходимо выбрать товар из любого турецкого или американского
-                        сайта/маркетплейса.</p>
+                    <p>Необходимо выбрать товар из любого турецкого
+или американского сайта маркетплейса.</p>
                 </span>
 
 
@@ -53,13 +53,14 @@ export const CardsBlock3 = () => {
 
                 <span >
                     <h2>Оформление заказа</h2>
-                    <p>Оставьте ссылки на товар, ожидайте SMS от менеджера, оплатите российской картой.</p>
+                    <p>Оставьте ссылки на товар, ожидайте SMS
+от менеджера, оплатите российской картой.</p>
                 </span>
             </div>
             <div className={s.Card}>
                 <span className={s.s2}>
                     <h2>Выкуп товара</h2>
-                    <p>Чтобы начать работу с нами, необходимо пройти быструю регистрацию.</p>
+                    <p>Выкупим вами выбранный товар в тот же день.</p>
                 </span>
 
 
@@ -69,21 +70,21 @@ export const CardsBlock3 = () => {
                 <h3 className={s.p1}>05</h3>
 
                 <span >
-                    <h2>Оформление заказа</h2>
-                    <p>Выкупим вами выбранный товар
-                        в тот же день</p>
+                    <h2>Прием и отправка</h2>
+                    <p>Принимаем ваши посылки, консолидируем
+и переупаковываем.</p>
                 </span>
             </div>
             <div className={s.Card}>
                 <span className={s.s2}>
-                    <h2>Выкуп товара</h2>
-                    <p>Принимаем ваши посылки,
-                        консолидируем и переупаковываем.</p>
+                    <h2>Доставляем до ваших рук</h2>
+                    <p>Доставляем  во все регионы России. До вашего адреса или до ближайшего пункта выдачи.</p>
                 </span>
 
 
                 <h3 className={s.p2}>06</h3>
             </div>
+            <div>   </div>
             <div className={s.test}>
                 <div style={{ height: `${scr}%`, }}>
 

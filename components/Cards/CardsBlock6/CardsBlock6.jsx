@@ -38,15 +38,15 @@ export const CardsBlock6 = (ProductCountry) => {
     return (
         <div className={s.Cards}>
             <Swiper
-                slidesPerView={3}
+                slidesPerView={1}
                 spaceBetween={30}
                 freeMode={true}
                 breakpoints={{
                     104: {
-                        slidesPerView: 1.5,
+                        slidesPerView: 1,
                     },
-                    492:{
-                        slidesPerView: 2,
+                    460:{
+                        slidesPerView: 1,
                     },
                     536: {
                         slidesPerView: 2.4,
