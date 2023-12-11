@@ -42,14 +42,14 @@ export const CardsBlock1 = async () => {
                         return (
                             <div key={res.id} className={s.card}>
                                 <Image
-                                    src={`${res.img}`}
+                                    src={`${res.image}`}
                                     layout="fill"
                                     objectFit="cover"
                                     alt="hwllo"
                                 />
                                 <h1>{res.title}</h1>
                                 <div className={s.info}>
-                                    <h3>{res.text}</h3>
+                                    <h3>{res.description}</h3>
                                 </div>
                             </div>
                         )
