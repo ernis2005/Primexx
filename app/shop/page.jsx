@@ -23,7 +23,6 @@ const page = (params) => {
         subTitle: 'Подзаголовок'
 
     }
-    console.log(data.shop);
     return (
         <div>
             <Header />

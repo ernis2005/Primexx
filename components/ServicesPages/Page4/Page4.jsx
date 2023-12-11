@@ -18,7 +18,6 @@ export const Page4 = () => {
     );
     const dispatch = useDispatch()
     const onSubmit = (data) =>  {
-        console.log(data)
         dispatch(postConsolidation(data))
         reset();
     }

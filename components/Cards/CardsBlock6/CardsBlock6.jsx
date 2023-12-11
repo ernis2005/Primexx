@@ -35,7 +35,6 @@ const data = [
 ]
 
 export const CardsBlock6 = (ProductCountry) => {
-    console.log(ProductCountry);
     return (
         <div className={s.Cards}>
             <Swiper

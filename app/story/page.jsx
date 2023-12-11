@@ -18,9 +18,8 @@ const page = () => {
     }, [])
 
     const data = useSelector(state => state.tracReducer)
-    console.log(data.trac);
+
     const trackCodes = data.trac.map(item => item.track_code);
-    console.log(trackCodes,'const trackCodes = data.trac.map(item => item.track_code);');
     return (
         <div>
             <HeaderProfile />
