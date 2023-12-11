@@ -26,17 +26,20 @@
             z-index: 100;
             background: linear-gradient(0deg, rgba(1, 26, 12, 0.6) 0%, rgba(1, 26, 13, 0.6) 100%), #303030 -18px -59.405px/101.111% 145.344% no-repeat;  display: grid;
             align-content: space-around;
-            gap: 15px;
+            gap: 20px;
         @media screen and (max-width:450px) {
-            padding: 10px;
+            padding: 15px;
         }
             h1{
                 position: relative;
-                z-index: 99;
-                color: var(--White, #F5F5F5);
+                z-index: 99;color: var(--White, #F5F5F5);
+
+                /* H1 */
                 font-family: Geometria1;
-                font-size: 44px;
-                font-weight: bold;
+                font-size: 64px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 120%; /* 76.8px */
                 @media screen and (max-width:450px) {
                     font-size: 36px;
                 }
@@ -59,7 +62,7 @@
 font-family: Geometria;
 font-size: 16px;
 font-style: normal;
-font-weight: 400;
+font-weight: 500;
 line-height: 130%; /* 20.8px */
                 }
             }
