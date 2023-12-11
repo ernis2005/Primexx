@@ -34,7 +34,8 @@ const data = [
     }
 ]
 
-export const CardsBlock6 = () => {
+export const CardsBlock6 = (ProductCountry) => {
+    console.log(ProductCountry);
     return (
         <div className={s.Cards}>
             <Swiper
@@ -63,24 +64,24 @@ export const CardsBlock6 = () => {
                 className="mySwiper"
             >
 
-                {
-                    data.map((res) => (
-                        <SwiperSlide className={s.Card}>
-                            <Link
-                                href={{
-                                    pathname: '/shop',
-                                    query: { id: JSON.stringify(res.id) , name: res.name,img:res.image},
-                                }}
-                                style={{backgroundImage:`url(${res.image})`} }
-                                className={s.Card}>
-                                <Image className={s.img} alt='/' layout='fill' objectFit='cover' src={`${res.image}`} />
-                                <p>{res.name}</p>
-                            </Link>
+                {ProductCountry.data?.length >= 0 && 
+                ProductCountry.data?.map((res ,index) => (
+                    <SwiperSlide className={s.Card} key={index}>
+                        <Link
+                            href={{
+                                pathname: '/shop',
+                                query: { id: JSON.stringify(res.id) , name: res.name,img:res.image},
+                            }}
+                            style={{backgroundImage:`url(${res.image})`} }
+                            className={s.Card}>
+                            <Image className={s.image} alt='/' layout='fill' objectFit='cover' src={`${res.image}`} />
+                            <p>{res.name}</p>
+                        </Link>
 
-                        </SwiperSlide>
+                    </SwiperSlide>
+            
+                ))}
                 
-                    ))
-                }
             </Swiper>
         </div>
     )

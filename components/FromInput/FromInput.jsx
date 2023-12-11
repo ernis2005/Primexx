@@ -6,6 +6,8 @@ import s from './page.module.scss'
 import { useForm } from 'react-hook-form'
 import cm from 'classnames'
 import { postPurchase_ordercreat } from '@/app/getData/getData'
+import { useRouter } from 'next/navigation'
+
 // type Inputs = {
 //     email: string,
 //     password:string,

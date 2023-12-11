@@ -146,6 +146,15 @@ export const postPurchase_ordercreat =(data: {
         return error
     }   
 }
+export const getCountry = async () => {
+    try {
+        const data = await axios(`${Api}about/country/`)
+        return data.data
+    } catch (error) {
+        return error
+    }
+}
+
 export const  getConsolidation = () => {
     try {
         const data = axios.get(`${Api}about/consolidation/`) 

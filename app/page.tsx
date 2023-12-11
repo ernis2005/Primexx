@@ -1,13 +1,12 @@
 import Image from "next/legacy/image";
 import s from './page.module.scss';
-import { CardsBlock1 } from '@/components/Cards/CardsBlock1/CardsBlock1';
 import { CardsBlock2 } from '@/components/Cards/CardsBlock2/CardsBlock2';
 import { TabelsBlock5 } from '@/components/Tabels/TabelsBlock5/page';
 import { CardsBlock6 } from '@/components/Cards/CardsBlock6/CardsBlock6';
 import Header from '@/components/Header/page';
 import Footer from '@/components/Footer/page';
 
-import {  getRateTime } from './getData/getData';
+import {  getCountry, getRateTime } from './getData/getData';
 import { CardsBlock3 } from '@/components/Cards/CardsBlock3/CardsBlock3';
 import imag from '../public/images/bg.png'
 import Link from "next/link";
@@ -15,6 +14,7 @@ import d from '../public/images/visa.svg'
 import { FromInput } from "@/components/FromInput/FromInput";
 import type { Metadata } from "next";
 import RegisterButton from "@/components/RegisterButton/RegisterButton";
+import { CardsBlock1 } from "@/components/Cards/CardsBlock1/CardsBlock1";
 type Product = {
     id: number;
     title: string;
@@ -22,6 +22,11 @@ type Product = {
     delivery_time: string;
     delivery: string;
 };
+type ProductCountry = {
+    id:number;
+    image:string;
+    name:string;
+    }
 export const metadata: Metadata = {
     title: 'Primex',
     description: 'Дарим доступ к растущему миру возможностей! ',
@@ -35,6 +40,7 @@ export const metadata: Metadata = {
 }
 const Home = async () => {
     const dataRate:Product[] = await getRateTime()
+    const dataCountry:ProductCountry[] = await getCountry()
     return (
         <>
             <Header />
@@ -119,7 +125,7 @@ const Home = async () => {
                 </div>
                 <div className={` Contend ${s.block6}`}>
                     <h3>Магазины</h3>
-                    <CardsBlock6 />
+                    <CardsBlock6 data={dataCountry} /> 
                 </div>
                 <div className={s.block7}>
                     <div className={s.block7Info}>
