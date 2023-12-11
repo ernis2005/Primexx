@@ -63,7 +63,7 @@ export const FromInput = ({colors}) => {
                     <input key={i} placeholder={res.title} {...register(`${res.name}`)} />
                 ))}
                 {errors.exampleRequired && <span>This field is required</span>}
-                <button type="submit" disabled={!watchAllFields.comment} style={{ backgroundColor: `${colors}`, color:'#fff'  }}>Отправить заявку</button>
+                <button className={s.btn_white} type="submit" disabled={!watchAllFields.comment}>Отправить заявку</button>
             </div>
         </form>
         </>
