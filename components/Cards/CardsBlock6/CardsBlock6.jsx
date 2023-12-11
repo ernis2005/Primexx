@@ -37,51 +37,22 @@ const data = [
 export const CardsBlock6 = (ProductCountry) => {
     return (
         <div className={s.Cards}>
-            <Swiper
-                slidesPerView={1}
-                spaceBetween={30}
-                freeMode={true}
-                breakpoints={{
-                    104: {
-                        slidesPerView: 1,
-                    },
-                    460:{
-                        slidesPerView: 1,
-                    },
-                    536: {
-                        slidesPerView: 2.4,
-                    },
-                    723: {
-                        slidesPerView: 3,
-                    },
-                 
-                }}
-                pagination={{
-                    clickable: true,
-                }}
-                modules={[FreeMode, Pagination]}
-                className="mySwiper"
-            >
+           
 
-                {ProductCountry.data?.length >= 0 && 
+            {ProductCountry.data?.length >= 0 && 
                 ProductCountry.data?.map((res ,index) => (
-                    <SwiperSlide className={s.Card} key={index}>
-                        <Link
-                            href={{
-                                pathname: '/shop',
-                                query: { id: JSON.stringify(res.id) , name: res.name,img:res.image},
-                            }}
-                            style={{backgroundImage:`url(${res.image})`} }
-                            className={s.Card}>
-                            <Image className={s.image} alt='/' layout='fill' objectFit='cover' src={`${res.image}`} />
-                            <p>{res.name}</p>
-                        </Link>
-
-                    </SwiperSlide>
-            
+                    <Link
+                        href={{
+                            pathname: '/shop',
+                            query: { id: JSON.stringify(res.id) , name: res.name,img:res.image},
+                        }}
+                        key={index}
+                        className={s.Card}>
+                        <Image className={s.image} alt='/' layout='fill' objectFit='cover' src={res.image} />
+                        <p>{res.name}</p>
+                    </Link>
                 ))}
                 
-            </Swiper>
         </div>
     )
 }

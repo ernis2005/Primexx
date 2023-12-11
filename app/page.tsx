@@ -119,10 +119,13 @@ const Home = async () => {
                         </Link>
                     </button>
                 </div>
-                {/* <div className={` Contend ${s.block6}`}>
+                <div className={` Contend ${s.block6}`}>
                     <h3>Магазины</h3>
-                    <CardsBlock6 data={dataCountry} /> 
-                </div> */}
+                    <div className={s.block6Card}>
+                        <CardsBlock6 data={dataCountry} /> 
+                    </div>
+                    
+                </div> 
                 <div className={s.block7} style={{marginBottom:'60px'}}>
                     <div className={s.block7Info}>
                         <h2>Ваш личный байер в мире

@@ -390,10 +390,7 @@
         }
     }
 
-    div {
-        width: 100%;
-        overflow: scroll;
-    }
+    
 
     button {
         display: flex;
@@ -583,4 +580,8 @@
             }
         }
     }
+}
+.block6Card{
+    max-width: 100%;
+    overflow: hidden;
 }
