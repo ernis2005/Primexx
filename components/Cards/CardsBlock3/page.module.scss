@@ -67,7 +67,7 @@ line-height: 120%;
         p{
             padding: 0;
             margin: 0;
-            color: var(--Black, #001A0C);
+            color: var(--Black, #000);
             font-family: Geometria;
             font-size: 16px;
             font-style: normal;
@@ -124,7 +124,8 @@ row-gap: 15px;
         border: none;
         @media screen and (max-width:498px) {
             padding: 15px;
-            font-size: 15px;
+            font-size: 16px;
+            font-size: 500;
         }
     }
  
