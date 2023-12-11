@@ -53,7 +53,7 @@ export const SwiperServicesPages4 =  () => {
             modules={[Pagination]}
             className="mySwiper"
         >
-            {consolidation.map((res,i) => (
+            {consolidation?.map((res,i) => (
                 <SwiperSlide key={i}>
                     <div className={s.Card}>
                         <Image  src={res.image} objectFit='cover' layout='fill' alt="Picture of the author" />
