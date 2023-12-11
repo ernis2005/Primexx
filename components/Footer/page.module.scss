@@ -66,6 +66,21 @@
         margin-bottom: 10px;
         border: none;
         cursor: pointer;
+        font-family: Geometria;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 130%; 
+        
+
+        span{
+            display: none !important;
+        }
+    }
+    .ul_barskan{
+        display: none;
+    }
+    .block{
+        display: none!important;
     }
 }
 
@@ -76,3 +91,29 @@
     width: 100%;
     margin: 50px auto ;
 }
+
+@media screen and (max-width:500px) {
+    .span{
+        display: block !important;
+        color: #FFF;
+        font-family: Geometria;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 130%; 
+    }
+    .block{
+        display: block !important;
+    }
+    .none{
+        display: none !important;
+    }
+    .ul_bar{
+        display: none!important;
+    }
+    .ul_barskan{
+        display: block!important;
+    }
+}
+
+
+
