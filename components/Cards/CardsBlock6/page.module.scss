@@ -9,8 +9,11 @@
 padding: 30px;
     
     
-    @media screen and (max-width:550px) {
-        width: 700px;
+    @media screen and (max-width:549px) {
+        width: 100%;
+
+        padding-left: 152px;    
+        gap: 15px;
     }
     .Card {
         width: 200px;
@@ -32,8 +35,12 @@ padding: 30px;
             justify-content: flex-end;
             align-items: center;
             gap: 10px;
-            @media screen and (max-width:536px) {
+            @media screen and (max-width:549px) {
                 min-width: 140px;
+                @media screen and (max-width:450px) {
+                    min-width: 120px;
+height: 180px;
+                }
             }
         }
 .image{    z-index: 3 ;

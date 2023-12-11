@@ -93,7 +93,10 @@ const Home = async () => {
                 <div className={`Contend  ${s.block4} `}>
                     <h3>
                     Хотите выкупить товар самостоятельно <br />
-                    и у вас есть зарубежная карта? <br /></h3>
+                        <span>
+
+                    и у вас есть зарубежная карта
+                        </span>? <br /></h3>
                     <p>
                         Зарегистрируйтесь и получите адреса складов в <span>Турции</span> 
                          и   <span>Америке</span> <br />
@@ -121,6 +124,7 @@ const Home = async () => {
                 </div>
                 <div className={` Contend ${s.block6}`}>
                     <h3>Магазины</h3>
+                    <p className={s.testasd}>Доставляем из 3х стран:</p>
                     <div className={s.block6Card}>
                         <CardsBlock6 data={dataCountry} /> 
                     </div>

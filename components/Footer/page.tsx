@@ -77,47 +77,47 @@ const Footer = () => {
                         </div>
                         <div>
                             <ul className={s.ul_bars}>
-                               <div className={s.litop}>
-                               <li >Горячая линия по вопросам  доставки</li>
-                                <li>
-                                    <button className={s.btn}>
+                                <div className={s.litop}>
+                                    <li >Горячая линия по вопросам  доставки</li>
+                                    <li>
+                                        <button className={s.btn}>
                                         Написать <span> WhatsApp</span>
-                                    </button>
-                                </li>
-                               </div>
-                               <ul className={s.ul_barskan}>
-                                <li>
-                                    <Link href={'/'}>
+                                        </button>
+                                    </li>
+                                </div>
+                                <ul className={s.ul_barskan}>
+                                    <li>
+                                        <Link href={'/'}>
                                         Главная
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href={'/Page/services'}>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href={'/Page/services'}>
                                         Услуги
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href={'/Page/rates'}>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href={'/Page/rates'}>
                                         Тарифы и сроки
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href={'/Page/news'}>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href={'/Page/news'}>
                                         Новости
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href={'/Page/FAQ'}>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href={'/Page/FAQ'}>
                                         F.A.Q.
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href={'/Page/about_us'}>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href={'/Page/about_us'}>
                                         О нас
-                                    </Link>
-                                </li>
+                                        </Link>
+                                    </li>
 
-                            </ul>
+                                </ul>
                                 <li>Дополнительно</li>
                                 <li>
                                     <Link href={'/Page/about_us'}>
@@ -138,25 +138,25 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className={`${s.block} between`}>
-                            <Link href={'https://www.instagram.com/'}>
-                                <Image className={s.img} src={insta} alt='' />
-                            </Link>
-                            <Link href={'https://vk.com/'}>
-                                <Image className={s.img} src={img} alt='' />
-                            </Link>
-                            <Link href={'https://www.tiktok.com/'}>
-                                <Image className={s.img} src={tikTok} alt='' />
-                            </Link>
-                            <Link href={'https://www.youtube.com/watch?v=oLPgYSNerik&list=RDMM&index=21'}>
-                                <Image className={s.img} src={youtube} alt='' />
-                            </Link>
-                            <Link href={'https://www.whatsapp.com/?lang=ru_RU'}>
-                                <Image className={s.img} src={what} alt='' />
-                            </Link>
-                            <Link href={'https://web.telegram.org/k/'}>
-                                <Image className={s.img} src={telegram} alt='' />
-                            </Link>
-                        </div>
+                        <Link href={'https://www.instagram.com/'}>
+                            <Image className={s.img} src={insta} alt='' />
+                        </Link>
+                        <Link href={'https://vk.com/'}>
+                            <Image className={s.img} src={img} alt='' />
+                        </Link>
+                        <Link href={'https://www.tiktok.com/'}>
+                            <Image className={s.img} src={tikTok} alt='' />
+                        </Link>
+                        <Link href={'https://www.youtube.com/watch?v=oLPgYSNerik&list=RDMM&index=21'}>
+                            <Image className={s.img} src={youtube} alt='' />
+                        </Link>
+                        <Link href={'https://www.whatsapp.com/?lang=ru_RU'}>
+                            <Image className={s.img} src={what} alt='' />
+                        </Link>
+                        <Link href={'https://web.telegram.org/k/'}>
+                            <Image className={s.img} src={telegram} alt='' />
+                        </Link>
+                    </div>
                 </div>
             </div>
 
