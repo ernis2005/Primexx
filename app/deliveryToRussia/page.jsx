@@ -1,7 +1,7 @@
 
 "use client"
 import { HeaderProfile } from '@/components/HeaderProfile/HeaderProfile'
-import React from 'react'
+import React, { useEffect } from 'react'
 import s from './page.module.scss'
 import { Form, useForm,reset } from 'react-hook-form'
 import { postDeliveryOrder } from '../getData/getData';
@@ -22,6 +22,7 @@ const page = (params ) => {
         reset();
     }
     const watchAllFields = watch();
+
 
     return (
         <div>

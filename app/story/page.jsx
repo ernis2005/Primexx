@@ -18,6 +18,9 @@ const page = () => {
     }, [])
 
     const data = useSelector(state => state.tracReducer)
+    console.log(data.trac);
+    const trackCodes = data.trac.map(item => item.track_code);
+    console.log(trackCodes,'const trackCodes = data.trac.map(item => item.track_code);');
     return (
         <div>
             <HeaderProfile />
@@ -41,7 +44,12 @@ const page = () => {
                 <div className={`Contend ${s.header}`}>
 
                     <div>
-                        <span> <p>Актуальные заказы</p> </span>
+                        <span> <p>Актуальные заказы</p>  {data.trac.length >= 0 ? (<Link  
+                            href={{
+                                pathname: '/deliveryToRussia',
+                                query: { id: JSON.stringify(trackCodes) ,},
+                            }} >Оформить доставку по РФ</Link>):null} 
+                        </span>
                         <CardStory data={data.trac} />
                     </div>
                     <div>
@@ -63,4 +71,6 @@ const page = () => {
 }
 
 export default page
+//    
+                        
 
