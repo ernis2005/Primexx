@@ -48,7 +48,6 @@ const page = async () => {
                         <Tabels2 data={data} />
                         <p>Лира к рублю - 5 рублей.</p>
                     </div>
-                    <div><h2>Турция (Стамбул) - Россия (Москва)</h2></div>
                     
                     {data?.map((res, i) => (
                         <div>

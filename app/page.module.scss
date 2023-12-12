@@ -140,6 +140,9 @@
 
             @media screen and (max-width:568px) {
                 font-size: 15px;
+                @media screen and (max-width:376px) {
+                    font-size: 14px;
+                }
             }
         }
     }
@@ -599,6 +602,20 @@ padding: 10px 20px;
             width: 100%;
 
         }
+
+    }
+    .fromInputp{
+        display: none;
+        @media screen and (max-width:978px) {
+            display: block;
+            font-size: 16px;
+            color: #FFF;
+            text-align: center;
+            font-family: Geometria;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 130%; /* 18.2px */
+        }
     }
 }
 
@@ -639,4 +656,10 @@ padding: 10px 20px;
 .block6Card{
     max-width: 100%;
     overflow: hidden;
+}
+.xf23{
+    @media screen  and (max-width:978px) {
+        display: none;
+        
+    }
 }

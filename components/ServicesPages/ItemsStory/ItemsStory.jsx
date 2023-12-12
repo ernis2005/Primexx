@@ -37,7 +37,7 @@ const ItemsStory = (data) => {
                         <span>{res.created_at?.slice(0, 10)}</span>
                     </div>
                 </li>
-                <li>
+                <li >
                     <p className={cm(s.asdasda, {
                         [s.s]: res.status >= 2,
                     })}></p>

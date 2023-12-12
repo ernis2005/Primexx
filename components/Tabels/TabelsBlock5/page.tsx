@@ -23,21 +23,21 @@ export const  TabelsBlock5 = ({ data }: ProductComponentProps) => {
             <table className={s.table} >
                 <thead className={s.block1}>
                     <tr  className={s.block1tr} >
-                        <th>Тариф</th>
+                        <th className={s.trrc}>Тариф</th>
                         <th>Цена
 за кг</th>
                         <th>Срок </th>
-                        <th>Отправка</th>
+                        <th className={s.trrc}>Отправка</th>
                     </tr>
                 </thead>
                 <thead className={s.block2} >
                     {data.length >= 0 ? (
                         data.map((res, index: React.Key) => (
                             <tr key={index} className={s.block2tr}>
-                                <td>{res.title}</td>
+                                <td className={s.trrc}>{res.title}</td>
                                 <td>{res.amount}</td>
                                 <td>{res.delivery_time}</td>
-                                <td>{res.delivery}</td>
+                                <td className={s.trrc}>{res.delivery}</td>
                             </tr>
                         ))
                         

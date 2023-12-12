@@ -14,14 +14,15 @@ display: grid;
             display: flex;
             min-width: 100%;
             justify-content: space-between;
-            th{    width: 25%;
+            th{    width: 20.4%;
                 height: 80px;
                 padding: 10px;
                 justify-content: space-between;
                 align-items: center;
                 flex-shrink: 0;
                 display: grid;
-                border: 1px solid var(--Black, #001A0C);
+                border-right: 0.7px solid #000;
+                border-bottom: 0.7px solid var(--Black, #001A0C);
                 background: var(--Dark-Green, #003318);
                 justify-content: center;
                 color: var(--White, #F5F5F5);
@@ -31,10 +32,12 @@ text-align: center;
 font-family: Geometria;
 font-size: 24px;
 font-style: normal;
-font-weight: 500;
+font-weight: 600;
 line-height: 150%; /* 36px */
 @media screen and (max-width:1050px) {
     font-size: 16px;
+    
+    font-weight: 500;
     @media screen and (max-width:483px) {
         font-size: 12px;
         height: 54px;
@@ -50,31 +53,36 @@ line-height: 150%; /* 36px */
             min-width: 100%;
             justify-content: space-between;
             td{
-            width: 25%;display: inline-flex;
-            height: 56px;
-            padding: 7px;
-            justify-content: space-between;
-            align-items: center;
-            flex-shrink: 0;
-            color: var(--White, #F5F5F5);
-text-align: center;
-
-/* Description */
-font-family: Geometria;
-font-size: 24px;
-font-style: normal;
-font-weight: 500;
-line-height: 150%; /* 36px */ 
-border: 0.7px solid var(--Black, #001A0C);
-justify-content: center;
-background: var(--Green, #009345);
+                width: 20.4%;
+    display: inline-flex;
+    height: 80px;
+    padding: 8px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    color: var(--White, #F5F5F5);
+    text-align: center;
+    font-family: Geometria;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    border-right: 0.7px solid #000;
+    border-bottom: 0.7px solid var(--Black, #001A0C);
+    justify-content: center;
+    background: var(--Green, #009345);
 @media screen and (max-width:1050px) {
     font-size: 16px;
+    font-weight: 500;
     @media screen and (max-width:483px) {
         font-size: 12px;
+        height: 54px;
     }
 }
             }
         }
     }
+}
+.trrc{
+    width: 30% !important;
 }

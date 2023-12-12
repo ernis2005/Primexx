@@ -113,7 +113,7 @@ const Home = async () => {
                 </div>
                 <div className={` Contend ${s.block5}`}>
                     <h3 >Тарифы и сроки</h3>
-                    <div style={{}}><TabelsBlock5 data={dataRate} /></div>
+                    <div style={{overflow:'hidden'}}><TabelsBlock5 data={dataRate} /></div>
 
                     <button style={{margin:'30px auto 40px'}}>
                         <Link href={'/Page/rates'}>
@@ -135,11 +135,14 @@ const Home = async () => {
                             международных покупок</h2>
                         <p>Служба Primex поможет легко приобрести товары в зарубежных интернет-магазинах</p>
                         <p>Выкупим товары с сайтов за вас в тот же день - <span> быстро, легко и доступно</span></p>
-                        <p>После заполнения заявки, байер сам
+                        <p className={s.xf23}>После заполнения заявки, байер сам
                             с вами свяжется с вами в течении
                             2-х часов в рабочее время.</p>
                     </div>
                     <div className={s.fromInput}><FromInput colors={"#333"} /></div>
+                    <p className={s.fromInputp}>После заполнения заявки, байер сам
+                            с вами свяжется с вами в течении  <br />
+                            2-х часов в рабочее время.</p>
                 </div>
             </main>
             <Footer />
