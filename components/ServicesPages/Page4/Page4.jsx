@@ -29,12 +29,14 @@ export const Page4 = () => {
                     Консолидация
                 </h2>
                 <p>Компания ‘’Primex’’, готова предложить для карго компаний B2B решение.</p>
-                <p> Вы занимаетесь доставкой зарубежных посылок и вам нужен склад в Турции и США с опытными сотрудниками для приема посылок ваших клиентов? У нас есть решение!</p>
+                <p> Вы занимаетесь доставкой зарубежных посылок и вам нужен склад в Турции и США с опытными <br />
+                 сотрудниками для приема посылок ваших клиентов? У нас есть решение!</p>
+            <h2 style={{paddingTop:'20px'}}>Мы можем предложить</h2>
             </span>
             <SwiperServicesPages4/>
             <div className={s.block1}>
-                <Image src={'/images/aq4.jpg'} layout='fill' objectFit='cover'/>
-                <h2>    </h2>
+                <Image src={'/images/konsol.jpg'} layout='fill' objectFit='cover'/>
+                <h2>  Получить консультацию  </h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input placeholder='Фамилия и имя' {...register("name", { required: true })} />
                    

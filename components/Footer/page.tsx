@@ -81,7 +81,7 @@ const Footer = () => {
                                     <li >Горячая линия по вопросам  доставки</li>
                                     <li>
                                         <button className={s.btn}>
-                                        Написать <span> WhatsApp</span>
+                                        Написать <span><a target='blank' href='https://web.whatsapp.com/'> WhatsApp</a></span>
                                         </button>
                                     </li>
                                 </div>

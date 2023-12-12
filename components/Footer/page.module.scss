@@ -75,9 +75,11 @@
         line-height: 130%; 
         
 
-        span{
+       span{
+        a{
             display: none;
         }
+       } 
     }
     .ul_barskan{
         display: none;
@@ -103,7 +105,8 @@
     }
     .btn{
         display: inline;
-        span{
+       span{
+        a{
             display: block!important;
             color: #FFF;
             font-family: Geometria;
@@ -111,6 +114,7 @@
             font-weight: 400;
             line-height: 130%; 
         }
+    }
     }
     .none{
         display: none !important;
