@@ -155,6 +155,9 @@
         padding-left: 30px;
         padding-right: 30px;
         max-width: 1200px;
+        @media screen and (max-width:450px) {
+            row-gap: 30px;
+        }
 
     }
 
@@ -252,7 +255,9 @@
     display: grid;
     row-gap: 60px;
     position: relative;
-
+@media screen and (max-width:450px) {
+    row-gap: 30px;
+}
     h3 {
         color: var(--Black, #001A0C);
         text-align: center;
@@ -383,6 +388,10 @@
         font-size: 48px;
         font-weight: 700;
         line-height: 120%;
+        padding:60px 0 62px;
+        @media screen and (max-width:450px) {
+            padding: 30px 0 32px;
+        }
     }
 
     @media screen and (max-width:800px) {
@@ -451,7 +460,7 @@ padding: 10px 20px;
     width: -webkit-fill-available;
     row-gap: 40px;
  @media screen and (max-width:450px) {
-        row-gap: 30px;
+        row-gap: 15px;
  }
     h3 {
         color: var(--Black, #001A0C);

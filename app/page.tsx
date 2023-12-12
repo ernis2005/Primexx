@@ -69,7 +69,6 @@ const Home = async () => {
                     </p>
                 </div>
                 <CardsBlock1 />
-                <div></div>
                 <div className={s.block3}>
                     <h3>Преимущества заказа из зарубежных сайтов</h3>
                     <p className={s.block3p}>Что делают привлекательными онлайн шоппинг на зарубежных сайтах?</p>
@@ -113,7 +112,7 @@ const Home = async () => {
                     <RegisterButton/>
                 </div>
                 <div className={` Contend ${s.block5}`}>
-                    <h3 style={{padding:'60px 0 62px'}}>Тарифы и сроки</h3>
+                    <h3 >Тарифы и сроки</h3>
                     <div style={{}}><TabelsBlock5 data={dataRate} /></div>
 
                     <button style={{margin:'30px auto 40px'}}>
