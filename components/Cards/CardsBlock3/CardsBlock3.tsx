@@ -14,6 +14,9 @@ export const CardsBlock3 = () => {
         if (heiScr <= 594) {
             test = 1900
         }
+        if (heiScr <= 841) {
+            test = 1900
+        }
         if (heiScr <= 562) {
             test = 2500
         }
