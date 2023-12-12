@@ -28,12 +28,12 @@ export const CardsBlock3 = () => {
         const height = refComponent.current.getBoundingClientRect().height;
         const scrlled = (winScr / height) * 70
         setScr(scrlled)
-        console.log(height);
         
     }
 
     useEffect(() => {
         // eslint-disable-next-line no-constant-condition
+        //trst
         addEventListener("scroll", onScroll)
         return () => removeEventListener("scroll", onScroll)
     },)
