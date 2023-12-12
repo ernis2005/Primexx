@@ -34,6 +34,9 @@
         grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
         grid-auto-flow: dense;
         gap: 30px;
+        @media screen and (max-width:500px) {
+            gap: 5px;
+        }
     }
     .flex{
         display: flex;
