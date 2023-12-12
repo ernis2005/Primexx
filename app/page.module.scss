@@ -57,6 +57,9 @@
             flex-shrink: 0;
             color: var(--Black, #001A0C);
             font-size: 16px;
+            @media screen and (max-width:450px) {
+                height: 45px;
+            }
         }
        
 

@@ -16,4 +16,7 @@
 font-style: normal;
 font-weight: 600 !important;
 line-height: 130%; /* 20.8px */
+@media screen and (max-width:450px) {
+    height: 45px !important;
+}
 }
