@@ -121,7 +121,7 @@ const Home = async () => {
                         </Link>
                     </button>
                 </div>
-                <div className={` Contend ${s.block6}`}>
+                <div className={`  ${s.block6}`}>
                     <h3>Магазины</h3>
                     <p className={s.testasd}>Доставляем из 3х стран:</p>
                     <div className={s.block6Card}>
