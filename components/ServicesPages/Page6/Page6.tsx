@@ -61,7 +61,7 @@ export const Page6 =  () => {
                 <li>Подготовка к отправке</li>
                 <li>Таможенное оформление</li>
             </ul> */}
-            <FAQAccordionPage data={data} />
+            <FAQAccordionPage />
             <div></div>
         </div>
     )

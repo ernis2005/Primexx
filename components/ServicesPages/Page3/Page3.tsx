@@ -59,9 +59,9 @@ export const Page3 = () => {
                 <p>После заполнения заявки, байер сам с вами свяжется с вами <br />
                     в течении 2-х часов в рабочее время.</p>
             </div>
-            {/* <h2>Часто задаваемые вопросы</h2> */}
-            {/* <div className={s.block3}>
-                <FAQAccordionPage data={data} />
+            {/* <h2>Часто задаваемые вопросы</h2> 
+            <div className={s.block3}>
+                <FAQAccordionPage  />
             </div> */}
             <div></div>
         </div>

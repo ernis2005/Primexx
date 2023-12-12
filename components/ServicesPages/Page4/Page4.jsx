@@ -14,7 +14,7 @@ import { InputMask } from '@react-input/mask'
 export const Page4 = () => {
   
 
-    const { register,        reset, handleSubmit, watch, formState: { errors } } = useForm(
+    const { register,  reset, handleSubmit, watch, formState: { errors } } = useForm(
     );
     const dispatch = useDispatch()
     const onSubmit = (data) =>  {
@@ -30,10 +30,11 @@ export const Page4 = () => {
                 </h2>
                 <p>Компания ‘’Primex’’, готова предложить для карго компаний B2B решение.</p>
                 <p> Вы занимаетесь доставкой зарубежных посылок и вам нужен склад в Турции и США с опытными <br />
-                 сотрудниками для приема посылок ваших клиентов? У нас есть решение!</p>
-            <h2 style={{paddingTop:'20px'}}>Мы можем предложить</h2>
+                сотрудниками для приема посылок ваших клиентов? У нас есть решение!</p>
+                <h2 style={{paddingTop:'20px'}}>Мы можем предложить</h2>
             </span>
             <SwiperServicesPages4/>
+            <button className={s.button}>Хочу заказать</button>
             <div className={s.block1}>
                 <Image src={'/images/konsol.jpg'} layout='fill' objectFit='cover'/>
                 <h2>  Получить консультацию  </h2>
@@ -51,9 +52,9 @@ export const Page4 = () => {
                 <p>После заполнения заявки, байер сам с вами свяжется с вами <br />
                 в течении 2-х часов в рабочее время.</p>
             </div>
-            {/* <div >
-                <FAQAccordionPage data={data} />
-            </div> */}
+            <div className={s.FAQAccordionPage} >
+                <FAQAccordionPage/>
+            </div> 
             
         </div>
     )

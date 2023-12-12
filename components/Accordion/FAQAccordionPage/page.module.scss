@@ -60,6 +60,7 @@ line-height: 150%; /* 36px */
      }
 }
 .svg{
+    position: a;
     color: #fff;
     display: block  !important;
     svg{
@@ -71,5 +72,11 @@ flex-shrink: 0;
 }
 .svgAcc{
     transform: rotate(0.5turn);
+    
+}
+.FAQCArd{
+    
+    display: grid;
+    row-gap: 30px;
     
 }

@@ -27,11 +27,22 @@ export const postConsolidation = createAsyncThunk(
         }
     }
 )
+export const getFAQ = createAsyncThunk(
 
+    'consolidation/getFAQ', async function (_, { dispatch, rejectWithValue }) {
+        try {
+            const data = await axios(`${Api}about/faq/`)
+            return data
+        } catch (error) {
+            return rejectWithValue(error.response.data)
+        }
+    }
+)
 
 export const getConsolidationData = createSlice({
     initialState: {
         consolidation: [],
+        FAQData: [],
     },
     status: null,
     error: null,
@@ -64,7 +75,19 @@ export const getConsolidationData = createSlice({
         [postConsolidation.rejected]: (state, action) => {
             state.status = 'failed'
             state.error = action.payload
+        },
+        [getFAQ.pending]: (state, action) => {
+            state.status = 'loading'
         }
+        ,
+        [getFAQ.fulfilled]: (state, action) => {
+            state.status = 'success'
+            state.FAQData = action.payload.data
+        },
+        [getFAQ.rejected]: (state, action) => {
+            state.status = 'failed'
+            state.error = action.payload
+        },
 
     }
 })

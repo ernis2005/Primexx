@@ -19,44 +19,44 @@ interface Types {
 export const SwiperPageAboutUs = (data: Types) => {
     return (<div className={s.Block}>
         <Swiper
-            slidesPerView={3.5}
-            spaceBetween={30}
+            slidesPerView={5}
+            spaceBetween={10}
             pagination={{
                 clickable: true,
             }}
             breakpoints={{
-                104: {
-                    slidesPerView: 1,
+                100:{
+                    slidesPerView: 2.2,
+                
                 },
-                556: {
-                    slidesPerView: 1,
+                496:{
+                    slidesPerView: 2.1,
                 },
-                728: {
-                    slidesPerView: 1.6,
+                579:{
+                    slidesPerView: 2.6,
                 },
-                876: {
-                    slidesPerView: 2,
+                717:{
+                    slidesPerView: 3.3,
                 },
-                1104: {
-                    slidesPerView: 2.4,
+                855: {
+                    slidesPerView: 4,
                 },
-                1254: {
-                    slidesPerView: 2.5,
-                },
-                1264: {
-                    slidesPerView: 3.5,
+                1200: {
+                    slidesPerView: 5,
+                    
                 },
             }}
             modules={[Pagination]}
             className="mySwiper"
         >
             {data.data.map((res) => (
-                <SwiperSlide key={res.id}>
-                    <div className={s.Card}>
-                        <Image src={res.image} objectFit='cover' layout='fill' />
-                    </div>
+                <SwiperSlide className={s.Card} key={res.id}>
+                    
+                    <Image src={res.image} objectFit='cover' layout='fill' />
+                    
                 </SwiperSlide>
             ))}
+            
         </Swiper>
     </div>)
 }

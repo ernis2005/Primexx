@@ -30,7 +30,7 @@ const page = async () => {
                     info={'Найдите ответ на ваш вопрос'}
                 />
                 <div className={`Contend ${s.block}`}>
-                    <FAQAccordionPage data={data} />
+                    <FAQAccordionPage  />
                 </div>
             </div>
             <Footer />

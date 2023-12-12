@@ -22,49 +22,97 @@ export const SwiperServicesPages4 =  () => {
     
     return (<div className={s.Block}>
         <Swiper
-            slidesPerView={3.5}
-            spaceBetween={30}
+            slidesPerView={5}
+            spaceBetween={10}
             pagination={{
                 clickable: true,
             }}
             breakpoints={{
-                104: {
-                    slidesPerView: 1,
+                100:{
+                    slidesPerView: 1.2,
+            
                 },
-                556: {
-                    slidesPerView: 1,
+                393:{
+                    slidesPerView: 1.2,
                 },
-                728: {
-                    slidesPerView: 1.6,
+                524:{
+                    slidesPerView: 1.8,
                 },
-                876: {
-                    slidesPerView: 2,
+                692:{
+                    slidesPerView: 2.2,
                 },
-                1104: {
-                    slidesPerView: 2.4,
+                982:{
+                    slidesPerView: 3.2,
+            
+            
                 },
-                1254: {
-                    slidesPerView: 2.5,
+                1190: {
+                    slidesPerView: 3.6,
                 },
-                1264: {
-                    slidesPerView: 3.5,
+                1200: {
+                    slidesPerView: 4,
+                
                 },
             }}
-            modules={[Pagination]}
-            className="mySwiper"
+            className={s.swiperCard}
         >
             {consolidation?.map((res,i) => (
-                <SwiperSlide key={i}>
-                    <div className={s.Card}>
-                        <Image  src={res.image} objectFit='cover' layout='fill' alt="Picture of the author" />
-                        <span>
-                            <h2>{res.title}</h2>
-                            <p>{res.description }</p>
-                        </span>
-                    </div>
+                <SwiperSlide className={s.Card} key={i}>
+                    
+                    <Image  src={res.image} objectFit='cover' layout='fill' alt="Picture of the author" />
+                    <span>
+                        <h2>{res.title}</h2>
+                        <p className={s.swiperp}>{res.description }</p>
+                    </span>
+                    
                 </SwiperSlide>
             ))}
 
+            
+            {consolidation?.map((res,i) => (
+                <SwiperSlide className={s.Card} key={i}>
+                    
+                    <Image  src={res.image} objectFit='cover' layout='fill' alt="Picture of the author" />
+                    <span>
+                        <h2>{res.title}</h2>
+                        <p className={s.swiperp}>{res.description }</p>
+                    </span>
+                    
+                </SwiperSlide>
+            ))}
+            {consolidation?.map((res,i) => (
+                <SwiperSlide className={s.Card} key={i}>
+                    
+                    <Image  src={res.image} objectFit='cover' layout='fill' alt="Picture of the author" />
+                    <span>
+                        <h2>{res.title}</h2>
+                        <p className={s.swiperp}>{res.description }</p>
+                    </span>
+                    
+                </SwiperSlide>
+            ))}
+            {consolidation?.map((res,i) => (
+                <SwiperSlide className={s.Card} key={i}>
+                    
+                    <Image  src={res.image} objectFit='cover' layout='fill' alt="Picture of the author" />
+                    <span>
+                        <h2>{res.title}</h2>
+                        <p className={s.swiperp}>{res.description }</p>
+                    </span>
+                    
+                </SwiperSlide>
+            ))}
+            {consolidation?.map((res,i) => (
+                <SwiperSlide className={s.Card} key={i}>
+                    
+                    <Image  src={res.image} objectFit='cover' layout='fill' alt="Picture of the author" />
+                    <span>
+                        <h2>{res.title}</h2>
+                        <p className={s.swiperp}>{res.description }</p>
+                    </span>
+                    
+                </SwiperSlide>
+            ))}
 
         </Swiper>
     </div>)

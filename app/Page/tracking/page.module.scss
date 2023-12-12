@@ -27,14 +27,15 @@ height: 80px;
 padding: 20px 30px;
 align-items: center;
 gap: 10px;
-color: rgba(0, 26, 12, 0.50);
 font-family: Geometria;
+color: #ccc !important;
 font-size: 24px;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
-border: 1px solid var(--Dark-Green, #003318);
+border: 1px solid var(--Dark-Green, #ccc);
 background: var(--White, #F5F5F5);
+
 @media screen and (max-width:1044px) {
     width: 500px;
 }
@@ -42,6 +43,10 @@ background: var(--White, #F5F5F5);
     width: 450px;
     font-size: 20px;
     height: 60px;
+}
+@media screen and (max-width:450px) {
+    font-size: 16px ;
+    padding: 15px;
 }
         }
         button {
@@ -59,7 +64,7 @@ color: var(--White, #F5F5F5);
 font-family: Geometria;
 font-size: 24px;
 font-style: normal;
-font-weight: 600;
+font-weight: 500;
 line-height: normal;
 @media screen and (max-width:824px) {
     width: 200px;

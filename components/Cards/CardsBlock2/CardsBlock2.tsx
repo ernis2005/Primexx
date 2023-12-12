@@ -39,7 +39,7 @@ export const CardsBlock2 = () => {
                 data?.map((el) => (
                     <div className={s.save}>
                         <div className={s.block}>
-                            <Image className={s.img} src={el.img} alt="/" layout='fill' objectFit='cover' />
+                            <Image className={s.img} src={el.img} style={{top:'-50px'}} alt="/" layout='fill' objectPosition={'top'} objectFit='cover' />
                             <div className={s.flex}>
                                 <h1>{el.title}</h1>
                                 <h3>{el.tema}</h3>

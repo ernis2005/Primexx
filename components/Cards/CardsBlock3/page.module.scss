@@ -122,10 +122,12 @@ row-gap: 15px;
         font-weight: 400;
         background: var(--Green, #009345);
         border: none;
+        margin-top: -40px;
         @media screen and (max-width:498px) {
             padding: 15px;
-            font-size: 16px;
+            font-size: 15px;
             font-size: 500;
+            margin-top: 0px ;
         }
     }
  

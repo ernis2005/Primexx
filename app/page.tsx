@@ -69,6 +69,7 @@ const Home = async () => {
                     </p>
                 </div>
                 <CardsBlock1 />
+                <div></div>
                 <div className={s.block3}>
                     <h3>Преимущества заказа из зарубежных сайтов</h3>
                     <p className={s.block3p}>Что делают привлекательными онлайн шоппинг на зарубежных сайтах?</p>
@@ -129,7 +130,7 @@ const Home = async () => {
                     </div>
                     
                 </div> 
-                <div className={s.block7} style={{marginBottom:'60px'}}>
+                <div className={s.block7} >
                     <div className={s.block7Info}>
                         <h2>Ваш личный байер в мире
                             международных покупок</h2>
