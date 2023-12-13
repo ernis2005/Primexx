@@ -38,6 +38,7 @@ const Footer = () => {
                         </div>
                     </div>
 
+                    <div className="flex">
                     <ul className={s.footer_midle}>
                         <li>
                             <Link href={'/'}>
@@ -81,9 +82,7 @@ const Footer = () => {
 
                         <ul className={s.footer_end_bottom}>
                             <li>
-                                <Link href={''}>
-                            Дополнительно
-                                </Link>
+                                <Link href={''}>Дополнительно</Link>
                             </li>
                             <li>
                                 <Link href={''}>Отзывы клиентов</Link>
@@ -96,6 +95,7 @@ const Footer = () => {
                             </li>
                         </ul>
 
+                    </div>
                     </div>
                 </div>
             </div>
