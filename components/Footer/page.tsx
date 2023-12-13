@@ -16,6 +16,16 @@ const Footer = () => {
                         </Link>
                         <h3>Дарим доступ к растущему <br />
                             миру возможностей! </h3>
+                            <ul className={`${s.footer_end_topes} ${s.footer_end_top}`}>
+                            <li>
+                                <Link href={'/Page/about_us'}>
+                                    Горячая линия по вопросам доставки
+                                </Link></li>
+                            <li>
+                                <Link href={'/Page/about_us'}>
+                                    <button className={s.btn}>Написать <span>в WhatsApp</span></button>
+                                </Link></li>
+                        </ul>
                         <div className={s.footer_icons}>
                             <Link href={''}>
                                 <Image src={'/images/Instagram.svg'} alt="" width={30} height={30} />
@@ -38,11 +48,11 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div className="flex">
+                    <div className={s.flex}>
                     <ul className={s.footer_midle}>
                         <li>
                             <Link href={'/'}>
-                                Главная
+                                Страницы
                             </Link>
                         </li>
                         <li>
@@ -70,13 +80,13 @@ const Footer = () => {
                     <div className={s.footer_end}>
 
                         <ul className={s.footer_end_top}>
-                            <li>
-                                <Link href={'/Page/about_us'}>
+                            <li style={{width:'300px'}}>
+                                <Link href={'/Page/about_us'} >
                                     Горячая линия по вопросам доставки
                                 </Link></li>
                             <li>
                                 <Link href={'/Page/about_us'}>
-                                    <button className={s.btn}>Написать <span>в WhatsApp</span></button>
+                                    <button className={s.btn}>Написать </button>
                                 </Link></li>
                         </ul>
 
