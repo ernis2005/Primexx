@@ -12,7 +12,7 @@
         .grid{
             display: grid;
             grid-template-columns: 7fr 1fr 1fr;
-            @media screen and (max-width:800px) {
+            @media screen and (max-width:820px) {
                 display: grid;
                 grid-template-columns: 1fr;
             }
@@ -27,7 +27,7 @@
                     padding: 30px 0 88px;
                     line-height: 150%;
 
-                    @media screen and (max-width:500px) {
+                    @media screen and (max-width:820px) {
                          font-size: 16px;
                          padding-bottom: 30px;
                     }
@@ -35,16 +35,16 @@
 
                 .footer_end_topes{
                     display: none;
-                    @media screen and (max-width:500px) {
+                    @media screen and (max-width:820px) {
                         display: block;
                         text-align: center;
                         li{
                             list-style: none;
                             padding-bottom: 20px; 
-                            @media screen and (max-width:1000) {
-                                padding-bottom: 9px!important;
-                                text-align: center;
-                                margin: 0 auto;
+                            // @media screen and (max-width:1000) {
+                            //     padding-bottom: 9px!important;
+                            //     text-align: center;
+                            //     margin: 0 auto;
                             }
                             a{
                                 color: var(--White, #F5F5F5);
@@ -52,7 +52,7 @@
                                 font-size: 16px;
                                 font-weight: 400;
                                 text-decoration: none;
-                                @media screen and (max-width:500px) {
+                                @media screen and (max-width:820px) {
                                     font-size: 14px;
                                 }
                                 .btn{
@@ -77,7 +77,7 @@
                     align-items: center;
                     gap: 20px;
 
-                    @media screen and (max-width:500px) {
+                    @media screen and (max-width:820px) {
                         position: relative;
                         top: 270px;
                     }
@@ -88,7 +88,7 @@
                 gap: 100px;
                 // padding-left: 40px;
 
-                @media screen and (max-width:500px) {
+                @media screen and (max-width:820px) {
                     display: flex;
                     justify-content: space-between;
                 }
@@ -97,7 +97,7 @@
                     li{
                         list-style: none;
                         margin-bottom: 25px;
-                        @media screen and (max-width:500px) {
+                        @media screen and (max-width:820px) {
                             margin-bottom: 15px;
                         }
                         li:nth-child(1){
@@ -117,31 +117,31 @@
                 }
                 .footer_end{
                     width: 100%;
-                    @media screen and (max-width:500px) {
+                    @media screen and (max-width:820px) {
                         display: flex;
                         justify-content: space-between;
                     }
                     .footer_end_top{
                         margin-bottom: 13px;
-                        @media screen and (max-width:500px) {
+                        @media screen and (max-width:820px) {
                             display: none !important;                            
                             
                         }
                         li{
                             list-style: none;
                             padding-bottom: 20px; 
-                            @media screen and (max-width:1000) {
-                                padding-bottom: 9px!important;
-                                text-align: center;
-                                margin: 0 auto;
-                            }
+                            // @media screen and (max-width:1000) {
+                            //     padding-bottom: 9px!important;
+                            //     text-align: center;
+                            //     margin: 0 auto;
+                            // }
                             a{
                                 color: var(--White, #F5F5F5);
                                 font-family: Geometria;
                                 font-size: 16px;
                                 font-weight: 400;
                                 text-decoration: none;
-                                @media screen and (max-width:500px) {
+                                @media screen and (max-width:820px) {
                                     font-size: 14px;
                                 }
     
@@ -155,7 +155,7 @@
                                     font-weight: 400;
                                     border: none;
     
-                                    @media screen and (max-width:500px) {
+                                    @media screen and (max-width:820px) {
                                         color: #FFF;
                                         font-family: Geometria;
                                         font-size: 16px;
@@ -172,7 +172,7 @@
                         li{
                             list-style: none;
                             padding-bottom: 10px;
-                            @media screen and (max-width:500px) {
+                            @media screen and (max-width:820px) {
                                 padding-bottom: 15px;
                             }
                             
@@ -183,7 +183,7 @@
                                 font-size: 16px;
                                 font-weight: 400;
                                 text-decoration: none;
-                                @media screen and (max-width:500px) {
+                                @media screen and (max-width:820px) {
                                     font-size: 14px;
                                 }
                             }
@@ -196,4 +196,3 @@
         }
     }
 
-}
