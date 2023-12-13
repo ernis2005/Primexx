@@ -22,7 +22,7 @@ export const BannerPages = ({ name, info, idPage }: Person) => {
         { img: "/images/news.png", id: 6 },
         { img: '/images/Amerika1.png', id: 7 },
         { img: '/images/AMERIKA.png', id: 8 },
-        { img: '/images/tovar.jpg', id: 9 }
+        { img: '/images/tovar1.jpg', id: 9 }
     ]
     return (
         <div className={s.Header}>
