@@ -39,63 +39,63 @@ const Footer = () => {
                     </div>
 
                     <div className="flex">
-                    <ul className={s.footer_midle}>
-                        <li>
-                            <Link href={'/'}>
+                        <ul className={s.footer_midle}>
+                            <li>
+                                <Link href={'/'}>
                                 Главная
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href={'/Page/services'}>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href={'/Page/services'}>
                                 Услуги
-                            </Link></li>
-                        <li>
-                            <Link href={'/Page/rates'}>
+                                </Link></li>
+                            <li>
+                                <Link href={'/Page/rates'}>
                                 Тарифы
-                            </Link></li>
-                        <li>
-                            <Link href={'/Page/news'}>
+                                </Link></li>
+                            <li>
+                                <Link href={'/Page/news'}>
                                 Новости
-                            </Link></li>
-                        <li>
-                            <Link href={'/Page/FAQ'}>
+                                </Link></li>
+                            <li>
+                                <Link href={'/Page/FAQ'}>
                                 F.A.Q.
-                            </Link></li>
-                        <li>
-                            <Link href={'/Page/about_us'}>
+                                </Link></li>
+                            <li>
+                                <Link href={'/Page/about_us'}>
                                 О нас
-                            </Link></li>
-                    </ul>
+                                </Link></li>
+                        </ul>
 
-                    <div className={s.footer_end}>
+                        <div className={s.footer_end}>
 
-                        <ul className={s.footer_end_top}>
-                            <li>
-                                <Link href={'/Page/about_us'}>
+                            <ul className={s.footer_end_top}>
+                                <li>
+                                    <Link href={'/Page/about_us'}>
                                     Горячая линия по вопросам доставки
-                                </Link></li>
-                            <li>
-                                <Link href={'/Page/about_us'}>
-                                    <button className={s.btn}>Написать <span>в WhatsApp</span></button>
-                                </Link></li>
-                        </ul>
+                                    </Link></li>
+                                <li>
+                                    <Link href={'/Page/about_us'}>
+                                        <button className={s.btn}>Написать <span>в WhatsApp</span></button>
+                                    </Link></li>
+                            </ul>
 
-                        <ul className={s.footer_end_bottom}>
-                            <li>
-                                <Link href={''}>Дополнительно</Link>
-                            </li>
-                            <li>
-                                <Link href={''}>Отзывы клиентов</Link>
-                            </li>
-                            <li>
-                                <Link href={''}>Магазины Турции</Link>
-                            </li>
-                            <li>
-                                <Link href={''}>Магазины Америки</Link>
-                            </li>
-                        </ul>
+                            <ul className={s.footer_end_bottom}>
+                                <li>
+                                    <Link href={''}>Дополнительно</Link>
+                                </li>
+                                <li>
+                                    <Link href={''}>Отзывы клиентов</Link>
+                                </li>
+                                <li>
+                                    <Link href={''}>Магазины Турции</Link>
+                                </li>
+                                <li>
+                                    <Link href={''}>Магазины Америки</Link>
+                                </li>
+                            </ul>
 
-                    </div>
+                        </div>
                     </div>
                 </div>
             </div>

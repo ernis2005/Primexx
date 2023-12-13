@@ -15,11 +15,12 @@ import Menu from './menu/Menu';
 import { LuUserSquare2 } from 'react-icons/lu'
 import { ugetUsers } from '@/app/redux/features/auth-slice'
 import Cookies from 'js-cookie';
+import { usePathname } from 'next/navigation'
 const Header = () => {
     const useName = useSelector((state) => state.authReducer.value.name)
     const isAuth = useSelector((state) => state.authReducer.value.isAuth)
 
-
+    const page = usePathname();
     const [module1, setModule1] = React.useState(false)
     const dispatch = useDispatch()
     // useEffect(() => {
@@ -78,28 +79,52 @@ const Header = () => {
                 <div className={s.className1}>
                     <ul>
                         <li>
-                            <Link href={'/'}>
+                            <Link className={cm({
+                                [s.active]: page === '/'
+                            })} href={'/'}>
                         Главная
                             </Link>
                         </li>
                         <li>
-                            <Link href={'/Page/services'}>
+                            <Link className={cm({
+                                [s.active]: page === '/Page/services'
+                            })} href={'/Page/services'}>
                         Услуги
                             </Link></li>
                         <li>
-                            <Link href={'/Page/rates'}>
+                            <Link 
+                                className={
+                                    cm({
+                                        [s.active]: page === '/Page/rates'
+                                    })
+                                }
+                                href={'/Page/rates'}>
                         Тарифы
                             </Link></li>
                         <li>
-                            <Link href={'/Page/news'}>
+                            <Link className={
+                                cm({
+                                    [s.active]: page === '/Page/news'
+                                })
+                            
+                            } href={'/Page/news'}>
                         Новости
                             </Link></li>
                         <li>
-                            <Link href={'/Page/FAQ'}>
+                            <Link className={
+                                cm({
+                                    [s.active]: page === '/Page/FAQ'
+                                })
+                            } href={'/Page/FAQ'}>
                         F.A.Q.
                             </Link></li>
                         <li>
-                            <Link href={'/Page/about_us'}>
+                            <Link className={
+                                cm({
+                                    [s.active]: page === '/Page/about_us'
+                                })
+                            
+                            } href={'/Page/about_us'}>
                         О нас
                             </Link></li>
 
