@@ -15,6 +15,7 @@ type Product = {
     delivery_time: string;
     delivery: string;
     additionally: string;
+    country_name:string;
 };
 
 export const metadata = {
@@ -51,7 +52,7 @@ const page = async () => {
                     
                     {data?.map((res, i) => (
                         <div>
-                            <h2>{res.country}</h2><Tabels1 data={res} />
+                            <h2>{res.country_name}</h2><Tabels1 data={res} />
                             <span>
                                 <p>Отправка товаров происходит два раза в неделю. <br />
                                 Коробки от обуви отдельно 1$. Груз от 100 килограмм по 14$  </p>
