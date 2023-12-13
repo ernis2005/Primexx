@@ -6,6 +6,7 @@ import { HeaderSvg } from '../svg/Header';
 
 
 const Footer = () => {
+    
     return (
         <footer className={`${s.footer}`}>
             <div className={s.wrap}>
