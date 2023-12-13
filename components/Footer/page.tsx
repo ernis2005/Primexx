@@ -6,7 +6,7 @@ import { HeaderSvg } from '../svg/Header';
 
 
 const Footer = () => {
-    
+
     return (
         <footer className={`${s.footer}`}>
             <div className={s.wrap}>
@@ -52,37 +52,42 @@ const Footer = () => {
                     <div className={s.flex}>
                         <ul className={s.footer_midle}>
                             <li>
-                                <Link href={'/'}>
-                                Страницы
+                                <Link style={{
+                                    color: 'rgba(245, 245, 245, 0.50)'
+                                }} href={'/'}>
+                                    Страницы
                                 </Link>
                             </li>
                             <li>
                                 <Link href={'/Page/services'}>
-                                Услуги
+                                    Услуги
                                 </Link></li>
-                            <li>
+                            <li style={{width:'300px'}}>
                                 <Link href={'/Page/rates'}>
-                                Тарифы
+                                Тарифы и сроки
                                 </Link></li>
                             <li>
                                 <Link href={'/Page/news'}>
-                                Новости
+                                    Новости
                                 </Link></li>
                             <li>
                                 <Link href={'/Page/FAQ'}>
-                                F.A.Q.
+                                    F.A.Q.
                                 </Link></li>
                             <li>
                                 <Link href={'/Page/about_us'}>
-                                О нас
+                                    О нас
                                 </Link></li>
+                            <li>
+                                <Link href={''}>Контакты</Link>
+                            </li>
                         </ul>
 
                         <div className={s.footer_end}>
                             <ul className={s.footer_end_top}>
-                                <li style={{width:'300px'}}>
+                                <li style={{ width: '302px' }}>
                                     <Link href={'/Page/about_us'} >
-                                    Горячая линия по вопросам доставки
+                                        Горячая линия по вопросам доставки
                                     </Link></li>
                                 <li>
                                     <Link href={'/Page/about_us'}>
@@ -92,10 +97,13 @@ const Footer = () => {
 
                             <ul className={s.footer_end_bottom}>
                                 <li>
-                                    <Link href={''}>Дополнительно</Link>
+                                    <Link
+                                        style={{
+                                            color: 'rgba(245, 245, 245, 0.50)'
+                                        }} href={''}>Дополнительно</Link>
                                 </li>
                                 <li>
-                                    <Link href={''}>Отзывы клиентов</Link>
+                                    <Link href={'/Page/about_us'}>Отзывы клиентов</Link>
                                 </li>
                                 <li>
                                     <Link href={''}>Магазины Турции</Link>
