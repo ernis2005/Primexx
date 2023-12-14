@@ -70,7 +70,6 @@ export const getConsolidationData = createSlice({
         },
         [postConsolidation.fulfilled]: (state, action) => {
             state.status = 'success'
-            state.consolidation = action.payload.data
         },
         [postConsolidation.rejected]: (state, action) => {
             state.status = 'failed'
@@ -88,7 +87,6 @@ export const getConsolidationData = createSlice({
             state.status = 'failed'
             state.error = action.payload
         },
-
     }
 })
 

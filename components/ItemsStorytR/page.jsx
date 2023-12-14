@@ -1,10 +1,23 @@
+"use client"
 import React from 'react'
-import cm from 'classnames'
 import s from './page.module.scss'
 import { Svg10 } from '@/components/svg/Header'
-import { RESPONSE_LIMIT_DEFAULT } from 'next/dist/server/api-utils'
+import Link from 'next/link'
+import cm from 'classnames'
+import { format } from 'date-fns'
+import { ru } from 'date-fns/locale'
 export const ItemsStorytR = (data) => {
+
+
     const res = data.data[0]
+    const fromattedData = (res)=> {
+        if (res !== null) {
+            const datenew = new Date(res);
+            const date = format(datenew,'dd MMMM yyyy',{ locale: ru })
+            return date
+            
+        }}
+    console.log(res);
     return (
         <div className={s.BlockINfo}>
             <ul className={s.Items}>
@@ -14,18 +27,24 @@ export const ItemsStorytR = (data) => {
                         [s.s]: res.status >= 1,
                     })}></p>
                     <div>
-                        <p>Формируется</p>
-                        <span>{res.created_at?.slice(0, 10)}</span>
+                        <p>Прибыл на склад, <br></br>
+                        готов к отправке</p>
+                        <span>
+                            {fromattedData(res.created_at)}
+                        </span>
                     </div>
                 </li>
-                <li>
+                <li >
                     <p className={cm(s.asdasda, {
                         [s.s]: res.status >= 2,
                     })}></p>
                     <Svg10 />
                     <div>
                         <p>В пути</p>
-                        <span>{res.sent_to_moscow_at?.slice(0, 10)}</span>
+                        <span>
+                        
+                            {fromattedData(res.sent_to_moscow_at)}
+                        </span>
                     </div>
                 </li>    <li>
                     <Svg10 />
@@ -33,8 +52,11 @@ export const ItemsStorytR = (data) => {
                         [s.s]: res.status >= 3,
                     })}></p>
                     <div>
-                        <p>Прибыл рейс</p>
-                        <span>{res.arrived_at?.slice(0, 10)}</span>
+                        <p>Прибыл на склад Москвы</p>
+                        <span>
+                            {fromattedData(res.arrived_at)}
+                        
+                        </span>
                     </div>
                 </li>    <li>
                     <Svg10 />
@@ -42,8 +64,10 @@ export const ItemsStorytR = (data) => {
                         [s.s]: res.status >= 4,
                     })}></p>
                     <div>
-                        <p>Сортируется на складе</p>
-                        <span>{res.sorted_at?.slice(0, 10)}</span>
+                        <p>Сортировка посылок</p>
+                        <span>
+                            {fromattedData(res.sorted_at)}
+                        </span>
                     </div>
                 </li>    <li>
                     <Svg10 />
@@ -52,7 +76,9 @@ export const ItemsStorytR = (data) => {
                     })}></p>
                     <div>
                         <p>Отправлен по адресу</p>
-                        <span>{res.sent_to_client_at?.slice(0, 10)}</span>
+                        <span>
+                            {fromattedData(res.sent_to_client_at)}
+                        </span>
                     </div>
                 </li>    <li>
                     <Svg10 />
@@ -60,8 +86,10 @@ export const ItemsStorytR = (data) => {
                         [s.s]: res.status >= 6,
                     })}></p>
                     <div>
-                        <p>Выдан</p>
-                        <span>{res.delivered_at?.slice(0, 10)}</span>
+                        <p>Успешно вручен</p>
+                        <span>
+                            {fromattedData(res.delivered_at)}
+                        </span>
                     </div>
                 </li>
             </ul>
@@ -73,15 +101,28 @@ export const ItemsStorytR = (data) => {
                         <h4>{res.status_label}</h4>
                     </span>
                     <span>
+                        <p >Вес составил:</p>
+                        <h4>{res.weight} кг.</h4>
+                    </span>
+                    <span>
                         <p >Плановая дата доставки:</p>
-                        <h4>10 октября, 2023</h4>
+                        <h4>
+                            {fromattedData(res.estimated_date)}
+                        </h4>
                     </span>
                     <span>
                         <p >Пункт выдачи:</p>
                         <h4>{res.sent_to_client_at}</h4>
                     </span>
                 </div>
+                <button className={cm(s.button, {
+                    [s.button2]: res.status < 1,
+                    [s.button2]: res.status >= 5,
+                })}><Link 
+                        href={{
+                            pathname: '/deliveryToRussia',
+                            query: { id: JSON.stringify(res.track_code) },
+                        }}>Оформить доставку по РФ</Link> </button>
             </div>
-        </div>
-    )
+        </div>)
 }

@@ -14,7 +14,7 @@ import { useRouter } from 'next/navigation'
 //     exampleRequired: string
 // }
 
-export const FromInput = ({colors}) => {
+export const FromInput = ({colors,textcolor}) => {
     const [index, setIndex]= useState(1)
     const [counterName, setCounterName] = useState( {id:1,name:'Турция'})
     const  dataInput =[
@@ -63,7 +63,7 @@ export const FromInput = ({colors}) => {
                     <input key={i} placeholder={res.title} {...register(`${res.name}`)} />
                 ))}
                 {errors.exampleRequired && <span>This field is required</span>}
-                <button className={s.btn_white} type="submit" disabled={!watchAllFields.comment}>Отправить заявку</button>
+                <button className={s.btn_white} style={{backgroundColor:colors,color:textcolor}}  type="submit" disabled={!watchAllFields.comment}>Отправить заявку</button>
             </div>
         </form>
         </>

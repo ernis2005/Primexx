@@ -4,7 +4,9 @@
     padding-top: 60px;
     overflow: hidden;
     padding-bottom: 60px;
-
+@media screen and (max-width:450px) {
+    row-gap: 30px;
+}
     div {
         width: 100%;
         display: grid;
@@ -25,7 +27,7 @@
             color: #000;
 
             /* Description */
-            font-family: Geometria1;
+            font-family: Geometria;
             font-size: 24px;
             font-style: normal;
             font-weight: 400;
@@ -63,7 +65,7 @@
     justify-content: center;
     p{
         color: red;
-    font-family: Geometria1;
+    font-family: Geometria;
     font-size: 30px;
     font-weight: 400;    
     }

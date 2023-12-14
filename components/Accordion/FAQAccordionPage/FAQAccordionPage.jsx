@@ -23,14 +23,14 @@ export const FAQAccordionPage = () => {
     }
     , [])
     const {status,FAQData,error} = useSelector((state) => state.consolidationReducer)
-    
+    console.log(FAQData);
     return (
         <div className={s.header}>
             {status === 'loading' ? <div>loading...</div> : null}
             {status === 'failed' ? <div>{error}</div> : null}
             {status === 'success' ? (
                 <div className={s.FAQCArd}>
-                    {FAQData !== undefined  ? (
+                    {FAQData?.length !== 0  ? (
 
                         FAQData?.map((res, i) => (
                             <div className={s.card} key={i} onClick={() => onClick(i)}>
@@ -52,7 +52,7 @@ export const FAQAccordionPage = () => {
                                 </div>
                             </div>
                         ))
-                    ):null
+                    ):(<h1 style={{height:'30vh',display:'flex',justifyContent:'center',alignItems:'center'}}> нет вопросов</h1>)
                     }
                 </div>
             ) : null}

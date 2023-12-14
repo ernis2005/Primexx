@@ -54,7 +54,7 @@ export const Page3 = () => {
             <div className={s.Block2}>
                 <Image src={'/images/aq.1.jpg'} layout='fill' objectFit='cover'/>
                 <div>
-                    <FromInput colors={"#333"} />
+                    <FromInput colors={"#333"} textcolor={"#fff"} />
                 </div>
                 <p>После заполнения заявки, байер сам с вами свяжется с вами <br />
                     в течении 2-х часов в рабочее время.</p>

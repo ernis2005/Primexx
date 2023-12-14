@@ -1,10 +1,13 @@
 
 .Cards{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
     width: 100%;
-    @media screen and (max-width:569px) {
+    @media screen and (max-width:1114px) {
+        grid-template-columns: 1fr 1fr ;
+    }
+    @media screen and (max-width:650px) {
         grid-template-columns: 1fr;
     }
     a{
@@ -21,7 +24,7 @@
 font-family: Geometria;
 font-size: 24px;
 font-style: normal;
-font-weight: 600;
+font-weight: 400;
 line-height: 150%; /* 36px */
         }
         span{
@@ -31,7 +34,7 @@ line-height: 150%; /* 36px */
 font-family: Geometria;
 font-size: 16px;
 font-style: normal;
-font-weight: 600;
+font-weight: 400;
 line-height: 150%; /* 24px */
         }
         @media screen and (max-width:676px) {
@@ -45,9 +48,19 @@ line-height: 150%; /* 24px */
         @media screen and (max-width:569px) {
             p{
                 font-size: 24px;
+                
             }
             span {
                 font-size: 16px;
+            }
+            @media screen and (max-width:450px) {
+                row-gap: 0px;
+                p{
+                    font-size: 16px;
+                }
+                span {
+                    font-size: 14px;
+                }
             }
         }
     }

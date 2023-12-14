@@ -43,6 +43,8 @@ export const CardsBlock2 = () => {
                             <div className={s.flex}>
                                 <h1>{el.title}</h1>
                                 <h3>{el.tema}</h3>
+                                
+                            
                             </div>
                         </div>
                         <p dangerouslySetInnerHTML={{ __html:el.text}} />

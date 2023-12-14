@@ -3,27 +3,20 @@ import s from './page.module.scss'
 import { Svg10 } from '@/components/svg/Header'
 import Link from 'next/link'
 import cm from 'classnames'
-// {
-//     status: 3,
-//     status_label: 'Сортируется на складе',
-//     created_at: '2023-11-27T13:45:10.514061+06:00',
-//     sent_to_moscow_at: '2023-11-27T15:01:26.163645+06:00',
-//     arrived_at: '2023-11-27T18:15:32.837186+06:00',
-//     sorted_at: null,
-//     sent_to_client_at: null,
-//     delivered_at: null,
-//     track_code: '9856833624418',
-//     client_code: 'P-42117',
-//     phone: '77996706200',
-//     price: '9.50',
-//     weight: '1.000',
-//     cost_usd: '9.50',
-//     cost_rub: 874,
-//     flight_code: 'C/MOS/27/11/23'
-//   }
+import { format } from 'date-fns'
+import { ru } from 'date-fns/locale'
 const ItemsStory = (data) => {
 
+
     const res = data.data
+    const fromattedData = (res)=> {
+        if (res !== null) {
+            const datenew = new Date(res);
+            const date = format(datenew,'dd MMMM yyyy',{ locale: ru })
+            return date
+            
+        }}
+    console.log(res);
     return (
         <div className={s.BlockINfo}>
             <ul className={s.Items}>
@@ -33,8 +26,11 @@ const ItemsStory = (data) => {
                         [s.s]: res.status >= 1,
                     })}></p>
                     <div>
-                        <p>Формируется</p>
-                        <span>{res.created_at?.slice(0, 10)}</span>
+                        <p>Прибыл на склад, <br></br>
+                        готов к отправке</p>
+                        <span>
+                            {fromattedData(res.created_at)}
+                        </span>
                     </div>
                 </li>
                 <li >
@@ -44,7 +40,10 @@ const ItemsStory = (data) => {
                     <Svg10 />
                     <div>
                         <p>В пути</p>
-                        <span>{res.sent_to_moscow_at?.slice(0, 10)}</span>
+                        <span>
+                        
+                            {fromattedData(res.sent_to_moscow_at)}
+                        </span>
                     </div>
                 </li>    <li>
                     <Svg10 />
@@ -52,8 +51,11 @@ const ItemsStory = (data) => {
                         [s.s]: res.status >= 3,
                     })}></p>
                     <div>
-                        <p>Прибыл рейс</p>
-                        <span>{res.arrived_at?.slice(0, 10)}</span>
+                        <p>Прибыл на склад Москвы</p>
+                        <span>
+                            {fromattedData(res.arrived_at)}
+                        
+                        </span>
                     </div>
                 </li>    <li>
                     <Svg10 />
@@ -61,8 +63,10 @@ const ItemsStory = (data) => {
                         [s.s]: res.status >= 4,
                     })}></p>
                     <div>
-                        <p>Сортируется на складе</p>
-                        <span>{res.sorted_at?.slice(0, 10)}</span>
+                        <p>Сортировка посылок</p>
+                        <span>
+                            {fromattedData(res.sorted_at)}
+                        </span>
                     </div>
                 </li>    <li>
                     <Svg10 />
@@ -71,7 +75,9 @@ const ItemsStory = (data) => {
                     })}></p>
                     <div>
                         <p>Отправлен по адресу</p>
-                        <span>{res.sent_to_client_at?.slice(0, 10)}</span>
+                        <span>
+                            {fromattedData(res.sent_to_client_at)}
+                        </span>
                     </div>
                 </li>    <li>
                     <Svg10 />
@@ -79,8 +85,10 @@ const ItemsStory = (data) => {
                         [s.s]: res.status >= 6,
                     })}></p>
                     <div>
-                        <p>Выдан</p>
-                        <span>{res.delivered_at?.slice(0, 10)}</span>
+                        <p>Успешно вручен</p>
+                        <span>
+                            {fromattedData(res.delivered_at)}
+                        </span>
                     </div>
                 </li>
             </ul>
@@ -92,8 +100,14 @@ const ItemsStory = (data) => {
                         <h4>{res.status_label}</h4>
                     </span>
                     <span>
+                        <p >Вес составил:</p>
+                        <h4>{res.weight} кг.</h4>
+                    </span>
+                    <span>
                         <p >Плановая дата доставки:</p>
-                        <h4>10 октября, 2023</h4>
+                        <h4>
+                            {fromattedData(res.estimated_date)}
+                        </h4>
                     </span>
                     <span>
                         <p >Пункт выдачи:</p>

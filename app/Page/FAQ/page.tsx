@@ -19,7 +19,6 @@ export const metadata = {
 }
 
 const page = async () => {
-    const data = await getFAQ()
     return (
         <>
             <Header />

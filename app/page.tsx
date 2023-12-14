@@ -140,7 +140,7 @@ const Home = async () => {
                             с вами свяжется с вами в течении
                             2-х часов в рабочее время.</p>
                     </div>
-                    <div className={s.fromInput}><FromInput colors={"#333"} /></div>
+                    <div className={s.fromInput}><FromInput textcolor={"#fff"} colors={"#333"} /></div>
                     <p className={s.fromInputp}>После заполнения заявки, байер сам
                             с вами свяжется с вами в течении  <br />
                             2-х часов в рабочее время.</p>
