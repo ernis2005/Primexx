@@ -7,7 +7,6 @@ import Header from '@/components/Header/page';
 import Footer from '@/components/Footer/page';
 
 import {  getCountry, getRateTime } from './getData/getData';
-import { CardsBlock3 } from '@/components/Cards/CardsBlock3/CardsBlock3';
 import imag from '../public/images/bg.png'
 import Link from "next/link";
 import d from '../public/images/visa.svg'
@@ -15,6 +14,7 @@ import { FromInput } from "@/components/FromInput/FromInput";
 import type { Metadata } from "next";
 import RegisterButton from "@/components/RegisterButton/RegisterButton";
 import { CardsBlock1 } from "@/components/Cards/CardsBlock1/CardsBlock1";
+import { CardsBlock3 } from "@/components/Cards/CardsBlock3/CardsBlock3";
 type Product = {
     id: number;
     title: string;
@@ -80,6 +80,7 @@ const Home = async () => {
                         <CardsBlock2 />
                     </div>
                 </div>
+                <div></div>
                 <div className={`Contend ${s.block3}`} >
                     <h3 style={{marginTop:'30px'}}>
                         Этапы работы
@@ -115,8 +116,8 @@ const Home = async () => {
                 <div className={` Contend ${s.block5}`}>
                     <h3 >Тарифы и сроки</h3>
                     <div style={{overflow:'hidden'}}><TabelsBlock5 data={dataRate} /></div>
-
-                    <button style={{margin:'30px auto 40px'}}>
+                    <div></div>
+                    <button style={{margin:'60px auto 40px'}}>
                         <Link href={'/Page/rates'}>
                             Узнать подробнее
                         </Link>
@@ -140,7 +141,7 @@ const Home = async () => {
                             с вами свяжется с вами в течении
                             2-х часов в рабочее время.</p>
                     </div>
-                    <div className={s.fromInput}><FromInput textcolor={"#fff"} colors={"#333"} /></div>
+                    <div className={s.fromInput}><FromInput textcolor={"#001A0C"} colors={"#F5F5F5"} /></div>
                     <p className={s.fromInputp}>После заполнения заявки, байер сам
                             с вами свяжется с вами в течении  <br />
                             2-х часов в рабочее время.</p>

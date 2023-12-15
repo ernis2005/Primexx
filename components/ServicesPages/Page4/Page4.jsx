@@ -24,7 +24,7 @@ export const Page4 = () => {
      
     return (
         <div className={s.header}>
-            <span>
+            <span className={s.span}>
                 <h2>
                     Консолидация
                 </h2>
@@ -35,27 +35,28 @@ export const Page4 = () => {
             </span>
             <SwiperServicesPages4/>
             <button className={s.button}>Хочу заказать</button>
-            <div className={s.block1}>
-                <Image src={'/images/konsol.jpg'} layout='fill' objectFit='cover'/>
-                <h2>  Получить консультацию  </h2>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <input placeholder='Фамилия и имя' {...register("name", { required: true })} />
-                   
-                    <InputMask
-                        placeholder='Номер телефона'
-                        mask="+7 (___) ___-__-__"
-                        {...register("phone", { required: true })}
-                        replacement={{ _: /\d/ }}
-                    />
-                    <button type='submit'>Отправить</button>
-                </form>
-                <p>После заполнения заявки, байер сам с вами свяжется с вами <br />
-                в течении 2-х часов в рабочее время.</p>
-            </div>
-            <div className={s.FAQAccordionPage} >
-                <FAQAccordionPage/>
-            </div> 
+            <div className={s.top}></div>
+            <div className={s.top}></div>
+            <h2 className={s.h22}>Часто задаваемые вопросы</h2>
+            <FAQAccordionPage/>
             
         </div>
     )
 }
+/// <div className={s.block1}>
+//    <Image src={'/images/konsol.jpg'} layout='fill' objectFit='cover'/>
+//    <h2>  Получить консультацию  </h2>
+//    <form onSubmit={handleSubmit(onSubmit)}>
+//        <input placeholder='Фамилия и имя' {...register("name", { required: true })} />
+      
+//        <InputMask
+//            placeholder='Номер телефона'
+//            mask="+7 (___) ___-__-__"
+//            {...register("phone", { required: true })}
+//            replacement={{ _: /\d/ }}
+//        />
+//        <button type='submit'>Отправить</button>
+//    </form>
+//    <p>После заполнения заявки, байер сам с вами свяжется с вами <br />
+//    в течении 2-х часов в рабочее время.</p>
+///</div>

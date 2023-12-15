@@ -5,7 +5,9 @@
     .block {
         display: grid;
         row-gap: 60px;
-
+@media screen and (max-width:450px) {
+    row-gap: 0px;
+}
         .Navigation {
             display: flex;
             text-align: left;
@@ -13,7 +15,11 @@
             justify-content: center;
             flex-wrap: wrap;
             row-gap: 30px;
-
+@media screen and (max-width:450px) {
+    display: grid;
+    justify-content: left;
+    padding-bottom: 60px;
+}
             li {
                 list-style: none;
                 color: var(--Black, #001A0C);

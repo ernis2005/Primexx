@@ -1,20 +1,22 @@
 .header {
     padding: 60px 0px;
     display: grid;
-    row-gap: 60px;
+    row-gap: 60px;width: 100%;
+    padding: 30px;
+    justify-content: center;
+    @media screen and (max-width:1250px) {
+        justify-content: normal;
+    }
 @media screen and (max-width:450px) {
     row-gap: 30px;
-    padding: 30px 0px;
+    padding: 30px 30px;
 }
-    span {
+    .span {
         display: grid;
         row-gap: 30px;
         text-align: center;
         max-width: 1200px;
         margin: 0 auto;
-        @media screen and (max-width:1238px) {
-            margin: 0 30px;
-          }
         h2 {
             color: #000;
             text-align: center;
@@ -142,6 +144,12 @@ p{
 
 .FAQAccordionPage{
     margin: 0 auto;
+justify-self: center;
+width: 99vh;
+position: relative;
+display: flex;
+justify-content: center;
+padding: 0px 30px;
 }
 .button{
     display: flex;
@@ -158,4 +166,28 @@ font-style: normal;
 font-weight: 400;
 border: none;
 line-height: normal;
+}
+.h22{
+    color: #000;
+    text-align: center;
+    
+    /* H2 */
+    font-family: Geometria;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 57.6px */
+    padding: 0px 30px;
+    @media screen and (max-width:950px) {
+        font-size: 36px;
+        @media screen and (max-width:450px) {
+            font-size: 24px;
+        }
+    }
+}
+.top{
+    display: none;
+    @media screen and (max-width:450px) {
+        display: block;
+    }
 }

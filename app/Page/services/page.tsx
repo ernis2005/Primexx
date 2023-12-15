@@ -11,7 +11,7 @@ import { Page3 } from '@/components/ServicesPages/Page3/Page3';
 import { Page4 } from '@/components/ServicesPages/Page4/Page4';
 const page = () => {
     const [navigationIndex, setNavigationIndex] = React.useState(2)
-    const NavigationData = ["Доставка", "Бесплатный склад", "Выкуп товара", "Консолидация", "Доставка коммерческих грузов"]
+    const NavigationData = [ "Бесплатный склад", "Выкуп товара", "Консолидация", "Доставка коммерческих грузов"]
 
     return (
         <>
@@ -28,17 +28,17 @@ const page = () => {
                         {NavigationData.map((res, i) => (<li key={i} onClick={() => setNavigationIndex(i)} className={cm(s.accli, { [s.accliAcc]: navigationIndex === i })} >{res}</li>))}
                     </ul>
                     <div className={cm(s.accNone, {
-                        [s.accs]: navigationIndex === 2
+                        [s.accs]: navigationIndex === 1
                     })}>
                         <Page3 />
                     </div>
                     <div className={cm(s.accNone, {
-                        [s.accs]: navigationIndex === 3
+                        [s.accs]: navigationIndex === 2
                     })}>
                         <Page4 />
                     </div>
                     <div className={cm(s.accNone, {
-                        [s.acc]: navigationIndex === 4
+                        [s.acc]: navigationIndex === 3
                     })}>
                         <Page6 />
                     </div>

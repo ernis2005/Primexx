@@ -1,100 +1,104 @@
 .Cards {
     display: grid;
-grid-template-columns: 2fr 2fr 2fr ;
-gap: 30px;
-    
-max-width: 100%;
-@media screen and (max-width:1092px) {
-    grid-template-columns: 2fr 2fr  ;
-    @media screen and (max-width:672px) {
-        grid-template-columns: 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+
+    @media screen and (max-width:700px) {
+        grid-template-columns: 1fr;
     }
-}
     .Card {
-        display: grid;
-        height: 500px;
-        width: 100%;
+        display: flex;
+        min-height: 400px;
         padding: 30px;
-        align-content: space-between;
-        row-gap: 30px;
-        background: var(--Green, #009345);
-        @media screen and (max-width:814px) {
-            h2{
-                font-size: 36px;
-            }
-            min-height: 20px;
-            @media screen and (max-width:672px) {
-height: auto;
-            }
-        }
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        background: var(--Dark-Green, #003318);
+gap: 40px;
+@media screen and (max-width:700px) {
+    gap: 30px;
+    min-height: auto;
+}
         .block1 {
             display: grid;
             row-gap: 15px;
-            color: var(--White, #F5F5F5);
+
             h2 {
-                font-family: Geometria1;
-                font-size: 48px;
+                color: var(--White, #F5F5F5);
+
+                /* H3 */
+                font-family: Geometria;
+                font-size: 36px;
                 font-style: normal;
                 font-weight: 700;
                 line-height: 120%;
-                /* 57.6px */
+                @media screen and (max-width:1061px) {
+                    font-size: 24px ;
+                }
+                /* 43.2px */
             }
 
             p {
+                color: var(--White, #F5F5F5);
+
+                /* Regular text */
                 font-family: Geometria;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: 150%;
-                /* 24px */
+                line-height: 130%;
+                @media screen and (max-width:700px) {
+                    
+                    font-size: 14px;
+                }
+                /* 20.8px */
             }
-            @media screen and (max-width:814px) {
-                h2{
-                    font-size: 36px;
+        }
+
+        .ul {
+            display: grid;
+            row-gap: 14px;
+
+            li {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                @media screen and (max-width:1061px) {
+                    grid-template-columns: 1fr;
+                }
+                @media screen and (max-width:700px) {
+                    grid-template-columns: 1fr 1fr;
+                
+                    font-size: 14px;
+                }
+                color: var(--White, #F5F5F5);
+                font-family: Geometria;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    position: relative;
+                    p {
+                    display: grid;
+                    align-items: center;
+                    line-height: 130%;
+                    
+                }
+
+                span {
+                    border-radius: 100px;
+                    border: 1px solid var(--White, #F5F5F5);
+                    /* Regular text */
+                    
+                    /* 20.8px */
+                    display: flex;
+                    padding: 5px 15px;
+                    justify-content: left;
+                   align-items: left;
+                   position: relative;
+                    gap: 10px;
+
                 }
             }
-        }
-
-    }
-}
-
-.ul {
-    display: grid;
-    row-gap: 20px;
-
-    li {
-        display: flex;
-        list-style: none;
-        gap: 15px;
-        align-items: center;
-
-        p {
-            color: var(--White, #F5F5F5);
-            font-family: Geometria;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 150%;
-            align-items: center;
-        }
-
-        span {
-
-            display: flex;
-            padding: 5px 15px;
-            justify-content: right;
-            align-items: center;
-            gap: 10px;
-            border-radius: 100px;
-            border: 1px solid var(--White, #F5F5F5);
-            color: var(--White, #F5F5F5);
-
-            font-family: Geometria;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 150%;
-
         }
     }
 }

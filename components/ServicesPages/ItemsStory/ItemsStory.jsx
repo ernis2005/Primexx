@@ -41,7 +41,6 @@ const ItemsStory = (data) => {
                     <div>
                         <p>В пути</p>
                         <span>
-                        
                             {fromattedData(res.sent_to_moscow_at)}
                         </span>
                     </div>

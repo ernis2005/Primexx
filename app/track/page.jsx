@@ -6,8 +6,8 @@ import { HeaderProfile } from '@/components/HeaderProfile/HeaderProfile'
 import { useForm } from 'react-hook-form'
 import { useDispatch, useSelector } from 'react-redux'
 import { getBaseparceId } from '../redux/features/baseparceId-get'
+import { ItemsStorytR } from '@/components/ServicesPages/Page3/ItemsStorytR/page'
 
-import { ItemsStorytR } from '@/components/ItemsStorytR/page'
 const page = () => {
     
     const {

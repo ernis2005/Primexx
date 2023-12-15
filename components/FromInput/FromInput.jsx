@@ -18,13 +18,13 @@ export const FromInput = ({colors,textcolor}) => {
     const [index, setIndex]= useState(1)
     const [counterName, setCounterName] = useState( {id:1,name:'Турция'})
     const  dataInput =[
-        { name:"url",title:"Ссылка на товар: ", length:17 },
-        { name:"size",title:"Размер товара: ", length:15 },
-        { name:"color",title:"Цвет: ", length:6},
-        { name:"quantity",title:"Количество: ", length:12},
-        { name:"fullname",title:"ФИО: ", length:5},
-        { name:"contact",title:"Контакты: ", length:10},
-        { name:"comment",title:"Комментарии: ", length:13},
+        { name:"url",title:"Ссылка на товар: ebay.com/itm/284526855467 ", length:17 },
+        { name:"size",title:"Размер товара: XS, M, L, 37, 38 ", length:15 },
+        { name:"color",title:"Цвет: Зеленый, White, Ocean Blue ", length:6},
+        { name:"quantity",title:"Количество: 1, 20, 48 ", length:12},
+        { name:"fullname",title:"ФИО: Булгаков Александр Петрович ", length:5},
+        { name:"contact",title:"Контакты: +8 (499) 123-45-67 ", length:10},
+        { name:"comment",title:"Комментарии: Прошу упаковать по крепче ", length:13},
     ]
     const onClicks = (index)=> {
         setIndex(index.id)

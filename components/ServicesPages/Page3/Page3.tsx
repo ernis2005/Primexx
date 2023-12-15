@@ -29,7 +29,7 @@ export const Page3 = () => {
 
     return isloding && (
         <div className={` ${s.Header}`}>
-            <span>
+            <span className={s.Info}>
                 <h2>Выкуп товара</h2>
                 <p>Оперативный байер выкупит за вас</p>
             </span>
@@ -54,15 +54,16 @@ export const Page3 = () => {
             <div className={s.Block2}>
                 <Image src={'/images/aq.1.jpg'} layout='fill' objectFit='cover'/>
                 <div>
-                    <FromInput colors={"#333"} textcolor={"#fff"} />
+                    <FromInput colors={"#009345"} textcolor={"#fff"} />
                 </div>
                 <p>После заполнения заявки, байер сам с вами свяжется с вами <br />
                     в течении 2-х часов в рабочее время.</p>
             </div>
-            {/* <h2>Часто задаваемые вопросы</h2> 
             <div className={s.block3}>
+                
+                <h2>Часто задаваемые вопросы</h2> 
                 <FAQAccordionPage  />
-            </div> */}
+            </div>
             <div></div>
         </div>
     )
