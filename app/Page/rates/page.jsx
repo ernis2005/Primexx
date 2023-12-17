@@ -25,7 +25,11 @@ const page = async () => {
     const data = await getRate()
     
     console.log(data,'data');
-    const uniqueData = data.reduce((acc, current) => {
+    if (data===undefined || !data?.length===0 || data===null) {
+        return  null
+    }
+    
+    const uniqueData =data?.reduce((acc, current) => {
         const x = acc.find(item => item.country === current.country);
         if (!x) {
             return acc.concat([current]);

@@ -9,8 +9,9 @@ import { Page6 } from '@/components/ServicesPages/Page6/Page6';
 import cm from 'classnames'
 import { Page3 } from '@/components/ServicesPages/Page3/Page3';
 import { Page4 } from '@/components/ServicesPages/Page4/Page4';
+import { Page1 } from '@/components/ServicesPages/Page1/Page1';
 const page = () => {
-    const [navigationIndex, setNavigationIndex] = React.useState(2)
+    const [navigationIndex, setNavigationIndex] = React.useState(0)
     const NavigationData = [ "Бесплатный склад", "Выкуп товара", "Консолидация", "Доставка коммерческих грузов"]
 
     return (
@@ -27,6 +28,11 @@ const page = () => {
                     <ul className={`Contend ${s.Navigation}`}>
                         {NavigationData.map((res, i) => (<li key={i} onClick={() => setNavigationIndex(i)} className={cm(s.accli, { [s.accliAcc]: navigationIndex === i })} >{res}</li>))}
                     </ul>
+                    <div className={cm(s.accNone, {
+                        [s.accs]: navigationIndex === 0
+                    })}>
+                        <Page1 />
+                    </div>
                     <div className={cm(s.accNone, {
                         [s.accs]: navigationIndex === 1
                     })}>

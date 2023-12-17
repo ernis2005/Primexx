@@ -1,0 +1,155 @@
+.header {
+    display: grid;
+    gap: 60px;
+justify-content: center;
+@media screen and (max-width:960px) {
+    gap: 30px;
+    @media screen and (max-width:450px) {
+        gap: 60px;
+        
+    }
+}
+    .info {
+        display: grid;
+        justify-content: center;
+        gap: 30px;
+
+        h2 {
+            color: #000;
+            text-align: center;
+
+            /* H2 */
+            font-family: Geometria;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%;
+            /* 57.6px */
+
+        }
+
+        p {
+            color: #000;
+            text-align: center;
+
+            /* Description */
+            font-family: Geometria;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            /* 36px */
+        }
+
+        @media screen and (max-width:960px) {
+            h2 {
+                font-size: 36px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            @media screen and (max-width:450px) {
+                gap: 15px;
+
+                h2 {
+                    font-size: 24px;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+
+                .p2 {
+                    display: none;
+                }
+            }
+        }
+
+        .Cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+@media screen and (max-width:583px) {
+    grid-template-columns: 1fr;
+}
+            div {
+
+                background-color: #000;
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+                justify-content: last baseline;
+
+                padding: 45px;
+
+                img {
+                    opacity: 0.3;
+                }
+
+                p {
+                    position: relative;
+                    z-index: 1;
+
+
+                    text-align: left;
+                    color: #fff;
+                    color: #FFF;
+                    font-family: Geometria;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                    /* 24px */
+                padding: 0;
+                }
+                
+                @media screen and (max-width:960px) {
+                    padding: 30px;
+                
+                     @media screen and (max-width:450px) {
+                        p{
+                            font-size: 14px;
+                        }
+                     }
+                }
+            }
+        }
+    }
+    .faq{
+        display: grid;
+        grid-template-columns: 1fr ;
+        gap: 60px;
+        
+        h2{
+    color: #000;
+text-align: center;
+
+/* H2 */
+font-family: Geometria;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 57.6px */
+
+}
+div{
+    width: 100%;
+    background-color: #000;
+}
+@media screen and (max-width:960px) {
+    gap: 30px;
+    h2{
+        font-size: 36px;
+    }
+    @media screen and (max-width:450px) {
+        h2{
+            font-size: 24px;
+        }
+    }
+    
+}
+    }
+}
