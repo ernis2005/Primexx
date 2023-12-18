@@ -46,7 +46,7 @@ const page = () => {
     return (
         <div className={s.Header} >
             <div className={s.bg}>
-                <Image src={'/images/bgLogin.jfif'} layout="fill"
+                <Image src={'/images/iamgeLogin.png'} layout="fill"
                     objectFit="cover"
                     alt="hwllo" />
             </div>
