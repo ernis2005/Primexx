@@ -30,7 +30,9 @@ const page = () => {
         <div>
             <HeaderProfile />
             <div className={s.Header}>
+                <h2> Отследить товар</h2>
                 <form className={`Contend ${s.Input}`}
+
                     onSubmit={handleSubmit(onSubmit)}>
                     <input placeholder="Введите трек номер" {...register("example")} />
                     {errors.exampleRequired && <span>This field is required</span>}
@@ -39,7 +41,8 @@ const page = () => {
                 
                 {data.status === 'loading' && <div className='Contend'>Загрузка</div>}
                 {data.status === 'failed' && <div className='Contend'>{data.error.message} </div>}
-                {data.status === 'success' && <div className={  ` ${s.blockasdsdas}`}><ItemsStorytR data={data.baseparceId.data}/></div>}
+                {data.status === 'success' && <div className={  ` ${s.blockasdsdas}`}>
+                    <ItemsStorytR data={data.baseparceId.data}/></div>}
                 <div style={{height:250}}>
                 </div>
             </div>

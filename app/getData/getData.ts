@@ -11,7 +11,8 @@ export const getNews = async () => {
     return data.data
 }
 export const getNewsId = async (id: number) => {
-    const data = await axios(`${Api}about/blog/${id}`)
+
+    const data = await axios(`${Api}about/blog/${id}/`)
 
     return data.data
 }

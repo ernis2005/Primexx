@@ -35,10 +35,14 @@ const page = async () => {
                 />
                 <div className={`Contend ${s.block}`}>
                     {data.length === 0 ? <div className={s.noData}>
-                      
+
                         <h1 style={{height:250}}>Новостей нет</h1>   
                     </div> : <CardsNews data={data} />
                     }
+                    
+                </div>
+                <div>
+                        
                 </div>
             </div>
             <Footer />

@@ -27,10 +27,10 @@ const page = () => {
             <Head>
                 <meta name="description" content="Описание вашей страницы" />
                 <meta property="og:image" content="/logo1.jpg" />
-        // Добавьте здесь другие мета-теги
+     
             </Head>
             <div className={s.bg}>
-                <Image src={'/images/bgLogin.jfif'} layout="fill"
+                <Image src={'/images/iamgeLogin.png '} layout="fill"
                     objectFit="cover"
                     alt="hwllo" />
             </div>

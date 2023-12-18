@@ -17,7 +17,6 @@ interface Person {
 }
 export const CardsNews = ({ data }: Person) => {
     const [noOFElement, setNoOFElement] = useState(6);
-    const datas = [1, 2, 3, 4, 5, 67, 8, 9, 0]
     const slice = data?.slice(0, noOFElement);
     const data4length = data.length;
     const LoadMore = () => {
@@ -33,17 +32,6 @@ export const CardsNews = ({ data }: Person) => {
                             <Image src={res.icon_card} layout="fill"
                                 objectFit="cover"
                                 alt="hwllo" />
-                            <div className={s.info}>
-                                <HeaderSvg />
-                                <div className={s.block} >
-                                    <p>
-                                        {res.title_card}
-                                    </p>
-                                    <span>
-                                        {res.description_card}
-                                    </span>
-                                </div>
-                            </div>
                         </Link>
 
                     </div>

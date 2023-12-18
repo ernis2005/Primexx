@@ -9,6 +9,7 @@ import cm from 'classnames'
 import { useDispatch } from 'react-redux'
 import { ugetUsers } from '@/app/redux/features/auth-slice'
 import Cookies from 'js-cookie'
+import { usePathname } from 'next/navigation'
 export const HeaderProfile = () => {
     const [module, setModule] = React.useState(false)
     const dispatch = useDispatch()
@@ -20,6 +21,8 @@ export const HeaderProfile = () => {
             
         }
     }, [])
+
+    const page = usePathname();
 
     return (
         <>

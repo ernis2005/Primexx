@@ -46,7 +46,11 @@ overflow: scroll;
                 row-gap: 30px;
                 padding-left: 30px;
                 padding-right: 30px;
-
+ @media screen and (max-width:450px) {
+    padding: 0 !important;
+    padding-left: 0px ;
+    padding-right: 0px;
+ }
                 p {
                     color: #000;
                     text-align: center;

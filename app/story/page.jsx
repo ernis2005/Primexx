@@ -37,9 +37,18 @@ const page = () => {
                 &&
                 <Loading />
             }
+            
+
+            {
+                data.trac.length <= 0 && (
+                    <p className={s.Contend}>
+                        Нету данных
+                    </p>
+                )
+            }
             {
                 data.status === "success"
-                &&
+                && data.trac.length > 0 &&
                 <div className={`Contend ${s.header}`}>
 
                     <div>
@@ -56,14 +65,6 @@ const page = () => {
                         <CardStory data={data.tracHistory} />
                     </div>
                 </div>
-            }
-
-            {
-                data.trac.length <= 0 && (
-                    <p className={s.Contend}>
-                        Нету данных
-                    </p>
-                )
             }
         </div>
     )

@@ -10,11 +10,13 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Box, Modal } from '@mui/material'
 import { fetchPasswordPatch } from '../redux/features/password-patch'
 import {saveChanges} from '../redux/features/save-changes'
-
+import cm  from 'classnames'
+import Image from 'next/legacy/image'
 const profile = () => {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+    const  [page , setPage] = useState(1)
     const  [newPassword , setnewPassword] = useState()
     const [oldPassword , setoldPassword] = useState()
     useEffect(() => {    
@@ -26,11 +28,11 @@ const profile = () => {
         register,
         handleSubmit,
         watch,
-        formState: { errors },
+        formState: { errors,isDirty },
     } = useForm()
     const user = useSelector((state) => state.authReducer.value)
     
-    
+    console.log(user);
     const onSubmit = (data) => {   
         let  useUnfo = data
         if(useUnfo.name.length <= 1){
@@ -43,9 +45,7 @@ const profile = () => {
         if(useUnfo.address.length <= 1){
             useUnfo.address = user.address
         }
-        
         dispatch(saveChanges(useUnfo))
-    
     }
     const style = {
         position: 'absolute' ,
@@ -88,9 +88,14 @@ const profile = () => {
     return (
         <div>
             <HeaderProfile />
-            <div className='Contend'>
+            <div className={`Contend ${s.blocks}`}>
                 <div className={s.block1}>
-                    <h2>Добро пожаловать,{user.name}</h2>
+                    <div className={s.code_logistic}>
+                        <h2>Добро пожаловать,{user.name}</h2>
+                        <p>Клиентский код: {user.code_logistic} </p>
+                    
+                    </div>    
+                
                     <form className={` ${s.Input}`}
                         onSubmit={handleSubmit(onSubmit)}
                     >
@@ -101,7 +106,6 @@ const profile = () => {
                         <span>
                             <p>Номер телефона</p>
                             <input  defaultValue={user.tel.replace(/^(\d{3})(\d{3})(\d{3})$/, '+996 ($1) $2-$3')}
-                                
                                 {...register("tel")}   maxLength={11}/>
                         </span>
                         <span>
@@ -110,7 +114,9 @@ const profile = () => {
                             <input defaultValue={`${user.address}`} {...register("address")} />
                         </span>
                         {errors.exampleRequired && <span>This field is required</span>}
-                        <button type="submit">Сохранить изменения</button>
+                        <button 
+                            className={cm(s.button, isDirty && s.buttonActive)}
+                            type="submit">Сохранить изменения</button>
                     
                     </form>
                     <button onClick={handleOpen} className={s.buttonPo} >Cменить пароль</button>
@@ -146,6 +152,197 @@ const profile = () => {
                         </Box>
                     </Modal>
                 </div>
+                <div className={s.block2}>
+                    <h2>
+                   Ваш адрес склада</h2>
+                    <div className={s.countrys}>
+                        <ul className={s.countrysUl}>
+                            <li  onClick={()=>setPage(1)} className={cm( s.isActive, {
+                                [s.countrysUlActive]: page === 1
+                            })}>
+                                <span><Image src={'/images/countrys/img1.jpg'} layout='fill' objectFit='cover'/></span>
+                                <p>
+                         США
+                                </p>
+                            </li>
+                            <li  onClick={()=>setPage(2)} className={cm( s.isActive, {
+                                [s.countrysUlActive]: page === 2
+                            })}>
+                                <span><Image src={'/images/countrys/iamg2.png'} layout='fill' objectFit='cover'/></span>
+                                <p>Турция
+                                </p>
+                            </li>
+                            <li  onClick={()=>setPage(3)} className={cm( s.isActive, {
+                                [s.countrysUlActive]: page === 3
+                            })}>
+                                <span><Image src={'/images/countrys/img3.png'} layout='fill' objectFit='cover'/></span>
+                                <p>
+                                Китай
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className={cm(s.PageCountrys ,{
+                        [s.testActive]: page === 1
+                    })}>
+                        <p>467 Carson drive, Bear, Delaware(DE) ,19701, +13027722737</p>
+                        <div className={s.testActiveUl}>
+                            <p>На сайтах магазинов адрес заполняется <br/>
+                        следующим образом:</p>
+                            <ul>
+                                <li>
+                                    <h3>First Name (ваше имя):</h3>
+                                    <p>
+                                    AkmoorPR
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>Last Name (ваша фамилия):</h3>
+                                    <p>Nurueva
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>Address line 1 (адрес склада):</h3>
+                                    <p>467 Carson Drive
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>Address line 2 (номер дома):</h3>
+                                    <p>PR
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>City (город):</h3>
+                                    <p>Bear
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>State (штат):</h3>
+                                    <p>Delaware (DE)
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>Zip code (индекс):</h3>
+                                    <p>19701
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>Phone (телефон):</h3>
+                                    <p>+1 302 7722737
+                                    </p>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div className={cm(s.PageCountrys ,{
+                        [s.testActive]: page === 2
+                    })}>
+                    
+                        <p>467 Carson drive, Bear, Delaware(DE) ,19701, +13027722737</p>
+                        <div className={s.testActiveUl}>
+                            <p>На сайтах магазинов адрес заполняется <br/>
+                    следующим образом:</p>
+                            <ul>
+                                <li>
+                                    <h3>First Name (ваше имя):</h3>
+                                    <p>
+                                AkmoorPR
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>Last Name (ваша фамилия):</h3>
+                                    <p>Nurueva
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>Address line 1 (адрес склада):</h3>
+                                    <p>467 Carson Drive
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>Address line 2 (номер дома):</h3>
+                                    <p>PR
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>City (город):</h3>
+                                    <p>Bear
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>State (штат):</h3>
+                                    <p>Delaware (DE)
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>Zip code (индекс):</h3>
+                                    <p>19701
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>Phone (телефон):</h3>
+                                    <p>+1 302 7722737
+                                    </p>
+                                </li>
+
+                            </ul>
+                        </div></div>
+                    <div className={cm(s.PageCountrys ,{
+                        [s.testActive]: page === 3
+                    })}>
+                    
+                        <p>467 Carson drive, Bear, Delaware(DE) ,19701, +13027722737</p>
+                        <div className={s.testActiveUl}>
+                            <p>На сайтах магазинов адрес заполняется <br/>
+                    следующим образом:</p>
+                            <ul>
+                                <li>
+                                    <h3>First Name (ваше имя):</h3>
+                                    <p>
+                                AkmoorPR
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>Last Name (ваша фамилия):</h3>
+                                    <p>Nurueva
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>Address line 1 (адрес склада):</h3>
+                                    <p>467 Carson Drive
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>Address line 2 (номер дома):</h3>
+                                    <p>PR
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>City (город):</h3>
+                                    <p>Bear
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>State (штат):</h3>
+                                    <p>Delaware (DE)
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>Zip code (индекс):</h3>
+                                    <p>19701
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>Phone (телефон):</h3>
+                                    <p>+1 302 7722737
+                                    </p>
+                                </li>
+
+                            </ul>
+                        </div></div>
+                </div>
+                <div></div>
             </div>
         </div>
     );

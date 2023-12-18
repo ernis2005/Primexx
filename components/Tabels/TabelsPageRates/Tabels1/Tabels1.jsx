@@ -21,14 +21,17 @@ export const Tabels1 = async (data) => {
                 </thead>
                 <tbody className={s.block2} >
                     {
-                        filterData?.map((res,index)=>(
-                            <tr className={s.block2} key={index}>
-                                <td>{res.title}</td>
-                                <td>{res.amount}</td>
-                                <td>{res.delivery_time}</td>
-                                {index % 4 === 0 && <td rowSpan={4} className={s.td4} dangerouslySetInnerHTML={{ __html: res.country_add_standard }}/>}</tr>
+                        filterData?.map((res,index)=> {
+                            const htmlContent = index !== 4 ? res.country_add_standard : res.country_add_express;
+                            return(
+                                <tr className={s.block2} key={index}>
+                                    <td  className={s.tbw300}>{res.title}</td>
+                                    <td>{res.amount}</td>
+                                    <td>{res.delivery_time}</td>
+                                    {index % 4 === 0 && <td   rowSpan={4} className={s.td4} dangerouslySetInnerHTML={{ __html:htmlContent}}/>}</tr>
                                 
-                        ))
+                            )
+                        })
 
                     }
                 </tbody>
