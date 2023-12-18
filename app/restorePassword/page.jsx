@@ -28,8 +28,6 @@ const page = () => {
     const router = useRouter()
     const onSubmit = (data) => {
         const  datasda =   dispatch(restorePasswordPost(data))
-    
-        
     }
     useEffect(() => {
         if (status === 'failed') {
