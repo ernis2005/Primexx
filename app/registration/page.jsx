@@ -7,7 +7,6 @@ import { Controller, useForm } from 'react-hook-form';
 import Image from "next/legacy/image";
 import { useDispatch, useSelector } from 'react-redux'
 import { registrationPost, useAppSelector } from '../redux/features/auth-slice';
-import Head from 'next/head';
 
 const page = () => {
     const dispatch = useDispatch()
@@ -24,11 +23,6 @@ const page = () => {
 
     return (
         <div className={s.Header} >
-            <Head>
-                <meta name="description" content="Описание вашей страницы" />
-                <meta property="og:image" content="/logo1.jpg" />
-     
-            </Head>
             <div className={s.bg}>
                 <Image src={'/images/iamgeLogin.png'} layout="fill"
                     objectFit="cover"

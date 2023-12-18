@@ -17,7 +17,6 @@ export const ItemsStorytR = (data) => {
             return date
             
         }}
-    console.log(res);
     return (
         <div className={s.BlockINfo}>
             <ul className={s.Items}>

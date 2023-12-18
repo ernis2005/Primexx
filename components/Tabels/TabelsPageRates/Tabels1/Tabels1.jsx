@@ -5,9 +5,7 @@ import { getRate } from '@/app/getData/getData';
 export const Tabels1 = async (data) => {
     const getTabel = await getRate()
     const filterData = await getTabel.filter((res) => res.country === data.data)
-    console.log(filterData,'dara');
-
-
+   
     return (
         <div>
             <table className={s.table} >

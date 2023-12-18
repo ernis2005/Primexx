@@ -46,7 +46,7 @@ const Header = () => {
                         <ul>
                             <li> <CiAlarmOn /> 09:00 - 20:00</li>
                             <li><BsTelephone /> <a href="tel:+996 770 710-170">+996 770 710-170</a>  </li>
-                            <li><MdOutlineMailOutline /> <a href="mailto:info@primex.kg">info@primex.kg</a> </li>
+                            <li><MdOutlineMailOutline /> <a href="mailto:primexcargo.org@gmail.com">primexcargo.org@gmail.com</a> </li>
                         </ul>
                     </div>
   

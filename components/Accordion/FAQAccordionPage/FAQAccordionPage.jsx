@@ -23,7 +23,6 @@ export const FAQAccordionPage = () => {
     }
     , [])
     const {status,FAQData,error} = useSelector((state) => state.consolidationReducer)
-    console.log(FAQData);
     return (
         <div className={s.header}>
             {status === 'loading' ? <div>loading...</div> : null}

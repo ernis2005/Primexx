@@ -4,7 +4,7 @@ import s from './page.module.scss'
 import { Tabels2 } from '@/components/Tabels/TabelsPageRates/Tabels1/Tabels2'
 import Header from '@/components/Header/page'
 import Footer from '@/components/Footer/page'
-import { getRate } from '@/app/getData/getData'
+import { getRate, getadditional_service } from '@/app/getData/getData'
 import img from '../../../public/images/тарифы.png'
 import { Tabels1 } from '@/components/Tabels/TabelsPageRates/Tabels1/Tabels1'
 
@@ -23,8 +23,7 @@ export const metadata = {
 
 const page = async () => {
     const data = await getRate()
-    
-    console.log(data,'data');
+    const data1 = await getadditional_service()
     if (data===undefined || !data?.length===0 || data===null) {
         return  null
     }
@@ -58,7 +57,7 @@ const page = async () => {
                     ))}
                     <div>
                         <h2>Дополнительные услуги</h2>
-                        <Tabels2 data={data} />
+                        <Tabels2 data={data1} />
                         <p>Лира к рублю - 5 рублей.</p>
                     </div>
                 </div>

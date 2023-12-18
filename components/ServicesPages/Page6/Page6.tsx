@@ -70,7 +70,7 @@ export const Page6 =  () => {
                         <ul className={s.services}>
                             <li><p>Упаковка грузов:</p> <span>$10 за одно место</span></li>
                             <li><p>Передача денег <br /> поставщику:   </p>  <span>  1% от общей суммы</span></li>
-                            <li><p>Проверка на брак перед<br /> отправкой в Россию:</p> <span>$0.2 за штуку</span></li>
+                            <li><p>Проверка на брак перед<br /> отправкой в Россию:</p> <span className={s.dsasad}> $0.2 за штуку</span></li>
                       
                     
                         </ul>

@@ -32,7 +32,6 @@ const profile = () => {
     } = useForm()
     const user = useSelector((state) => state.authReducer.value)
     
-    console.log(user);
     const onSubmit = (data) => {   
         let  useUnfo = data
         if(useUnfo.name.length <= 1){

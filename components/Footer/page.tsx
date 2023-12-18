@@ -30,22 +30,20 @@ const Footer = () => {
                             </Link></li>
                     </ul>
                     <div className={s.block1Sc}>
-                        <Link href={''}>
+                        <Link href={'https://www.instagram.com/primex_ec?igshid=OGQ5ZDc2ODk2ZA=='}>
                             <Image src={'/images/Instagram.svg'} alt="" width={30} height={30} />
                         </Link>
-                        <Link href={''}>
+                        <Link href={'https://vk.com/primex_ec'}>
                             <Image src={'/images/Vector.svg'} alt="" width={30} height={30} />
                         </Link>
-                        <Link href={''}>
+                        <Link href={'https://www.tiktok.com/@primex_ec?_t=8iBRh0XfVhO&_r=1'}>
                             <Image src={'/images/tit_tok.svg'} alt="" width={30} height={30} />
                         </Link>
-                        <Link href={''}>
+                        <Link href={'https://www.youtube.com/@primex_ec'}>
                             <Image src={'/images/youtube (Stroke).svg'} alt="" width={30} height={30} />
                         </Link>
-                        <Link href={''}>
-                            <Image src={'/images/WhatsApp.svg'} alt="" width={30} height={30} />
-                        </Link>
-                        <Link href={''}>
+                
+                        <Link href={'https://t.me/primexecchat'}>
                             <Image src={'/images/Telegram.svg'} alt="" width={30} height={30} />
                         </Link>
                     </div>
@@ -116,22 +114,20 @@ const Footer = () => {
                 </div>
                 
                 <div className={s.Sc}>
-                    <Link href={''}>
+                    <Link href={'https://www.instagram.com/primex_ec?igshid=OGQ5ZDc2ODk2ZA=='}>
                         <Image src={'/images/Instagram.svg'} alt="" width={30} height={30} />
                     </Link>
-                    <Link href={''}>
+                    <Link href={'https://vk.com/primex_ec'}>
                         <Image src={'/images/Vector.svg'} alt="" width={30} height={30} />
                     </Link>
-                    <Link href={''}>
+                    <Link href={'https://www.tiktok.com/@primex_ec?_t=8iBRh0XfVhO&_r=1'}>
                         <Image src={'/images/tit_tok.svg'} alt="" width={30} height={30} />
                     </Link>
-                    <Link href={''}>
+                    <Link href={'https://www.youtube.com/@primex_ec'}>
                         <Image src={'/images/youtube (Stroke).svg'} alt="" width={30} height={30} />
                     </Link>
-                    <Link href={''}>
-                        <Image src={'/images/WhatsApp.svg'} alt="" width={30} height={30} />
-                    </Link>
-                    <Link href={''}>
+                
+                    <Link href={'https://t.me/primexecchat'}>
                         <Image src={'/images/Telegram.svg'} alt="" width={30} height={30} />
                     </Link>
                 </div>

@@ -7,7 +7,6 @@ import { Svg10 } from '@/components/svg/Header'
 export const CardsBlock3 = () => {
     const [scr, setScr] = useState(0)
     const ref =useRef()
-    console.log(ref.current?.getBoundingClientRect().top);
     
 
     const refComponent= useRef();

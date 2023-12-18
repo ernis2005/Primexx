@@ -27,6 +27,7 @@ export const Page1 = () => {
                 <h2>Часто задаваемые вопросы</h2>
                 <FAQAccordionPage  />
             </div>
+            <div></div>
         </div>
     )
 }

@@ -29,7 +29,7 @@
 width: 100%;
             row-gap: 15px;
             align-items: center;
-
+gap: 15px;
             li {
                 color: #000;
                 text-align: right;
@@ -152,7 +152,7 @@ cursor: pointer;
                     gap: 10px;
                     align-items: center;
                     row-gap: 10px;
-                    justify-content: center;
+                    justify-content: left;
 
 margin: 0 auto;
                     li {
@@ -185,7 +185,7 @@ margin: 0 auto;
             }
             .socialMedia{
                 display: flex;
-                gap: 0px;
+                gap: 15px;
                 li{
                     list-style: none;
                     svg{

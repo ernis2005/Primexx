@@ -4,9 +4,9 @@ type Product = {
     id: number;
     title: string;
     amount: string;
-    delivery_time: string;
-    delivery: string;
-    additionally:string
+    price: string;
+    description: string;
+    service:string
 };
 
 type ProductList = Product[];
@@ -23,16 +23,16 @@ export const Tabels2 = (data: ProductComponentProps) => {
                     <tr  >
                         <th>Услуга</th>
 
-                        <th style={{ width: "550px" }}>Стоимость</th>
+                        <th >Стоимость</th>
                         <th>Дополнительно</th>
                     </tr>
                 </thead>
                 <thead className={s.block2} >
                     {data.data.map((res, index) => (
                         <tr className={s.block2} key={index}>
-                            <td>{res.title}</td>
-                            <td style={{ width: "550px" }}>{res.amount}</td>
-                            <td>{res.additionally}</td>
+                            <td className={s.td1}>{res.service}</td>
+                            <td >{res.price}</td>
+                            <td className={s.td1}>{res.description}</td>
 
                         </tr>
                     ))}

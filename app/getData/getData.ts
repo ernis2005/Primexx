@@ -33,6 +33,16 @@ export const getRate = async () => {
     }
     
 }
+export const getadditional_service = async () => {
+
+    try {
+        const data = await axios(`${Api}about/additional_service/`)
+        return data.data
+    } catch (error) {
+        return  error
+    }
+}
+
 export const getCardPag1 = async () => {
     try {
         const data = await axios(`${Api}about/card/`)

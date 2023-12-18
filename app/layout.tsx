@@ -6,7 +6,6 @@ import Footer from '@/components/Footer/page'
 import Login from '@/components/Login/Login'
 import { ReduxProider } from './redux/provider'
 import { StyledEngineProvider } from '@mui/material/styles';
-import Head from 'next/head'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -30,9 +29,7 @@ export default function RootLayout({
     return (
         
         <html lang="en">
-            <Head>
-                <link rel="icon" href="/logo1.jpg" />
-            </Head>
+            
             <StyledEngineProvider>
                 <body className={inter.className}>
                     <ReduxProider>

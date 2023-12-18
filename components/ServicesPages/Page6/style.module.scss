@@ -176,6 +176,10 @@ line-height: 150%; /* 36px */
                     grid-template-columns: 1fr 1fr;
                     @media screen and (max-width:1031px) {
                         grid-template-columns: 1fr;
+                        @media screen and (max-width:831px) {
+                            
+                        }
+                    
                     }
 padding: 0;
 /* Regular text */
@@ -196,6 +200,9 @@ gap: 10px;
 border-radius: 100px;
 border: 1px solid var(--White, #F5F5F5);
 justify-content: left;
+@media screen and (max-width:1031px) {
+                            width: 167px;
+}
                 }
                 }
             }
@@ -230,4 +237,8 @@ margin: 0 auto;
 }
     
 }
+}
+.dsasad{
+    
+    width: 145px !important; 
 }
