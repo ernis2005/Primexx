@@ -1,1 +1,1 @@
-export   const Api  = "http://185.251.88.126:8000/"
+export   const Api  = "http://api.primexcargo.org/"
