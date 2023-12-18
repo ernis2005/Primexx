@@ -24,7 +24,7 @@ export const getRateTime = async () => {
         return  error
     }
 }
-export const getRate = async () => {
+export const zgetRate = async () => {
     try {
         const data = await axios(`${Api}about/rate/`)
         return data.data

@@ -9,7 +9,7 @@ import type { NewsCard, NewsCardList } from './type'
 import image from '../../../public/images/carson.png'
 
 export const metadata = {
-    title: "Новости",
+    title: "Блог",
     description: '',
     icons: [
         {
@@ -30,8 +30,8 @@ const page = async () => {
             <div className={`top ${s.Header}`}>
                 <BannerPages
                     idPage={6}
-                    name={'Новости'}
-                    info={'Узнайте что у нас нового'}
+                    name={'Блог'}
+                    info={'Все о международном шоппинге'}
                 />
                 <div className={`Contend ${s.block}`}>
                     {data.length === 0 ? <div className={s.noData}>

@@ -19,7 +19,7 @@ export const BannerPages = ({ name, info, idPage }: Person) => {
         { img: "/images/tarif.jpg", id: 3 },
         { img: "/images/faq.png", id: 4 },
         { img: "/images/daun1.jpg", id: 5 },
-        { img: "/images/news.png", id: 6 },
+        { img: "/images/news2.jpeg", id: 6 },
         { img: '/images/Amerika1.png', id: 7 },
         { img: '/images/AMERIKA.png', id: 8 },
         { img: '/images/tovar1.jpg', id: 9 }
