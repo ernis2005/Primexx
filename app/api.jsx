@@ -1,1 +1,1 @@
-export   const Api  = "https://api.primexcargo.org/"
+export   const Api  = "http://api.primexcargo.org/"

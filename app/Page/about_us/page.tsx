@@ -1,3 +1,4 @@
+
 import React from 'react'
 import s from './page.module.scss'
 import Header from '@/components/Header/page'
