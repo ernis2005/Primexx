@@ -2,8 +2,9 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
-    gap: 30px;
+    gap: 60px 30px;
     @media screen and (max-width:900px){
+        gap: 30px;
     grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
  @media screen and (max-width:369px) {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -42,22 +43,18 @@
                     font-style: normal;
                     font-weight: 900;
                     line-height: 150%;
+                    padding: 0px;
                     text-align: left; /* 36px */ }
-                @media screen and (max-width:800px) {
-                    h3{
-                        font-size: 18px;
-                        font-weight: 400;
-                    
-                    }
-                    @media screen and (max-width:450px) {
-                        padding: 15px;
-                     h3{
-                        font-size: 17px;   
-                        }
+           
+   @media screen and (max-width:1000px) {
+    h1{font-size: 36px;
+    }   
+    h3{
+        font-size: 16px;
+    }
+}
+  
                 }
-                    
-                }
-            }
         }
         
         .img{

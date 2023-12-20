@@ -48,6 +48,10 @@
         border: 1px solid #CCC;
         background: #E6E6E6;
         row-gap: 30px;
+        @media screen and (max-width:450px) {
+            padding: 15px;
+            gap: 15px;
+        }
 
         .image {
             width: 180px;
@@ -103,6 +107,21 @@
                     margin: 1px !important;
                     text-align:     left !important;
                 }
+            @media screen and (max-width:450px) {
+                row-gap: 5px;
+                h2{
+                    color: var(--Black, #001A0C);
+font-family: Geometria;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 130%; /* 18.2px */
+                }
+                p
+                {
+                    font-size: 12px;
+                }
+            }
             }
         }
     }

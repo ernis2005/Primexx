@@ -6,11 +6,19 @@
     row-gap: 60px;
     width: 100%;
    
- 
+    @media screen and (max-width:980px) {
+        gap: 30px;
+    @media screen and (max-width:450px) {
+        gap: 60px;
+    }
+    }
     .Info{
 
     display: grid;
     row-gap: 30px;
+    @media screen and (max-width:450px) {
+        gap: 15px;
+    }
     h2{
         color: #000;
 text-align: center;
@@ -47,6 +55,13 @@ line-height: 150%; /* 36px */
         }
     }
 }
+.blocks{
+    display: grid;
+    gap: 60px;
+    @media screen and (max-width:980px) {
+        gap: 30px;
+    }
+}
 h2{
     color: #000;
 text-align: center;
@@ -74,29 +89,27 @@ line-height: 120%; /* 57.6px */
 .block1Svgs{
     display:flex;
     justify-content: space-between;
-    width: 720px;
+    width: 790px;
     margin: 0 auto;
   
     height: 10px;
     div{
-
-        position: relative;
-        width: 654px;
-        position: absolute;
-        height: 10px;
-        z-index: 1;
-        margin: 0;
-        margin-left: 35px;
-        background: var(--Green, #009345);
+        width: 684px;
+    position: absolute;
+    height: 10px;
+    z-index: 1;
+    margin: 0;
+    margin-left: 41px;
+    background: var(--Green, #009345);    
     }
     svg{
-        width: 120px;
-        height: 120px;
-        margin-top: -56px;
+        width: 117px;
+        height: 82px;
+        margin-top: -36px;
         position: relative;
         z-index: 2;
     }
-    @media screen and (max-width:912px) {
+    @media screen and (max-width:960px) {
         width: 600px;
         div{
             width: 525px;
@@ -118,7 +131,7 @@ line-height: 120%; /* 57.6px */
 .block1info{
     display: flex;
     justify-content: space-between;
-    width: 858px;
+    width: 916px;
     margin: 0 auto;
     p{
         color: #000;
@@ -131,7 +144,7 @@ font-style: normal;
     font-weight: 400;
 line-height: 150%; /* 36px */
     }
-    @media screen and (max-width:912px) {
+    @media screen and (max-width:960px) {
         width: 645px;
         p{
             font-size: 16px ;
@@ -229,4 +242,10 @@ img{
     margin: 30px;
     display: grid;
     row-gap: 30px;
+    width: 1200px;
+    margin: 0 auto;
+    @media screen and (max-width:1251px) {
+        max-width: 100%;
+        width: 100%;    
+    }
 }

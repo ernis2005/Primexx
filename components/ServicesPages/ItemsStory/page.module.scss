@@ -6,16 +6,21 @@
         display: grid;
         justify-content: center;
         row-gap: 60px;
+        @media screen and (max-width:450px) {
+            row-gap: 47px;
+            
+        }
         
     }
 
-    .block2 {
-        height: 291px;
-
+    .block2 {    height: 212px;
         row-gap: 30px;
         display: grid !important;
         justify-items: start !important;
-
+        @media screen and (max-width:450px) {
+            row-gap: 15px;
+            height: 0;
+        }
         h2 {
             color: var(--Black, #001A0C);
 
@@ -36,12 +41,14 @@ margin-left: 1px !important;
         div {
             display: grid;
             gap: 30px;
-@media screen and (max-width:450px) {
-    gap: 10px;
-}
+             @media screen and (max-width:450px) {
+                row-gap: 0px;
+                gap: 10px !important;
+             }
             span {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
+                
 
                 p {
                     max-width: 240px;
@@ -87,7 +94,6 @@ margin-left: 1px !important;
             border: none;
             cursor: pointer;
  
-            
             align-content: center;
             a{
                 color: #FFF;

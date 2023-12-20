@@ -12,6 +12,11 @@ const nextConfig = {
                 hostname: "185.251.88.126",
                 
             },
+            {
+                protocol: "http",
+                hostname: "192.168.89.177",
+                
+            },
         ],
         minimumCacheTTL: 1500000,
     },

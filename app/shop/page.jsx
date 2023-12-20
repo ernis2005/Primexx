@@ -18,6 +18,7 @@ const page = (params) => {
         dispatch(getShop({ category__id: category, country__id: params.searchParams.id }))
     }, [dispatch, category])
     const data = useSelector((state) => state.shopReducer)
+    
     const infoPage = {
         title: 'Магазины Америки',
         subTitle: 'Подзаголовок'
@@ -42,12 +43,13 @@ const page = (params) => {
                     <ul>
                         <li
                             onClick={() => setCategory(1)}
-                        >Маркетплейсы</li>
+                        >БАДы и витамины</li>
                         <li
                             onClick={() => setCategory(2)}
-                        >Универмаги</li>
+                        >Обувь  </li>
                         <li onClick={() => setCategory(3)}>Одежда</li>
-                        <li onClick={() => setCategory(4)}>Обувь</li>
+                        <li onClick={() => setCategory(4)}>	Универмаги</li>
+                        <li onClick={() => setCategory(5)} >Маркетплейсы</li>
                     </ul>
                     {data.status !== 'loading' && (data.shop.length === 0 && <div style={{ margin: '0 auto', height: '250px' }}>Нет данных</div>)}
                     {

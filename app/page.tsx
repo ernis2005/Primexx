@@ -60,7 +60,7 @@ const Home = async () => {
                             из Турции и Америки
                         </h1>
                         <p>Наши решения дарят доступ к растущему миру возможностей</p>
-                        <button>Хочу заказать</button>
+                        <button > <Link href={'/Page/services'}>Хочу заказать</Link> </button>
                     </div>
                 </div>
                 <div className={`Contend ${s.block2}`}>
@@ -71,10 +71,10 @@ const Home = async () => {
                 <CardsBlock1 />
                 <div></div>
                 <div className={s.block3}>
-                    <h3>Преимущества заказа из зарубежных сайтов</h3>
-                    <p className={s.block3p}>Что делают привлекательными онлайн шоппинг на зарубежных сайтах?</p>
+
                     <div className={s.block2Image}>
-                       
+                        <h3>Преимущества заказа из зарубежных сайтов</h3>
+                        <p className={s.block3p}>Что делают привлекательными онлайн шоппинг на зарубежных сайтах?</p>
                     </div>
                     <div className={` Contend ${s.block2Info}`}>
                         <CardsBlock2 />
@@ -82,7 +82,7 @@ const Home = async () => {
                 </div>
                 <div></div>
                 <div className={`Contend ${s.block3}`} >
-                    <h3 style={{marginTop:'30px'}}>
+                    <h3 >
                         Этапы работы
                     </h3>
                     <div>
@@ -115,9 +115,10 @@ const Home = async () => {
                 </div>
                 <div className={` Contend ${s.block5}`}>
                     <h3 >Тарифы и сроки</h3>
-                    <div style={{overflow:'hidden'}}><TabelsBlock5 data={dataRate} /></div>
-                    <div></div>
-                    <button style={{margin:'60px auto 40px'}}>
+                    <div style={{overflow:'hidden'}}>
+                        <TabelsBlock5 data={dataRate} /> 
+                    </div>
+                    <button >
                         <Link href={'/Page/rates'}>
                             Узнать подробнее
                         </Link>
@@ -127,7 +128,7 @@ const Home = async () => {
                     <h3>Магазины</h3>
                     <p className={s.testasd}>Доставляем из 3х стран:</p>
                     <div className={s.block6Card}>
-                        <CardsBlock6 data={dataCountry} /> 
+                        <CardsBlock6 data={dataCountry} />  
                     </div>
                     
                 </div> 
@@ -142,9 +143,9 @@ const Home = async () => {
                             2-х часов в рабочее время.</p>
                     </div>
                     <div className={s.fromInput}><FromInput textcolor={"#001A0C"} colors={"#F5F5F5"} /></div>
-                    <p className={s.fromInputp}>После заполнения заявки, байер сам
-                            с вами свяжется с вами в течении  <br />
-                            2-х часов в рабочее время.</p>
+                    <p className={s.fromInputp}>После заполнения заявки, байер сам <br />
+                            с вами свяжется  <br />с вами в течении  
+                             2-х часов в рабочее время.</p>
                 </div>
                 <div className={s.topTop}></div>
             </main>

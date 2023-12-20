@@ -104,7 +104,7 @@ export const ItemsStorytR = (data) => {
                         <h4>{res.weight} кг.</h4>
                     </span>
                     <span>
-                        <p >Плановая дата доставки:</p>
+                        <p >Плановая дата <br/> доставки:</p>
                         <h4>
                             {fromattedData(res.estimated_date)}
                         </h4>

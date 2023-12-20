@@ -4,9 +4,11 @@
  
     position: relative;
     background: var(--Dark-Green, #003318);
+    padding: 30px;
     @media screen and (max-width:450px) {
         min-height: 300px !important ;
-        height: 300px !important;   
+        height: 300px !important;
+        padding: 15px;   
         max-height: 300px !important;
     }
     img{    
@@ -65,6 +67,5 @@ line-height: 150% !important; /* 24px */
 
     @media screen and (max-width:1264px) {
         width: 100%;
-        padding: 30px;
     }
 }

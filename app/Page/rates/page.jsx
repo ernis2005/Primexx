@@ -28,7 +28,7 @@ const page = async () => {
         return  null
     }
     
-    const uniqueData =data?.reduce((acc, current) => {
+    const uniqueData =data.reduce((acc, current) => {
         const x = acc.find(item => item.country === current.country);
         if (!x) {
             return acc.concat([current]);
@@ -36,6 +36,8 @@ const page = async () => {
             return acc;
         }
     }, []);
+
+    
     return (
         <>
             <Header />

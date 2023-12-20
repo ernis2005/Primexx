@@ -113,21 +113,22 @@
 
     .blockChat {
         display: grid;
+        gap: 60px;
 
         .Chat {
-            display: block;
-
+            display: grid;
+            grid-row: 15px;
+gap: 15px;
             @media screen and (max-width:765px) {
                 display: none;
             }
 
             p {
-                padding: 10px 0px;
                 color: #FFF;
 
                 /* Regular text */
                 font-family: Geometria;
-                font-size: 16px;
+                font-size: 15px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 130%;

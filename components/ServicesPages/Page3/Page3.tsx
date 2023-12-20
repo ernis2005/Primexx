@@ -29,36 +29,41 @@ export const Page3 = () => {
 
     return isloding && (
         <div className={` ${s.Header}`}>
-            <span className={s.Info}>
-                <h2>Выкуп товара</h2>
-                <p>Оперативный байер выкупит за вас</p>
-            </span>
-            <div className={s.block1}>
-                <div className={s.block1Svgs}>
-                    <Svg10 />
-                    <Svg10 />
-                    <Svg10 />
-                    <div>
+            <div  className={s.blocks}>
+                <span className={s.Info}>
+                    <h2>Выкуп товара</h2>
+                    <p>Оперативный байер выкупит за вас</p>
+                </span>
+                <div className={s.block1}>
+                    <div className={s.block1Svgs}>
+                        <Svg10 />
+                        <Svg10 />
+                        <Svg10 />
+                        <div>
+                        </div>
+                    </div>
+                    <div className={s.block1info}>
+                        <p>Оставьте нам ссылку <br />
+                        на нужный товар</p>
+                        <p>Оплатите заказ <br />
+                        российской картой</p>
+                        <p>Получите посылку <br />
+                        не выходя из дома</p>
                     </div>
                 </div>
-                <div className={s.block1info}>
-                    <p>Оставьте нам ссылку <br />
-                        на нужный товар</p>
-                    <p>Оплатите заказ <br />
-                        российской картой</p>
-                    <p>Получите посылку <br />
-                        не выходя из дома</p>
-                </div>
             </div>
-            <h2>Оформление выкупа</h2>
-            <div className={s.Block2}>
-                <Image src={'/images/aq.1.jpg'} layout='fill' objectFit='cover'/>
-                <div>
-                    <FromInput colors={"#009345"} textcolor={"#fff"} />
-                </div>
-                <p>После заполнения заявки, байер сам с вами свяжется с вами <br />
+            <div  className={s.blocks}>
+                <h2>Оформление выкупа</h2>
+                <div className={s.Block2}>
+                    <Image src={'/images/aq.1.jpg'} layout='fill' objectFit='cover'/>
+                    <div>
+                        <FromInput colors={"#009345"} textcolor={"#fff"} />
+                    </div>
+                    <p>После заполнения заявки, байер сам с вами свяжется с вами <br />
                     в течении 2-х часов в рабочее время.</p>
+                </div>
             </div>
+            
             <div className={s.block3}>
                 
                 <h2>Часто задаваемые вопросы</h2> 
