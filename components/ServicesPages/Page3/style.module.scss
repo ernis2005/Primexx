@@ -241,9 +241,12 @@ img{
 .block3{
     margin: 30px;
     display: grid;
-    row-gap: 30px;
+    row-gap: 60px;
     width: 1200px;
     margin: 0 auto;
+ @media screen and (max-width:960px) {
+    row-gap: 30px;
+ }
     @media screen and (max-width:1251px) {
         max-width: 100%;
         width: 100%;    

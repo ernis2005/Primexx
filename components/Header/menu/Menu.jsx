@@ -38,7 +38,7 @@ const Menu = ({ setModule }) => {
                         </li>
                         <li>
                             <Link onClick={() => setModule(false)} href={'/Page/news'}>
-                                Новости
+                            Блог
                             </Link>
                         </li>
                         <li>
@@ -66,7 +66,7 @@ const Menu = ({ setModule }) => {
                                         Вход
                                     </a>
                                 </li>
-                                <span></span><li>Регистрация</li></>) : <li> <Link href={'/profile'} >{useName}</Link></li>}
+                                <span></span><li> <Link href={'/registration'}>Регистрация</Link> </li></>) : <li> <Link href={'/profile'} >{useName}</Link></li>}
 
                             </ul>
                         </div>

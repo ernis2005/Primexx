@@ -3,7 +3,9 @@
     padding: 60px 32px;
     background: var(--Black, #001A0C);
     color: #fff;
-
+a{
+    text-decoration: none !important;
+}
     .blocks {
 
         display: grid;

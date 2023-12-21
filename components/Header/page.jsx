@@ -108,7 +108,7 @@ const Header = () => {
                                 })
                             
                             } href={'/Page/news'}>
-                        Новости
+                            Блог
                             </Link></li>
                         <li>
                             <Link className={

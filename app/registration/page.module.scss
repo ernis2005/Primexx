@@ -9,8 +9,10 @@
     justify-items: center;
     background-color: black;
     height: 100vh;
-
-    .contend {
+@media screen and (max-width:450px) {
+    height: 163vh;
+}
+.contend {
         display: grid;
         flex-direction: column;
         justify-content: center;
@@ -18,7 +20,7 @@
         position: relative;
         z-index: 2;
         gap: 24px;
-
+  
         h2 {
             color: var(--White, #F5F5F5);
             text-align: center;
@@ -104,6 +106,10 @@ border: none;
         position: absolute;
         opacity: 0.5;
         z-index: 1;
+        @media screen and (max-width:450px) {
+            height: 163vh;
+        }
+        
       
     }
 }

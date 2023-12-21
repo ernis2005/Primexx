@@ -68,8 +68,8 @@ export const Page6 =  () => {
 
                         <h2>Дополнительные услуги</h2>
                         <ul className={s.services}>
-                            <li><p>Упаковка грузов:</p> <span>$10 за одно место</span></li>
-                            <li><p>Передача денег <br /> поставщику:   </p>  <span>  1% от общей суммы</span></li>
+                            <li><p>Упаковка грузов:</p> <span className={s.servicesp1}>$10 за одно место</span></li>
+                            <li><p>Передача денег <br /> поставщику:   </p>  <span className={s.servicesp2}>  1% от общей суммы</span></li>
                             <li><p>Проверка на брак перед<br /> отправкой в Россию:</p> <span className={s.dsasad}> $0.2 за штуку</span></li>
                       
                     

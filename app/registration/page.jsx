@@ -25,7 +25,7 @@ const page = () => {
         <div className={s.Header} >
             <div className={s.bg}>
                 <Image src={'/images/iamgeLogin.png'} layout="fill"
-                    objectFit="cover"
+                    objectFit="fill"
                     alt="hwllo" />
             </div>
             <form className={s.contend} onSubmit={handleSubmit(onSubmit)}>

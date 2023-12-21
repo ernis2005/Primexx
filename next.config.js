@@ -17,6 +17,11 @@ const nextConfig = {
                 hostname: "192.168.89.177",
                 
             },
+            {
+                protocol: "http",
+                hostname: "api.primexcargo.org",
+                
+            },
         ],
         minimumCacheTTL: 1500000,
     },
