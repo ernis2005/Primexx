@@ -83,7 +83,6 @@ gap: 40px;
                     line-height: 130%;
                     
                 }
-
                 span {
                     border-radius: 100px;
                     border: 1px solid var(--White, #F5F5F5);
@@ -96,9 +95,12 @@ gap: 40px;
                    align-items: left;
                    position: relative;
                     gap: 10px;
-
+                    
                 }
             }
         }
     }
+}
+.ulspan2{
+    width: 58px;
 }

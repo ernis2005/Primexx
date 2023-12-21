@@ -26,7 +26,7 @@ export const FAQAccordionPage = () => {
     return (
         <div className={s.header}>
             {status === 'loading' ? <div style={{height:200}}>loading...</div> : null}
-            {status === 'failed' ? <div style={{height:200}}>{error} error</div> : null}
+            {status === 'failed' ? <div style={{height:200}}> error</div> : null}
             {status === 'success' ? (
                 <div className={s.FAQCArd}>
                     {FAQData?.length !== 0  ? (

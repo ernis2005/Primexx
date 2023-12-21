@@ -87,7 +87,7 @@ export const Page6 =  () => {
                 <li>Таможенное оформление</li>
             </ul> */}
             <h2 className={s.faqH2}> Часто задаваемые вопросы</h2>
-            <FAQAccordionPage />
+            <FAQAccordionPage /> 
             <div></div>
         </div>
     )
