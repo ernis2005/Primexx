@@ -29,8 +29,9 @@
                 font-weight: 400;
                 line-height: 150%;
                 @media screen and (max-width:450px) {
-                    font-size: 15px;
+                    font-size: 10.8px;
                     height: 40px;
+                    padding: 4.5px;
                 }
                 /* 25.2px */
             }
@@ -55,14 +56,19 @@
             width: 336px;
             height: 40px;
             @media screen and (max-width:450px) {
-            font-size: 13px;  
+            font-size: 10.8px;  
             padding:    0px;
-            height: 56px    ;
+            height: 46px    ;
+            padding: 4.5px;
+            
             }
         }
         .td4 {
             width: 210px;
             max-height: 40px;
+            @media screen  {
+                
+            }
             p {
                 color: #F5F5F5 !important;
                 font-size: 16px;
@@ -73,4 +79,7 @@
 }
 .td1{
     width: 40% !important;
+    @media screen and (max-width:450px) {
+        width: 154px;
+    }
 }

@@ -3,7 +3,9 @@
     display: grid;
     padding-bottom: 60px;
     row-gap: 60px;
-
+@media screen and (max-width:450px) {
+    padding-bottom: 0px
+}
     .contend {
         margin: 0 auto;
         display: grid;
