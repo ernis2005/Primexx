@@ -9,6 +9,11 @@
     justify-items: center;
     background-color: black;
     height: 100vh;
+@media screen and (max-width:450px) {
+    height: 110vh;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
 
     .contend {
         display: grid;
@@ -100,6 +105,10 @@ border: none;
         position: absolute;
         opacity: 0.5;
         z-index: 1;
+        @media screen and (max-width:450px) {
+            height: 110vh;
+        }
+    
       
     }
 }
