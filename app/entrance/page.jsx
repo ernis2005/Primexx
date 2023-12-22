@@ -74,13 +74,13 @@ const page = () => {
                 <div>
                     {error && <p id='error'>Не правильно ввели пароль или логин</p>}
                     <span>Электронная почта
-                        <input placeholder='email' type="email" {...register("email")} />
+                        <input style={{marginTop:8}} placeholder='email' type="email" {...register("email")} />
                     </span>
                     <span>Пароль
                         <p onClick={() => handleOpen()}>
                             забыли пароль?
                         </p>
-                        <input placeholder='password' type="password" {...register("password")} />
+                        <input style={{marginTop:8}} placeholder='password' type="password" {...register("password")} />
 
                     </span>
                     {errors.exampleRequired && <span>This field is required</span>}
