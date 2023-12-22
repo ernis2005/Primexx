@@ -32,7 +32,7 @@ import { getCardPag1 } from '@/app/getData/getData';
 // ]
 
 
-export const CardsBlock1 = async (data) => {
+export const CardsBlock1 =  (data) => {
 
     return (
         <div className={s.wrap}>
