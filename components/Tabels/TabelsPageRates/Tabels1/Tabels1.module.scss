@@ -1,7 +1,7 @@
 .table {
-    width: 11   00px;
+    width: 940px;
     background-color: #000;
-
+margin: 0 auto;
     @media screen and (max-width:700px) {
         width: 900px;
         @media screen and (max-width:450px) {
@@ -54,11 +54,12 @@
             width: 336px;
             @media screen and (max-width:450px) {
             font-size: 10px;  
-            padding: 10px;
+            padding: 0px;
+            height: 56px    ;
             }
         }
         .td4 {
-            width: 30%;
+            width: 29%;
 
             p {
                 color: #F5F5F5 !important;
@@ -66,9 +67,6 @@
            @media screen and (max-width:450px) {
             font-size: 10px;  
             padding: 10px;
-            
-            
-            
            }
             }
         }
@@ -76,5 +74,8 @@
 }
 .tbw300{
     width: 30% !important;
+    @media screen and (max-width:450px) {
+        width: 180px;
+    }
  
 }
