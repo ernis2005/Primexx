@@ -60,15 +60,15 @@ export const getFAQ = async () => {
     }
 
 }
-export const getAboutUs = async () => {
-    try {
-        const data = await axios(`${Api}about/about_us/`)
-        return data.data
-    } catch (error) {
-        return  error
-    }
+// export const getAboutUs = async () => {
+//     try {
+//         const data = await axios(`${Api}about/about_us/`)
+//         return data.data
+//     } catch (error) {
+//         return  error
+//     }
 
-}
+// }
 export const getShop = async (props:{country__id:number,category__id:number}) => {
     try {
         const data = await axios(`${Api}about/shop/?country__id=${props.country__id}&category__id=${props.category__id}`)

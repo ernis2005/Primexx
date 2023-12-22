@@ -1,6 +1,21 @@
-.loader {
-    width: 48px;
-    height: 48px;
+.Block2{
+    width: 100%;
+    height: 100vh;
+color: violet;
+padding: 30px;
+display: grid;
+justify-content: center;
+align-items: center;
+align-content: center;
+.loader{
+    display: grid;
+    row-gap: 16px;
+    
+}
+}
+.loadersd {
+    width: 38px;
+    height: 38px;
     border:10px solid #FFF;
     border-radius: 50%;
     position: relative;
@@ -9,7 +24,7 @@
     margin: 0 auto;
     margin: 0 auto;
   }
-  .loader::before {
+  .loadersd::before {
     content: "";
     position: absolute;
     box-sizing: border-box;

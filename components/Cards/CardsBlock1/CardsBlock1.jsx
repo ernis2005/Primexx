@@ -32,13 +32,13 @@ import { getCardPag1 } from '@/app/getData/getData';
 // ]
 
 
-export const CardsBlock1 = async () => {
-    const datadata= await getCardPag1()
+export const CardsBlock1 = async (data) => {
+
     return (
         <div className={s.wrap}>
             <div className={s.cards}>
-                {datadata.length >= 0 ? (
-                    datadata.map((res, i) => {
+                {data.length >= 0 ? (
+                    data.map((res, i) => {
                         return (
                             <div key={res.id} className={s.card}>
                                 <Image

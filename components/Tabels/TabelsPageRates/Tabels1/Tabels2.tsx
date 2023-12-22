@@ -18,7 +18,7 @@ export const Tabels2 = (data: ProductComponentProps) => {
 
     return (
         <div>
-            <table className={s.table} >
+            {data.data.length === 0 ? <div className={s.noData}>Нет данных</div> :  <table className={s.table} >
                 <thead className={s.block1}>
                     <tr  >
                         <th>Услуга</th>
@@ -38,7 +38,8 @@ export const Tabels2 = (data: ProductComponentProps) => {
                     ))}
                 </thead>
 
-            </table>
+            </table> }
+          
         </div>
     )
 }

@@ -7,7 +7,10 @@ import passwordReducer from './features/password-patch'
 import passwordRestoreReducer from './features/password-restore'
 import consolidationReducer from './features/getData'
 import saveChangesReducer from './features/save-changes'
-import getDataReducer from './features/getData'
+import aboutUsSlice from './features/about-us'
+import aboutBlogSlice from './features/about-blog'
+import rateSlice from './features/about-rates'
+import aboutHomeSlice from './features/about-home'
 export  const store  = configureStore ( {
     reducer: {
         authReducer,
@@ -18,7 +21,10 @@ export  const store  = configureStore ( {
         passwordRestoreReducer,
         consolidationReducer,
         saveChangesReducer,
-        
+        aboutUsSlice,
+        aboutBlogSlice,
+        rateSlice,
+        aboutHomeSlice
     }
 }) 
 
