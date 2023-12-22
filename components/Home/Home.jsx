@@ -14,10 +14,10 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getCardPag1, getCountry, getRateTime } from '@/app/redux/features/about-home'
 
 import { redirect } from 'next/navigation'
-import { TabelsBlock5 } from '../Tabels/TabelsBlock5/page'
 import { CardsBlock6 } from '../Cards/CardsBlock6/CardsBlock6'
 import loading from './loading'
 import Loading from './loading'
+import { TabelsBlock5 } from '../Tabels/TabelsBlock5/page'
 export default function HomeComponent() {
 
     const dispath = useDispatch()
@@ -33,7 +33,6 @@ export default function HomeComponent() {
     if (status === 'loading') {
         return <Loading/>
     }
-    console.log(status);
     return status !== 'loading' && (
         <div>
           
@@ -66,7 +65,7 @@ export default function HomeComponent() {
                             из любого американского или турецкого сайта и маркетплейса во все регионы России.
                     </p>
                 </div>
-                <CardsBlock1 data={card} />
+                <CardsBlock1 data={card.data} />
                 <div></div>
                 <div className={s.block3}>
 
@@ -113,7 +112,7 @@ export default function HomeComponent() {
                 <div className={` Contend ${s.block5}`}>
                     <h3>Тарифы и сроки</h3>
                     <div style={{ overflow: 'hidden' }}>
-                        <TabelsBlock5 data={rateTime} />
+                        <TabelsBlock5 data={rateTime.data} />
                     </div>
                     <button>
                         <Link href={'/Page/rates'}>
@@ -125,7 +124,7 @@ export default function HomeComponent() {
                     <h3>Магазины</h3>
                     <p className={s.testasd}>Доставляем из 3х стран:</p>
                     <div className={s.block6Card}>
-                        <CardsBlock6 data={country} />
+                        <CardsBlock6 data={country.data} />
                     </div>
 
                 </div>

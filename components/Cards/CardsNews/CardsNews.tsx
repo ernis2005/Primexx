@@ -16,9 +16,11 @@ interface Person {
     data: NewsCard[]
 }
 export const CardsNews = ({ data }: Person) => {
+    
+    
     const [noOFElement, setNoOFElement] = useState(6);
     const slice = data?.slice(0, noOFElement);
-    const data4length = data.length;
+    const data4length = data?.length;
     const LoadMore = () => {
         setNoOFElement(noOFElement + 6);
     };
@@ -26,7 +28,7 @@ export const CardsNews = ({ data }: Person) => {
     return (
         <div className={s.Header}>
             <div className={s.Cards}>
-                {slice.map((res, i) => (
+                {slice?.map((res, i) => (
                     <div key={i} className={s.Card}>
                         <Link href={`/Page/news/${res.id}`} >
                             <Image src={res.icon_card} layout="fill"

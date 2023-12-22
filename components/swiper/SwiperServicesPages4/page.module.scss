@@ -5,6 +5,10 @@
     position: relative;
     background: var(--Dark-Green, #003318);
     padding: 30px;
+    justify-content: start;
+    justify-items: start;
+    align-items: end;
+    display: grid;
     @media screen and (max-width:450px) {
         min-height: 300px !important ;
         height: 300px !important;
@@ -15,10 +19,10 @@
         opacity: 0.3;
     }
     span {
-        
- padding: 30px;
-        position: absolute;
-        bottom: 30px;
+        position: relative;
+        z-index: 11;
+        bottom: 0px;
+
         padding-bottom: 0px;
         text-align: left !important;
         display: grid;
@@ -27,7 +31,6 @@
             padding: 0px;
         @media screen and (max-width:450px) {
             margin:  0px !important;
-            padding: 10px !important;
         }
         }
         

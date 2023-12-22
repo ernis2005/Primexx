@@ -31,7 +31,8 @@ const page =  () => {
     useEffect(() => {
         dispatch(getaboutBlog())
     }, [dispatch])
-    const {aboutUs,status ,error}  = useSelector((state) => state.aboutBlogSlice)
+    const {aboutBlog,status ,error}  = useSelector((state) => state.aboutBlogSlice)
+   
     return (
         <>
             <Header />
@@ -44,9 +45,9 @@ const page =  () => {
                 {status === 'loading' && <Loading/>}
                 {status === 'failed' && <p style={{height:200}} >{error}</p>}
                 {status === 'success' &&<div className={`Contend ${s.block}`}>
-                    {aboutUs.length === 0 ? <div className={s.noData}>
+                    {aboutBlog?.length === 0 ? <div className={s.noData}>
                         <h1 style={{height:250}}>Новостей нет</h1>   
-                    </div> : <CardsNews data={aboutUs} />
+                    </div> : <CardsNews data={aboutBlog} />
                     }
                 </div>  }
                 <div>

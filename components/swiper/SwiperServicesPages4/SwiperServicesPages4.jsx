@@ -67,7 +67,47 @@ export const SwiperServicesPages4 =  () => {
                     
                 </SwiperSlide>
             ))}
-
+            {consolidation?.map((res,i) => (
+                <SwiperSlide className={s.Card} key={i}>
+                    
+                    <Image  src={res.image} objectFit='cover' layout='fill' alt="Picture of the author" />
+                    <span>
+                        <h2>{res.title}</h2>
+                        <p className={s.swiperp}>{res.description }</p>
+                    </span>
+                    
+                </SwiperSlide>
+            ))}{consolidation?.map((res,i) => (
+                <SwiperSlide className={s.Card} key={i}>
+                    
+                    <Image  src={res.image} objectFit='cover' layout='fill' alt="Picture of the author" />
+                    <span>
+                        <h2>{res.title}</h2>
+                        <p className={s.swiperp}>{res.description }</p>
+                    </span>
+                    
+                </SwiperSlide>
+            ))}{consolidation?.map((res,i) => (
+                <SwiperSlide className={s.Card} key={i}>
+                    
+                    <Image  src={res.image} objectFit='cover' layout='fill' alt="Picture of the author" />
+                    <span>
+                        <h2>{res.title}</h2>
+                        <p className={s.swiperp}>{res.description }</p>
+                    </span>
+                    
+                </SwiperSlide>
+            ))}{consolidation?.map((res,i) => (
+                <SwiperSlide className={s.Card} key={i}>
+                    
+                    <Image  src={res.image} objectFit='cover' layout='fill' alt="Picture of the author" />
+                    <span>
+                        <h2>{res.title}</h2>
+                        <p className={s.swiperp}>{res.description }</p>
+                    </span>
+                    
+                </SwiperSlide>
+            ))}
 
         </Swiper>
     </div>)

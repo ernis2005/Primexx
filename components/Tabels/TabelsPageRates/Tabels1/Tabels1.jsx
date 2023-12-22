@@ -1,11 +1,13 @@
+"use client"
 import React from 'react'
 import s from './Tabels1.module.scss'
 import { getRate } from '@/app/getData/getData';
+import { useSelector } from 'react-redux';
 
-export const Tabels1 = async (data) => {
-    const getTabel = await getRate()
-    const filterData = await getTabel.filter((res) => res.country === data.data)
-   
+export const Tabels1 =  (data) => {
+    const { rate,  } = useSelector((state) => state.rateSlice)
+
+    const filterData =  rate.data?.filter((res) => res.country === data.rate)
     return (
         <div>
             <table className={s.table} >

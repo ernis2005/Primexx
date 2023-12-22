@@ -10,7 +10,7 @@ export const  getaboutBlog = createAsyncThunk (
             const data = await axios(`${Api}about/blog/`, {
                 method: "GET",
             })
-            return data
+            return data.data
         } catch (error) {
             return rejectWithValue(error.message)
         }

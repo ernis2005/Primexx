@@ -33,12 +33,11 @@ import { getCardPag1 } from '@/app/getData/getData';
 
 
 export const CardsBlock1 =  (data) => {
-
     return (
         <div className={s.wrap}>
             <div className={s.cards}>
-                {data.length >= 0 ? (
-                    data.map((res, i) => {
+                {data.data?.length >= 0 ? (
+                    data.data?.map((res, i) => {
                         return (
                             <div key={res.id} className={s.card}>
                                 <Image

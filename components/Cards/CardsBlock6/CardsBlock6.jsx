@@ -35,6 +35,7 @@ const data = [
 ]
 
 export const CardsBlock6 = (ProductCountry) => {
+    
     return (
         <div className={s.Cards}>
            

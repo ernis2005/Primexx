@@ -1,22 +1,9 @@
 import React, { FC } from 'react'
 import s from './page.module.scss'
 
-type Product = {
-    id: number;
-    title: string;
-    amount: string;
-    delivery_time: string;
-    delivery: string;
-};
 
-type ProductList = Product[];
-type ProductComponentProps = {
-    data: ProductList;
-};
-
-
-export const  TabelsBlock5 = ({ data }: ProductComponentProps) => {
-
+export const  TabelsBlock5 = (data) => {
+ 
 
     return (
         <div>
@@ -31,8 +18,8 @@ export const  TabelsBlock5 = ({ data }: ProductComponentProps) => {
                     </tr>
                 </thead>
                 <thead className={s.block2} >
-                    {data.length >= 0 ? (
-                        data.map((res, index: React.Key) => (
+                    {data.data?.length >= 0 ? (
+                        data.data?.map((res, index) => (
                             <tr key={index} className={s.block2tr}>
                                 <td className={s.trrc}>{res.title}</td>
                                 <td>{res.amount}</td>
