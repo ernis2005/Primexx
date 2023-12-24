@@ -1,6 +1,6 @@
 .Card {
 
-    min-height: 350px;
+    min-height: 400px;
  
     position: relative;
     background: var(--Dark-Green, #003318);
@@ -9,6 +9,9 @@
     justify-items: start;
     align-items: end;
     display: grid;
+    @media screen and  (max-width:960px) {
+        min-height: 350px;
+    }
     @media screen and (max-width:450px) {
         min-height: 300px !important ;
         height: 300px !important;
@@ -45,6 +48,9 @@ font-style: normal;
 text-align: left !important;
 font-weight: 500 !important;
 line-height: 150%; /* 36px */
+@media screen and (max-width:960px) {
+    font-size: 14px !important;
+}
 
         }
         .swiperp{

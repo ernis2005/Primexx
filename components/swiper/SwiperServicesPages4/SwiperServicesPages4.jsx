@@ -23,21 +23,23 @@ export const SwiperServicesPages4 =  () => {
     return (<div className={s.Block}>
         <Swiper
             slidesPerView={5}
-            spaceBetween={10}
+            spaceBetween={30}
             pagination={{
                 clickable: true,
             }}
             breakpoints={{
                 100:{
                     slidesPerView: 1.2,
-            
+                    spaceBetween:10
                 },
                 393:{
                     slidesPerView: 1.2,
                 },
                 524:{
                     slidesPerView: 1.8,
+                    spaceBetween:30
                 },
+                
                 692:{
                     slidesPerView: 2.2,
                 },
@@ -67,8 +69,7 @@ export const SwiperServicesPages4 =  () => {
                     
                 </SwiperSlide>
             ))}
-
-
+       
         </Swiper>
     </div>)
 }

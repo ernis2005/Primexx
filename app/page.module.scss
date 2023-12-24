@@ -12,7 +12,7 @@
         position: absolute;
         height: 100%;
         background-color: #001A0CB2;
-        opacity: 0.2;
+        opacity: 0.25;
     }
 
     .block1Info {
@@ -495,7 +495,9 @@ padding: 10px 20px;
     display: grid;
     width: -webkit-fill-available;
     row-gap: 20px;
- @media screen and (max-width:450px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media screen and (max-width:450px) {
         row-gap: 15px;
  }
  @media screen and (max-width:450px) {

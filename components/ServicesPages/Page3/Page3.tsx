@@ -6,8 +6,16 @@ import { FromInput } from '@/components/FromInput/FromInput'
 import { FAQAccordionPage } from '@/components/Accordion/FAQAccordionPage/FAQAccordionPage'
 import { getFAQ } from '@/app/getData/getData'
 import Image from 'next/legacy/image'
-
+import FromInputPage3 from './FromInputPage3/FromInputPage3'
 import { useForm } from 'react-hook-form'
+const Svg =() => (
+    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30" cy="30" r="30" fill="#F5F5F5"/>
+        <circle cx="30" cy="30" r="11" stroke="#009345" stroke-width="6"/>
+    </svg>
+
+)
+
 export const Page3 = () => {
     const [isloding, useIsLoding] = useState(false)
     const [data, useData] = useState()
@@ -26,7 +34,7 @@ export const Page3 = () => {
     useEffect(() => {
         getData()
     }, [])
-
+ 
     return isloding && (
         <div className={` ${s.Header}`}>
             <div  className={s.blocks}>
@@ -36,9 +44,9 @@ export const Page3 = () => {
                 </span>
                 <div className={s.block1}>
                     <div className={s.block1Svgs}>
-                        <Svg10 />
-                        <Svg10 />
-                        <Svg10 />
+                        <Svg />
+                        <Svg />
+                        <Svg />
                         <div>
                         </div>
                     </div>
@@ -55,9 +63,8 @@ export const Page3 = () => {
             <div  className={s.blocks}>
                 <h2>Оформление выкупа</h2>
                 <div className={s.Block2}>
-                    <Image src={'/images/aq.1.jpg'} layout='fill' objectFit='cover'/>
                     <div>
-                        <FromInput colors={"#009345"} textcolor={"#fff"} />
+                        <FromInputPage3 colors={"#009345"} textcolor={"#fff"} />
                     </div>
                     <p>После заполнения заявки, байер сам с вами свяжется с вами <br />
                     в течении 2-х часов в рабочее время.</p>

@@ -5,8 +5,10 @@
 
     div {
         display: grid;
-        row-gap: 20px;
-
+        row-gap: 30px;
+@media screen and (max-width:960px) {
+    row-gap: 15px;
+}
         @media screen and (max-width:460px) {
             row-gap: 15px;
         }

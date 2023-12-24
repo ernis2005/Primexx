@@ -31,32 +31,19 @@ export const Page4 = () => {
                 <p className={s.p2}>Компания ‘’Primex’’, готова предложить для карго компаний B2B решение.</p>
                 <p className={s.p2}> Вы занимаетесь доставкой зарубежных посылок и вам нужен склад в Турции и США с опытными <br />
                 сотрудниками для приема посылок ваших клиентов? У нас есть решение!</p>
-                <h2 style={{paddingTop:'20px'}}>Мы можем предложить</h2>
             </span>
-            <SwiperServicesPages4/>
-            <button className={s.button}>Хочу заказать</button>
-            <div className={s.top}></div>
-            <div className={s.top}></div>
-            <h2 className={s.h22}>Часто задаваемые вопросы</h2>
-            <FAQAccordionPage/>
+            <div className={s.block12}>
+                <h2 >Мы можем предложить</h2>
+                <SwiperServicesPages4/>
+                <button className={s.button}>Хочу заказать</button>
+            </div>
+      
+            <div className={s.block222}>
+                <h2 className={s.h22}>Часто задаваемые вопросы</h2>
+                <FAQAccordionPage/>
+            </div>
+            
             
         </div>
     )
 }
-/// <div className={s.block1}>
-//    <Image src={'/images/konsol.jpg'} layout='fill' objectFit='cover'/>
-//    <h2>  Получить консультацию  </h2>
-//    <form onSubmit={handleSubmit(onSubmit)}>
-//        <input placeholder='Фамилия и имя' {...register("name", { required: true })} />
-      
-//        <InputMask
-//            placeholder='Номер телефона'
-//            mask="+7 (___) ___-__-__"
-//            {...register("phone", { required: true })}
-//            replacement={{ _: /\d/ }}
-//        />
-//        <button type='submit'>Отправить</button>
-//    </form>
-//    <p>После заполнения заявки, байер сам с вами свяжется с вами <br />
-//    в течении 2-х часов в рабочее время.</p>
-///</div>

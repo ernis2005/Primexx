@@ -20,14 +20,14 @@
     }
     h2{
         color: #000;
-text-align: center;
-
-/* H2 */
-font-family: Geometria1;
-font-size: 48px;
-font-style: normal;
-font-weight: 700;
-line-height: 120%; /* 57.6px */
+        text-align: center;
+        
+        /* H2 */
+        font-family: Geometria1;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%; /* 57.6px */
     }
     p{
         color: #000;
@@ -40,7 +40,7 @@ font-style: normal;
     font-weight: 400;
 line-height: 150%; /* 36px */
     }
-    @media screen and (max-width:912px) {
+    @media screen and (max-width:960px) {
         h2{
         font-size: 36px;
         }
@@ -78,7 +78,7 @@ font-size: 48px;
 font-style: normal;
 font-weight: 700;
 line-height: 120%; /* 57.6px */
-@media screen and (max-width:912px) {
+@media screen and (max-width:962px) {
     font-size: 36px;
     @media screen and (max-width:452px) {
         font-size: 26px ;
@@ -88,51 +88,51 @@ line-height: 120%; /* 57.6px */
 .block1{
     display: grid;
     row-gap: 50px;
-    margin-top: 40px;
+    margin-top: 30px;
+    @media screen and (max-width: 960px) {
+        row-gap: 27px;
+        margin-top: 23px;
+    }
     @media screen and (max-width:539px) {
         width: 300px;
     }
 .block1Svgs{
     display:flex;
     justify-content: space-between;
-    width: 790px;
+    width: 720px;
     margin: 0 auto;
   
     height: 10px;
     div{
-        width: 684px;
+        width: 710px;
     position: absolute;
     height: 10px;
     z-index: 1;
     margin: 0;
-    margin-left: 41px;
     background: var(--Green, #009345);    
-    }
-    svg{
-        width: 117px;
-        height: 92px;
-        margin-top: -41px;
-        position: relative;
-        z-index: 2;
+    margin-left: 5px;
+    margin-bottom: 30px;
     }
     @media screen and (max-width:960px) {
-        width: 600px;
-        div{
-            width: 525px;
-        }
-        svg{
-            width: 100px;
-            height: 100px;
-            margin-top: -47px;
-
-        }
-        @media screen and (max-width:700px) {
-            width: 530px;
-            div{
-                width: 465px;
-            }
-        }
+    width:  580px;
+    div{
+        width: 577px;
+    margin-left: 2px;
     }
+
+}
+    svg{
+        margin-top: -27px;
+        position: relative;
+        z-index: 2;
+        @media screen and (max-width:960px) {
+            width: 45px;
+            height: 45px;
+ margin-top: -18px;
+        }
+        filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.15));
+    }
+    
 }
 .block1info{
     display: flex;
@@ -151,9 +151,9 @@ font-style: normal;
 line-height: 150%; /* 36px */
     }
     @media screen and (max-width:960px) {
-        width: 645px;
+        width: 678px;
         p{
-            font-size: 16px ;
+            font-size: 14px ;
         }
         @media screen and (max-width:700px) {
             width: 611px;
@@ -171,14 +171,16 @@ line-height: 150%; /* 36px */
         grid-row-gap: 30px;
         row-gap: 50px;
         width: 272px;
+        margin-top: -10px;
         div{
             width: 10px;
     height: 173px;
     margin-left: 36px;
         }
         svg{
-           width: 80px;
-           height: 80px;
+           width: 45px;
+           height: 45px;
+           margin-left: 17px;
         }
     }
     .block1info{    display: grid;
@@ -211,7 +213,7 @@ gap: 30px;
 @media screen and (max-width:539px) {
     width: 100%;
 }
-background: var(--Dark-Green, #003318);
+background: var(--Dark-Green, #004D24 );
 
 div{
     width: 600px;
@@ -230,6 +232,15 @@ position: relative;
     font-weight: 400;
 
 line-height: 150%; /* 24px */
+@media screen  and (max-width:960px) {
+    color: #FFF;
+text-align: center;
+font-family: Geometria;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 130%; /* 18.2px */
+}
 }
 img{
     opacity: 0.2 ;
