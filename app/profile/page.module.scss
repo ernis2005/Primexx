@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+
     @media screen and (max-width:769px) {
         grid-template-columns: 1fr;
     }
@@ -33,15 +34,18 @@
         width: 350px;
         row-gap: 30px;
         margin-top: 60px;
+
         @media screen and (max-width:769px) {
             margin: 0 auto;
             margin-top: 50px;
         }
+
         @media screen and (max-width:436px) {
             width: 330px;
-        @media screen  and  (max-width:385px) {
-            width: 100%;
-        }
+
+            @media screen and (max-width:385px) {
+                width: 100%;
+            }
         }
 
         span {
@@ -114,52 +118,58 @@
     justify-content: center;
     padding: 60px 0px;
     display: grid;
-    gap: 10px;
+    // gap: 10px;
+
     @media screen and (max-width:769px) {
         gap: 33px;
-    padding: 0;
+        padding: 0;
     }
-    h2{text-align: left;}
+
+    h2 {
+        text-align: left;
+    padding-bottom: 10px;
+    }
 
     .countrys {
         display: grid;
-        gap: 30px;
-width: 240px;
+        width: 240px;
+
         .countrysUl {
             display: flex;
             justify-content: space-between;
-gap: 30px;
+            grid-gap: 30px;
+
             li {
                 display: flex;
                 gap: 10px;
                 align-items: center;
-
+                cursor: pointer;
                 height: 24px;
-            
-padding-bottom: 10px;
+                padding-bottom: 10px;
+
                 span {
                     position: relative;
                     width: 24px;
                     height: 24px;
- 
                 }
-                p{
-                    color: #000;
-font-family: Geometria;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
 
-@media screen and (max-width:769px) {
-    font-size: 14px !important;
-}                
-}
-            
+                p {
+                    color: #000;
+                    font-family: Geometria;
+                    font-size: 16px;
+                    font-weight: 400;
+                    padding-top: 10px;
+
+                    @media screen and (max-width:769px) {
+                        font-size: 14px !important;
+                    }
+                }
+
             }
-            .countrysUlActive{
+
+            .countrysUlActive {
                 border-bottom: 2px solid #009345;
-            
+
                 @media screen and (max-width:769px) {
                     font-size: 14px !important;
                 }
@@ -168,100 +178,110 @@ line-height: normal;
     }
 }
 
-.PageCountrys{
+.PageCountrys {
     display: none;
 
 }
-.code_logistic{
+
+.code_logistic {
     justify-content: left;
     text-align: left;
     display: grid;
     row-gap: 15px;
-    p{color: #000;
 
-        /* Regular text */
+    p {
+        color: #000;
         font-family: Geometria;
         font-size: 16px;
-        font-style: normal;
         font-weight: 400;
-        line-height: 130%; /* 20.8px */
+        line-height: 130%;
     }
 }
-.testActive{
+
+.testActive {
     display: grid;
     row-gap: 60px;
-    p{
+
+    p {
         color: #000;
-font-family: Geometria;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 150%; /* 24px */
-text-align: left;
+        font-family: Geometria;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+        text-align: left;
     }
+
     @media screen and (max-width:769px) {
         gap: 30px;
-        
     }
-    .testActiveUl{
+
+    .testActiveUl {
         text-align: left;
         display: grid;
         row-gap: 15px;
+
         @media screen and (max-width:769px) {
             gap: 30px;
-            
-        }
-        p{
-            color: #009345;
-font-family: Geometria;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 130%; /* 20.8px */
 
-@media screen and (max-width:769px) {
-    font-size: 14px !important;
-}
         }
-        ul{
+
+        p {
+            color: #009345;
+            font-family: Geometria;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 130%;
+
+            @media screen and (max-width:769px) {
+                font-size: 14px !important;
+            }
+        }
+
+        ul {
             display: grid;
             row-gap: 15px;
             width: 100%;
-            li{
+
+            li {
                 display: grid;
-                grid-template-columns: 1fr 1fr ;
+                grid-template-columns: 1fr 1fr;
                 justify-content: space-between;
                 width: 100%;
                 gap: 60px;
-                h3 {color: #000;
+
+                h3 {
+                    color: #000;
                     font-family: Geometria1;
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 500;
-                    line-height: 130%; /* 20.8px */
- 
+                    line-height: 130%;
+                    letter-spacing: -0.48px;
+
                     @media screen and (max-width:769px) {
                         font-size: 14px !important;
                     }
-                    letter-spacing: -0.48px;}
-            p{
-                color: #000;
-font-family: Geometria;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 130%; /* 20.8px */
-letter-spacing: -0.48px;
 
-@media screen and (max-width:769px) {
-    font-size: 14px !important;
-} 
-}
                 }
+
+                p {
+                    color: #000;
+                    font-family: Geometria;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 130%;
+                    letter-spacing: -0.48px;
+
+                    @media screen and (max-width:769px) {
+                        font-size: 14px !important;
+                    }
+                }
+            }
         }
 
     }
 }
+
 .buttonPo {
     display: flex;
     height: 44px;
@@ -271,7 +291,6 @@ letter-spacing: -0.48px;
     color: var(--White, #F5F5F5);
     font-family: Geometria;
     font-size: 16px;
-    font-style: normal;
 
 
     background: var(--Green, #009345) !important;
@@ -281,10 +300,12 @@ letter-spacing: -0.48px;
 
     @media screen and (max-width:436px) {
         width: 330px;
+
         @media screen and (max-width:385px) {
             width: 100%;
         }
     }
+
     @media screen and (max-width:769px) {
         margin: 0 auto;
     }

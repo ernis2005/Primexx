@@ -238,50 +238,56 @@ const profile = () => {
                         [s.testActive]: page === 2
                     })}>
                     
-                        <p>467 Carson drive, Bear, Delaware(DE) ,19701, +13027722737</p>
+                        <p>Türkiye, İstanbul, Hemşire Sokak 17/C, Fatih Kumpkapı,<br /> Nişanca mahallesi, 34130, +905359749009</p>
                         <div className={s.testActiveUl}>
                             <p>На сайтах магазинов адрес заполняется <br/>
                     следующим образом:</p>
                             <ul>
                                 <li>
-                                    <h3>First Name (ваше имя):</h3>
+                                    <h3>Adynyz (ваше имя):</h3>
                                     <p>
-                                AkmoorPR
+                                    AkmoorPrimex
                                     </p>
                                 </li>
                                 <li>
-                                    <h3>Last Name (ваша фамилия):</h3>
+                                    <h3>Soyadiniz (ваша фамилия):</h3>
                                     <p>Nurueva
                                     </p>
                                 </li>
                                 <li>
-                                    <h3>Address line 1 (адрес склада):</h3>
-                                    <p>467 Carson Drive
+                                    <h3>Mahalle 1 (адрес склада):</h3>
+                                    <p>Nisanca Mah
                                     </p>
                                 </li>
                                 <li>
-                                    <h3>Address line 2 (номер дома):</h3>
-                                    <p>PR
+                                    <h3>Adres 2 (номер дома):</h3>
+                                    <p>Hemsire Sok 17/C
                                     </p>
                                 </li>
                                 <li>
-                                    <h3>City (город):</h3>
-                                    <p>Bear
+                                    <h3>Ilce (город):</h3>
+                                    <p>Kumkapi/Fatih
                                     </p>
                                 </li>
                                 <li>
-                                    <h3>State (штат):</h3>
-                                    <p>Delaware (DE)
+                                    <h3>Sehir (штат):</h3>
+                                    <p>Istanbul
                                     </p>
                                 </li>
                                 <li>
-                                    <h3>Zip code (индекс):</h3>
-                                    <p>19701
+                                    <h3>Posts kodu (индекс):</h3>
+                                    <p>34130
                                     </p>
                                 </li>
                                 <li>
-                                    <h3>Phone (телефон):</h3>
-                                    <p>+1 302 7722737
+                                    <h3>Telefon (телефон):</h3>
+                                    <p>+905359749009
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <h3>Ulke (cтрана):</h3>
+                                    <p>Turkiye
                                     </p>
                                 </li>
 
@@ -291,51 +297,52 @@ const profile = () => {
                         [s.testActive]: page === 3
                     })}>
                     
-                        <p>467 Carson drive, Bear, Delaware(DE) ,19701, +13027722737</p>
+                        {/* <p>467 Carson drive, Bear, Delaware(DE) ,19701, +13027722737</p> */}
                         <div className={s.testActiveUl}>
                             <p>На сайтах магазинов адрес заполняется <br/>
                     следующим образом:</p>
                             <ul>
                                 <li>
-                                    <h3>First Name (ваше имя):</h3>
-                                    <p>
+                                    <h3>名 (ваше имя):</h3>
+                                    {/* <p>
                                 AkmoorPR
-                                    </p>
+                                    </p> */}
                                 </li>
                                 <li>
-                                    <h3>Last Name (ваша фамилия):</h3>
-                                    <p>Nurueva
-                                    </p>
+                                    <h3>
+                                    姓  (ваша фамилия):</h3>
+                                    {/* <p>Nurueva
+                                    </p> */}
                                 </li>
                                 <li>
-                                    <h3>Address line 1 (адрес склада):</h3>
-                                    <p>467 Carson Drive
-                                    </p>
+                                    <h3>地址第一行 (адрес склада):</h3>
+                                    {/* <p>467 Carson Drive
+                                    </p> */}
                                 </li>
                                 <li>
-                                    <h3>Address line 2 (номер дома):</h3>
-                                    <p>PR
-                                    </p>
+                                    <h3>地址行2 (номер дома):</h3>
+                                    {/* <p>PR
+                                    </p> */}
                                 </li>
                                 <li>
-                                    <h3>City (город):</h3>
-                                    <p>Bear
-                                    </p>
+                                    <h3>城市 (город):</h3>
+                                    {/* <p>Bear
+                                    </p> */}
                                 </li>
                                 <li>
-                                    <h3>State (штат):</h3>
-                                    <p>Delaware (DE)
-                                    </p>
+                                    <h3>狀態 (штат):</h3>
+                                    {/* <p>Delaware (DE)
+                                    </p> */}
                                 </li>
                                 <li>
-                                    <h3>Zip code (индекс):</h3>
-                                    <p>19701
-                                    </p>
+                                    <h3>郵遞區號 (индекс):</h3>
+                                    {/* <p>19701
+                                    </p> */}
                                 </li>
                                 <li>
-                                    <h3>Phone (телефон):</h3>
-                                    <p>+1 302 7722737
-                                    </p>
+                                    <h3>電話 (телефон):</h3>
+                                    {/* <p>+1 302 7722737
+                                    </p> */}
                                 </li>
 
                             </ul>

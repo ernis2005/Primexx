@@ -18,6 +18,8 @@ import { CardsBlock6 } from '../Cards/CardsBlock6/CardsBlock6'
 import loading from './loading'
 import Loading from './loading'
 import { TabelsBlock5 } from '../Tabels/TabelsBlock5/page'
+
+
 export default function HomeComponent() {
 
     const dispath = useDispatch()
@@ -26,6 +28,7 @@ export default function HomeComponent() {
         dispath(getCountry())
         dispath(getRateTime())
     },[dispath])
+    
     const {card,rateTime,status,country,error} = useSelector((state) => state.aboutHomeSlice)
     if (status=== 'failed') {
         redirect('/404')
