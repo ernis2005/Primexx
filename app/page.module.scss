@@ -24,6 +24,9 @@
         display: grid;
         row-gap: 30px;
         border-radius: 0px ;
+        @media screen and (max-width:450px) {
+            row-gap: 15px;
+        }
 
         h1 {
             color: var(--White, #F5F5F5);
@@ -44,6 +47,9 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            @media screen and (max-width:450px) {
+                font-size: 13px;
+            }
         }
 
         button {
@@ -59,6 +65,7 @@
             font-size: 16px;
             @media screen and (max-width:450px) {
                 height: 45px;
+                margin-top: 15px;
         
             }
          a{color: var(--Black, #001A0C);
@@ -101,7 +108,8 @@
                     }
 
                     p {
-                        font-size: 16px;
+                        font-size: 14px;
+                        line-height: 150%;
                     }
 
                     button {
@@ -467,6 +475,9 @@
         margin-top: 60px;
         @media screen and (max-width:960px) {
             margin-top: 30px;
+            @media screen and (max-width:450px) {
+                margin-top: 0px;
+            }
         }
         background: var(--Green, #009345);
 
