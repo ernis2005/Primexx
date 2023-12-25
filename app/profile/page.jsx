@@ -186,7 +186,7 @@ const profile = () => {
                     })}>
                         <p>467 Carson drive, Bear, Delaware(DE) ,19701, +13027722737</p>
                         <div className={s.testActiveUl}>
-                            <p>На сайтах магазинов адрес заполняется <br/>
+                            <p className={s.green}>На сайтах магазинов адрес заполняется <br/>
                         следующим образом:</p>
                             <ul>
                                 <li>
@@ -238,9 +238,9 @@ const profile = () => {
                         [s.testActive]: page === 2
                     })}>
                     
-                        <p>Türkiye, İstanbul, Hemşire Sokak 17/C, Fatih Kumpkapı,<br /> Nişanca mahallesi, 34130, +905359749009</p>
+                        <p>Türkiye, İstanbul, Hemşire Sokak 17/C, Fatih Kumpkapı, Nişanca mahallesi, 34130, +905359749009</p>
                         <div className={s.testActiveUl}>
-                            <p>На сайтах магазинов адрес заполняется <br/>
+                            <p className={s.green}>На сайтах магазинов адрес заполняется <br/>
                     следующим образом:</p>
                             <ul>
                                 <li>
@@ -299,7 +299,7 @@ const profile = () => {
                     
                         {/* <p>467 Carson drive, Bear, Delaware(DE) ,19701, +13027722737</p> */}
                         <div className={s.testActiveUl}>
-                            <p>На сайтах магазинов адрес заполняется <br/>
+                            <p className={s.green}>На сайтах магазинов адрес заполняется <br/>
                     следующим образом:</p>
                             <ul>
                                 <li>
