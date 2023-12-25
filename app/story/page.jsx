@@ -42,7 +42,7 @@ const page = () => {
             {
                 data.trac.length <= 0 && (
                     <p className={s.Contend}>
-                        Нету данных
+                        Нет данных
                     </p>
                 )
             }

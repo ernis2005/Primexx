@@ -30,7 +30,7 @@ margin-top: 60px;
 
         @media screen and (max-width:754px) {
             display: grid;
-
+gap: 15px;
         }
 
         @media screen and (max-width:754px) {
@@ -44,64 +44,79 @@ margin-top: 60px;
         }
 
         input {
-            outline: none;
             display: flex;
             width: 690px;
-            height: 80px;
-            padding: 20px 30px;
+            padding: 15px 30px;
             align-items: center;
             gap: 10px;
-            color: rgba(0, 26, 12, 0.50);
+            color: #000;
+            outline: none;
             font-family: Geometria;
             font-size: 24px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
-            border: 1px solid var(--Dark-Green, #003318);
-            background: var(--White, #F5F5F5);
 
-            @media screen and (max-width:1044px) {
-                width: 500px;
-            }
-
-            @media screen and (max-width:824px) {
-                width: 450px;
-                font-size: 20px;
-                height: 60px;
-            }
+            height: 60px;
+            
         }
 
         button {
             display: flex;
             width: 278px;
-            height: 80px;
-            margin: 0 auto;
-            padding: 10px;
+            padding: 15px 10px;
             justify-content: center;
-            border: none;
             align-items: center;
             gap: 10px;
-            background: var(--Green, #009345);
-            color: var(--White, #F5F5F5);
-            font-family: Geometria;
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
+        border: none;
+        background: var(--Green, #009345);
+        color: var(--White, #F5F5F5);
+font-family: Geometria;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 
-            @media screen and (max-width:824px) {
-                width: 200px;
-                height: 60px;
-                font-size: 20px;
-            }
-
-            @media screen and (max-width:754px) {
-                display: grid;
-                width: 450px;
-            }
+            
         }
-    }
+        @media screen and (max-width:1050px) {
+            input{
+                color: var(--White, #F5F5F5);
+font-family: Geometria;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+color: #B3B3B3;
+width:70%;
+/* Regular text */
+font-family: Geometria;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 130%; /* 20.8px */
+height: 41px;
 
+            }
+            button {
+                display: flex;
+                padding: 10px 15px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                flex: 1 0 0;
+                color: var(--White, #F5F5F5);
+width: 260px;
+/* Regular text */
+font-family: Geometria;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 130%; /* 20.8px */
+height: 41px;
+        }        
+    }
+    }
     .contends {
         display: grid;
         gap: 60px;

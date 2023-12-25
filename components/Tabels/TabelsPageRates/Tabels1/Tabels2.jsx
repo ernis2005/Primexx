@@ -17,8 +17,8 @@ export const Tabels2 = (data) => {
                     {data.rate.data?.map((res, index) => (
                         <tr className={s.block2} key={index}>
                             <td className={s.td1}>{res.service}</td>
-                            <td >{res.price}</td>
-                            <td className={s.td1}>{res.description}</td>
+                            <td className={s.td2} >{res.price}</td>
+                            <td className={s.td11}>{res.description}</td>
 
                         </tr>
                     ))}

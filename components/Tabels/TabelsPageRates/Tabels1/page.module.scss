@@ -52,9 +52,9 @@
             padding: 15px;
         }
         td {
-            padding: 15px;
             width: 336px;
             height: 40px;
+            font-size: 16px;
             @media screen and (max-width:450px) {
             font-size: 10.8px;  
             padding:    0px;
@@ -78,8 +78,16 @@
     }
 }
 .td1{
-    width: 40% !important;
+ min-width: 280px !important;
     @media screen and (max-width:450px) {
-        width: 154px;
+        min-width: 154px !important; 
+    }
+}
+.td11{
+    min-width: 385px !important ;
+    height: 56px !important;
+    @media screen and (max-width:450px) {
+        height: 36px !important;
+        min-width: 200px !important;
     }
 }

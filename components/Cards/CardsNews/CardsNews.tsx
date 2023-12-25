@@ -38,7 +38,6 @@ export const CardsNews = ({ data }: Person) => {
 
                     </div>
                 ))}
-
             </div>
             {data4length <= 6 ? null : <button onClick={() => LoadMore()} className={cm(s.button, { [s.buttonNone]: data4length <= noOFElement })}>
                 Смотреть еще

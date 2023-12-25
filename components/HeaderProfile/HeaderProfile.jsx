@@ -23,6 +23,11 @@ export const HeaderProfile = () => {
     }, [])
 
     const page = usePathname();
+    const  ex = async () => {
+        Cookies.remove('uliId');
+        window.location.href = "/";
+        window.location.reload();
+    }
 
     return (
         <>
@@ -54,6 +59,11 @@ export const HeaderProfile = () => {
                             <Link href={'/profile'}>
                                 Профиль
                             </Link>
+                        </li>
+                        <li>
+                            <a onClick={ex} className={s.liRi} href='/' >
+                            Выйти из учетной записи
+                            </a>
                         </li>
                     </ul>
                     <button onClick={() => setModule(true)}>

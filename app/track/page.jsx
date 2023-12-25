@@ -34,7 +34,7 @@ const page = () => {
                 <form className={`Contend ${s.Input}`}
 
                     onSubmit={handleSubmit(onSubmit)}>
-                    <input placeholder="Введите трек номер" {...register("example")} />
+                    <input placeholder="Введите трек номер: 1234000000" {...register("example")} />
                     {errors.exampleRequired && <span>This field is required</span>}
                     <button type="submit">Отследить</button>
                 </form>

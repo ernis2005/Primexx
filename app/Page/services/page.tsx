@@ -44,7 +44,7 @@ const page = () => {
                         <Page4 />
                     </div>
                     <div className={cm(s.accNone, {
-                        [s.acc]: navigationIndex === 3
+                        [s.accs]: navigationIndex === 3
                     })}>
                         <Page6 />
                     </div>

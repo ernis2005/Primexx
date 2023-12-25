@@ -2,10 +2,16 @@ import React from 'react'
 import s from './page.module.scss'
 import { AiOutlineClose } from 'react-icons/ai'
 import Link from 'next/link'
+import Cookies from 'js-cookie'
 interface Peson {
     setModule: React.Dispatch<React.SetStateAction<boolean>>
 }
 const Menu = ({ setModule }: Peson) => {
+    const  ex = async () => {
+        Cookies.remove('uliId');
+        window.location.href = "/";
+        window.location.reload();
+    }
     return (
         <div className={s.module}>
             <div className={s.block1}>
@@ -21,6 +27,11 @@ const Menu = ({ setModule }: Peson) => {
                     <li> <Link href={'/profile'}>
                         Профиль
                     </Link> </li>
+                    <li>
+                        <a onClick={ex} className={s.liRi} href='/' >
+                            Выйти из аккаунта
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

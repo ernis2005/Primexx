@@ -49,7 +49,7 @@ const page = () => {
     return (
         <>
             <Header />
-            <div style={{ marginTop: '124px' }} className={s.header}>
+            <div  className={`top ${s.header}`}>
                 <BannerPages
                     idPage={3}
                     name={'Тарифы и сроки'}

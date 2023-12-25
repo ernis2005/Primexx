@@ -1,64 +1,77 @@
-.Card{
+.Card {
     display: grid;
-    grid-template-columns: 2fr 2fr ;
+    grid-template-columns: 2fr 2fr;
     justify-content: space-evenly;
     position: relative;
     align-items: center;
     gap: 200px;
-@media screen and (max-width:1100px) {
-    gap: 100px;
-}
 
-@media screen and (max-width:583px) {
-    grid-template-columns: 2fr ;
-    padding-left: 114px;
-    row-gap: 42px;
-    @media screen and (max-width:542px) {
-        padding-left: 77px;
+    @media screen and (max-width:1100px) {
+        gap: 100px;
     }
 
+    @media screen and (max-width:1200px) {
+        br {
+            display: none !important;
+        }
     }
-    
-.p1     {
-    color: var(--Black, #001A0C);
-    text-align: right;
 
-/* H2 */
-font-family: Geometria1;
-font-size: 48px;
-font-style: normal;
-font-weight: 700;
-line-height: 120%; 
-@media screen and (max-width:583px) {
-  
-        display: none !important;
-    
-}
-}
-.p2{
-    color: var(--Black, #001A0C);
-    text-align: left;
-    
-    font-family: Geometria1;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 120%; 
-display: block !important;
     @media screen and (max-width:583px) {
-        display: none !important;
-    
-}
+        grid-template-columns: 2fr;
+        padding-left: 114px;
+        row-gap: 42px;
 
-}
+        @media screen and (max-width:542px) {
+            padding-left: 77px;
+        }
+
+    }
+
+    .p1 {
+        color: var(--Black, #001A0C);
+        text-align: right;
+
+        /* H2 */
+        font-family: Geometria1;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+
+        @media screen and (max-width:583px) {
+
+            display: none !important;
+
+        }
+    }
+
+    .p2 {
+        color: var(--Black, #001A0C);
+        text-align: left;
+
+        font-family: Geometria1;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+        display: block !important;
+
+        @media screen and (max-width:583px) {
+            display: none !important;
+
+        }
+
+    }
 
     span {
         display: grid;
         row-gap: 15px;
         text-align: left;
+
         @media screen and (max-height:583px) {
-        text-align: left;
-    }
+            text-align: left;
+        }
+
         h2 {
             color: var(--Black, #001A0C);
 
@@ -67,11 +80,13 @@ display: block !important;
             font-style: normal;
             font-weight: 400;
             line-height: 150%;
+
             @media screen and (max-width:769px) {
-            font-size: 20px !important;
+                font-size: 20px !important;
             }
         }
-        p{
+
+        p {
             padding: 0;
             margin: 0;
             color: var(--Black, #000);
@@ -79,50 +94,59 @@ display: block !important;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
-            line-height: 150%; 
+            line-height: 150%;
         }
     }
-    .s2{
+
+    .s2 {
         text-align: right;
+
         @media screen and (max-width:583px) {
-  
+
             text-align: left;
-         }
-        p{
+        }
+
+        p {
             padding: 0;
             margin: 0;
-            
+
         }
     }
+
     @media screen and (max-width:583px) {
-  h3{
-    display: none !important;
-  }
-}
-@media screen and (max-width:498px) {
-    span{
-        h2{
-            font-size: 16px !important ;
-        }
-        p{
-            font-size: 14px !important;
-        font-weight: 400 !important;
+        h3 {
+            display: none !important;
         }
     }
-}
+
+    @media screen and (max-width:498px) {
+        span {
+            h2 {
+                font-size: 16px !important;
+            }
+
+            p {
+                font-size: 14px !important;
+                font-weight: 400 !important;
+            }
+        }
+    }
 
 }
-.Header{
+
+.Header {
     display: grid;
-    row-gap: 66px ;
+    row-gap: 66px;
+
     @media screen and (max-width:1100px) {
         gap: 60px;
     }
-    
- @media screen and (max-width:498px) {
-row-gap: 15px;
- }
-    .btn_bar{
+
+    @media screen and (max-width:498px) {
+        row-gap: 15px;
+    }
+
+    .btn_bar {
         margin: 0 auto;
         max-width: 710px;
         width: 100%;
@@ -134,50 +158,77 @@ row-gap: 15px;
         background: var(--Green, #009345);
         border: none;
         margin-top: -40px;
+
         @media screen and (max-width:498px) {
             padding: 15px;
             font-size: 15px;
             font-size: 500;
-            margin-top: 0px ;
+            margin-top: 0px;
         }
     }
- 
+
 }
-.test{
+
+.test {
     position: absolute;
     width: 10px;
     height: 816px;
     left: 50%;
     border-radius: 10px;
     margin-top: 40px;
+
     @media screen and (max-width:583px) {
-        left: 30px;  
+        left: 30px;
         margin-top: 20px;
         margin-left: 46px;
     }
+
     @media screen and (max-width:910px) {
         height: 859px;
+
         @media screen and (max-width:850px) {
             height: 886px;
+
             @media screen and (max-width:746px) {
                 height: 920px;
+
                 @media screen and (max-width:680px) {
                     height: 953px;
+
                     @media screen and (max-width:607px) {
-                        height: 996px;   
+                        height: 996px;
+
                         @media screen and (max-width:583px) {
                             height: 799px;
+
                             @media screen and (max-width:568px) {
                                 height: 817px;
+
                                 @media screen and (max-width:598px) {
-                                    height: 500px;
+                                 
                                     left: 8px;
+                                @media screen and (max-width:498px) {
+                                    height: 500px;
+                                }
+
                                     @media screen and (max-width:466px) {
                                         height: 538px;
-                                    }   
-                                    
+
+                                        @media screen and (max-width:433px) {
+                                            height: 577px;
+
+                                            @media screen and (max-width:401px) {
+                                                height: 608px;
+
+                                                @media screen and (max-width:393px) {
+                                                    height: 620px;
+                                                }
+                                            }
+                                        }
+                                    }
+
                                 }
-                            }   
+                            }
                         }
                     }
                 }
@@ -185,76 +236,102 @@ row-gap: 15px;
         }
     }
 
-   
-background: #D9D9D9;
-div{
-      
+
+    background: #D9D9D9;
+
+    div {
+
         max-height: 100%;
         width: 100%;
         z-index: 1;
         position: absolute;
         border-radius: 10px;
         background: var(--Green, #009345);
-        
+
     }
+
     span {
         width: 300px;
         row-gap: 122px;
         position: relative;
         z-index: 2;
         display: grid;
-        svg{
+
+        svg {
             margin-left: -20px;
             margin-top: -23px;
             width: 50px;
             filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.15));
-            
+
             @media screen and (max-width:680px) {
                 margin-left: -18px !important;
                 width: 45px !important;
             }
         }
-        
+
         @media screen and (max-width:910px) {
             row-gap: 130px;
-        @media screen and (max-width:850px) {
-            row-gap: 137px;
-            @media screen  and  (max-width:746px) {
-                row-gap: 143px;
-                @media screen and (max-width:680px) {
-                    row-gap: 149px;
-                    @media screen and (max-width:607px) {
-                        row-gap: 157px;
-                        @media screen and (max-width:583px) {
-                            row-gap: 119px;    
-                            @media screen and (max-width:568px) {
-                                row-gap: 124px;
-                                @media screen and (max-width:498px) {
-                                    row-gap: 58px;
-                                    @media screen and (max-width:482px) {
-                                        row-gap: 64px;
-                                        @media screen and (max-width:466px) {
-                                            row-gap: 69px;
+
+            @media screen and (max-width:850px) {
+                row-gap: 137px;
+
+                @media screen and (max-width:746px) {
+                    row-gap: 143px;
+
+                    @media screen and (max-width:680px) {
+                        row-gap: 149px;
+
+                        @media screen and (max-width:607px) {
+                            row-gap: 157px;
+
+                            @media screen and (max-width:583px) {
+                                row-gap: 119px;
+
+                                @media screen and (max-width:568px) {
+                                    row-gap: 124px;
+
+                                    @media screen and (max-width:498px) {
+                                        row-gap: 58px;
+
+                                        @media screen and (max-width:482px) {
+                                            row-gap: 64px;
+
+                                            @media screen and (max-width:466px) {
+                                                row-gap: 69px;
+
+                                                @media screen and (max-width:433px) {
+                                                    row-gap: 73px;
+
+                                                    @media screen and (max-width:401px) {
+                                                        row-gap: 81px;
+
+                                                        @media screen and (max-width:393px) {
+                                                            row-gap: 88px;
+                                                        }
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
                             }
-                        }   
+                        }
                     }
                 }
             }
-        } 
         }
     }
-    
-  
+
+
 }
-.winScr{
-    svg{
+
+.winScr {
+    svg {
         margin-left: -24px !important;
         width: 60px !important;
+
         @media screen and (max-width:680px) {
-            width: 50px !important;
+            width: 45px !important;
             margin-left: -20px !important;
         }
     }
