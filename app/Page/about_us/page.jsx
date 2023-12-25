@@ -34,7 +34,7 @@ const page =  () => {
             <div className={`top ${s.Header}`}>
                 <BannerPages
                     idPage={5}
-                    name={'О Нас'}
+                    name={'О нас'}
                     info={'Узнайте о нас'}
                 />
                 {status === 'loading' && <Loading/>}

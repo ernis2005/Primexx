@@ -13,9 +13,7 @@ export const metadata = {
     ],
 }
 const Home =  () => {
-    // const dataRate:Product[] = await getRateTime()
-    // const dataCountry:ProductCountry[] = await getCountry()
-    
+   
     return (<HomeComponent/>);
 }
 

@@ -20,14 +20,14 @@ export const SwiperPageAboutUs = (data: Types) => {
     return (<div className={s.Block}>
         <Swiper
             slidesPerView={5}
-            spaceBetween={10}
+            spaceBetween={30}
             pagination={{
                 clickable: true,
             }}
             breakpoints={{
                 100:{
-                    slidesPerView: 2.2,
-                
+                    slidesPerView: 2.3,
+                    spaceBetween:15,
                 },
                 496:{
                     slidesPerView: 2.1,
@@ -41,6 +41,9 @@ export const SwiperPageAboutUs = (data: Types) => {
                 855: {
                     slidesPerView: 4,
                 },
+                960:{
+                    spaceBetween:30,
+                },
                 1200: {
                     slidesPerView: 5,
                     
@@ -49,6 +52,41 @@ export const SwiperPageAboutUs = (data: Types) => {
             modules={[Pagination]}
             className="mySwiper"
         >
+            {data.data.map((res) => (
+                <SwiperSlide className={s.Card} key={res.id}>
+                    <Image src={res.image} objectFit='cover' layout='fill' />
+                </SwiperSlide>
+            ))}
+            {data.data.map((res) => (
+                <SwiperSlide className={s.Card} key={res.id}>
+                    <Image src={res.image} objectFit='cover' layout='fill' />
+                </SwiperSlide>
+            ))}
+            {data.data.map((res) => (
+                <SwiperSlide className={s.Card} key={res.id}>
+                    <Image src={res.image} objectFit='cover' layout='fill' />
+                </SwiperSlide>
+            ))}
+            {data.data.map((res) => (
+                <SwiperSlide className={s.Card} key={res.id}>
+                    <Image src={res.image} objectFit='cover' layout='fill' />
+                </SwiperSlide>
+            ))}
+            {data.data.map((res) => (
+                <SwiperSlide className={s.Card} key={res.id}>
+                    <Image src={res.image} objectFit='cover' layout='fill' />
+                </SwiperSlide>
+            ))}
+            {data.data.map((res) => (
+                <SwiperSlide className={s.Card} key={res.id}>
+                    <Image src={res.image} objectFit='cover' layout='fill' />
+                </SwiperSlide>
+            ))}
+            {data.data.map((res) => (
+                <SwiperSlide className={s.Card} key={res.id}>
+                    <Image src={res.image} objectFit='cover' layout='fill' />
+                </SwiperSlide>
+            ))}
             {data.data.map((res) => (
                 <SwiperSlide className={s.Card} key={res.id}>
                     <Image src={res.image} objectFit='cover' layout='fill' />

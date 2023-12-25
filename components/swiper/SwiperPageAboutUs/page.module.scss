@@ -19,7 +19,12 @@ align-items: center;
 .Block{
     max-width:1200px;
     overflow: hidden;
-     
+     padding-top: 30px;
+     padding-bottom: 30px;
+     @media screen and (max-width:450px) {
+        padding-top: 15px;
+        padding-bottom: 15px;
+     }
         @media screen and (max-width:1264px) {
      width: 100%;   
      

@@ -19,7 +19,7 @@ import loading from './loading'
 import Loading from './loading'
 import { TabelsBlock5 } from '../Tabels/TabelsBlock5/page'
 export default function HomeComponent() {
-
+ 
     const dispath = useDispatch()
     useEffect(()=> {
         dispath(getCardPag1())

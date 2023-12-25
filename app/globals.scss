@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: Geometria1;
-  src: url(/fonts/geometria_bold.otf);
+  src: url(/fonts/Geometria-Bold.ttf);
 }
 @font-face {
   font-family: Geometria;
@@ -65,3 +65,6 @@ button a{
   text-decoration: none;
   color: #fff;
 } 
+.swiper-pagination{
+  display: none;
+}

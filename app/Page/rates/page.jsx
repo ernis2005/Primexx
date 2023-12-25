@@ -60,21 +60,19 @@ const page = () => {
                     {status === 'failed' && <p style={{ height: 200 }} >{error}</p>}
                     {status === 'success' && <>
                         {uniqueData?.map((res, i) => (
-                            <div>
+                            <div   className={s.block1}>
                                 <h2>{res.country_name}</h2>
                                 <Tabels1 rate={res.country} />
 
                                 <span dangerouslySetInnerHTML={{ __html: res.country_description }} />
                             </div>
                         ))}
-                        <div>
+                        <div className={s.block1}>
                             <h2>Дополнительные услуги</h2>
                             <Tabels2 rate={additional_service} />
-                            <p>Лира к рублю - 5 рублей.</p>
                         </div>
                     </>
                     }
-                    
                 </div>
             </div>
             <Footer />

@@ -4,11 +4,19 @@
 import React, { createRef, useEffect, useRef, useState } from 'react'
 import s from './page.module.scss'
 import { Svg10 } from '@/components/svg/Header'
+import cm  from 'classnames'
 export const CardsBlock3 = () => {
+    
     const [scr, setScr] = useState(0)
     const ref =useRef()
+    console.log(scr);
+    const Svg10 =() => (
+        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="30" r="30" fill="#F5F5F5"/>
+            <circle cx="30" cy="30" r="11" stroke="#009345" stroke-width="6"/>
+        </svg>
     
-
+    )
     const refComponent= useRef();
     const onScroll = () => {
         let test = 1311
@@ -20,10 +28,10 @@ export const CardsBlock3 = () => {
             test = 1900
         }
         if (heiScr <= 562) {
-            test = 2500
+            test = 1800
         }
         if (heiScr <= 450) {
-            test = 1600
+            test = 1500
         }
         
         const winScr = document.documentElement.scrollTop - test;
@@ -101,15 +109,33 @@ export const CardsBlock3 = () => {
 
                 </div>
                 <span>
-                    <span style={{width:`${ref.current?.getBoundingClientRect().top*2 >=scr ? '200px' : '300px'}`}} ref={ref}>
-                    
-                        <Svg10  />
+                    <span className={cm({ 
+                        [s.winScr]: scr >= 1
+                    }) } >
+                        <Svg10 />
                     </span>
-                    <Svg10 />
-                    <Svg10 />
-                    <Svg10 />
-                    <Svg10 />
-                    <Svg10 />
+                    <span className={cm({ 
+                        [s.winScr]: scr >= 19
+                    }) } >
+                        <Svg10 />
+                    </span>
+                    <span className={cm({ 
+                        [s.winScr]: scr >= 38
+                    }) } >
+                        <Svg10 />
+                    </span><span className={cm({ 
+                        [s.winScr]: scr >= 57.5
+                    }) } >
+                        <Svg10 />
+                    </span><span className={cm({ 
+                        [s.winScr]: scr >= 76
+                    }) } >
+                        <Svg10 />
+                    </span><span className={cm({ 
+                        [s.winScr]: scr >= 96
+                    }) } >
+                        <Svg10 />
+                    </span> 
                 </span>
             </div>
             <button className={s.btn_bar}>Благодаря нашей трекинг системе отслеживайте ваши посылки на каждом этапе</button>
