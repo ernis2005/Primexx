@@ -19,7 +19,7 @@ const Menu = ({ setModule }) => {
             <div className={s.block1}>
                 <div className={s.menu}>
                     <button onClick={() => setModule(false)}>
-                        <AiOutlineClose />
+                        <AiOutlineClose /> 
                     </button>
                     <ul>
                         <li>
