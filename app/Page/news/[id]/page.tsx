@@ -3,8 +3,8 @@ import s from './page.module.scss'
 import { BannerPages } from '@/components/BannerPages/BannerPages'
 import Image from "next/legacy/image"
 import Header from '@/components/Header/page'
-import Footer from '@/components/Footer/page'
 import { getNewsId } from '@/app/getData/getData'
+import Footer from '@/components/Footer/page'
 export const metadata = {
     title: "Новости",
     description: '',

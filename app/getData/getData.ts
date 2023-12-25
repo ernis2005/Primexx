@@ -16,6 +16,14 @@ export const getNewsId = async (id: number) => {
 
     return data.data
 }
+export const getCoy = async () => {
+    try {
+        const data = await axios(`${Api}about/country/`)
+        return data.data
+    } catch (error) {
+        return  error
+    }
+}
 export const getRateTime = async () => {
     try {
         const data = await axios(`${Api}about/rate_time/`)

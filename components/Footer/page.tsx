@@ -1,12 +1,20 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+"use clinet ";
+
+
 import React from "react";
 import s from './page.module.scss'
 import Image from 'next/image';
 import Link from 'next/link'
 import { HeaderSvg } from '../svg/Header';
+import { useSelector } from "react-redux";
+import { getCoy } from "@/app/getData/getData";
 
 
-const Footer = () => {
-
+const Footer = async () => {
+    const data:any  = await getCoy()
+    console.log(data);
+    
     return (
         <footer className={s.footer} >
             <div className={`  ${s.blocks}`}>
@@ -107,13 +115,19 @@ const Footer = () => {
                             <li>
                                 <Link href={'/Page/about_us'}>Отзывы клиентов</Link>
                             </li>
-                            <li>
-                                <Link href={''}>Магазины Турции</Link>
-                            </li>
-                            <li>
-                                <Link href={''}>Магазины Америки</Link>
+                            {data.filter((res:any) => {
+
+                                return res.name !== 'Китай' }
+                            ).map((res:any)=> (
                                 
-                            </li>
+                                <li>
+                                    <Link    href={{
+                                        pathname: '/shop',
+                                        query: { id: JSON.stringify(res.id), name: res.name, img: res.image },
+                                    }}>Магазины {res.name}</Link>
+                                </li>
+                                
+                            ))}
                         </ul>
 
                     </div>

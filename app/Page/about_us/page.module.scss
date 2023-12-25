@@ -3,6 +3,9 @@
 
     row-gap: 60px;
     min-height: 700px;
+    @media screen  and (max-width:450px) {
+        row-gap: 30px;
+    }
     
     .contend{
         display: grid;

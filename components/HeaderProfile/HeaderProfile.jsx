@@ -41,22 +41,30 @@ export const HeaderProfile = () => {
                     </div>
                     <ul>
                         <li>
-                            <Link href={'/order'}>
+                            <Link className={cm(s.dddd,{
+                                [s.accLinc] : page === '/order'
+                            })} href={'/order'}>
                                 Заказать выкуп
                             </Link>
                         </li>
                         <li>
-                            <Link href={'/track'}>
+                            <Link className={cm(s.ddd,{
+                                [s.accLinc] : page === '/track'
+                            })} href={'/track'}>
                                 Отследить посылку
                             </Link>
                         </li>
                         <li>
-                            <Link href={'/story'}>
+                            <Link className={cm(s.ff , {
+                                [s.accLinc] : page === '/story'
+                            })} href={'/story'}>
                                 История посылок
                             </Link>
                         </li>
                         <li>
-                            <Link href={'/profile'}>
+                            <Link className={cm(s.fff , {
+                                [s.accLinc] : page === '/profile'
+                            })} href={'/profile'}>
                                 Профиль
                             </Link>
                         </li>

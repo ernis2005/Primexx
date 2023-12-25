@@ -3,7 +3,6 @@ import { BannerPages } from '@/components/BannerPages/BannerPages'
 import React, { useEffect } from 'react'
 import s from './page.module.scss'
 import Header from '@/components/Header/page'
-import Footer from '@/components/Footer/page'
 import img from '../../../public/images/тарифы.png'
 import { Tabels1 } from '@/components/Tabels/TabelsPageRates/Tabels1/Tabels1'
 import { useDispatch, useSelector } from 'react-redux'
@@ -12,6 +11,7 @@ import Loading from '@/components/Loading/Loading'
 import { getrate,  } from '@/app/redux/features/about-rates'
 import {getservice} from '@/app/redux/features/about-rates'
 import { Tabels2 } from '@/components/Tabels/TabelsPageRates/Tabels1/Tabels2'
+import Footer from '@/components/Footer/page'
 // export const metadata = {
 //     title: "Тарифы и сроки",
 //     description: '',

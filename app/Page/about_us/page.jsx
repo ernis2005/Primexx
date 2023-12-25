@@ -3,13 +3,14 @@
 import React, { useEffect } from 'react'
 import s from './page.module.scss'
 import Header from '@/components/Header/page'
-import Footer from '@/components/Footer/page'
+
 import { BannerPages } from '@/components/BannerPages/BannerPages'
 import { SwiperPageAboutUs } from '@/components/swiper/SwiperPageAboutUs/SwiperPageAboutUs'
 import RegisterButton from '@/components/RegisterButton/RegisterButton'
 import { useDispatch, useSelector } from 'react-redux'
 import { getabout } from '@/app/redux/features/about-us'
 import Loading from '@/components/Loading/Loading'
+import Footer from '@/components/Footer/page'
 // export const metadata = {
 //     title: "О Нас",
 //     description: '',

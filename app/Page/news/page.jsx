@@ -5,12 +5,12 @@ import React, { useEffect } from 'react'
 import s from './page.module.scss'
 import { CardsNews } from '@/components/Cards/CardsNews/CardsNews'
 import Header from '@/components/Header/page'
-import Footer from '@/components/Footer/page'
 import { getNews } from '@/app/getData/getData'
 import image from '../../../public/images/carson.png'
 import { useDispatch, useSelector } from 'react-redux'
 import { getaboutBlog } from '@/app/redux/features/about-blog'
 import Loading from '@/components/Loading/Loading'
+import Footer from '@/components/Footer/page'
 
 // export const metadata = {
 //     title: "Блог",

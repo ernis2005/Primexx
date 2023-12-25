@@ -72,7 +72,7 @@ export const trac = createSlice({
         [getTrac.rejected]: (state, action) => { 
             
             state.status = "failed"
-            state.error = action.payload.message
+            state.error = action.payload?.message
         },
         [getTracHistory.pending]: (state, action) => {
             state.status = "loading"
