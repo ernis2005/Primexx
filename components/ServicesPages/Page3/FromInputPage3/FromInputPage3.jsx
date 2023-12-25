@@ -44,7 +44,8 @@ const FromInputPage3 = ({colors,textcolor}) => {
     const watchAllFields = watch();
 
     return (
-        <><form className={s.contend} onSubmit={handleSubmit(onSubmit)}>
+        <>
+        <form className={s.contend} onSubmit={handleSubmit(onSubmit)}>
             <span className={s.tabs}>
                 <div style={{cursor:'pointer'}} className={cm(s.block1, {
                     [s.block2]: index === 1
@@ -63,7 +64,7 @@ const FromInputPage3 = ({colors,textcolor}) => {
                     <input key={i} placeholder={res.title} {...register(`${res.name}`)} />
                 ))}
                 {errors.exampleRequired && <span>This field is required</span>}
-                <button className={s.btn_white} style={{backgroundColor:colors,color:textcolor}}  type="submit" disabled={!watchAllFields.comment}>Отправить заявку</button>
+                <button className={s.btn_white}  type="submit" disabled={!watchAllFields.comment}>Отправить заявку</button>
             </div>
         </form>
         </>

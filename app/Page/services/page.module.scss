@@ -8,9 +8,11 @@
     .block {
         display: grid;
         row-gap: 60px;
-@media screen and (max-width:450px) {
-    row-gap: 0px;
-}
+
+        @media screen and (max-width:450px) {
+            row-gap: 0px;
+        }
+
         .Navigation {
             display: flex;
             text-align: left;
@@ -18,47 +20,67 @@
             justify-content: center;
             flex-wrap: wrap;
             row-gap: 30px;
-@media screen and (max-width:450px) {
-    display: grid;
-    justify-content: left;
-    padding-bottom: 60px;
-}
+
+            @media screen and (max-width:450px) {
+                display: grid;
+                justify-content: left;
+                padding-bottom: 60px;
+            }
+
             li {
                 list-style: none;
                 color: var(--Black, #001A0C);
                 font-family: Geometria;
                 font-size: 16px;
-                font-style: normal;
-              
-                line-height: normal;
+                position: relative;
+                cursor: pointer;
 
                 &:hover {
                     border-bottom: 1px solid #001A0C;
                     transition: 0.7s;
                 }
             }
+            li:hover::before{
+                width: 100%;
+            }
+            li:nth-child(1){
+                max-width: 150px;
+            }
+            li:nth-child(2){
+                max-width: 111px;
+            }
+            li:nth-child(3){
+                max-width: 118px;
+            }
+            li:nth-child(4){
+                max-width: 255px;
+            }
+           
         }
 
     }
 }
+.accliAcc {
+    border-bottom: 1px solid black;
+}
+
 
 .accNone {
     display: none;
-
 }
 
 .acc {
     display: block;
     max-width: 1200px;
-    margin:  auto;
-    
-  @media screen and (max-width:1238px) {
-    margin: 0 30px;
-  }}
+    margin: auto;
 
-.accliAcc {
-    border-bottom: 1px solid black;
+    @media screen and (max-width:1238px) {
+        margin: 0 30px;
+    }
 }
-.accs{
+
+
+
+.accs {
     display: block;
 }

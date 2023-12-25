@@ -1,38 +1,53 @@
 .contend {
     display: grid;
     row-gap: 20px;
+    max-width: 600px;
     width: 100%;
 
     div {
         display: grid;
         row-gap: 15px;
-@media screen and (max-width:960px) {
-    row-gap: 15px;
-}
+
+        @media screen and (max-width:960px) {
+            row-gap: 15px;
+        }
+
         @media screen and (max-width:460px) {
             row-gap: 15px;
         }
 
         input {
-
+            max-width: 600px;
             width: 100%;
             padding: 15px 20px;
             gap: 10px;
-            color: #000;
+            color: #B3B3B3;
             font-family: Geometria;
             font-size: 16px;
             font-weight: 400;
-            line-height: 150%;
+            line-height: 130%;
             border: 1px solid #CCC;
             background: #FFF;
             outline: none;
+
+            &::placeholder{
+                color: #B3B3B3;
+                font-family: Geometria;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 130%;
+                background: #FFF;
+
+            }
+
             @media screen and (max-width:960px) {
                 padding: 10px 20px;
             }
+
             @media screen and (max-width:960px) {
                 font-size: 14px;
-                 padding: 10px 20px;
-             }  
+                padding: 10px 20px;
+            }
 
             @media screen and (max-width:460px) {
                 padding: 10px;
@@ -40,22 +55,25 @@
         }
 
         button {
-            width: 100%;
+            // width: 100%;
             padding: 15px 20px;
             gap: 10px;
-            color: var(--Black, #001A0C);
+            color: var(--White, #F5F5F5);
+            background: var(--Green, #009345);
+            text-align: center;
             font-family: Geometria;
             font-size: 16px;
             font-weight: 400;
-            line-height: 150%;
+            line-height: 130%;
             border: none;
-            @media screen and (max-width:960px) {
-                padding: 10px 20px;
-            }
+
+           
+
             @media screen and (max-width:960px) {
                 font-size: 14px;
-                 padding: 10px 20px;
-             }  
+                padding: 10px 15px;
+            }
+
             @media screen and (max-width:460px) {
                 padding: 10px;
             }
@@ -63,72 +81,76 @@
     }
 }
 
-.btn_white{
+.btn_white {
+    max-width: 600px;
     width: 100%;
     color: var(--Black, #001A0C);
     font-family: Geometria;
     font-size: 16px;
     font-weight: 400;
     background: var(--White, #F5F5F5);
-    
-    
+    @media screen and (max-width:960px) {
+        padding: 10px 20px!important;
+    }
 }
 
-
 .tabs {
+    max-width: 600px;
     width: 100%;
-    display: flex !important;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 29px;
+    @media screen and (max-width:460px) {
+        grid-gap: 15px;
+    }
 
     .block1 {
-        width: 49%;
-        display: flex;
-        width: 49% !important;
+        max-width: 285px;
+        width: 100%;
         padding: 15px 20px;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        flex-shrink: 0;color: #FFF;
+        flex-shrink: 0;
+        color: #FFF;
         text-align: center;
-        @media screen and (max-width:960px) {
-            padding: 10px 20px;
-        }
-        /* Regular text */
         font-family: Geometria;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
-        line-height: 150%;
+        line-height: 130%;
         background: #B3B3B3;
-        @media screen and (max-width:960px) {
-            font-size: 14px;
-             padding: 10px 20px;
-         }  
+
+        @media screen and (max-width:460px) {
+            padding: 10px 20px;
+        }
+       
     }
 
     .block2 {
-        display: flex;
-        width: 210px;
+        // display: flex;
+        max-width: 285px;
+        width: 100%;
         padding: 15px 20px;
         justify-content: center;
         align-items: center;
         gap: 10px;
-        
+
         flex-shrink: 0;
         color: var(--White, #F5F5F5);
         text-align: center;
 
-        /* 24px */background: var(--Green, #009345);
+        /* 24px */
+        background: var(--Green, #009345);
         /* Regular text */
         font-family: Geometria;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
-        line-height: 150%;
+        line-height: 130%;
+
         /* 24px */
-        @media screen and (max-width:960px) {
-           font-size: 14px;
+        @media screen and (max-width:460px) {
+            font-size: 14px;
             padding: 10px 20px;
-        }  
+        }
+       
     }
 }

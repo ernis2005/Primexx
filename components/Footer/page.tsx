@@ -132,7 +132,8 @@ const Footer =   () => {
                                     <Link    href={{
                                         pathname: '/shop',
                                         query: { id: JSON.stringify(res.id), name: res.name, img: res.image },
-                                    }}>Магазины {res.name}</Link>
+                                    }}>Магазины {res.name}
+                                    </Link>
                                 </li>
                                 
                             ))}
