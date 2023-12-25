@@ -3,7 +3,7 @@
     grid-template-columns: 2fr 2fr;
     justify-content: space-evenly;
     position: relative;
-    align-items: center;
+    align-items: top    ;
     gap: 200px;
 
     @media screen and (max-width:1100px) {
@@ -79,7 +79,7 @@
             font-size: 24px;
             font-style: normal;
             font-weight: 400;
-            line-height: 150%;
+            line-height: 130%;
 
             @media screen and (max-width:769px) {
                 font-size: 20px !important;
@@ -94,7 +94,7 @@
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
-            line-height: 150%;
+            line-height: 130%;
         }
     }
 
@@ -176,7 +176,7 @@
     left: 50%;
     border-radius: 10px;
     margin-top: 40px;
-
+margin-top: 34px;
     @media screen and (max-width:583px) {
         left: 30px;
         margin-top: 20px;

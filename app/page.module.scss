@@ -505,7 +505,7 @@ padding: 10px 20px;
 .block6 {
     display: grid;
     width: -webkit-fill-available;
-    row-gap: 20px;
+    row-gap: 15px;
     padding-top: 60px;
     padding-bottom: 60px;
     @media screen and (max-width:450px) {
@@ -672,7 +672,7 @@ padding: 30px;
 
     .fromInput {
         width: 450px;
-
+        margin-left: 74px   ;
         @media screen and (max-width:844px) {
             width: 100%;
 

@@ -1,7 +1,7 @@
 .header{
      display: grid;
      row-gap: 30px;
-     
+   
       .card{
          margin: 0 auto;
         width: 1000px;
@@ -89,5 +89,7 @@ flex-shrink: 0;
     
     display: grid;
     row-gap: 30px;
-    
+    @media screen and (max-width:450px) {
+        row-gap: 15px !important;
+     }
 }

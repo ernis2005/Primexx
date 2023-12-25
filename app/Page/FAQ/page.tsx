@@ -22,7 +22,7 @@ const page = async () => {
     return (
         <>
             <Header />
-            <div style={{ marginTop: '124px' }} className={s.header}>
+            <div  className={` top ${s.header}`}>
                 <BannerPages
                     idPage={4}
                     name={'Часто задаваемые вопросы'}

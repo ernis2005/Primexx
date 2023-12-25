@@ -30,7 +30,7 @@ export const SwiperServicesPages4 =  () => {
             breakpoints={{
                 100:{
                     slidesPerView: 1.4,
-                    spaceBetween:10
+                    spaceBetween:15
                 },
                 393:{
                     slidesPerView: 1.4,
@@ -68,7 +68,7 @@ export const SwiperServicesPages4 =  () => {
                     </span>
                     
                 </SwiperSlide>
-            ))}
+            ))} 
         
         </Swiper>
     </div>)

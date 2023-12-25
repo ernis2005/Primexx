@@ -2,6 +2,9 @@
     display: grid;
     row-gap: 60px;
 
+    p{
+        line-height: 130% !important;
+    }
     .block {
         display: grid;
         row-gap: 60px;
