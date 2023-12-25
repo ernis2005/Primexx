@@ -25,7 +25,6 @@ export const CardShop = ({ data }: { data: DataArray; }) => {
                     <div className={s.info}>
                         <h2>{res.title}</h2>
                         <p  dangerouslySetInnerHTML={{__html: res.description}}/>
-            
                     </div>
                 </div>
             ))}

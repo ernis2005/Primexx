@@ -173,6 +173,7 @@
                     padding: 10px 25px;
                     width: 100%;
                     background: var(--Green, #009345);
+                    border: none;
                 }
             }
 
@@ -227,4 +228,10 @@
             
         }
     }
+}
+
+ .flex{
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }

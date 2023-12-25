@@ -112,6 +112,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <Link href={''}>Магазины Америки</Link>
+                                
                             </li>
                         </ul>
 
