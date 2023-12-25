@@ -45,28 +45,28 @@ const FromInputPage3 = ({colors,textcolor}) => {
 
     return (
         <>
-        <form className={s.contend} onSubmit={handleSubmit(onSubmit)}>
-            <span className={s.tabs}>
-                <div style={{cursor:'pointer'}} className={cm(s.block1, {
-                    [s.block2]: index === 1
-                })} onClick={()=>onClicks(
-                    {id:1,name:'Турция'}
-                )}  >Турция</div>
-                <div style={{cursor:'pointer'}}
-                    className={cm(s.block1, {
-                        [s.block2]: index === 2
+            <form className={s.contend} onSubmit={handleSubmit(onSubmit)}>
+                <span className={s.tabs}>
+                    <div style={{cursor:'pointer'}} className={cm(s.block1, {
+                        [s.block2]: index === 1
                     })} onClick={()=>onClicks(
-                        {id:2,name:'Америка'}
-                    )} >Америка</div>
-            </span>
-            <div>
-                {dataInput.map((res,i) => (
-                    <input key={i} placeholder={res.title} {...register(`${res.name}`)} />
-                ))}
-                {errors.exampleRequired && <span>This field is required</span>}
-                <button className={s.btn_white}  type="submit" disabled={!watchAllFields.comment}>Отправить заявку</button>
-            </div>
-        </form>
+                        {id:1,name:'Турция'}
+                    )}  >Турция</div>
+                    <div style={{cursor:'pointer'}}
+                        className={cm(s.block1, {
+                            [s.block2]: index === 2
+                        })} onClick={()=>onClicks(
+                            {id:2,name:'Америка'}
+                        )} >Америка</div>
+                </span>
+                <div>
+                    {dataInput.map((res,i) => (
+                        <input key={i} placeholder={res.title} {...register(`${res.name}`)} />
+                    ))}
+                    {errors.exampleRequired && <span>This field is required</span>}
+                    <button className={s.btn_white}  type="submit" disabled={!watchAllFields.comment}>Отправить заявку</button>
+                </div>
+            </form>
         </>
     )
 }

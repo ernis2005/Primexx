@@ -57,41 +57,6 @@ export const SwiperPageAboutUs = (data: Types) => {
                     <Image src={res.image} objectFit='cover' layout='fill' />
                 </SwiperSlide>
             ))}
-            {data.data.map((res) => (
-                <SwiperSlide className={s.Card} key={res.id}>
-                    <Image src={res.image} objectFit='cover' layout='fill' />
-                </SwiperSlide>
-            ))}
-            {data.data.map((res) => (
-                <SwiperSlide className={s.Card} key={res.id}>
-                    <Image src={res.image} objectFit='cover' layout='fill' />
-                </SwiperSlide>
-            ))}
-            {data.data.map((res) => (
-                <SwiperSlide className={s.Card} key={res.id}>
-                    <Image src={res.image} objectFit='cover' layout='fill' />
-                </SwiperSlide>
-            ))}
-            {data.data.map((res) => (
-                <SwiperSlide className={s.Card} key={res.id}>
-                    <Image src={res.image} objectFit='cover' layout='fill' />
-                </SwiperSlide>
-            ))}
-            {data.data.map((res) => (
-                <SwiperSlide className={s.Card} key={res.id}>
-                    <Image src={res.image} objectFit='cover' layout='fill' />
-                </SwiperSlide>
-            ))}
-            {data.data.map((res) => (
-                <SwiperSlide className={s.Card} key={res.id}>
-                    <Image src={res.image} objectFit='cover' layout='fill' />
-                </SwiperSlide>
-            ))}
-            {data.data.map((res) => (
-                <SwiperSlide className={s.Card} key={res.id}>
-                    <Image src={res.image} objectFit='cover' layout='fill' />
-                </SwiperSlide>
-            ))}
             
         </Swiper>
     </div>)

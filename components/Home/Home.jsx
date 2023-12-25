@@ -129,22 +129,21 @@ export default function HomeComponent() {
                     <div className={s.block6Card}>
                         <CardsBlock6 data={country.data} />
                     </div>
-
                 </div>
                 <div className={s.block7}>
                     <div className={s.block7Info}>
                         <h2>Ваш личный байер <br/>
-                        в мире  <br/>                                международных <br/> покупок</h2>
+                    в мире  <br/>                                международных <br/> покупок</h2>
                         <p>Служба Primex поможет легко приобрести товары в зарубежных интернет-магазинах</p>
                         <p>Выкупим товары с сайтов за вас в тот же день - <span> быстро, легко и доступно</span></p>
                         <p className={s.xf23}>После заполнения заявки, байер сам
-                                с вами свяжется с вами в течении
-                                2-х часов в рабочее время.</p>
+                            с вами свяжется с вами в течении
+                            2-х часов в рабочее время.</p>
                     </div>
                     <div className={s.fromInput}><FromInput textcolor={"#001A0C"} colors={"#F5F5F5"} /></div>
                     <p className={s.fromInputp}>После заполнения заявки, байер сам <br />
-                            с вами свяжется  <br />с вами в течении
-                            2-х часов в рабочее время.</p>
+                        с вами свяжется  <br />с вами в течении
+                        2-х часов в рабочее время.</p>
                 </div>
                 <div className={s.topTop}></div>
             </main><Footer /></> }

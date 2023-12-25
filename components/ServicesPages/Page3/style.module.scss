@@ -232,7 +232,9 @@
                 margin-left: 81px;
                 text-align: left;
                 margin-top: -26px;
-
+@media screen and (max-width:450px) {
+row-gap: 43px;
+}
                 p {
                     text-align: left;
                 }

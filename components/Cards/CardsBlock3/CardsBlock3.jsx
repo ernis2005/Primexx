@@ -18,16 +18,20 @@ export const CardsBlock3 = () => {
     )
     const refComponent= useRef();
     const onScroll = () => {
-        let test = 1311
+        let test = 1211
         const heiScr = window.innerWidth
         if (heiScr <= 594) {
-            test = 1900
+            test = 1500
         }
         if (heiScr <= 841) {
-            test = 1900
+            test = 1700
         }
         if (heiScr <= 562) {
-            test = 1800
+            test = 1900
+        }
+        if (heiScr <= 500) {
+            test = 2300
+            
         }
         if (heiScr <= 450) {
             test = 1500
@@ -50,7 +54,11 @@ export const CardsBlock3 = () => {
         <div className={s.Header} ref={refComponent}>
             <div className={s.Card}>
                 <h3 className={s.p1}>01</h3>
-
+                <span className={cm(s.spanVsvg,{
+                    [s.winScr]: scr >= 1,
+                })}>
+                    <Svg10 />
+                </span>
                 <span >
                     <h2>Регистрация</h2>
                     <p>Чтобы начать работу с нами, необходимо пройти <br/> быструю регистрацию</p>
@@ -62,13 +70,21 @@ export const CardsBlock3 = () => {
                     <p>Необходимо выбрать товар из любого турецкого
                         или американского сайта маркетплейса.</p>
                 </span>
-
+                <span className={cm(s.spanVsvg,{
+                    [s.winScr]: scr >= 19
+                }   )}>
+                    <Svg10 />
+                </span>
 
                 <h3 className={s.p2}>02</h3>
             </div>
             <div className={s.Card}>
                 <h3 className={s.p1}>03</h3>
-
+                <span className={cm(s.spanVsvg,{
+                    [s.winScr]: scr >= 38
+                })}>
+                    <Svg10 />
+                </span>
                 <span >
                     <h2>Оформление заказа</h2>
                     <p>Оставьте ссылки на товар, ожидайте SMS <br/>
@@ -80,13 +96,22 @@ export const CardsBlock3 = () => {
                     <h2>Выкуп товара</h2>
                     <p>Выкупим вами выбранный товар в тот же день.</p>
                 </span>
-
+                <span className={cm(s.spanVsvg,{
+                    [s.winScr]: scr >= 57.5
+                })}>
+                    <Svg10 />
+                </span>
+               
 
                 <h3 className={s.p2}>04</h3>
             </div>
             <div className={s.Card}>
                 <h3 className={s.p1}>05</h3>
-
+                <span className={cm(s.spanVsvg,{
+                    [s.winScr]: scr >= 76
+                })}>
+                    <Svg10 />
+                </span>
                 <span >
                     <h2>Прием и отправка</h2>
                     <p>Принимаем ваши посылки, консолидируем
@@ -99,7 +124,11 @@ export const CardsBlock3 = () => {
                     <p>Доставляем  во все регионы России. До вашего <br/> адреса или до ближайшего пункта выдачи.</p>
                 </span>
 
-
+                <span className={cm(s.spanVsvg,{
+                    [s.winScr]: scr >= 99
+                })}>
+                    <Svg10 />
+                </span>
                 <h3 className={s.p2}>06</h3>
             </div>
             <div>   </div>
@@ -107,37 +136,38 @@ export const CardsBlock3 = () => {
                 <div style={{ height: `${scr}%`, }}>
 
                 </div>
-                <span>
-                    <span className={cm({ 
-                        [s.winScr]: scr >= 1
-                    }) } >
-                        <Svg10 />
-                    </span>
-                    <span className={cm({ 
-                        [s.winScr]: scr >= 19
-                    }) } >
-                        <Svg10 />
-                    </span>
-                    <span className={cm({ 
-                        [s.winScr]: scr >= 38
-                    }) } >
-                        <Svg10 />
-                    </span><span className={cm({ 
-                        [s.winScr]: scr >= 57.5
-                    }) } >
-                        <Svg10 />
-                    </span><span className={cm({ 
-                        [s.winScr]: scr >= 76
-                    }) } >
-                        <Svg10 />
-                    </span><span className={cm({ 
-                        [s.winScr]: scr >= 96
-                    }) } >
-                        <Svg10 />
-                    </span> 
-                </span>
+             
             </div>
             <button className={s.btn_bar}>Благодаря нашей трекинг системе отслеживайте ваши посылки на каждом этапе</button>
         </div>
     )
 }
+// <span>
+//     <span className={cm( s.span1,{ 
+//         [s.winScr]: scr >= 1
+//     }) } >
+//         <Svg10 />
+//     </span>
+//     <span className={cm(s.span2,{ 
+//         [s.winScr]: scr >= 19
+//     }) } >
+//         <Svg10 />
+//     </span>
+//     <span className={cm(s.span3,{ 
+//         [s.winScr]: scr >= 38
+//     }) } >
+//         <Svg10 />
+//     </span><span className={cm ( s.span4,{ 
+//         [s.winScr]: scr >= 57.5
+//     }) } >
+//         <Svg10 />
+//     </span><span className={cm(s.span5,{ 
+//         [s.winScr]: scr >= 76
+//     }) } >
+//         <Svg10 />
+//     </span><span className={cm(s.span6,{ 
+//         [s.winScr]: scr >= 96
+//     }) } >
+//         <Svg10 />
+//     </span> 
+// </span>

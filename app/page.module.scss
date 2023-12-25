@@ -166,6 +166,7 @@
                 font-size: 15px;
                 @media screen and (max-width:376px) {
                     font-size: 14px;
+                    line-height: 120%;
                 }
             }
         }
@@ -581,7 +582,7 @@ padding: 30px;
             grid-template-columns: 2fr;
             row-gap: 60px;padding: 30px;
             @media screen and (max-width:450px) {
-                padding: 30px;
+                padding: 45px 30px;
             row-gap: 30px;
             }
 
@@ -631,9 +632,9 @@ padding: 30px;
                 
                 }
             @media screen and (max-width:450px) {
-                font-size: 14px;
+                font-size: 14px !important;
                 span{
-                    font-size: 14px;
+                    font-size: 14px !important;
                 }
             }
             }
@@ -673,6 +674,9 @@ padding: 30px;
     .fromInput {
         width: 450px;
         margin-left: 74px   ;
+        @media screen and (max-width:1147px) {
+            margin-left: 0px;
+        }
         @media screen and (max-width:844px) {
             width: 100%;
 

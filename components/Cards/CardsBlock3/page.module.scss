@@ -1,14 +1,12 @@
 .Card {
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 3fr 1fr 3fr;
     justify-content: space-evenly;
     position: relative;
     align-items: top    ;
-    gap: 200px;
+    gap: 10px;
 
-    @media screen and (max-width:1100px) {
-        gap: 100px;
-    }
+    
 
     @media screen and (max-width:1200px) {
         br {
@@ -67,7 +65,27 @@
         display: grid;
         row-gap: 15px;
         text-align: left;
-
+        @media screen and (max-width:450px) {
+            row-gap: 10px;
+        }
+        svg{
+            justify-content: center;
+            width: 50px;
+            margin-left: 10px;
+            padding: 0px;
+            filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.296)) !important; 
+@media screen and (max-width:763px) {
+    width: 45px ;
+}
+            @media screen and (max-width:583px) {
+                width: 45px ;
+                @media screen and (max-width:450px) {
+                    padding-left: 0px;
+                    margin-left:0px ;
+                    width: 45px ;
+                }
+            }
+        }
         @media screen and (max-height:583px) {
             text-align: left;
         }
@@ -171,72 +189,30 @@
 
 .test {
     position: absolute;
-    width: 10px;
-    height: 816px;
+    width: 10px;height: 66%;
     left: 50%;
     border-radius: 10px;
     margin-top: 40px;
-margin-top: 34px;
-    @media screen and (max-width:583px) {
-        left: 30px;
-        margin-top: 20px;
-        margin-left: 46px;
+margin-top: 26px;
+@media screen and (max-width:769px) {
+    height: 68%;
+}
+@media screen and (max-width:642px) {
+    height: 67%;
+}
+@media screen and (max-width:498px) {
+height: 64%;
+}
+@media screen and (max-width:450px) {
+    height: 62%;
+}
+
+@media screen and (max-width:583px)  {
+    left: 58px   ;
+    @media screen and (max-width:450px) {
+        left: 47px;
     }
-
-    @media screen and (max-width:910px) {
-        height: 859px;
-
-        @media screen and (max-width:850px) {
-            height: 886px;
-
-            @media screen and (max-width:746px) {
-                height: 920px;
-
-                @media screen and (max-width:680px) {
-                    height: 953px;
-
-                    @media screen and (max-width:607px) {
-                        height: 996px;
-
-                        @media screen and (max-width:583px) {
-                            height: 799px;
-
-                            @media screen and (max-width:568px) {
-                                height: 817px;
-
-                                @media screen and (max-width:598px) {
-                                 
-                                    left: 8px;
-                                @media screen and (max-width:498px) {
-                                    height: 500px;
-                                }
-
-                                    @media screen and (max-width:466px) {
-                                        height: 538px;
-
-                                        @media screen and (max-width:433px) {
-                                            height: 577px;
-
-                                            @media screen and (max-width:401px) {
-                                                height: 608px;
-
-                                                @media screen and (max-width:393px) {
-                                                    height: 620px;
-                                                }
-                                            }
-                                        }
-                                    }
-
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-
+}
     background: #D9D9D9;
 
     div {
@@ -250,89 +226,33 @@ margin-top: 34px;
 
     }
 
-    span {
-        width: 300px;
-        row-gap: 122px;
-        position: relative;
-        z-index: 2;
-        display: grid;
-
-        svg {
-            margin-left: -20px;
-            margin-top: -23px;
-            width: 50px;
-            filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.15));
-
-            @media screen and (max-width:680px) {
-                margin-left: -18px !important;
-                width: 45px !important;
-            }
-        }
-
-        @media screen and (max-width:910px) {
-            row-gap: 130px;
-
-            @media screen and (max-width:850px) {
-                row-gap: 137px;
-
-                @media screen and (max-width:746px) {
-                    row-gap: 143px;
-
-                    @media screen and (max-width:680px) {
-                        row-gap: 149px;
-
-                        @media screen and (max-width:607px) {
-                            row-gap: 157px;
-
-                            @media screen and (max-width:583px) {
-                                row-gap: 119px;
-
-                                @media screen and (max-width:568px) {
-                                    row-gap: 124px;
-
-                                    @media screen and (max-width:498px) {
-                                        row-gap: 58px;
-
-                                        @media screen and (max-width:482px) {
-                                            row-gap: 64px;
-
-                                            @media screen and (max-width:466px) {
-                                                row-gap: 69px;
-
-                                                @media screen and (max-width:433px) {
-                                                    row-gap: 73px;
-
-                                                    @media screen and (max-width:401px) {
-                                                        row-gap: 81px;
-
-                                                        @media screen and (max-width:393px) {
-                                                            row-gap: 88px;
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+   
 
 
 }
 
 .winScr {
     svg {
-        margin-left: -24px !important;
-        width: 60px !important;
-
-        @media screen and (max-width:680px) {
+        width: 60px !important ;
+        @media screen and (max-width:763px) {
+            width: 50px !important;
+        }
+        @media screen and (max-width:583px) {
             width: 45px !important;
-            margin-left: -20px !important;
         }
     }
+}
+
+
+.spanVsvg{
+    justify-content: center;
+    z-index: 6;
+    justify-content: center;
+    z-index: 6;
+    @media screen and (max-width:583px) {
+        position: absolute;
+       
+    }
+
+
 }
