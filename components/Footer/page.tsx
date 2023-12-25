@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-"use clinet ";
 
-
-import React from "react";
+'use client'
+import React, { useEffect, useState } from "react";
 import s from './page.module.scss'
 import Image from 'next/image';
 import Link from 'next/link'
@@ -11,11 +10,20 @@ import { useSelector } from "react-redux";
 import { getCoy } from "@/app/getData/getData";
 
 
-const Footer = async () => {
-    const data:any  = await getCoy()
-    console.log(data);
+const Footer =   () => {
+    const [ data, setData] = useState<any>()
+    const [loding, setLoding] = useState(false)
+
+    const getData =  async ()=>  {
+        await getCoy().then(res => setData(res))
+        await setLoding(false)
+   
+    }
+    useEffect(()=> {
+        getData()    
+    },[])
     
-    return (
+    return   (
         <footer className={s.footer} >
             <div className={`  ${s.blocks}`}>
                 <div className={s.block1}>
@@ -115,7 +123,7 @@ const Footer = async () => {
                             <li>
                                 <Link href={'/Page/about_us'}>Отзывы клиентов</Link>
                             </li>
-                            {data.filter((res:any) => {
+                            {data?.filter((res:any) => {
 
                                 return res.name !== 'Китай' }
                             ).map((res:any)=> (

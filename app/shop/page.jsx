@@ -25,7 +25,6 @@ const page = (params) => {
     //     subTitle: 'Подзаголовок'
     // }
 
-    console.log(data, 'dasdssdas');
     return (
         <div>
             <Header />

@@ -28,7 +28,7 @@ const page =  () => {
         dispatch(getabout())
     }, [dispatch])
     const {aboutUs,status ,error} = useSelector((state) => state.aboutUsSlice)
-    console.log(aboutUs);
+   
     return (
         <div >
             <Header />
