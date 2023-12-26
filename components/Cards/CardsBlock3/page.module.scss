@@ -207,28 +207,27 @@ height: 64%;
     height: 62%;
 }
 
+
 @media screen and (max-width:583px)  {
     left: 58px   ;
     @media screen and (max-width:450px) {
         left: 47px;
     }
 }
+@media screen and (min-width: 583px) and (max-width: 960px) {
+    height: 69%;
+    margin-top: 31px;
+}
     background: #D9D9D9;
 
     div {
-
         max-height: 100%;
         width: 100%;
         z-index: 1;
         position: absolute;
         border-radius: 10px;
         background: var(--Green, #009345);
-
     }
-
-   
-
-
 }
 
 .winScr {
@@ -249,6 +248,10 @@ height: 64%;
     z-index: 6;
     justify-content: center;
     z-index: 6;
+    @media screen and (min-width: 583px) and (max-width: 960px) {
+        justify-content: center;
+        align-items: center;
+    }
     @media screen and (max-width:583px) {
         position: absolute;
        

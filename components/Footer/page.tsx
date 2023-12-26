@@ -38,7 +38,7 @@ const Footer =   () => {
                     <ul className={s.block1ButtonWha}>
                         <li>
                             <Link href={'/Page/about_us'}>
-                                    Горячая линия по вопросам доставки
+                                    Горячая линия по <br/> вопросам доставки
                             </Link></li>
                         <li>
                             <button className={s.btn}>
@@ -109,7 +109,7 @@ const Footer =   () => {
                     <div className={s.blockChat}>
                         <div className={s.Chat}>
                             <p>
-                        Горячая линия по вопросам доставки
+                        Горячая линия по <br /> вопросам доставки
                             </p>
                     
                             <a href={"https://api.whatsapp.com/send?phone=905359749009"}>

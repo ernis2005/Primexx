@@ -71,9 +71,9 @@
                     line-height: 150%;
 
                     @media screen and (max-width:984px) {
-                        font-size: 20px;
+                        font-size: 16px;
 
-                        @media screen and (max-width:676px) {
+                        @media screen and (max-width:450px) {
                             font-size: 14px;
                         }
                     }
@@ -92,10 +92,10 @@
                 line-height: 150%;
 
                 @media screen and (max-width:984px) {
-                    font-size: 20px;
+                    font-size: 16px;
 
-                    @media screen and (max-width:676px) {
-                        font-size: 16px;
+                    @media screen and (max-width:450px) {
+                        font-size: 14px;
                     }
                 }
             }
