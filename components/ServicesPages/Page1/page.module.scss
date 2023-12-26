@@ -88,9 +88,9 @@
                 // justify-content: last baseline;
                 padding-top: 30px;
 
-                @media screen and (max-width:583px) {
-                    padding: 15px!important;
-                }
+                // @media screen and (max-width:583px) {
+                //     padding: 15px!important;
+                // }
 
                 .img {
                     position: relative;
@@ -120,7 +120,7 @@
                         align-items: flex-start;
                         gap: 15px;
                         align-self: stretch;
-                        padding: 0!important;
+                        padding: 15px!important;
                     }
 
                     p {
