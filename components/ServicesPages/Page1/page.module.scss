@@ -70,7 +70,7 @@
             }
         }
 
-        .Cards {
+        .Cardss {
             display: grid;
             gap: 30px;
 
@@ -173,9 +173,7 @@
             line-height: 120%;
         }
 
-        div {
-            width: 100%;
-        }
+        
 
         @media screen and (max-width:960px) {
             gap: 30px;

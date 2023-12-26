@@ -9,7 +9,7 @@ export const Page1 = () => {
                 <h2>Бесплатный склад</h2>
                 <p>PRIMEX — сервис доставки товаров из зарубежных магазинов</p>
                 <p className={s.p2}>Если у вас есть зарубежная банковская карта, совершайте самостоятельную покупку с помощью нашей услуги Mail forwarding.</p>
-                <div className={s.Cards}>
+                <div className={s.Cardss}>
                     <div className={`${s.images}`}>
                         {/* <Image className={s.img}  src={'/images/uslug1.jpg'} layout='fill' objectFit='cover'/> */}
                         <div>
@@ -26,10 +26,10 @@ export const Page1 = () => {
                     </div>
                 </div>
             </div>
-            <div className={s.faq}>
+            <span className={s.faq}>
                 <h2>Часто задаваемые вопросы</h2>
                 <FAQAccordionPage  />
-            </div>
+            </span>
             <div></div>
         </div>
     )

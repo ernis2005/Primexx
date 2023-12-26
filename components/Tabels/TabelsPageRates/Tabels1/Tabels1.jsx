@@ -26,7 +26,7 @@ export const Tabels1 =  (data) => {
                             return(
                                 <tr className={s.block2} key={index}>
                                     <td  className={s.tbw300}>{res.title}</td>
-                                    <td>{res.amount}</td>
+                                    <td >{res.amount}</td>
                                     <td>{res.delivery_time}</td>
                                     {index % 4 === 0 && <td   rowSpan={4} className={s.td4} dangerouslySetInnerHTML={{ __html:htmlContent}}/>}</tr>
                                 
