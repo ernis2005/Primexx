@@ -48,11 +48,11 @@ export default function HomeComponent() {
 
                 <div className={s.block1}>
                     <div className={s.bg}>
-                        <Image
+                        {/* <Image
                             src={'/images/bg.png'}
                             layout="fill"
                             objectFit="cover"
-                            alt="hwllo" />
+                            alt="hwllo" /> */}
                     </div>
                     <div className={` Contend ${s.block1Info}`}>
                         <h1>
