@@ -22,7 +22,7 @@ const page = async ({ params: { id } }: { params: { id: number } }) => {
     return (
         <>
             <Header />
-            <div style={{ marginTop: '124px' }} className={s.header}>
+            <div  className={`top ${s.header}`}>
                 <div className={s.Header}>
                     <Image src={data.image} layout="fill"
                         objectFit="cover"

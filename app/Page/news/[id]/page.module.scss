@@ -11,7 +11,7 @@
         justify-content: space-between;
 
         padding: 20px 0px;
-
+gap: 30px;
         @media screen and (max-width:1035px) {
             display: grid;
             row-gap: 15px;
@@ -59,7 +59,6 @@ min-height: 0px;
     margin: 0 auto;
     opacity: 1;
     position: relative;
-    overflow: hidden;
     img{
         opacity: 0.3;
     }
@@ -70,6 +69,9 @@ min-height: 0px;
         row-gap: 20px;
         position: relative;
         z-index: 11;
+        @media screen and (max-width:450px)  {
+            padding: 60px 0px;
+        }
         h2{
             color: var(--White, #F5F5F5);
             font-family: Geometria1;
@@ -77,10 +79,10 @@ min-height: 0px;
             font-style: normal;
             font-weight: 700;
             line-height: 120%;
-@media screen and (max-width:655px) {
-    font-size: 46px;
+@media screen and (max-width:960px) {
+    font-size: 36px;
     @media screen and (max-width:455px) {
-        font-size: 30px ;
+        font-size: 16 ;
     }
 } /* 76.8px */
         }
@@ -94,7 +96,7 @@ line-height: normal;
 @media screen and (max-width:655px) {
     font-size: 20px;
     @media screen and (max-width:455px) {
-        font-size: 18px ;
+        font-size: 16px ;
     }
 } /* 76.8px */
         }
