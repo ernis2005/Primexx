@@ -1,11 +1,13 @@
 .block1 {
     display: block;
-    // background: linear-gradient(90deg, rgba(0, 26, 12, 0.60) 0%, rgba(0, 26, 12, 0.00) 100%), linear-gradient(0deg, rgba(0, 26, 12, 0.70) 0%, rgba(0, 26, 12, 0.70) 100%), url(/images/bg.jfif), lightgray 50% / cover no-repeat;
+    background: linear-gradient(90deg, rgba(0, 26, 12, 0.60) 10%, rgba(0, 26, 12, 0.00) 10%), linear-gradient(0deg, rgba(0, 26, 12, 0.70) 10%, rgba(0, 26, 12, 0.70) 10%), url('/images/san.jpg'), white 100%;
     position: relative;
-
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9.9;
     // background: linear-gradient(90deg, rgba(0, 26, 12, 0.60) 0%, rgba(0, 26, 12, 0.00) 100%), linear-gradient(0deg, rgba(0, 26, 12, 0.70) 0%, rgba(0, 26, 12, 0.70) 100%), ;
 
-    background: var(--Green, #01170b);
+    // background: var(--Green, #01170b);
 
     .bg {
         width: 100%;
