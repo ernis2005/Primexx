@@ -1,21 +1,15 @@
 .block1 {
     display: block;
-    background: linear-gradient(90deg, rgba(0, 26, 12, 0.60) 10%, rgba(0, 26, 12, 0.00) 10%), linear-gradient(0deg, rgba(0, 26, 12, 0.70) 10%, rgba(0, 26, 12, 0.70) 10%), url('/images/san.jpg'), white 100%;
+    background: linear-gradient(90deg, rgba(0, 26, 12, 0.60) 0%, rgba(0, 26, 12, 0.00) 100%), linear-gradient(0deg, rgba(0, 26, 12, 0.60) 0%, rgba(0, 26, 12, 0.60) 100%), url('/images/san.jpg'), lightgray 50% / cover no-repeat;
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.9.9;
-    // background: linear-gradient(90deg, rgba(0, 26, 12, 0.60) 0%, rgba(0, 26, 12, 0.00) 100%), linear-gradient(0deg, rgba(0, 26, 12, 0.70) 0%, rgba(0, 26, 12, 0.70) 100%), ;
-
-    // background: var(--Green, #01170b);
-
-    .bg {
-        width: 100%;
-        position: absolute;
-        height: 100%;
-        background-color: #001A0CB2;
-        opacity: 0.25;
-    }
+    background-position:center center;
+    background-size:cover;
+    object-fit: cover;
+    // opacity: 999;
+    //background: var(--Green, #01170b);
+ 
 
     .block1Info {
         padding: 90px 0px;

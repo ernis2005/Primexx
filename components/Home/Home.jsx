@@ -47,13 +47,13 @@ export default function HomeComponent() {
             <><Header /><main className={`top ${s.main}`}>
 
                 <div className={s.block1}>
-                    <div className={s.bg}>
-                        {/* <Image
-                            src={'/images/bg.png'}
+                    {/* <div className={s.bg}>
+                        <Image
+                            src={'/images/san.jpg'}
                             layout="fill"
                             objectFit="cover"
-                            alt="hwllo" /> */}
-                    </div>
+                            alt="hwllo" />
+                    </div> */}
                     <div className={` Contend ${s.block1Info}`}>
                         <h1>
                                 Доставка от 5 дней <br />
