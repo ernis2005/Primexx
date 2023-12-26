@@ -34,6 +34,7 @@ const profile = () => {
     
     const onSubmit = (data) => {   
         let  useUnfo = data
+
         if(useUnfo.name.length <= 1){
             useUnfo.name = user.name
             
@@ -191,13 +192,11 @@ const profile = () => {
                             <ul>
                                 <li>
                                     <h3>First Name (ваше имя):</h3>
-                                    <p>
-                                    AkmoorPR
-                                    </p>
+                                    <p> {user.first_name}.</p>
                                 </li>
                                 <li>
                                     <h3>Last Name (ваша фамилия):</h3>
-                                    <p>Nurueva
+                                    <p> {user.last_name}.
                                     </p>
                                 </li>
                                 <li>
@@ -246,12 +245,13 @@ const profile = () => {
                                 <li>
                                     <h3>Adynyz (ваше имя):</h3>
                                     <p>
-                                    AkmoorPrimex
+                                        {user.first_name}.
                                     </p>
                                 </li>
                                 <li>
                                     <h3>Soyadiniz (ваша фамилия):</h3>
-                                    <p>Nurueva
+                                    <p> <p> {user.last_name}.
+                                    </p>
                                     </p>
                                 </li>
                                 <li>

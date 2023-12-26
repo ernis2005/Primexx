@@ -23,6 +23,8 @@ export const registrationPost= createAsyncThunk(
                     phone: phoneNumberWithoutMask,
                     password: params.password,
                     info: `${params.name}  ${params.lastName}`,
+                    first_name: params.name,
+                    last_name: params.lastName,
                     role: params.role,
                     address: params.address,
                 })
@@ -116,7 +118,9 @@ const initialState = {
         tel: "",
         code_logistic: "",
         info: "",
-        address: ""
+        address: "",
+        last_name:"",
+        first_name:""
     } 
 }
 
@@ -132,10 +136,13 @@ export const auto = createSlice({
                     isAuth: true,
                     email: action.payload.email,
                     name: action.payload?.info,
+
                     code_logistic: action.payload.code_logistic,
                     send_code: action.payload.send_cod,
                     tel: action.payload.phone,
-                    address: action.payload.address
+                    address: action.payload.address,
+                    last_name:action.payload.lastName,
+                    first_name:action.payload.name
                 },
             }
         },
@@ -148,7 +155,9 @@ export const auto = createSlice({
                     code_logistic: action.payload.code_logistic,
                     send_code: action.payload.send_cod,
                     tel: action.payload.phone,
-                    address: action.payload.address
+                    address: action.payload.address,
+                    last_name:action.payload.lastName,
+                    first_name:action.payload.name
                 },
             }
         },
