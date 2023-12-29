@@ -31,7 +31,6 @@ const profile = () => {
         formState: { errors,isDirty },
     } = useForm()
     const user = useSelector((state) => state.authReducer.value)
-    
     const onSubmit = (data) => {   
         let  useUnfo = data
 

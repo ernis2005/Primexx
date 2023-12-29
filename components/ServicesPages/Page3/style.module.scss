@@ -265,7 +265,7 @@ row-gap: 43px;
 
         background: var(--Dark-Green, #004D24);
 
-        div {
+        .Block2Div {
             width: 600px;
             z-index: 1;
         }
@@ -302,7 +302,7 @@ row-gap: 43px;
         }
 
         @media screen and (max-width:832px) {
-            div {
+            .Block2Div {
                 width: 100%;
 
             }

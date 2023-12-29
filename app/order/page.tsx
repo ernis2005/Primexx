@@ -9,7 +9,7 @@ const page = () => {
             <HeaderProfile />
             <div className={`Contend ${s.block}`}>
                 <h2>Оформить выкуп</h2>
-                <div>
+                <div className={s.blockDiv}>
                     <FromInputPage3 colors={"#009345"} textcolor={"#fff"}/>
                 </div>
                 <p>После заполнения заявки, байер сам с вами свяжется <br />

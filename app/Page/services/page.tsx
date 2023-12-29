@@ -11,7 +11,7 @@ import { Page3 } from '@/components/ServicesPages/Page3/Page3';
 import { Page4 } from '@/components/ServicesPages/Page4/Page4';
 import { Page1 } from '@/components/ServicesPages/Page1/Page1';
 const page = () => {
-    const [navigationIndex, setNavigationIndex] = React.useState(1)
+    const [navigationIndex, setNavigationIndex] = React.useState(0)
     const NavigationData = [ "Бесплатный склад", "Выкуп товара", "Консолидация", "Доставка коммерческих грузов"]
 
     return (

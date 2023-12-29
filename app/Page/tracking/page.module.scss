@@ -129,6 +129,7 @@ line-height: normal;
     row-gap: 60px;
     @media screen and (max-width:450px) {
         row-gap: 30px;
+        padding: 16px;
     }
         h2{
             color: var(--Black, #001A0C);

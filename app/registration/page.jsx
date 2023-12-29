@@ -20,7 +20,15 @@ const page = () => {
         dispatch(registrationPost(data))
     }
     const { status, error } = useAppSelector((state) => state.authReducer)
-
+    const handleInputChange = (event) => {
+        const inputValue = event.target.value;
+        const containsLatinCharacters = /[a-zA-Z]/.test(inputValue);
+      
+        if (containsLatinCharacters) {
+            // Блокировка ввода латинских символов
+            event.preventDefault();
+        }
+    };
     return (
         <div className={s.Header} >
             <div className={s.bg}>
@@ -53,20 +61,35 @@ const page = () => {
                         <select className={s.input} {...register("role")}>
                             <option value="1">user</option>
                             <option value="0">байер </option>
-
                         </select>
                     </span>
                     <span>Электронная почта
-                        <input placeholder='email' type="email" {...register("email")} />
+                        <input placeholder='email' type="email" {...register("email" )}    onKeyPress={(event) => {
+                            const regex = /^[A-Za-z]+$/;
+                            if (!regex.test(event.key)) {
+                                event.preventDefault();
+                            }
+                        }}
+                        />
                     </span>
                     <span>Адрес
                         <input placeholder='address' type="address" {...register("address")} />
                     </span>
                     <span>Введите пароль
-                        <input placeholder='' type="password" {...register("password")} />
+                        <input placeholder='' type="password" {...register("password",{ pattern: /^[A-Za-z0-9@._-]*$/,}) }   onKeyPress={(event) => {
+                            const regex = /^[A-Za-z]+$/;
+                            if (!regex.test(event.key)) {
+                                event.preventDefault();
+                            }
+                        }}/>
                     </span>
                     <span>Повторите пароль
-                        <input placeholder='' type="password" {...register("repeatPassword")} />
+                        <input placeholder='' type="password" {...register("repeatPassword",{ pattern: /^[A-Za-z0-9@._-]*$/,}) }   onKeyPress={(event) => {
+                            const regex = /^[A-Za-z]+$/;
+                            if (!regex.test(event.key)) {
+                                event.preventDefault();
+                            }
+                        }}/>
                     </span>
                     {errors.exampleRequired && <span>This field is required</span>}
                     <button type="submit"  >Создать аккаунт</button>

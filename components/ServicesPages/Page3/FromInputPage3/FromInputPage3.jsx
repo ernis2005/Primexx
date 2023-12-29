@@ -1,13 +1,16 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import s from './page.module.scss'
 
 import { useForm } from 'react-hook-form'
 import cm from 'classnames'
 import { postPurchase_ordercreat } from '@/app/getData/getData'
 import { useRouter } from 'next/navigation'
-
+import { useDispatch, useSelector } from 'react-redux'
+import { postPurchase_ordercreats } from '@/app/redux/features/purchaseOrdercreat'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 // type Inputs = {
 //     email: string,
 //     password:string,
@@ -37,14 +40,59 @@ const FromInputPage3 = ({colors,textcolor}) => {
         reset,
         formState: { errors },
     } = useForm()
+   
+    const  dispath  = useDispatch()
     const onSubmit = (data) =>  {
-        postPurchase_ordercreat(data,counterName)
+        
+        const datas = [data,counterName]
+        dispath(postPurchase_ordercreats(datas))
         reset();
     }
     const watchAllFields = watch();
-
+    const {status} = useSelector((state) => state.purchaseOrdercreatSlice)
+    useEffect(()=> {
+        if (status === 'success') {
+            // Error('Вы успешно отправили запрос')
+            toast.success('Успешно отправлено ', {
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+        }
+        if (status === 'failed') {
+            toast.error('Не удалось отправить', {
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+        }
+        
+    },[status])
     return (
         <>
+            <ToastContainer
+                className={s.ToastContainer}
+                autoClose={1000}
+                limit={1}
+                hideProgressBar
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
             <form className={s.contend} onSubmit={handleSubmit(onSubmit)}>
                 <span className={s.tabs}>
                     <div style={{cursor:'pointer'}} className={cm(s.block1, {

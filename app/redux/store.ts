@@ -11,6 +11,8 @@ import aboutUsSlice from './features/about-us'
 import aboutBlogSlice from './features/about-blog'
 import rateSlice from './features/about-rates'
 import aboutHomeSlice from './features/about-home'
+import purchaseOrdercreatSlice from './features/purchaseOrdercreat'
+import consolidationSlice from './features/consolidation-slice'
 export  const store  = configureStore ( {
     reducer: {
         authReducer,
@@ -24,7 +26,9 @@ export  const store  = configureStore ( {
         aboutUsSlice,
         aboutBlogSlice,
         rateSlice,
-        aboutHomeSlice
+        aboutHomeSlice,
+        purchaseOrdercreatSlice,
+        consolidationSlice
     }
 }) 
 

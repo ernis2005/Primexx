@@ -1,0 +1,99 @@
+.header{
+    display: grid;
+    row-gap: 30px;
+  
+     .card{
+        margin: 0 auto;
+       width: 1000px;
+       
+       @media screen and (max-width:1238px) {
+       
+       width: 100%;}
+      display: block;
+.block1{
+   background: var(--Green, #009345);
+   padding: 18px 30px;
+justify-content: space-between;
+align-items: center;
+display: flex;
+text-align: left;
+
+width: 100%;
+
+p{
+   color: var(--White, #F5F5F5);
+
+/* Description */
+font-family: Geometria;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 36px */
+}
+@media screen and (max-width:450px) {
+   padding: 15px;
+   p{
+       font-size: 13px;
+   }
+}
+}
+.block2{
+   display: none;
+ 
+}
+.block2Acc{
+ display: block;
+   width: 100%;
+   padding: 30px;
+   background: #E6E6E6;
+
+   @media screen and (max-width:450px) {
+       padding: 20px;
+   }
+   ul{
+       display: grid;
+       row-gap: 10px;
+       text-align: left;
+       li{
+           list-style: none;
+           display: flex;
+     
+               color: #000;
+               font-family: Geometria;
+               font-size: 16px;
+               font-style: normal;
+               font-weight: 400;
+               line-height: 150%; /* 36px */
+               @media screen and (max-width:450px) {
+                   font-size: 14px;
+               }
+           
+       }
+   }
+
+}
+    }
+}
+.svg{
+   position: a;
+   color: #fff;
+   display: block  !important;
+   svg{
+       width: 25px;
+height: 25px;
+display: block ;
+flex-shrink: 0;
+   }
+}
+.svgAcc{
+   transform: rotate(0.5turn);
+   
+}
+.FAQCArd{
+   
+   display: grid;
+   row-gap: 30px;
+   @media screen and (max-width:450px) {
+       row-gap: 15px !important;
+    }
+}

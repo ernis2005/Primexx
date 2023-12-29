@@ -19,6 +19,7 @@ const page = (params ) => {
     } = useForm()
     const onSubmit= (data) => {
         postDeliveryOrder(data,id)
+    
         reset();
     }
     const watchAllFields = watch();

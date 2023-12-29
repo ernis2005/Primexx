@@ -1,13 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import s from './page.module.scss'
 
 import { useForm } from 'react-hook-form'
 import cm from 'classnames'
-import { postPurchase_ordercreat } from '@/app/getData/getData'
 import { useRouter } from 'next/navigation'
-
+import { useDispatch, useSelector } from 'react-redux'
+import { postPurchase_ordercreats } from '@/app/redux/features/purchaseOrdercreat'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // type Inputs = {
 //     email: string,
 //     password:string,
@@ -28,7 +30,7 @@ export const FromInput = ({colors,textcolor}) => {
     ]
     const onClicks = (index)=> {
         setIndex(index.id)
-        setCounterName(index.name)
+        setCounterName(index)
     }
     const {
         register,
@@ -37,35 +39,81 @@ export const FromInput = ({colors,textcolor}) => {
         reset,
         formState: { errors },
     } = useForm()
+    
+    const  dispath  = useDispatch()
     const onSubmit = (data) =>  {
-        postPurchase_ordercreat(data,counterName)
+        
+        const datas = [data,counterName]
+        dispath(postPurchase_ordercreats(datas))
         reset();
     }
     const watchAllFields = watch();
-
+    const dATA = useSelector((state) => state.purchaseOrdercreatSlice)
+    useEffect(()=> {
+        if (dATA.status  === 'success') {
+            // Error('Вы успешно отправили запрос')
+            toast.success('Успешно отправлено ', {
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+        }
+        if (dATA.status  === 'failed') {
+            toast.error('Не удалось отправить', {
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+        }
+        
+    },[dATA.status ])
     return (
-        <><form className={s.contend} onSubmit={handleSubmit(onSubmit)}>
-            <span className={s.tabs}>
-                <div style={{cursor:'pointer'}} className={cm(s.block1, {
-                    [s.block2]: index === 1
-                })} onClick={()=>onClicks(
-                    {id:1,name:'Турция'}
-                )}  >Турция</div>
-                <div style={{cursor:'pointer'}}
-                    className={cm(s.block1, {
-                        [s.block2]: index === 2
+        <>
+            <ToastContainer
+                className={s.ToastContainer}
+                autoClose={1000}
+                limit={1}
+                hideProgressBar
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
+            <form className={s.contend} onSubmit={handleSubmit(onSubmit)}>
+                <span className={s.tabs}>
+                    <div style={{cursor:'pointer'}} className={cm(s.block1, {
+                        [s.block2]: index === 1
                     })} onClick={()=>onClicks(
-                        {id:2,name:'Америка'}
-                    )} >Америка</div>
-            </span>
-            <div>
-                {dataInput.map((res,i) => (
-                    <input key={i} placeholder={res.title} {...register(`${res.name}`)} />
-                ))}
-                {errors.exampleRequired && <span>This field is required</span>}
-                <button className={s.btn_white} style={{backgroundColor:colors,color:textcolor}}  type="submit" disabled={!watchAllFields.comment}>Отправить заявку</button>
-            </div>
-        </form>
+                        {id:1,name:'Турция'}
+                    )}  >Турция</div>
+                    <div style={{cursor:'pointer'}}
+                        className={cm(s.block1, {
+                            [s.block2]: index === 2
+                        })} onClick={()=>onClicks(
+                            {id:2,name:'Америка'}
+                        )} >Америка</div>
+                </span>
+                <div>
+                    {dataInput.map((res,i) => (
+                        <input key={i} placeholder={res.title} {...register(`${res.name}`)} />
+                    ))}
+                    {errors.exampleRequired && <span>This field is required</span>}
+                    <button className={s.btn_white} style={{backgroundColor:colors,color:textcolor}}  type="submit" disabled={!watchAllFields.comment}>Отправить заявку</button>
+                </div>
+            </form>
         </>
     )
 }

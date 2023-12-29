@@ -1,7 +1,7 @@
 import React from 'react'
 import s from './page.module.scss'
 import Image from 'next/legacy/image'
-import { FAQAccordionPage } from '@/components/Accordion/FAQAccordionPage/FAQAccordionPage'
+import {FAQAccordionId} from '../../Accordion/FAQAccordionId/FAQAccordionId'
 export const Page1 = () => {
     return (
         <div className={`Contend ${s.header}`}>
@@ -28,7 +28,7 @@ export const Page1 = () => {
             </div>
             <span className={s.faq}>
                 <h2>Часто задаваемые вопросы</h2>
-                <FAQAccordionPage  />
+                <FAQAccordionId id={1}  />
             </span>
             <div></div>
         </div>

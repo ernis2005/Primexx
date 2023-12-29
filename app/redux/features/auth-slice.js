@@ -141,8 +141,8 @@ export const auto = createSlice({
                     send_code: action.payload.send_cod,
                     tel: action.payload.phone,
                     address: action.payload.address,
-                    last_name:action.payload.lastName,
-                    first_name:action.payload.name
+                    last_name:action.payload.last_name,
+                    first_name:action.payload.first_name
                 },
             }
         },
@@ -156,8 +156,8 @@ export const auto = createSlice({
                     send_code: action.payload.send_cod,
                     tel: action.payload.phone,
                     address: action.payload.address,
-                    last_name:action.payload.lastName,
-                    first_name:action.payload.name
+                    last_name:action.payload.last_name,
+                    first_name:action.payload.first_name
                 },
             }
         },

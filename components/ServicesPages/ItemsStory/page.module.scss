@@ -6,21 +6,25 @@
         display: grid;
         justify-content: center;
         row-gap: 60px;
+
         @media screen and (max-width:450px) {
             row-gap: 47px;
-            
+
         }
-        
+
     }
 
-    .block2 {    height: 212px;
+    .block2 {
+        height: 212px;
         row-gap: 30px;
         display: grid !important;
         justify-items: start !important;
+
         @media screen and (max-width:450px) {
             row-gap: 15px;
             height: 0;
         }
+
         h2 {
             color: var(--Black, #001A0C);
 
@@ -30,7 +34,8 @@
             font-style: normal !important;
             font-weight: 400 !important;
             line-height: 150% !important;
-margin-left: 1px !important;
+            margin-left: 1px !important;
+
             /* 36px */
             @media screen and (max-width:1145px) {
                 font-size: 16px !important;
@@ -41,14 +46,16 @@ margin-left: 1px !important;
         div {
             display: grid;
             gap: 30px;
-             @media screen and (max-width:450px) {
+
+            @media screen and (max-width:450px) {
                 row-gap: 0px;
                 gap: 10px !important;
-             }
+            }
+
             span {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                
+
 
                 p {
                     max-width: 240px;
@@ -63,6 +70,7 @@ margin-left: 1px !important;
                     /* 24px */
                     list-style: none;
                 }
+
                 h4 {
                     max-width: 240px;
                     color: var(--Black, #001A0C);
@@ -72,10 +80,33 @@ margin-left: 1px !important;
                     font-weight: 400;
                     line-height: 150%;
                     list-style: none;
+                    h4{
+                        @media screen and (max-width:450px) {
+                            color: var(--Black, #001A0C);
+                        
+                        /* Regular text */
+                        font-family: Geometria;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 130%; /* 20.8px */
+                        }
+                        }
                 }
 
             }
+h4{
+@media screen and (max-width:450px) {
+    color: var(--Black, #001A0C);
 
+/* Regular text */
+font-family: Geometria;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 130%; /* 20.8px */
+}
+}
         }
 
         button {
@@ -85,7 +116,7 @@ margin-left: 1px !important;
             gap: 10px;
             align-self: stretch;
             background: var(--Green, #009345);
-       
+
             width: 100%;
             text-align: center;
             justify-content: center;
@@ -93,19 +124,20 @@ margin-left: 1px !important;
             /* 24px */
             border: none;
             cursor: pointer;
- 
+
             align-content: center;
-            a{
+
+            a {
                 color: #FFF;
                 text-align: center;
-    
+
                 /* Regular text */
                 font-family: Geometria;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
                 text-decoration: none;
-                padding-top:6px ;
+                padding-top: 6px;
 
             }
         }
@@ -120,40 +152,47 @@ margin-left: 1px !important;
             position: relative;
             display: flex;
             gap: 30px;
-.s{
-width: 10px;
-position: absolute;
-background: #009345;
-height: 94px;
-margin-left: 40px;
-margin-top: 24px;
-display: block;
-z-index: 1;
-@media screen and (max-width:1145px) {
-    margin-left: 35px;
+            align-content: flex-end;
+            display: flex;
+            align-items: top;
 
-}
-}
+            @media screen and (max-width:450px) {
+                align-items: center;
+            gap: 15px;
+            }
+
+            .s {
+                width: 10px;
+                position: absolute;
+                background: #009345;
+                height: 107px;
+                margin-left: 26px;
+                margin-top: 24px;
+                display: block;
+                z-index: 1;
+                @media screen  and (max-width:450px) {
+                    margin-left: 20px;
+                    margin-top: 72px;
+                }
+
+            }
 
             svg {
-                position: absolute;
-                width: 90px;
-                height: 90px;
-                margin-top: -17px;
+                width: 60px;
+                height: 60px;
                 z-index: 2;
 
-                @media screen and (max-width:1145px) {
-                    width: 79px;
-                    height: 79px;
-                    margin-top: -15px;
+                filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.15));
 
+                @media screen and (max-width:450px) {
+                    width: 50px;
+                    height: 50px;
                 }
             }
 
             div {
                 display: grid;
                 row-gap: 10px;
-                margin-left: 110px;
 
                 P {
                     color: #000;
@@ -162,9 +201,11 @@ z-index: 1;
                     font-style: normal;
                     font-weight: 400;
                     line-height: 150%;
+
                     /* 24px */
-                    br{
+                    br {
                         display: none;
+
                         @media screen and (max-width:450px) {
                             display: block;
                         }
@@ -182,22 +223,40 @@ z-index: 1;
                 }
 
                 @media screen and (max-width:1145px) {
-                    margin-left: 90px;
+                    margin-left: 0px;
 
                     p {
-                        font-size: 16px;
+                        color: #000;
+
+/* Regular text */
+font-family: Geometria;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 130%; /* 20.8px */
+                    }
+                    span {
+                        color: #808080;
+font-family: Geometria;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 100%; /* 16px */
                     }
                 }
             }
         }
     }
 }
-.asdasda{
+
+.asdasda {
     display: none;
 }
-.button2{
+
+.button2 {
     display: none !important;
 }
-.button3{
+
+.button3 {
     display: none !important;
 }

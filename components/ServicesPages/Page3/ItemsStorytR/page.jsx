@@ -1,14 +1,20 @@
 "use client"
 import React from 'react'
 import s from './page.module.scss'
-import { Svg10 } from '@/components/svg/Header'
 import Link from 'next/link'
 import cm from 'classnames'
 import { format } from 'date-fns'
 import { ru } from 'date-fns/locale'
 export const ItemsStorytR = (data) => {
 
-
+    const Svg10 =() => (
+        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="30" r="30" fill="#F5F5F5"/>
+            <circle cx="30" cy="30" r="11" stroke="#009345" strokeWidth="6"/>
+        </svg>
+    
+    )
+    
     const res = data.data[0]
     const fromattedData = (res)=> {
         if (res !== null) {
@@ -27,7 +33,7 @@ export const ItemsStorytR = (data) => {
                     })}></p>
                     <div>
                         <p>Прибыл на склад, <br></br>
-                        готов к отправке</p>
+                    готов к отправке</p>
                         <span>
                             {fromattedData(res.created_at)}
                         </span>
@@ -35,14 +41,14 @@ export const ItemsStorytR = (data) => {
                 </li>
                 <li >
                     <p className={cm(s.asdasda, {
-                        [s.s]: res.status >= 2,
+                        [s.s]: res.status >=2,
                     })}></p>
                     <Svg10 />
                     <div>
                         <p>В пути</p>
                         <span>
-                        
                             {fromattedData(res.sent_to_moscow_at)}
+              
                         </span>
                     </div>
                 </li>    <li>
@@ -54,7 +60,7 @@ export const ItemsStorytR = (data) => {
                         <p>Прибыл на склад Москвы</p>
                         <span>
                             {fromattedData(res.arrived_at)}
-                        
+                    
                         </span>
                     </div>
                 </li>    <li>
@@ -100,11 +106,7 @@ export const ItemsStorytR = (data) => {
                         <h4>{res.status_label}</h4>
                     </span>
                     <span>
-                        <p >Вес составил:</p>
-                        <h4>{res.weight} кг.</h4>
-                    </span>
-                    <span>
-                        <p >Плановая дата <br/> доставки:</p>
+                        <p >Плановая дата доставки:</p>
                         <h4>
                             {fromattedData(res.estimated_date)}
                         </h4>

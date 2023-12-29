@@ -3,6 +3,9 @@
     row-gap: 60px;
     padding-top: 60px;
     padding-bottom: 60px;
+    @media screen and (max-width:450px) {
+        row-gap: 30px;
+    }
 
     h2 {
         color: #000;
