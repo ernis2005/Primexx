@@ -46,15 +46,16 @@ const page = () => {
                     {errors.exampleRequired && <span>This field is required</span>}
                     <button type="submit">Отследить</button>
                 </form>
-                
-                {data.status === 'loading' && <div className='Contend'>Загрузка</div>}
-                {data.status === 'failed' && <div className='Contend'>{data.error.message} </div>}
-                {data.status === 'success' && <div className={s.blockasdsdas}  >
-                    <h2>
+                <div>
+                    {data.status === 'loading' && <div className='Contend'>Загрузка</div>}
+                    {data.status === 'failed' && <div className='Contend'>{data.error.message} </div>}
+                    {data.status === 'success' && <div className={s.blockasdsdas}  >
+                        <h2>
                 Информация о доставке
-                    </h2>
-                    <ItemsStorytR data={data.baseparceId.data}/>
-                </div>}
+                        </h2>
+                        <ItemsStorytR data={data.baseparceId.data}/>
+                    </div>}
+                </div>
                 
             </div>
             <Footer />
