@@ -6,28 +6,35 @@ import Login from '@/components/Login/Login'
 import { ReduxProider } from './redux/provider'
 import { StyledEngineProvider } from '@mui/material/styles';
 const inter = Inter({ subsets: ['latin'] })
-
-export const metadata: Metadata = {
-    title: 'ЭКСПРЕСС ДОСТАВКА ПОСЫЛОК ИЗ ТУРЦИИ И США',
-    description: 'Сервис по доставке ваших любимых брендов из любого Американского и Турецкого сайта и маркетплейса в Россию. Бесплатный склад для байеров. Удобный личный кабинет ',
-    icons: [
-        {
-            rel: "icon",
-            sizes: "any",
-            url: "/logo1.jpg",
+// export const metadata: Metadata = {
+//     title: 'ЭКСПРЕСС ДОСТАВКА ПОСЫЛОК ИЗ ТУРЦИИ И США',
+//     description: 'Сервис по доставке ваших любимых брендов из любого Американского и Турецкого сайта и маркетплейса в Россию. Бесплатный склад для байеров. Удобный личный кабинет ',
+//     icons: [
+//         {
+//             rel: "icon",
+//             sizes: "any",
+//             url: "/logo1.jpg",
+//         },
+//     ],
+// }
+export async function generateMetadata() {
+    return {
+        title: 'ЭКСПРЕСС ДОСТАВКА ПОСЫЛОК ИЗ ТУРЦИИ И США',
+        description: 'Сервис по доставке ваших любимых брендов из любого Американского и Турецкого сайта и маркетплейса в Россию. Бесплатный склад для байеров. Удобный личный кабинет ',
+        openGraph: {
+            images: [
+                `/logo1.jpg`,
+            ],
         },
-    ],
+    };
 }
 export default function RootLayout({
     children,
 }: {
     children: React.ReactNode
 }) {
-
     return (
-        
         <html lang="en">
-            
             <StyledEngineProvider>
                 <body className={inter.className}>
                     <ReduxProider>
@@ -35,7 +42,6 @@ export default function RootLayout({
                     </ReduxProider>
                 </body>
             </StyledEngineProvider>
-
         </html>
     )
 }
