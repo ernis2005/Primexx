@@ -80,9 +80,9 @@
             @media screen and (max-width:583px) {
                 width: 45px ;
                 @media screen and (max-width:450px) {
-                    padding-left: 0px;
+                    padding-left: 2px;
                     margin-left:0px ;
-                    width: 45px ;
+                    width: 40px ;
                 }
             }
         }
@@ -238,6 +238,8 @@ height: 64%;
         }
         @media screen and (max-width:583px) {
             width: 45px !important;
+            padding-left: 0px !important;
+            margin-left: 0px !important;
         }
     }
 }
