@@ -28,7 +28,7 @@ const page = () => {
                     <ul className={`Contend ${s.Navigation}`}>
                         {NavigationData.map((res, i) => (<li key={i} onClick={() => setNavigationIndex(i)} className={cm(s.accli, { [s.accliAcc]: navigationIndex === i })} >{res}</li>))}
                     </ul>
-                    {/* <div className={cm(s.accNone, {
+                    <div className={cm(s.accNone, {
                         [s.accs]: navigationIndex === 0
                     })}>
                         <Page1 />
@@ -47,7 +47,7 @@ const page = () => {
                         [s.accs]: navigationIndex === 3
                     })}>
                         <Page6 />
-                    </div> */}
+                    </div>
                     <div></div>
                 </div>
             </div>
