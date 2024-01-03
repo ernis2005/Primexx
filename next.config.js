@@ -22,11 +22,6 @@ const nextConfig = {
                 hostname: "api.primexcargo.org",
                 
             },
-            {
-                protocol: "https",
-                hostname: "www.google.com",
-                
-            },
         ],
         minimumCacheTTL: 1500000,
     },
