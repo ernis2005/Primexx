@@ -25,7 +25,7 @@ export const registrationPost= createAsyncThunk(
                     info: `${params.name}  ${params.lastName}`,
                     first_name: params.name,
                     last_name: params.lastName,
-                    role: params.role,
+                    role: 1,
                     address: params.address,
                 })
                

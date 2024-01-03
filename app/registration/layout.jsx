@@ -1,6 +1,6 @@
 export const metadata = {
     title: "Регистрация",
-    description: '',
+    description: 'test ',
     icons: [
         {
             rel: "icon",
@@ -8,6 +8,12 @@ export const metadata = {
             url: "/logo1.jpg",
         },
     ],
+    
+    openGraph: {
+        images: [
+            `/logo1.jpg`,
+        ],
+    },
 }
 
 export default function RegistrationLayout({children}) {

@@ -191,11 +191,11 @@ const profile = () => {
                             <ul>
                                 <li>
                                     <h3>First Name (ваше имя):</h3>
-                                    <p> {user.first_name}.</p>
+                                    <p> {user.first_name}PR</p>
                                 </li>
                                 <li>
                                     <h3>Last Name (ваша фамилия):</h3>
-                                    <p> {user.last_name}.
+                                    <p> {user.last_name}
                                     </p>
                                 </li>
                                 <li>
@@ -244,12 +244,12 @@ const profile = () => {
                                 <li>
                                     <h3>Adynyz (ваше имя):</h3>
                                     <p>
-                                        {user.first_name}.
+                                        {user.first_name}PR
                                     </p>
                                 </li>
                                 <li>
                                     <h3>Soyadiniz (ваша фамилия):</h3>
-                                    <p> <p> {user.last_name}.
+                                    <p> <p> {user.last_name}
                                     </p>
                                     </p>
                                 </li>

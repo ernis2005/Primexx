@@ -7,8 +7,8 @@ import Footer from '@/components/Footer/page'
 import { FAQAccordionPage } from '@/components/Accordion/FAQAccordionPage/FAQAccordionPage'
 import { getFAQ } from '@/app/getData/getData'
 export const metadata = {
-    title: "Часто задаваемые вопросы",
-    description: '',
+    title: "ПОЧЕМУ КАРТА ДЛЯ ОПЛАТЫ НЕ ПРОХОДИТ ПРИ ВЫКУПЕ С САЙТА?",
+    description: 'Часто задаваемые вопросы о заказе и доставке зарубежных сайтов',
     icons: [
         {
             rel: "icon",
@@ -16,6 +16,11 @@ export const metadata = {
             url: "/logo1.jpg",
         },
     ],
+    openGraph: {
+        images: [
+            `/logo1.jpg`,
+        ],
+    },
 }
 
 const page = async () => {

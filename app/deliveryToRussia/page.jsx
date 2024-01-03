@@ -38,7 +38,7 @@ const page = (params ) => {
                     <input placeholder={'ФИО'} {...register(`Fullname`)} />
                     <input placeholder={'Номер телефона'} {...register(`PhoneNumber`)} />
                     <input placeholder={'Клиентский код'} {...register(`ClientCode`)} />
-                    <input placeholder={'Полный адрес'} {...register(`FullAddress`)} />
+                    <input placeholder={'Город, улица, дом, квартира'} {...register(`FullAddress`)} />
                     <input placeholder={'Комментарий'} {...register(`Comment`)} />
                     <button type="submit"   disabled={!watchAllFields.Comment}>Оставить заявку</button>
                 </form>

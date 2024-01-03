@@ -41,30 +41,24 @@ const page = () => {
 
                 <div>
                     {error && <p>{error}</p>}
-                    <span>Ваше имя
-                        <input placeholder='Ваше имя' type="text" {...register("name")} />
+                    <span>Ваше имя (латиницей)
+                        <input placeholder='Алексей' type="text" {...register("name")} />
                     </span>
-                    <span>Ваша фамилия
-                        <input placeholder='Ваша фамилия' type="text" {...register("lastName")} />
+                    <span>Ваша фамилия (латиницей)
+                        <input placeholder='Филатов' type="text" {...register("lastName")} />
                     </span>
                     <span>Номер телефона
                         <InputMask
-                            placeholder='+7 (___) ___-__-__'
+                            placeholder='+7 (ХХХ) ХХХ-ХХ-ХХ'
                             mask="+7 (___) ___-__-__"
                             {...register("tel")}
                             replacement={{ _: /\d/ }}
                         />
                         {/* <input placeholder='+996 (###) 999 999' type="tel" {...register("tel")} /> */}
                     </span>
-                    <span>
-                        Роль
-                        <select className={s.input} {...register("role")}>
-                            <option value="1">user</option>
-                            <option value="0">байер </option>
-                        </select>
-                    </span>
+                   
                     <span>Электронная почта
-                        <input placeholder='email' type="email" {...register("email" )}    onKeyPress={(event) => {
+                        <input placeholder='example@email.com' type="email" {...register("email" )}    onKeyPress={(event) => {
                             const regex = /^[A-Za-z]+$/;
                             if (!regex.test(event.key)) {
                                 event.preventDefault();
@@ -73,10 +67,10 @@ const page = () => {
                         />
                     </span>
                     <span>Адрес
-                        <input placeholder='address' type="address" {...register("address")} />
+                        <input placeholder='Город, улица, дом, квартира' type="address" {...register("address")} />
                     </span>
                     <span>Введите пароль
-                        <input placeholder='' type="password" {...register("password",{ pattern: /^[A-Za-z0-9@._-]*$/,}) }   onKeyPress={(event) => {
+                        <input placeholder='************' type="password" {...register("password",{ pattern: /^[A-Za-z0-9@._-]*$/,}) }   onKeyPress={(event) => {
                             const regex = /^[A-Za-z]+$/;
                             if (!regex.test(event.key)) {
                                 event.preventDefault();
@@ -84,7 +78,7 @@ const page = () => {
                         }}/>
                     </span>
                     <span>Повторите пароль
-                        <input placeholder='' type="password" {...register("repeatPassword",{ pattern: /^[A-Za-z0-9@._-]*$/,}) }   onKeyPress={(event) => {
+                        <input placeholder='************' type="password" {...register("repeatPassword",{ pattern: /^[A-Za-z0-9@._-]*$/,}) }   onKeyPress={(event) => {
                             const regex = /^[A-Za-z]+$/;
                             if (!regex.test(event.key)) {
                                 event.preventDefault();

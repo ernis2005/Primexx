@@ -8,8 +8,8 @@ import { StyledEngineProvider } from '@mui/material/styles';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-    title: 'Primex',
-    description: 'Дарим доступ к растущему миру возможностей! ',
+    title: 'ЭКСПРЕСС ДОСТАВКА ПОСЫЛОК ИЗ ТУРЦИИ И США',
+    description: 'Сервис по доставке ваших любимых брендов из любого Американского и Турецкого сайта и маркетплейса в Россию. Бесплатный склад для байеров. Удобный личный кабинет ',
     icons: [
         {
             rel: "icon",

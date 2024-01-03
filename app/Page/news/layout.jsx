@@ -1,7 +1,7 @@
 
 export const metadata = {
-    title: "Блог ",
-    description: '',
+    title: "БЛОГ О МЕЖДУНАРОДНОМ ШОППИНГЕ, ЛАЙФХАКИ БАЙЕРОВ ",
+    description: 'Тут все секреты о международном шоппинге, лайфхаки байера, разбор сайтов, магазины, скидки, промокоды',
     icons: [
         {
             rel: "icon",
@@ -9,6 +9,11 @@ export const metadata = {
             url: "/logo1.jpg",
         },
     ],
+    openGraph: {
+        images: [
+            `/logo1.jpg`,
+        ],
+    },
 }
 
 export default function storyLayout({children}) {

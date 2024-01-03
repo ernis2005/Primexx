@@ -96,7 +96,7 @@ export const Page4 = () => {
                                 {...register("phone", { required: true })}
                                 replacement={{ _: /\d/ }}
                             />
-                            <button type='submit'>Отправить</button>
+                            <button type='submit' style={{background:"#fff"}}>Отправить</button>
                         </form>
                         <p>После заполнения заявки, байер сам с вами свяжется с вами <br />
     в течении 2-х часов в рабочее время.</p>
