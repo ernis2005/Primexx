@@ -13,7 +13,7 @@ export async function generateMetadata() {
         description: 'Сервис по доставке ваших любимых брендов из любого Американского и Турецкого сайта и маркетплейса в Россию. Бесплатный склад для байеров. Удобный личный кабинет ',
         openGraph: {
             images: [
-                `https://www.google.com/url?sa=i&url=https%3A%2F%2Fkartin.papik.pro%2Fcveti%2F3898-kartinki-dlja-profilja-cvety-69-foto.html&psig=AOvVaw3Eu_cvnTzns8FJTSKuCCsq&ust=1704360798825000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOig8vL0wIMDFQAAAAAdAAAAABAD`,
+                `logo1.jpg/`,
             ],
         },
     };
