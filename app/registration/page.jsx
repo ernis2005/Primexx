@@ -42,10 +42,22 @@ const page = () => {
                 <div>
                     {error && <p>{error}</p>}
                     <span>Ваше имя (латиницей)
-                        <input placeholder='Алексей' type="text" {...register("name")} />
+                        <input placeholder='Алексей' type="text" {...register("name")}
+                            onKeyPress={(event) => {
+                                const regex = /^[A-Za-z]/;
+                                if (!regex.test(event.key)) {
+                                    event.preventDefault();
+                                }
+                            }} />
                     </span>
                     <span>Ваша фамилия (латиницей)
-                        <input placeholder='Филатов' type="text" {...register("lastName")} />
+                        <input placeholder='Филатов' type="text" {...register("lastName")}
+                            onKeyPress={(event) => {
+                                const regex = /^[A-Za-z]/;
+                                if (!regex.test(event.key)) {
+                                    event.preventDefault();
+                                }
+                            }} />
                     </span>
                     <span>Номер телефона
                         <InputMask
@@ -59,7 +71,7 @@ const page = () => {
                    
                     <span>Электронная почта
                         <input placeholder='example@email.com' type="email" {...register("email" )}    onKeyPress={(event) => {
-                            const regex = /^[A-Za-z]+$/;
+                            const regex = /^[A-Za-z0-9@._-]/;
                             if (!regex.test(event.key)) {
                                 event.preventDefault();
                             }
@@ -67,23 +79,30 @@ const page = () => {
                         />
                     </span>
                     <span>Адрес
-                        <input placeholder='Город, улица, дом, квартира' type="address" {...register("address")} />
+                        <input placeholder='Город, улица, дом, квартира' type="address" {...register("address")}
+                            onKeyPress={(event) => {
+                                const regex = /^[A-Za-z0-9@._-]/;
+                                if (!regex.test(event.key)) {
+                                    event.preventDefault();
+                                }
+                            }} />
                     </span>
                     <span>Введите пароль
-                        <input placeholder='************' type="password" {...register("password",{ pattern: /^[A-Za-z0-9@._-]*$/,}) }   onKeyPress={(event) => {
-                            const regex = /^[A-Za-z]+$/;
+                        <input placeholder='************' type="password" {...register("password",{ pattern: /^[A-Za-z0-9@._-]*$/,}) }    onKeyPress={(event) => {
+                            const regex = /^[A-Za-z0-9@._-]/;
                             if (!regex.test(event.key)) {
                                 event.preventDefault();
                             }
                         }}/>
                     </span>
                     <span>Повторите пароль
-                        <input placeholder='************' type="password" {...register("repeatPassword",{ pattern: /^[A-Za-z0-9@._-]*$/,}) }   onKeyPress={(event) => {
-                            const regex = /^[A-Za-z]+$/;
-                            if (!regex.test(event.key)) {
-                                event.preventDefault();
-                            }
-                        }}/>
+                        <input placeholder='************' type="password" {...register("repeatPassword",{ pattern: /^[A-Za-z0-9@._-]*$/,}) }   
+                            onKeyPress={(event) => {
+                                const regex = /^[A-Za-z0-9@._-]/;
+                                if (!regex.test(event.key)) {
+                                    event.preventDefault();
+                                }
+                            }}/>
                     </span>
                     {errors.exampleRequired && <span>This field is required</span>}
                     <button type="submit"  >Создать аккаунт</button>

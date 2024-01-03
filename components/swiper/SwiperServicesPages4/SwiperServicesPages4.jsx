@@ -52,7 +52,7 @@ export const SwiperServicesPages4 =  () => {
                     slidesPerView: 3.6,
                 },
                 1200: {
-                    slidesPerView: 4,
+                    slidesPerView: 4.3,
                 
                 },
             }}

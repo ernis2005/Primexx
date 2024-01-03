@@ -70,7 +70,6 @@ const page = () => {
                         <div className={s.block1}>
                             <h2>Дополнительные услуги</h2>
                             <Tabels2 rate={additional_service} />
-                            <p className={s.test}>Лира к рублю - 5 рублей.</p>
                         </div>
                     </>
                     }
