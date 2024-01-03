@@ -69,14 +69,26 @@ line-height: 130% !important; /* 24px */
 }
 
 .Block {
-    overflow: hidden;
-    width: 100%;
+    width: 1200px;
     margin: 0 auto;
 justify-content: center;
+div  {
+
+@media (min-width:1264px) and (max-width:3000px) {
+    width: 1400px;
+}
+}
 @media screen and (max-width:1326px) {
     margin-left: 0px !important;
 }
     @media screen and (max-width:1264px) {
         width: 100%;
+       overflow: hidden;
+       div{
+        width: --webkit-fill-available;
+       }
+        .riBlock{
+            display: none !important;
+        }
     }
 }

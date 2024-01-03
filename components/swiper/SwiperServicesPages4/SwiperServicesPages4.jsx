@@ -40,7 +40,7 @@ export const SwiperServicesPages4 =  () => {
                     spaceBetween:30
                 },
                 
-                692:{
+                862:{
                     slidesPerView: 3.2,
                 },
                 982:{
@@ -52,7 +52,7 @@ export const SwiperServicesPages4 =  () => {
                     slidesPerView: 3.6,
                 },
                 1200: {
-                    slidesPerView: 4.3,
+                    slidesPerView: 4.7,
                 
                 },
             }}
@@ -69,6 +69,7 @@ export const SwiperServicesPages4 =  () => {
                     
                 </SwiperSlide>
             ))} 
+            <SwiperSlide  className={s.riBlock} ></SwiperSlide>
         
         </Swiper>
     </div>)
