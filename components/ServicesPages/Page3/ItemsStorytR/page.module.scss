@@ -1,7 +1,17 @@
 .BlockINfo {
     display: flex;
     justify-content: space-between;
-
+    width: 1000px;
+    margin: 0 auto;
+    @media screen and (max-width:1150px) {
+        width: 1000px;
+        @media screen  and (max-width:1048px) {
+            width: 900px;
+            @media screen and (max-width:960px) {
+                width: 100%;
+            }
+        }
+    }
     @media screen and (max-width:923px) {
         display: grid;
         justify-content: center;
@@ -13,7 +23,7 @@
 
     .block2 {
         height: 212px;
-        row-gap: 30px;
+        row-gap: 15px;
         display: grid !important;
         justify-items: start !important;
         @media screen and (max-width:450px) {
@@ -28,7 +38,7 @@
 
             /* Description */
             font-family: Geometria !important;
-            font-size: 24px !important;
+            font-size: 16px !important;
             font-style: normal !important;
             font-weight: 400 !important;
             line-height: 150% !important;
@@ -47,11 +57,11 @@
 
         div {
             display: grid;
-            gap: 30px;
+            gap: 15px;
 
             @media screen and (max-width:450px) {
                 row-gap: 0px;
-                gap: 1px !important;
+                gap: 10px !important;
             }
 
             span {
@@ -82,35 +92,33 @@
                     font-weight: 400;
                     line-height: 150%;
                     list-style: none;
-                    // h4{
-                    //     @media screen and (max-width:450px) {
-                    //         color: var(--Black, #001A0C);
-
-                    //     /* Regular text */
-                    //     font-family: Geometria;
-                    //     font-size: 16px;
-                    //     font-style: normal;
-                    //     font-weight: 400;
-                    //     line-height: 130%; /* 20.8px */
-                    //     }
-                    // }
+                    h4{
+                        @media screen and (max-width:450px) {
+                            color: var(--Black, #001A0C);
+                        
+                        /* Regular text */
+                        font-family: Geometria;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 130%; /* 20.8px */
+                        }
+                        }
                 }
 
             }
+h4{
+@media screen and (max-width:450px) {
+    color: var(--Black, #001A0C);
 
-            h4 {
-                @media screen and (max-width:450px) {
-                    color: var(--Black, #001A0C);
-
-                    /* Regular text */
-                    font-family: Geometria;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 130%;
-                    /* 20.8px */
-                }
-            }
+/* Regular text */
+font-family: Geometria;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 130%; /* 20.8px */
+}
+}
         }
 
         button {
@@ -148,7 +156,7 @@
     .Items {
         position: relative;
         display: grid;
-        row-gap: 40px;
+        row-gap: 30px;
         li {
             position: relative;
             display: flex;
@@ -164,27 +172,28 @@
                 width: 10px;
                 position: absolute;
                 background: #009345;
-                height: 107px;
-                margin-left: 26px;
+                height: 93px;
+                margin-left: 18px;
                 margin-top: 24px;
                 display: block;
                 z-index: 1;
-                @media screen and (max-width:450px) {
-                    margin-left: 20px;
+                @media screen  and (max-width:450px) {
+                    margin-left: 18px;
                     margin-top: 72px;
                 }
+
             }
 
             svg {
-                width: 60px;
-                height: 60px;
+                width: 45px;
+                height: 45px;
                 z-index: 2;
 
                 filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.15));
 
                 @media screen and (max-width:450px) {
-                    width: 50px;
-                    height: 50px;
+                    width: 45px;
+                    height: 45px;
                 }
             }
 
@@ -195,7 +204,7 @@
                 P {
                     color: #000;
                     font-family: Geometria;
-                    font-size: 24px;
+                    font-size: 16px;
                     font-style: normal;
                     font-weight: 400;
                     line-height: 150%;
@@ -226,23 +235,20 @@
                     p {
                         color: #000;
 
-                        /* Regular text */
-                        font-family: Geometria;
-                        font-size: 16px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 130%;
-                        /* 20.8px */
+/* Regular text */
+font-family: Geometria;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 130%; /* 20.8px */
                     }
-
                     span {
                         color: #808080;
-                        font-family: Geometria;
-                        font-size: 16px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 100%;
-                        /* 16px */
+font-family: Geometria;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 100%; /* 16px */
                     }
                 }
             }

@@ -79,13 +79,7 @@ const page = () => {
                         />
                     </span>
                     <span>Адрес
-                        <input placeholder='Город, улица, дом, квартира' type="address" {...register("address")}
-                            onKeyPress={(event) => {
-                                const regex = /^[A-Za-z0-9@._-]/;
-                                if (!regex.test(event.key)) {
-                                    event.preventDefault();
-                                }
-                            }} />
+                        <input placeholder='Город, улица, дом, квартира' type="address" {...register("address")}  />
                     </span>
                     <span>Введите пароль
                         <input placeholder='************' type="password" {...register("password",{ pattern: /^[A-Za-z0-9@._-]*$/,}) }    onKeyPress={(event) => {

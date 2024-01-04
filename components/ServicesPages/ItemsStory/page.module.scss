@@ -1,7 +1,17 @@
 .BlockINfo {
     display: flex;
     justify-content: space-between;
-
+width: 1100px;
+margin: 0 auto;
+@media screen and (max-width:1150px) {
+    width: 1000px;
+    @media screen  and (max-width:1048px) {
+        width: 900px;
+        @media screen and (max-width:960px) {
+            width: 100%;
+        }
+    }
+}
     @media screen and (max-width:923px) {
         display: grid;
         justify-content: center;
@@ -16,7 +26,7 @@
 
     .block2 {
         height: 212px;
-        row-gap: 30px;
+        row-gap: 15px;
         display: grid !important;
         justify-items: start !important;
 
@@ -30,7 +40,7 @@
 
             /* Description */
             font-family: Geometria !important;
-            font-size: 24px !important;
+            font-size: 16px !important;
             font-style: normal !important;
             font-weight: 400 !important;
             line-height: 150% !important;
@@ -45,7 +55,7 @@
 
         div {
             display: grid;
-            gap: 30px;
+            gap: 15px;
 
             @media screen and (max-width:450px) {
                 row-gap: 0px;
@@ -146,7 +156,7 @@ line-height: 130%; /* 20.8px */
     .Items {
         position: relative;
         display: grid;
-        row-gap: 40px;
+        row-gap: 30px;
 
         li {
             position: relative;
@@ -165,29 +175,26 @@ line-height: 130%; /* 20.8px */
                 width: 10px;
                 position: absolute;
                 background: #009345;
-                height: 107px;
-                margin-left: 26px;
+                height: 93px;
+                margin-left: 18px;
                 margin-top: 24px;
                 display: block;
                 z-index: 1;
                 @media screen  and (max-width:450px) {
-                    margin-left: 20px;
+                    margin-left: 18px;
                     margin-top: 72px;
                 }
 
             }
 
             svg {
-                width: 60px;
-                height: 60px;
+                width: 45px;
+                height: 45px;
                 z-index: 2;
 
                 filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.15));
 
-                @media screen and (max-width:450px) {
-                    width: 50px;
-                    height: 50px;
-                }
+               
             }
 
             div {
@@ -197,7 +204,7 @@ line-height: 130%; /* 20.8px */
                 P {
                     color: #000;
                     font-family: Geometria;
-                    font-size: 24px;
+                    font-size: 16px;
                     font-style: normal;
                     font-weight: 400;
                     line-height: 150%;
