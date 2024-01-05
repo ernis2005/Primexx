@@ -105,6 +105,10 @@ const ItemsStory = (data) => {
                         <h4>{res.status_label}</h4>
                     </span>
                     <span>
+                        <p >Вес составил:</p>
+                        <h4>{res.weight} кг.</h4>
+                    </span>
+                    <span>
                         <p >Плановая дата доставки:</p>
                         <h4>
                             {fromattedData(res.estimated_date)}
