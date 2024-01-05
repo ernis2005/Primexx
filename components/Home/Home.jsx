@@ -36,15 +36,18 @@ export default function HomeComponent() {
     if (status === 'loading') {
         return <Loading/>
     }
+    const handleScroll = () => {
+        const element = document.getElementById('target-element');
+        element.scrollIntoView({ behavior: 'smooth' , block: "end",});
+    };
+    console.log(country,'country');
     return status !== 'loading' && (
         <div>
           
             <div className={s.top}></div>
             {status === 'loading' && <Loading/>}
             {status === 'failed' && <p>{error}</p>}
-            {status === 'success' && 
-            
-            <><Header /><main className={`top ${s.main}`}>
+            {status === 'success' &&  <><Header /><main className={`top ${s.main}`}>
 
                 <div className={s.block1}>
                     {/* <div className={s.bg}>
@@ -60,7 +63,9 @@ export default function HomeComponent() {
                                 из Турции и Америки
                         </h1>
                         <p>Наши решения дарят доступ к растущему миру возможностей</p>
-                        <button> <Link href={'/Page/services'}>Хочу заказать</Link> </button>
+                        <button onClick={handleScroll}>
+                        Хочу заказать
+                        </button>
                     </div>
                 </div>
                 <div className={`Contend ${s.block2}`}>
@@ -140,7 +145,7 @@ export default function HomeComponent() {
                             с вами свяжется с вами в течении
                             2-х часов в рабочее время.</p>
                     </div>
-                    <div className={s.fromInput}><FromInput textcolor={"#001A0C"} colors={"#F5F5F5"} /></div>
+                    <div className={s.fromInput} id="target-element"><FromInput textcolor={"#001A0C"} colors={"#F5F5F5"} /></div>
                     <p className={s.fromInputp}>После заполнения заявки, байер сам <br />
                         с вами свяжется  <br />с вами в течении
                         2-х часов в рабочее время.</p>

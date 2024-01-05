@@ -36,7 +36,6 @@ const profile = () => {
 
         if(useUnfo.name.length <= 1){
             useUnfo.name = user.name
-            
         }
         if(useUnfo.tel.length <= 1){
             useUnfo.tel = user.tel

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 
 import axios from "axios"
@@ -22,6 +23,15 @@ export const getCoy = async () => {
         return data.data
     } catch (error) {
         return  error
+    }
+}
+export const getCoyId = async (id:number) => {
+    try {
+        const data:any  = await axios(`${Api}about/country/`)
+        const filterData = data.data.filter((res:any)=> res.id == id )
+        return filterData
+    } catch (error) {
+        return error
     }
 }
 export const getRateTime = async () => {

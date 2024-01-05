@@ -125,7 +125,7 @@ export const CardsBlock3 = () => {
                 </span>
 
                 <span className={cm(s.spanVsvg,{
-                    [s.winScr]: scr >= 99
+                    [s.winScr]: scr >= 98
                 })}>
                     <Svg10 />
                 </span>

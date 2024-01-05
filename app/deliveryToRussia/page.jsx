@@ -7,6 +7,7 @@ import { Form, useForm,reset } from 'react-hook-form'
 import { postDeliveryOrder } from '../getData/getData';
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import { useSelector } from 'react-redux'
 const page = (params ) => {
     const  id = params.searchParams.id
     
@@ -37,6 +38,8 @@ const page = (params ) => {
         
     }
     const watchAllFields = watch();
+    
+    const user = useSelector((state) => state.authReducer.value)
 
 
     return (
@@ -65,7 +68,7 @@ const page = (params ) => {
                 <form className={s.from} onSubmit={handleSubmit(onSubmit)}>
                     <input placeholder={'ФИО'} {...register(`Fullname`)} />
                     <input placeholder={'Номер телефона'} {...register(`PhoneNumber`)} />
-                    <input placeholder={'Клиентский код'} {...register(`ClientCode`)} />
+                    <input placeholder={'Клиентский код'} {...register(`ClientCode`)} defaultValue={user.code_logistic} />
                     <input placeholder={'Город, улица, дом, квартира'} {...register(`FullAddress`)} />
                     <input placeholder={'Комментарий'} {...register(`Comment`)} />
                     <button type="submit"   disabled={!watchAllFields.Comment}>Оставить заявку</button>

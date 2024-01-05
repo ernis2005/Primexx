@@ -38,8 +38,8 @@ export const CardsBlock6 = (ProductCountry) => {
                 ProductCountry.data?.map((res, index) => (
                     <Link
                         href={{
-                            pathname: '/shop',
-                            query: { id: JSON.stringify(res.id), name: res.name, img: res.image },
+                            pathname: `/shop/${res.id}/`,
+                            query: { id: JSON.stringify(res.id), name: res.name, img: res.image,description:res.description },
                         }}
                         key={index}
                         className={s.Card}>

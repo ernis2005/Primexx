@@ -29,7 +29,7 @@ export const ItemsStorytR = (data) => {
                 <li >
                     <Svg10 />
                     <p className={cm(s.asdasda, {
-                        [s.s]: res.status >= 0,
+                        [s.s]: res.status >= 1,
                     })}></p>
                     <div>
                         <p>Прибыл на склад, <br></br>
@@ -41,7 +41,7 @@ export const ItemsStorytR = (data) => {
                 </li>
                 <li >
                     <p className={cm(s.asdasda, {
-                        [s.s]: res.status >=0,
+                        [s.s]: res.status >=2,
                     })}></p>
                     <Svg10 />
                     <div>
@@ -54,7 +54,7 @@ export const ItemsStorytR = (data) => {
                 </li>    <li>
                     <Svg10 />
                     <p className={cm(s.asdasda, {
-                        [s.s]: res.status >= 0,
+                        [s.s]: res.status >= 3,
                     })}></p>
                     <div>
                         <p>Прибыл на склад Москвы</p>
@@ -66,7 +66,7 @@ export const ItemsStorytR = (data) => {
                 </li>    <li>
                     <Svg10 />
                     <p className={cm(s.asdasda, {
-                        [s.s]: res.status >= 0,
+                        [s.s]: res.status >= 4,
                     })}></p>
                     <div>
                         <p>Сортировка посылок</p>
@@ -77,7 +77,7 @@ export const ItemsStorytR = (data) => {
                 </li>    <li>
                     <Svg10 />
                     <p className={cm(s.asdasda, {
-                        [s.s]: res.status >= 0,
+                        [s.s]: res.status >= 5,
                     })}></p>
                     <div>
                         <p>Отправлен по адресу</p>
