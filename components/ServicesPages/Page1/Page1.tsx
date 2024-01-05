@@ -28,7 +28,7 @@ export const Page1 = () => {
             </div>
             <span className={s.faq}>
                 <h2>Часто задаваемые вопросы</h2>
-                <FAQAccordionId id={1}  />
+                <FAQAccordionId id={'Бесплатный склад'}  />
             </span>
             <div></div>
         </div>
