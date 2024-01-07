@@ -40,7 +40,7 @@ const page =  () => {
                 />
                 {status === 'loading' && <Loading/>}
                 {status === 'failed' && <p style={{height:200}} >{error}</p>}
-                {status === 'success' &&     <div className={`Contend ${s.contend}`}>
+                {status === 'success' &&     <div className={` ${s.contend}`}>
                     <button className={s.button}>Добро пожаловать в Primex: <br /> ваш надежный партнер для экспресс-доставки <br />
                 из Турции и Америки в Россию!</button>
                     <p>Мы — логистическая компания Primex, и нашей гордостью является обеспечение оперативной и надежной доставки товаров из Турции и Америки в Россию.</p>

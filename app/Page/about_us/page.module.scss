@@ -10,7 +10,12 @@
     .contend{
         display: grid;
         row-gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
         .button{
+            @media screen and (max-width:1219px) {
+                margin: 0px 30px ;
+            }
             display: flex;
             padding: 15px 60px;
             justify-content: center;
@@ -24,6 +29,7 @@
             font-size: 16px;
             font-weight: 400;
             line-height: 130%; 
+            max-width: 1200px;
             border: none;
             br{
                 display: none;
@@ -47,6 +53,11 @@
             font-size: 16px;
           
             line-height: 130%;
+            max-width: 1200px;
+            @media screen  and  (max-width:1219px) {
+                
+            padding: 0px 30px;
+            }
 @media screen and (max-width:630px) {
     
     font-size: 20px;

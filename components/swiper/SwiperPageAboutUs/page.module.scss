@@ -17,16 +17,29 @@ align-items: center;
     }
 }
 .Block{
-    max-width:1200px;
-    overflow: hidden;
+    
      padding-top: 30px;
+    
      padding-bottom: 30px;
+    @media (min-width:1244px) and  (max-width:3000px) {
+        width:1400px;
+    }
+    @media screen and  (max-width:1244px) {
+        min-width: 100% !important;
+    }
+    @media screen  and  (max-width:1219px) {
+                padding-left: 30px;
+        }
      @media screen and (max-width:450px) {
         padding-top: 15px;
         padding-bottom: 15px;
      }
-        @media screen and (max-width:1264px) {
-     width: 100%;   
      
-    }
+    
+    // .SwiperCard{
+    //     width: 1300px;
+    //     @media screen and (max-width:1258px) {
+    //         width: 100% !important;
+    //     }
+    // }
 }

@@ -48,6 +48,9 @@ export const SwiperPageAboutUs = (data: Types) => {
                     slidesPerView: 5,
                     
                 },
+                1300:{
+                    slidesPerView: 5.9  ,
+                }
             }}
             modules={[Pagination]}
             className="mySwiper"
@@ -59,5 +62,6 @@ export const SwiperPageAboutUs = (data: Types) => {
             ))}
             
         </Swiper>
+    
     </div>)
 }

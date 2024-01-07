@@ -166,22 +166,22 @@
 
     .btn_bar {
         margin: 0 auto;
+        
         max-width: 710px;
         width: 100%;
-        padding: 26px;
+        padding: 30px;
         color: var(--White, #F5F5F5);
         font-family: Geometria;
         font-size: 16px;
         font-weight: 400;
         background: var(--Green, #009345);
-        border: none;
-        margin-top: -40px;
-
+        border: none;    margin-top: -65px;
+        
         @media screen and (max-width:498px) {
             padding: 15px;
             font-size: 15px;
             font-size: 500;
-            margin-top: 0px;
+            margin-top: 5px;
         }
     }
 
@@ -205,6 +205,9 @@ height: 64%;
 }
 @media screen and (max-width:450px) {
     height: 62%;
+    @media screen and (max-width:435px) {
+        height: 61%;
+    }
 }
 
 
