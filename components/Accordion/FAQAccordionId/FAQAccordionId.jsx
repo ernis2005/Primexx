@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getFAQ ,getFAQId} from '@/app/redux/features/getData'
 
 export const FAQAccordionId = (id) => {
+    console.log(id);
     const [state, setstate] = React.useState(99)
     const [isLoding, setIsLoding] = React.useState(false)
     const onClick = (id) => {
@@ -23,15 +24,16 @@ export const FAQAccordionId = (id) => {
     }
     , [])
     const {status,FAQData} = useSelector((state) => state.consolidationReducer)
+    console.log(FAQData,'FAQData');
     return (
         <div className={s.header}>
             {status === 'loading' ? <div style={{height:200}}>loading...</div> : null}
             {status === 'failed' ? <div style={{height:200}}> error</div> : null}
             {status === 'success' ? (
                 <div className={s.FAQCArd}>
-                    {FAQData.filter((res) => res.id === id.id)?.length !== 0  ? (
+                    {FAQData.filter((res) => res.service_title === id.id)?.length !== 0  ? (
                 
-                        FAQData.filter((res) => res.id === id.id).map((res, i) => (
+                        FAQData.filter((res) => res.service_title === id.id).map((res, i) => (
                             <div className={s.card} key={i} onClick={() => onClick(i)}>
                                 <div className={s.block1}>
                                     <p>

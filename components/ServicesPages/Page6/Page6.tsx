@@ -123,7 +123,7 @@ export const Page6 = () => {
                 </div>
                 <h2 className={s.faqH2}> Часто задаваемые вопросы</h2>
                 <div className={s.FAQAccordionPage}>
-                    <FAQAccordionId id={4} />
+                    <FAQAccordionId id={'Доставка коммерческих'} />
                 </div>
                 <div></div>
             </div>

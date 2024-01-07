@@ -105,7 +105,7 @@ export const Page4 = () => {
                 </div>
                 <div className={s.block222}>
                     <h2 className={s.h22}>Часто задаваемые вопросы</h2>
-                    <FAQAccordionId id={3}  />
+                    <FAQAccordionId id={'Консолидация'}  />
                 </div>
             
             
