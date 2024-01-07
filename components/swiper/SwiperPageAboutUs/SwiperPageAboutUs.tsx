@@ -26,30 +26,30 @@ export const SwiperPageAboutUs = (data: Types) => {
             }}
             breakpoints={{
                 100:{
-                    slidesPerView: 2.3,
+                    slidesPerView: 2.5,
                     spaceBetween:15,
                 },
                 496:{
-                    slidesPerView: 2.1,
+                    slidesPerView: 2.5,
                 },
                 579:{
-                    slidesPerView: 2.6,
+                    slidesPerView: 3.4,
                 },
                 717:{
                     slidesPerView: 3.3,
                 },
                 855: {
-                    slidesPerView: 4,
+                    slidesPerView: 4.1,
                 },
                 960:{
                     spaceBetween:30,
                 },
                 1200: {
-                    slidesPerView: 5,
+                    slidesPerView: 5.5,
                     
                 },
                 1300:{
-                    slidesPerView: 5.9  ,
+                    slidesPerView: 5.99 ,
                 }
             }}
             modules={[Pagination]}
@@ -60,6 +60,7 @@ export const SwiperPageAboutUs = (data: Types) => {
                     <Image src={res.image} objectFit='cover' layout='fill' />
                 </SwiperSlide>
             ))}
+            <SwiperSlide></SwiperSlide>
             
         </Swiper>
     
