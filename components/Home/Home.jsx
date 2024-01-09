@@ -40,7 +40,6 @@ export default function HomeComponent() {
         const element = document.getElementById('target-element');
         element.scrollIntoView({ behavior: 'smooth' , block: "end",});
     };
-    console.log(country,'country');
     return status !== 'loading' && (
         <div>
           

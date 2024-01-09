@@ -14,7 +14,7 @@
         background: #E6E6E6;
         padding: 30px;
         display: grid;
-        row-gap: 15px;
+        row-gap: 10px;
         width: 100%;
         text-decoration: none   ;
         p{
@@ -64,4 +64,15 @@ line-height: 150%; /* 24px */
             }
         }
     }
+}
+.is_ordered{
+    color: var(--Green, #009345);
+    font-family: Geometria;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    display: flex;
+    gap: 10px;
+
+    line-height: 130%; /* 18.2px */
 }

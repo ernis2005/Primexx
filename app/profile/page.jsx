@@ -199,7 +199,7 @@ const profile = () => {
                                 </li>
                                 <li>
                                     <h3>Address line 1 (адрес склада):</h3>
-                                    <p>467 Carson Drive
+                                    <p>467 Carson Drive {user.code_logistic}
                                     </p>
                                 </li>
                                 <li>
@@ -259,7 +259,7 @@ const profile = () => {
                                 </li>
                                 <li>
                                     <h3>Adres 2 (номер дома):</h3>
-                                    <p>Hemsire Sok 17/C
+                                    <p>Hemsire Sok 17/C {user.code_logistic}
                                     </p>
                                 </li>
                                 <li>

@@ -19,7 +19,12 @@ const page = () => {
 
     const data = useSelector(state => state.tracReducer)
 
-    const trackCodes = data.trac.map(item => item.track_code);
+
+    console.log(data.trac);
+    const is_orderedFilter = data.trac.filter((res) => res.is_ordered === false)
+    console.log(is_orderedFilter,'is_orderedFilter');
+    const trackCodes = is_orderedFilter.map(item => item.track_code);
+    console.log(is_orderedFilter,'is_orderedFilter');
     return (
         <div>
             <HeaderProfile />
@@ -32,13 +37,7 @@ const page = () => {
                     </p>
                 </div>
             }
-            {
-                data.status === "loading"
-                &&
-                <Loading />
-            }
             
-
             {
                 data.trac.length <= 0 && (
                     <p className={s.Contend}>
@@ -52,7 +51,7 @@ const page = () => {
                 <div className={`Contend ${s.header}`}>
 
                     <div>
-                        <span> <p>Актуальные заказы</p>  {data.trac.length >= 0 ? (<Link  
+                        <span> <p>Актуальные заказы</p>  {is_orderedFilter.length > 0 ? (<Link  
                             href={{
                                 pathname: '/deliveryToRussia',
                                 query: { id: JSON.stringify(trackCodes) ,},
