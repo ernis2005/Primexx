@@ -12,6 +12,8 @@ import { fetchPasswordPatch } from '../redux/features/password-patch'
 import {saveChanges} from '../redux/features/save-changes'
 import cm  from 'classnames'
 import Image from 'next/legacy/image'
+
+
 const profile = () => {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
