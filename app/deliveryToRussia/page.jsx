@@ -9,11 +9,8 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import { useSelector } from 'react-redux'
 const page = (params ) => {
-    const  id =  JSON.parse(params.searchParams.id);
- 
-    // console.log(typeof(id));
-    console.log(id);
-    const typeOF = typeof(id)
+    const  id = params.searchParams.id
+    
     const {
         register,
         handleSubmit,
@@ -22,12 +19,8 @@ const page = (params ) => {
         reset,
         formState: { errors },
     } = useForm()
-    const user = useSelector((state) => state.authReducer.value)
-   
     const onSubmit= (data) => {
-        const cod = user.code_logistic
-        postDeliveryOrder(data,id,cod)
-
+        postDeliveryOrder(data,id)
     
         reset();
         
@@ -46,6 +39,9 @@ const page = (params ) => {
     }
     const watchAllFields = watch();
     
+    const user = useSelector((state) => state.authReducer.value)
+
+
     return (
         <div>
             
@@ -70,10 +66,9 @@ const page = (params ) => {
                         на доставку из склада по Российской Федерации</p>
                 </span>
                 <form className={s.from} onSubmit={handleSubmit(onSubmit)}>
-                    <spna className={s.tracCod}>Трек Код :  {typeOF == 'object' && id.map((res)=> <p>{res}</p>)} {typeOF == 'string' && id} </spna>
                     <input placeholder={'ФИО'} {...register(`Fullname`)} />
                     <input placeholder={'Номер телефона'} {...register(`PhoneNumber`)} />
-                    <input placeholder={'Клиентский код'}   defaultValue={user.code_logistic} />
+                    <input placeholder={'Клиентский код'} {...register(`ClientCode`)} defaultValue={user.code_logistic} />
                     <input placeholder={'Город, улица, дом, квартира'} {...register(`FullAddress`)} />
                     <input placeholder={'Комментарий'} {...register(`Comment`)} />
                     <button type="submit"   disabled={!watchAllFields.Comment}>Оставить заявку</button>

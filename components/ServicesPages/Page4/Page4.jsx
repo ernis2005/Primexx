@@ -81,6 +81,7 @@ export const Page4 = () => {
                     <h2 >Мы можем предложить</h2>
              
                     <SwiperServicesPages4/>
+           
 
                 </div>
                 <div className={s.block1}>
@@ -88,6 +89,7 @@ export const Page4 = () => {
                         <h2>  Получить консультацию  </h2>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <input placeholder='Фамилия и имя' {...register("name", { required: true })} />
+       
                             <InputMask
                                 placeholder='Номер телефона'
                                 mask="+7 (___) ___-__-__"
@@ -98,6 +100,7 @@ export const Page4 = () => {
                         </form>
                         <p>После заполнения заявки, байер сам с вами свяжется с вами <br />
     в течении 2-х часов в рабочее время.</p>
+   
                     </div>
                 </div>
                 <div className={s.block222}>

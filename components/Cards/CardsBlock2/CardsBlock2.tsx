@@ -36,8 +36,8 @@ export const CardsBlock2 = () => {
     return (
         <div className={s.saves}>
             {
-                data?.map((el,i) => (
-                    <div className={s.save} key={i}>
+                data?.map((el) => (
+                    <div className={s.save}>
                         <div className={s.block}>
                             <Image className={s.img} src={el.img} style={{top:'-50px'}} alt="/" layout='fill' objectPosition={'top'} objectFit='cover' />
                             <div className={s.flex}>

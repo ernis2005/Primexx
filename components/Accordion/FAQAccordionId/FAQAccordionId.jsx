@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getFAQ ,getFAQId} from '@/app/redux/features/getData'
 
 export const FAQAccordionId = (id) => {
-
+    console.log(id);
     const [state, setstate] = React.useState(99)
     const [isLoding, setIsLoding] = React.useState(false)
     const onClick = (id) => {
@@ -24,6 +24,7 @@ export const FAQAccordionId = (id) => {
     }
     , [])
     const {status,FAQData} = useSelector((state) => state.consolidationReducer)
+    console.log(FAQData,'FAQData');
     return (
         <div className={s.header}>
             {status === 'loading' ? <div style={{height:200}}>loading...</div> : null}

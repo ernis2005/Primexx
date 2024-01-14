@@ -5,6 +5,7 @@ import cm from 'classnames'
 import { format } from 'date-fns'
 import { ru } from 'date-fns/locale'
 const ItemsStory = (data) => {
+
     const Svg10 =() => (
         <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="30" cy="30" r="30" fill="#F5F5F5"/>
@@ -118,14 +119,14 @@ const ItemsStory = (data) => {
                         <h4>{res.sent_to_client_at}</h4>
                     </span>
                 </div>
-                {res.is_ordered === false ?  (  <button className={cm(s.button, {
+                <button className={cm(s.button, {
                     [s.button2]: res.status < 1,
                     [s.button2]: res.status >= 5,
                 })}><Link 
                         href={{
                             pathname: '/deliveryToRussia',
                             query: { id: JSON.stringify(res.track_code) },
-                        }}>Оформить доставку по РФ</Link> </button>):null}
+                        }}>Оформить доставку по РФ</Link> </button>
             </div>
         </div>)
 }
