@@ -18,7 +18,6 @@ export const  getaboutBlog = createAsyncThunk (
 )
 
 export const aboutBlogSlice = createSlice({
-
     name: 'aboutBlog',
     initialState: {
         aboutBlog: [],
