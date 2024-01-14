@@ -203,7 +203,7 @@ export const codeSend = (email:string)=> {
         return error
     }
 }
-export const postDeliveryOrder = (data: { Fullname: string; PhoneNumber: string; ClientCode: string; FullAddress: string; Comment: string; }, id: string) => {
+export const postDeliveryOrder = (data: { Fullname: string; PhoneNumber: string; ClientCode: string; FullAddress: string; Comment: string; }, id:any) => {
     try { 
         const myto = Cookies.get('uliId');
         axios.post(`${Api}flight/delivery_order/create/`, {
