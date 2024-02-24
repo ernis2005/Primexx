@@ -21,33 +21,33 @@ import { TabelsBlock5 } from '../Tabels/TabelsBlock5/page'
 
 
 export default function HomeComponent() {
- 
+
     const dispath = useDispatch()
-    useEffect(()=> {
+    useEffect(() => {
         dispath(getCardPag1())
         dispath(getCountry())
         dispath(getRateTime())
-    },[dispath])
-    
-    const {card,rateTime,status,country,error} = useSelector((state) => state.aboutHomeSlice)
-    if (status=== 'failed') {
+    }, [dispath])
+
+    const { card, rateTime, status, country, error } = useSelector((state) => state.aboutHomeSlice)
+    if (status === 'failed') {
         redirect('/404')
     }
     if (status === 'loading') {
-        return <Loading/>
+        return <Loading />
     }
     const handleScroll = () => {
         const element = document.getElementById('target-element');
-        element.scrollIntoView({ behavior: 'smooth' , block: "end",});
+        element.scrollIntoView({ behavior: 'smooth', block: "end", });
     };
-    console.log(country,'country');
+    console.log(country, 'country');
     return status !== 'loading' && (
         <div>
-          
+
             <div className={s.top}></div>
-            {status === 'loading' && <Loading/>}
+            {status === 'loading' && <Loading />}
             {status === 'failed' && <p>{error}</p>}
-            {status === 'success' &&  <><Header /><main className={`top ${s.main}`}>
+            {status === 'success' && <><Header /><main className={`top ${s.main}`}>
 
                 <div className={s.block1}>
                     {/* <div className={s.bg}>
@@ -59,18 +59,18 @@ export default function HomeComponent() {
                     </div> */}
                     <div className={` Contend ${s.block1Info}`}>
                         <h1>
-                                Доставка от 5 дней <br />
-                                из Турции и Америки
+                            Доставка от 5 дней <br />
+                            из Турции и Америки
                         </h1>
                         <p>Наши решения дарят доступ к растущему миру возможностей</p>
                         <button onClick={handleScroll}>
-                        Хочу заказать
+                            Хочу заказать
                         </button>
                     </div>
                 </div>
                 <div className={`Contend ${s.block2}`}>
                     <p>Мы являемся сервисом по доставке ваших любимых брендов <br />
-                            из любого американского или турецкого сайта и маркетплейса во все регионы России.
+                        из любого американского или турецкого сайта и маркетплейса во все регионы России.
                     </p>
                 </div>
                 <CardsBlock1 data={card.data} />
@@ -88,7 +88,7 @@ export default function HomeComponent() {
                 <div></div>
                 <div className={`Contend ${s.block3}`}>
                     <h3>
-                            Этапы работы
+                        Этапы работы
                     </h3>
                     <div>
                         <CardsBlock3 />
@@ -98,15 +98,15 @@ export default function HomeComponent() {
                 <div></div>
                 <div className={`Contend  ${s.block4} `}>
                     <h3>
-                            Хотите выкупить товар самостоятельно <br />
+                        Хотите выкупить товар самостоятельно <br />
                         <span>
 
-                                и у вас есть зарубежная карта
+                            и у вас есть зарубежная карта
                         </span>? <br /></h3>
                     <p>
-                            Зарегистрируйтесь и получите адреса складов в <span>Турции</span>
-                            и   <span>Америке</span> <br />
-                            для самостоятельных покупок
+                        Зарегистрируйтесь и получите адреса складов в <span>Турции</span>
+                        и   <span>Америке</span> <br />
+                        для самостоятельных покупок
                     </p>
                     <div className={s.block4Images}>
                         <Image
@@ -124,7 +124,7 @@ export default function HomeComponent() {
                     </div>
                     <button>
                         <Link href={'/Page/rates'}>
-                                Узнать подробнее
+                            Узнать подробнее
                         </Link>
                     </button>
                 </div>
@@ -137,8 +137,8 @@ export default function HomeComponent() {
                 </div>
                 <div className={s.block7}>
                     <div className={s.block7Info}>
-                        <h2>Ваш личный байер <br/>
-                    в мире  <br/>                                международных <br/> покупок</h2>
+                        <h2>Ваш личный байер <br />
+                            в мире  <br />                                международных <br /> покупок</h2>
                         <p>Служба Primex поможет легко приобрести товары в зарубежных интернет-магазинах</p>
                         <p>Выкупим товары с сайтов за вас в тот же день - <span> быстро, легко и доступно</span></p>
                         <p className={s.xf23}>После заполнения заявки, байер сам
@@ -151,7 +151,7 @@ export default function HomeComponent() {
                         2-х часов в рабочее время.</p>
                 </div>
                 <div className={s.topTop}></div>
-            </main><Footer /></> }
+            </main><Footer /></>}
         </div>
     )
 }
